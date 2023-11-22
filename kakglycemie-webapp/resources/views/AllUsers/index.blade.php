@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenu.e sur KaK</title>
-    
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    @include('AllUsers/components/header')
+    <div class="bg-red-600">
+        <h2>Motiv</h2>
+    </div>
     
 </body>
 </html>
