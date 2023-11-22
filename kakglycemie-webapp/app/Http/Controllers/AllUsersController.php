@@ -10,14 +10,11 @@ class AllUsersController extends Controller
     
     public function index()
     {
-        
+        //la route pour la page d'accueil
+        return view('AllUsers.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
         //
