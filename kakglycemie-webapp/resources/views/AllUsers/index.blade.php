@@ -8,9 +8,7 @@
 </head>
 <body>
     @include('AllUsers/components/header')
-    <div class="bg-red-600">
-        <h2>Motiv</h2>
-    </div>
+   
     
 </body>
 </html>
