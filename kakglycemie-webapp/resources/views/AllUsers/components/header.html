@@ -64,7 +64,8 @@
     
     <section id="bgSection" class="bg-center bg-no-repeat bg-[url('./bg1.jpg')] bg-gray-700 bg-blend-multiply">
       <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-          <div id="messageFirst" class="flex flex-col">
+          
+          <div id="messageFirst" class="flex flex-col hidden mySlides ">
             <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none
             text-white md:text-5xl lg:text-6xl">Message 1 in the world’s
             potential</h1>
@@ -72,59 +73,62 @@
           
           </div>
 
-          <div id="messageSecond" class="hidden flex flex-col">
+          <div id="messageSecond" class="hidden flex flex-col mySlides">
               <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none
               text-white md:text-5xl lg:text-6xl">Message 22 in the world’s
               potential</h1>
               <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
-          
-          </div>
-          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-              <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-                  Get started
-                  <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              </a>
-              <a href="#" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-                  Learn more
-              </a>  
+              <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                    Get started
+                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a href="#" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                    Learn more
+                </a>  
+            </div>
           </div>
 
+        
+
           <div class="mt-4 flex justify-between">
-            <a href="#" class="bg-blue-700 px-4 text-white" id="btnBack">Back</a>
-            <a href="#" class="bg-blue-700 px-4 text-white" id="btnNext">Next</a>
+            <a href="#" class="bg-blue-700 px-4 text-white"
+            onclick="plusSlides(-1)" >Back</a>
+            <a href="#" class="bg-blue-700 px-4 text-white"
+            onclick="plusSlides(-1)" >Next</a>
           </div>
       </div>
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div> 
     </section>
 
     <script>
-      const btnBack = document.getElementById('btnBack');
-      const btnNext = document.getElementById('btnNext');
-      const messageFirst = document.getElementById('messageFirst');
-      const messageSecond = document.getElementById('messageSecond');
-      const bgSection = document.getElementById('bgSection');
+    
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
+      } 
+
       
-      function callBackImage(){
-         messageSecond.style.display = 'flex';
-        messageFirst.style.display = 'none';
-        bgSection.style.backgroundImage = 'url(./bg2.jpg)';
-      }
-      function callNextImage(){
-         messageSecond.style.display = 'none';
-        messageFirst.style.display = 'flex';
-        bgSection.style.backgroundImage = 'url(./bg1.jpg)';
-      }
-
-      btnBack.addEventListener('click',callBackImage)
-      setTimeout(() => {
-       callBackImage()
-      }, 5000);
-
-      setTimeout(() => {
-       callNextImage()
-      }, 6000);
-      btnNext.addEventListener('click', callNextImage)
 
     </script>
+
+    
+
   </main>
 </body>
 
