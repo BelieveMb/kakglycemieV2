@@ -142,18 +142,27 @@
 
     </script>
 
-    <section class="bg-red-400 px-4">
-      <div class="font-regular relative block w-full rounded-lg  p-2 text-sm leading-5 text-white opacity-100"
-        data-dismissible="alert">
+    <section class="bg-red-500 px-12" id="alertBanner">
+      <div class="font-bold flex flex-row block w-full rounded-lg  p-2 text-xl
+      leading-5 text-white opacity-100" >
         <div class="mr-12">Inscrivez ou connectez vous pour profiter pleinement de KaK</div>
-        <div class="absolute top-2.5 right-3 w-max rounded-lg        transition-all hover:bg-white hover:bg-opacity-20"
-        data-dismissible-target="alert">
-          <button role="button" class="w-max rounded-lg p-1"><i class="bi bi-x-circle"></i>
-            </button>
+        <div class="absolute top-2.5 right-3 w-max rounded-lg        transition-all hover:bg-white hover:bg-opacity-20" data-dismissible-target="alert">
+          <button role="button" id="closeBanner" class="w-max rounded-lg p-1"><i class="bi bi-x-circle"></i></button>
         </div>
       </div>
     </section>
 
+    <script>
+      const alertBanner =  document.getElementById('alertBanner');
+      const closeBanner =  document.getElementById('closeBanner');
+
+      function closeSectionBanner(){
+        alertBanner.style.display = "none"
+      }
+
+      closeBanner.addEventListener('click', closeSectionBanner);
+
+    </script>
   </main>
 </body>
 
