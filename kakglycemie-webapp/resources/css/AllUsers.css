@@ -19,3 +19,7 @@
     from {opacity: .4}
     to {opacity: 1}
 }
+
+.sectionPadding{
+    padding: 0 10rem;
+}
