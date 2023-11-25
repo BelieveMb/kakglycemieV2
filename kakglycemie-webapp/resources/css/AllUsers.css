@@ -2,3 +2,20 @@
     --primary-color : ;
     
 }
+
+/* ############# slider of header  ############# */
+.mySlides{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12rem 6rem;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
