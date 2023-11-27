@@ -8,6 +8,10 @@
 </head>
 <body>
     @include('AllUsers/components/header')
+    <div class="bg-red-800">
+    <img src="{{ asset('images/logo_white.png') }}" alt="Logo Kak glycémie" class="w-12 h-12">
+
+    </div>
    
     <section id="bgSection" class="bg-gray-700 bg-blend-multiply">
       <div class="  w-full text-center  ">

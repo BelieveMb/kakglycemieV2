@@ -26,7 +26,8 @@
               <a href="/" class="text-lg font-semibold tracking-widest text-gray-900
               uppercase rounded-lg dark-mode:text-white focus:outline-none
               focus:shadow-outline">
-                <img src="logo_white.png" alt="Logo Kak glycémie" class="w-12 h-12">
+
+                <img src="{{ asset('images/logo_white.png') }}" alt="Logo Kak glycémie" class="w-12 h-12">
               </a>
               <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
