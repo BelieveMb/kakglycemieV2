@@ -8,16 +8,11 @@
 </head>
 <body>
     @include('AllUsers/components/header')
-  
- 
-    <!-- <img src=" asset('images/logo_white.jpg')" alt="Logo Kak glycémie" class="w-12 h-12"> -->
-    <img src="../images/logo_white.jpg" alt="Logo Kak glycémie" class="w-12 h-12">
-
    
     <section id="bgSection" class="bg-gray-700 bg-blend-multiply">
       <div class="  w-full text-center  ">
 
-        <div class="flex flex-col hidden mySlides fade" style="background-image: url('bg2.jpg');">
+        <div class="flex flex-col hidden mySlides fade" style="background-image: url('{{ asset('images/patient_kak.jpg') }}');">
           <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none
             text-white md:text-5xl lg:text-6xl"> 1 in the world
             potential</h1>
@@ -40,7 +35,7 @@
           </div>
         </div>
 
-        <div class="hidden flex flex-col mySlides fade " style="background-image: url('bg1.jpg');">
+        <div class="hidden flex flex-col mySlides fade " style="background-image: url('{{ asset('images/img_med.jpg') }}');">
           <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none
               text-white md:text-5xl lg:text-6xl">Message 22 in the world’s
             potential</h1>
@@ -431,6 +426,6 @@
     </section>
 
     
-    <script src="js/home.js"></script>
+    <script src="{{ asset('js/home.js')}}"></script>
 </body>
 </html>

@@ -15,4 +15,6 @@ function showSlides() {
 
   setTimeout(showSlides, 6000); // Change image every 2 seconds
 }
+
+console.log('king')
 //slider script
