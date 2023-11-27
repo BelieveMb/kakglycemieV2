@@ -11,7 +11,7 @@ class AllUsersController extends Controller
     public function index()
     {
         //la route pour la page d'accueil
-        return view('AllUsers.index');
+        return view('AllUsers.index', ["title"=>"Accueil"]);
     }
 
     

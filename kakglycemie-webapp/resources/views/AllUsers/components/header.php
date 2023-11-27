@@ -23,11 +23,8 @@
           <div x-data="{ open: false }"
             class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div class="flex flex-row items-center justify-between p-4">
-              <a href="/" class="text-lg font-semibold tracking-widest text-gray-900
-              uppercase rounded-lg dark-mode:text-white focus:outline-none
-              focus:shadow-outline">
-
-                <img src="{{ asset('images/logo_white.png') }}" alt="Logo Kak glycémie" class="w-12 h-12">
+              <a href="/" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none              focus:shadow-outline">
+                <img src="../images/logo_white.png " alt="Logo Kak glycémie" class="w-12 h-12">
               </a>
               <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
