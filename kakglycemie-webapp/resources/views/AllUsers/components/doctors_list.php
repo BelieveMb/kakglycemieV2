@@ -6,7 +6,7 @@
             <!-- card body  -->
             <div class="flex-auto block py-2 px-8">
               <div>
-                <h3 class="mb-2 text-[2rem] font-semibold text-gray-700">Nos Médecins</h3>
+                <h3 class="mb-2 text-[2rem] font-semibold text-gray-700">Nos Médecins Components</h3>
 
                 <div class="flex flex-wrap flex-col align-center w-full gap-8 lg:flex-row  lg:align-start">
                   <div class="flex flex-col mr-5 text-center mb-11   ">

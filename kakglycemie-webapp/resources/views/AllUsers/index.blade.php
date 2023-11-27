@@ -140,6 +140,10 @@
               </div>
       </div>
     </section>
+    
+    <!-- components our doctors  -->
+    @include('AllUsers/components/doctors_list')
+    <!-- components our doctors  -->
 
    
 
