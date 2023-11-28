@@ -40,7 +40,8 @@
             <nav :class="{'flex': open, 'hidden': !open}"
               class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
               <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  hover:bg-gray-200  md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                href="#">Patients</a>
+                href="{{ route('patientName')}}">Patients</a>
+
               <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  hover:bg-gray-200  md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="#">Médecins</a>
               <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  hover:bg-gray-200  md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"

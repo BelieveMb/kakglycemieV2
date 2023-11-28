@@ -15,17 +15,13 @@ class AllUsersController extends Controller
     }
 
     
-    public function create()
+    public function patient()
     {
-        //
+        //for patient
+        return view('AllUsers.patient', ["title"=>"patient"]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     public function store(Request $request)
     {
         //
@@ -42,12 +38,7 @@ class AllUsersController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\AllUsers  $allUsers
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(AllUsers $allUsers)
     {
         //

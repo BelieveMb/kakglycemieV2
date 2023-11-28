@@ -69,16 +69,16 @@
       function showSlides() {
         let i;
         let slides = document.getElementsByClassName("mySlides");
-  let bgSection = document.getElementById("bgSection");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  slides[slideIndex - 1].style.display = "block";
-
-  setTimeout(showSlides, 6000); // Change image every 2 seconds
-}
+        let bgSection = document.getElementById("bgSection");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        
+        setTimeout(showSlides, 6000); // Change image every 2 seconds
+      }
 
     </script>
 
@@ -171,7 +171,7 @@
     <section class="bg-gray-50 px-8  lg:px-40 py-20">
       <div class=" flex flex-wrap">
         <div class="w-full md:w-4/12 ">
-          <img alt="image votre avantage sur kak" class="max-w-full h-full rounded-lg shadow-lg" src="img_avantage.jpg">
+          <img alt="image votre avantage sur kak" class="max-w-full h-full rounded-lg shadow-lg" src="{{ asset('images/img_avantage.jpg') }}">
         </div>
         <!-- <div class="w-full md:w-1/2 ml-auto mr-auto px-4"> -->
         <div class="w-full md:w-1/2 ml-auto mr-auto px-4">
@@ -233,53 +233,9 @@
       </div>
     </section>
 
-    <!-- section our doctors  -->
-    <section class="bg-gray-700 px-8  lg:px-40 lg:py-20 " >
-      <div class="flex flex-wrap  ">
-        <div class="w-full max-w-full ">
-          <div class="relative flex-[1_auto] flex flex-col break-words min-w-0 bg-clip-border rounded-[.95rem] border border-dashed border-stone-200 bg-white ">
-            <!-- card body  -->
-            <div class="flex-auto block py-8 px-9">
-              <div>
-                <div class="mb-9">
-                  <h1 class="mb-2 text-[2rem] font-semibold text-gray-700">Nos Médecins</h1>
-                  <span class="text-[1.15rem] font-medium text-red-300"> Meet
-                  our talented team, afor  dynamic group of experts drliven by
-                  passion and innovation. </span>
-                </div>
-                <div class="flex flex-wrap flex-col align-center w-full gap-8 lg:flex-row  lg:align-start">
-                  <div class="flex flex-col mr-5 text-center mb-11   ">
-                    <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                      <img class="inline-block shrink-0 rounded-[.95rem]
-                      w-[150px] h-[150px] shadow-red-200 shadow-lg"
-                      src="bg1.jpg" alt="avarat image">
-                    </div>
-                    <div class="text-center">
-                      <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha Reynolds</a>
-                      <span class="block font-medium text-red-300">Marketing Manager</span>
-                    </div>
-                  </div>
-
-                  <div class="flex flex-col mr-5 text-center mb-11   ">
-                    <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                      <img class="inline-block shrink-0 rounded-[.95rem]
-                      w-[150px] h-[150px] shadow-red-200 shadow-lg"
-                      src="bg2.jpg" alt="avarat image">
-                    </div>
-                    <div class="text-center">
-                      <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha Reynolds</a>
-                      <span class="block font-medium text-red-300">Marketing Manager</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
+    <!-- components our doctors  -->
+        @include('AllUsers/components/doctors_list')
+    <!-- components our doctors  -->
 
     <!-- section accordion  -->
     <section class="flex gap-20 px-8  lg:px-40 lg:py-20 ">
@@ -445,6 +401,7 @@
       </div>
     </section>
 
+    @include('AllUsers/components/footer')
     
     <script src="{{ asset('../js/home.js')}}"></script>
 </body>
