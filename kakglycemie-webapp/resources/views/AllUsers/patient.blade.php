@@ -45,6 +45,18 @@
         <a href="#" class="px-4 py-2  text-sm font-semibold bg-gray-100 text-red-500 rounded-lg  hover:text-red-600 focus:text-gray-900 hover:shabg-gray-200  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> Inscription </a>
       </div>
     </section>
+
+    <!--  section suivre sa glycémie  -->
+    <section class=" px-8 py-10 lg:px-40 lg:py-4 flex flex-col lg:flex-row">
+      <div class="bg-red-5">
+        <h3>Text</h3>
+      </div>
+      <div class="w-1/2">
+        <img src="{{ asset('images/img_avantage.jpg') }}" alt="">
+      </div>
+
+    </section>
+
       
    
 
