@@ -40,23 +40,74 @@
         <h3>Nous sommes là pour vous aider à suivre votre glycémie et vos traitements de manière simple et efficace.</h3>
 
       </div>
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 lg:flex-row lg:space-x-8">
         <a href="#" class="px-4 py-2  text-sm font-semibold bg-gray-100 text-red-500 rounded-lg  hover:text-red-600 focus:text-gray-900 hover:shabg-gray-200  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> Connexion  </a>
         <a href="#" class="px-4 py-2  text-sm font-semibold bg-gray-100 text-red-500 rounded-lg  hover:text-red-600 focus:text-gray-900 hover:shabg-gray-200  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> Inscription </a>
       </div>
     </section>
 
     <!--  section suivre sa glycémie  -->
-    <section class=" px-8 py-10 lg:px-40 lg:py-4 flex flex-col lg:flex-row">
-      <div class="bg-red-5">
-        <h3>Text</h3>
-      </div>
-      <div class="w-1/2">
-        <img src="{{ asset('images/img_avantage.jpg') }}" alt="">
-      </div>
+    <section class="bg-gray-50 px-8  lg:px-40 py-20">
+      <div class=" flex flex-wrap justify-between">
+        <div class="w-full md:w-1/2 ">
+          <div class="">
 
+            <span class="text-gray-500">Pour vous</span>
+            <h3 class="text-4xl font-semibold text-gray-700">Suivre sa glycémie</h3>
+            <p class="mt-4 text-lg leading-relaxed text-gray-700">
+              <b>Pourquoi suivre sa glycémie ?</b>, Le suivi de la glycémie est essentiel pour les patients diabétiques. En effet, cela permet de contrôler son taux de sucre dans le sang et d'adapter son traitement en conséquence. 
+            </p>
+            <ul class="list-none my-2">
+
+              <li class="py-2">
+                <div class="flex items-center">
+                  <div>
+                    <span class="text-xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-person"></i></span>
+                  </div>
+                  <div>
+                    <h4 class="text-gray-700 font-semibold">Amazing page examples</h4>
+                  </div>
+                </div>
+              </li>
+              <li class="py-2">
+                <div class="flex items-center">
+                  <div>
+                    <span class="text-xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-person"></i></span>
+                  </div>
+                  <div>
+                    <h4 class="text-gray-700 font-semibold">Amazing page examples</h4>
+                  </div>
+                </div>
+              </li>
+              <li class="py-2">
+                <div class="flex items-center">
+                  <div>
+                    <span class="text-xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-person"></i></span>
+                  </div>
+                  <div>
+                    <h4 class="text-gray-700 font-semibold">Amazing page examples</h4>
+                  </div>
+                </div>
+              </li>
+             
+            </ul>
+
+            <p class=" text-lg leading-relaxed text-gray-700">
+              Started faster. You can change the text and images and you're
+              good to go.
+            </p>
+            <div class="mt-8">
+              <a href="#" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
+              focus:bg-red-200 focus:outline-none"> Commencez </a>
+            </div>
+          
+          </div>
+        </div>
+        <div class="w-full md:w-4/12 ">
+          <img alt="image votre avantage sur kak" class="max-w-full h-full rounded-lg shadow-lg" src="{{ asset('images/img_avantage.jpg') }}">
+        </div>
+      </div>
     </section>
-
       
    
 
