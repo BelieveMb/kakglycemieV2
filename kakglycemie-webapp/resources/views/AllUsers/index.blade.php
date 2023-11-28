@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenu.e sur KaK /{{$title}}</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('css/AllUsers.css') }}">
+
 </head>
 <body>
     @include('AllUsers/components/header')
    
     <section id="bgSection" class="bg-gray-700 bg-blend-multiply">
-      <div class="  w-full text-center  ">
+      <div class="  w-full text-center flex flex-row items-center  ">
 
-        <div class="flex flex-col hidden mySlides fade" style="background-image: url('{{ asset('images/patient_kak.jpg') }}');">
+        <div class="flex flex-col items-center hidden mySlides fade  h-[80vh]" style="background-image: url('{{ asset('images/patient_kak.jpg') }}');">
           <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none
             text-white md:text-5xl lg:text-6xl"> 1 in the world
             potential</h1>
@@ -35,7 +37,7 @@
           </div>
         </div>
 
-        <div class="hidden flex flex-col mySlides fade " style="background-image: url('{{ asset('images/img_med.jpg') }}');">
+        <div class="hidden flex flex-col mySlides fade  h-[80vh] " style="background-image: url('{{ asset('images/med_pat.png') }}');">
           <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none
               text-white md:text-5xl lg:text-6xl">Message 22 in the world’s
             potential</h1>
@@ -61,6 +63,25 @@
       </div>
 
     </section>
+    <script>
+      //slider script
+      let slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+  let bgSection = document.getElementById("bgSection");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  slides[slideIndex - 1].style.display = "block";
+
+  setTimeout(showSlides, 6000); // Change image every 2 seconds
+}
+
+    </script>
 
 
 
@@ -426,6 +447,6 @@
     </section>
 
     
-    <script src="{{ asset('js/home.js')}}"></script>
+    <script src="{{ asset('../js/home.js')}}"></script>
 </body>
 </html>
