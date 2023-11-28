@@ -93,8 +93,7 @@
       </div>
       <div>
         <a href="#" class="px-4 py-2  text-sm font-semibold bg-gray-100 text-red-500 rounded-lg     
-        hover:text-red-600
-        focus:text-gray-900 hover:bg-gray-200  hover:shadow-outline
+        hover:text-red-600 focus:text-gray-900 hover:shabg-gray-200  hover:shadow-outline
         focus:bg-gray-200 focus:outline-none"> Commencez  </a>
       </div>
       

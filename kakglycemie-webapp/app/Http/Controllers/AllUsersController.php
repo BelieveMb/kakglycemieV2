@@ -27,12 +27,7 @@ class AllUsersController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\AllUsers  $allUsers
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(AllUsers $allUsers)
     {
         //
@@ -44,24 +39,13 @@ class AllUsersController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\AllUsers  $allUsers
-     * @return \Illuminate\Http\Response
-     */
+   
     public function update(Request $request, AllUsers $allUsers)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\AllUsers  $allUsers
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function destroy(AllUsers $allUsers)
     {
         //
