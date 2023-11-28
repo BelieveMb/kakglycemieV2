@@ -109,49 +109,28 @@
     <section class="  px-8 py-10 lg:px-40 lg:py-4 ">
       <div id="services" class="section bg-white">
         <div >
-            <h3 class="text-2xl py-4">Services <span class="text-red-600">gratuits</span> </h3>
+            <h3 class="text-2xl py-4 font-semibold text-gray-500">Votre <span class="text-red-600">gratuits</span> </h3>
         </div>
 
         <div class="flex flex-wrap flex-row text-center">
           <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
               <!-- service block -->
-              <div class="py-8 px-4 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                  <div class="inline-block text-gray-900 mb-4 text-4xl">
+              <div class="py-8 px-4 mb-12 bg-gray-400 border-b border-gray-700 rounded-xl transform transition duration-300 ease-in-out hover:-translate-y-2 hover:bg-gray-200">
+                  <div class="inline-block text-gray-800 mb-4 text-5xl">
                       <!-- icon -->
                       <span class="bi bi-search"></span>
                   </div>
                   <h3 class="text-lg leading-normal mb-2 font-semibold text-black"> Prévention de complication</h3>
-                  <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+                  <p class="text-gray-100">This is a wider card with supporting text below as a natural content.</p>
               </div>
           </div>
 
-          <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
-              <!-- service block -->
-              <div class="py-8 px-4 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                  <div class="inline-block text-gray-900 mb-4 text-4xl">
-                      <!-- icon -->
-                      <span class="bi bi-search"></span>
-                  </div>
-                  <h3 class="text-lg leading-normal mb-2 font-semibold text-black"> Prévention de complication</h3>
-                  <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-              </div>
-          </div>
-
-          <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
-              <!-- service block -->
-              <div class="py-8 px-4 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                  <div class="inline-block text-gray-900 mb-4 text-4xl">
-                      <!-- icon -->
-                      <span class="bi bi-search"></span>
-                  </div>
-                  <h3 class="text-lg leading-normal mb-2 font-semibold text-black"> Prévention de complication</h3>
-                  <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-              </div>
-          </div>
-          
         </div>
       </div>
     </section>
+
+    
+    <!-- section avantage patient -->
       
    
 
