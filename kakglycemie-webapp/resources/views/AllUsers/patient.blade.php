@@ -34,7 +34,21 @@
 
     </section>
 
-    
+    <!--  section banner  -->
+    <section class="bg-red-500  px-8 py-10 lg:px-40 lg:py-4 flex flex-col    justify-between gap-6 ">
+      <div class="font-bold flex  text-lg leading-5 text-white      opacity-100 lg:text-xl " >
+        <h3>Nous sommes là pour vous aider à suivre votre glycémie et vos traitements de manière simple et efficace.</h3>
+
+      </div>
+      <div class="flex flex-col gap-4">
+        <a href="#" class="px-4 py-2  text-sm font-semibold bg-gray-100 text-red-500 rounded-lg  hover:text-red-600 focus:text-gray-900 hover:shabg-gray-200  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> Connexion  </a>
+        <a href="#" class="px-4 py-2  text-sm font-semibold bg-gray-100 text-red-500 rounded-lg  hover:text-red-600 focus:text-gray-900 hover:shabg-gray-200  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> Inscription </a>
+      </div>
+    </section>
+      
+   
+
+
 
 
 </body>
