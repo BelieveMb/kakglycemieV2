@@ -6,14 +6,13 @@
             <!-- card body  -->
             <div class="flex-auto block py-2 px-8">
               <div>
-                <h3 class="mb-2 text-[2rem] font-semibold text-gray-700">Nos Médecins Components</h3>
+                <h3 class="mb-2 text-[2rem] font-semibold text-gray-700">Nos Médecins </h3>
 
                 <div class="flex flex-wrap flex-col align-center w-full gap-8 lg:flex-row  lg:align-start">
                   <div class="flex flex-col mr-5 text-center mb-11   ">
                     <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                      <img class="inline-block shrink-0 rounded-[.95rem]
-                      w-[150px] h-[150px] shadow-red-200 shadow-lg"
-                      src="bg1.jpg" alt="avarat image">
+                      <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
+                      src="../images/img_med.png" alt="avarat image">
                     </div>
                     <div class="text-center">
                       <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha Reynolds</a>
@@ -23,9 +22,8 @@
 
                   <div class="flex flex-col mr-5 text-center mb-11   ">
                     <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                      <img class="inline-block shrink-0 rounded-[.95rem]
-                      w-[150px] h-[150px] shadow-red-200 shadow-lg"
-                      src="bg2.jpg" alt="avarat image">
+                      <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
+                      src="../images/img_med.png" alt="avarat image">
                     </div>
                     <div class="text-center">
                       <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha Reynolds</a>

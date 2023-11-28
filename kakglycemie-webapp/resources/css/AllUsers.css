@@ -6,6 +6,9 @@
     focus:text-gray-900 hover:bg-gray-200  hover:shadow-outline
     focus:bg-gray-200 focus:outline-none;
 }
+body{
+    background-color: #100;
+}
 
 /* ############# slider of header  ############# */
 .mySlides{
