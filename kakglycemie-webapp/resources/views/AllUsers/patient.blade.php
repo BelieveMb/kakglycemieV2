@@ -47,7 +47,7 @@
     </section>
 
     <!--  section suivre sa glycémie  -->
-    <section class="bg-gray-50 px-8  lg:px-40 py-20">
+    <section class="bg-gray-200 px-8  lg:px-40 py-20">
       <div class=" flex flex-wrap justify-between">
         <div class="w-full md:w-1/2 ">
           <div class="">
@@ -109,7 +109,7 @@
     <section class="  px-8 py-10 lg:px-40 lg:py-4 ">
       <div id="services" class="section bg-white">
         <div >
-            <h3 class="text-2xl py-4 font-semibold text-gray-500">Votre <span class="text-red-600">gratuits</span> </h3>
+            <h3 class="text-3xl py-4 font-semibold text-gray-800">Votre <span class="text-red-600">gratuits</span> </h3>
         </div>
 
         <div class="flex flex-wrap flex-row text-center">
@@ -129,9 +129,48 @@
       </div>
     </section>
 
-    
-    <!-- section avantage patient -->
-      
+
+    <!-- section comment ça marche -->
+    <section class="bg-gray-800  px-8 py-10 lg:px-40 lg:py-8 ">
+      <div class="py-4 flex flex-col justify-center text-center">
+          <h3 class="text-3xl py-4 font-semibold text-gray-50">Comment ça <span class="text-red-500">marche</span> </h3>
+          <p class="text-gray-200">KaK glycémie est conçu pour aider les patients atteints de diabète à suivre leur taux de glycémie, d'échanger avec son médecin et à améliorer leur santé. </p>
+      </div>
+
+      <div class="flex flex-wrap flex-row text-center">
+          <div class="flex-shrink px-2 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+              <!-- CCM block -->
+              <div class="py-8 px-4 border-b border-gray-50 rounded-xl transform transition duration-300 ease-in-out hover:shadow-2xl ">
+                  <div class="inline-block text-gray-50 mb-4 text-5xl">
+                      <!-- icon -->
+                      <span class="bi bi-search"></span>
+                  </div>
+                  <h3 class="text-2xl leading-normal my-2 font-semibold text-white"> S'inscrire</h3>
+                  <p class="text-gray-100">This is a wider card with supporting text below as a natural content.</p>
+              </div>
+          </div>
+
+        </div>
+    </section>
+
+    <!-- section testimonials -->
+    <section class="bg-gray-100 flex gap-20 px-8  lg:px-40 lg:py-20 ">
+      <div class="flex min-h-screen items-center justify-center px-12 bg-white dark:bg-gray-950">
+        <div class="max-w-md rounded-3xl p-px bg-gradient-to-b from-blue-300 to-pink-300 dark:from-blue-800 dark:to-purple-800 ">
+          <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white dark:bg-gray-900">
+            <p class="text-gray-700 dark:text-gray-300">I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.</p>
+
+            <div class="mt-8 flex gap-4 items-center">
+              <img class="h-12 w-12 rounded-full" src="https://pbs.twimg.com/profile_images/1599029039297077249/p0znhFdE_400x400.jpg" alt="" />
+              <div>
+                <h3 class="text-lg font-medium text-gray-700 dark:text-white">Oketa Fred</h3>
+                <span class="text-sm tracking-wide text-gray-600 dark:text-gray-400">Fullstack Developer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
    
 
 
