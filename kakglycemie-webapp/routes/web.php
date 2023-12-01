@@ -14,6 +14,3 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[AllUsersController::class, 'index'])->name('accueilName');
-Route::get('/patient', [AllUsersController::class, 'patient'])->name('patientName');
-
