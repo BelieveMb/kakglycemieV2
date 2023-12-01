@@ -9,11 +9,25 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
+        <!-- sexePat -->
+        <div>
+            <x-input-label for="sexePat" :value="__('sexePat')" />
+            <x-text-input id="sexePat" class="block mt-1 w-full" type="text" name="sexePat" :value="old('sexePat')" required autofocus autocomplete="sexePat" />
+            <x-input-error :messages="$errors->get('sexePat')" class="mt-2" />
+        </div>
+
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>
+
+        <!-- telPat -->
+        <div>
+            <x-input-label for="telPat" :value="__('telPat')" />
+            <x-text-input id="telPat" class="block mt-1 w-full" type="text" name="telPat" :value="old('telPat')" required autofocus autocomplete="telPat" />
+            <x-input-error :messages="$errors->get('telPat')" class="mt-2" />
         </div>
 
         <!-- Password -->
