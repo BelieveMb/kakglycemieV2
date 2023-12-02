@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"> -->
+  <!-- flowbite link css  -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="../../../css/AllUsers.css">
 
@@ -37,14 +39,13 @@
                 </svg>
               </button>
             </div>
-            <nav :class="{'flex': open, 'hidden': !open}"
-              class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  hover:bg-gray-200  md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            <nav :class="{'flex': open, 'hidden': !open}"               class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="{{ route('patientName')}}">Patients</a>
 
-              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  hover:bg-gray-200  md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="#">Médecins</a>
-              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  hover:bg-gray-200  md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg   md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="#">A propos de nous</a>
 
               <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-100 text-red-500 rounded-lg   md:mt-0 md:ml-4 
@@ -69,6 +70,9 @@
 
 
   </main>
+  <!-- flowbite link js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+
 </body>
 
 </html>
