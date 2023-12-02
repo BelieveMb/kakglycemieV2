@@ -48,9 +48,7 @@
                 href="#">A propos de nous</a>
 
               <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-100 text-red-500 rounded-lg   md:mt-0 md:ml-4 
-                      hover:text-red-600
-                      focus:text-gray-900 hover:bg-gray-200  hover:shadow-outline
-                      focus:bg-gray-200 focus:outline-none " href="#">Connexion</a>
+                      hover:text-red-600 focus:text-gray-900 hover:bg-gray-200  hover:shadow-outline focus:bg-gray-200 focus:outline-none " href="{{ route('login') }}">Connexion</a>
 
 
             </nav>
