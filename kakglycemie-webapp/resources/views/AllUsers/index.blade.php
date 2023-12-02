@@ -20,16 +20,14 @@
           </p>
 
           <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-            <a href="#"
-              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
+            <a href="{{ route('register') }}" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
               S'inscrire
               <span class="ml-2 -mr-1 text-lg" >
                 <i class="bi bi-arrow-right"></i>
               </span>
               
             </a>
-            <a href="#"
-              class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+            <a href="{{ route('login') }}" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
               Se connecter
             </a>
           </div>
@@ -41,18 +39,14 @@
           Suivez vos patients, analysez leurs données de glycémie, échangez des messages sécurisés et offrez un suivi personnalisé, le tout dans un seul outil pratique.
           </p>
           <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-            <a href="#"
-              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
+            <a href="{{ route('register') }}"  class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
               Commencez 
               <span class="ml-2 -mr-1 text-lg" >
                 <i class="bi bi-arrow-right"></i>
               </span>              
             </a>
 
-            <a href="#"
-              class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400"> En savoir plus
-
-            </a>
+            <a href="{{ route('doctorName') }}"  class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400"> En savoir plus  </a>
 
           </div>
         </div>
@@ -90,9 +84,8 @@
 
       </div>
       <div>
-        <a href="{{ route('login') }}" class="px-4 py-2  text-sm font-semibold bg-gray-100 text-red-500 rounded-lg     
-        hover:text-red-600 focus:text-gray-900 hover:shabg-gray-200  hover:shadow-outline
-        focus:bg-gray-200 focus:outline-none"> Commencez  </a>
+        <a href="{{ route('register') }}" class="px-4 py-2  text-sm font-semibold bg-gray-100 text-red-500 rounded-lg     
+        hover:text-red-700 focus:text-gray-900 hover:bg-gray-200  hover:shadow-outline         focus:bg-gray-200 focus:outline-none"> Commencez  </a>
       </div>
       
     </section>

@@ -21,6 +21,16 @@ class AllUsersController extends Controller
         return view('AllUsers.patient', ["title"=>"patient"]);
     }
 
+    public function doctor()
+    {
+        //for patient
+        return view('AllUsers.doctor', ["title"=>"doctor"]);
+    }
+    public function about()
+    {
+        //for patient
+        return view('AllUsers.about', ["title"=>"à propos de nous"]);
+    }
    
     public function store(Request $request)
     {

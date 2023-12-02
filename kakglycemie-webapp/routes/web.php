@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/',[AllUsersController::class, 'index'])->name('accueilName');
 Route::get('/patient', [AllUsersController::class, 'patient'])->name('patientName');
+Route::get('/doctor', [AllUsersController::class, 'doctor'])->name('doctorName');
+Route::get('/about-us', [AllUsersController::class, 'about'])->name('aboutName');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
