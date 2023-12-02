@@ -14,12 +14,12 @@
     <section id="bgSection" class="bg-gray-700 bg-blend-multiply">
       <div class="  w-full text-center  ">
 
-        <div class="flex flex-col justify-center hidden mySlides fade  h-[80vh] bg-no-repeat bg-cover bg-center py-40 " style="background-image: url('{{ asset('images/patient_kak.jpg') }}');">
-          <h1 class="mb-4 mx-20 text-3xl font-extrabold tracking-tight leading-none text-rose-400 md:text-5xl lg:text-6xl "> Prenez le contrôle de votre glycémie avec KaK glycémie </h1>
-          <p class="mb-8 text-lg font-normal text-gray-100 lg:text-xl sm:px-16 lg:px-48">Suivez vos mesures, découvrez des tendances et échangez avec votre médecin en un seul endroit, avec le meilleur outil de gestion du diabète.
+        <div class=" flex-col justify-center hidden mySlides fade  h-[90vh] bg-no-repeat bg-cover bg-center py-40 " style="background-image: url('{{ asset('images/patient_kak.jpg') }}');">
+          <h1 class="mb-4 mx-4 text-4xl font-extrabold tracking-tight leading-none text-red-400 md:text-5xl lg:text-6xl lg:mx-20"> Prenez le contrôle de votre glycémie avec KaK glycémie </h1>
+          <p class="mb-8 text-lg font-bold text-red-100  lg:text-xl sm:px-16 lg:px-48">Suivez votre glycémie, découvrez des tendances et échangez avec votre médecin avec le meilleur outil de gestion du diabète.
           </p>
 
-          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+          <div class="flex flex-col space-y-4 mx-20 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 lg:mx-0">
             <a href="{{ route('register') }}" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
               S'inscrire
               <span class="ml-2 -mr-1 text-lg" >
@@ -33,12 +33,12 @@
           </div>
         </div>
 
-        <div class="hidden flex flex-col mySlides fade  h-[80vh] bg-no-repeat bg-cover bg-center py-40" style="background-image: url('{{ asset('images/med_pat.png') }}');">
-          <h1 class="mb-4 mx-20 text-3xl font-extrabold tracking-tight leading-none text-red-50 md:text-5xl lg:text-6xl ">   Optimisez votre pratique médicale avec KaK glycémie</h1>
-          <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
-          Suivez vos patients, analysez leurs données de glycémie, échangez des messages sécurisés et offrez un suivi personnalisé, le tout dans un seul outil pratique.
-          </p>
-          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+        
+        <div class=" flex-col justify-center hidden mySlides fade  h-[90vh] bg-no-repeat bg-cover bg-center py-40 " style="background-image: url('{{ asset('images/med_pat.png') }}');">
+          <h1 class="mb-4 mx-4 text-4xl font-extrabold tracking-tight leading-none text-red-400 md:text-5xl lg:text-6xl lg:mx-20"> Optimisez votre pratique médicale avec KaK glycémie</h1>
+          <p class="mb-8 text-lg font-normal text-gray-100 lg:text-xl sm:px-16 lg:px-48">          Suivez vos patients, analysez leurs données, échangez des messages sécurisés..., le tout dans un seul outil pratique.</p>
+
+          <div class="flex flex-col space-y-4 mx-20 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 lg:mx-0">
             <a href="{{ route('register') }}"  class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
               Commencez 
               <span class="ml-2 -mr-1 text-lg" >
@@ -50,6 +50,9 @@
 
           </div>
         </div>
+
+
+
 
       </div>
 
@@ -96,57 +99,37 @@
               <div class=" flex flex-col lg:flex-row group bg-white shadow-2xl shadow-gray-600 border ">
 
                     <div  class="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
-                        <span class="p-5 rounded-full bg-red-500 text-white shadow-lg shadow-red-200"><svg
-                                xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                            </svg></span>
+                        <span class="p-5 rounded-full bg-red-500 text-white shadow-lg shadow-red-200">
+                          <span class="bi bi-person-circle"></span>
+                        </span>
                         <h3 class="text-2xl font-medium text-slate-700 mt-3">Mon Profil</h3>
-                        <p class="mt-2 text-sm text-slate-500">Team BrainEdge education is a bunch of highly focused,
-                            energetic
-                            set of people.</p>
+                        <p class="mt-2 text-sm text-slate-500">KaK vous permet de créer un profil utilisateur détaillé où vous pouvez enregistrer vos informations personnelles.</p>
                     </div>
 
                     <div
                         class="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
-                        <span class="p-5 rounded-full bg-orange-500 text-white shadow-lg shadow-orange-200"><svg
-                                xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="1.5">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                                <polyline points="10 9 9 9 8 9"></polyline>
-                            </svg></span>
-                        <h3 class="text-2xl font-medium text-slate-700 mt-3">Mon Traitemnt</h3>
+                        <span class="p-5 rounded-full bg-orange-500 text-white shadow-lg shadow-orange-200"><span class="bi bi-clipboard2-pulse"> </span></span>
+                        <h3 class="text-2xl font-medium text-slate-700 mt-3">Mon Traitement</h3>
 
-                        <p class="mt-2 text-sm text-slate-500">Know where you stand and what next to do to succeed .</p>
+                        <p class="mt-2 text-sm text-slate-500">Vous pouvez facilement suivre votre traitement quotidien. Vous pouvez enregistrer les médicaments que vous prenez, les doses prescrites et les heures de prise. </p>
                     </div>
 
                     <div
                         class="p-10 flex flex-col items-center text-center group   md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
-                        <span class="p-5 rounded-full bg-yellow-500 text-white shadow-lg shadow-yellow-200"><svg
-                                xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                            </svg></span>
+                        <span class="p-5 rounded-full bg-yellow-500 text-white shadow-lg shadow-yellow-200">
+                          <span class="bi bi-clipboard-data-fill"></span>
+                        </span>
                         <p class="text-xl font-medium text-slate-700 mt-3">Graphe</p>
-                        <p class="mt-2 text-sm text-slate-500">Professional Advice for higher education abroad and
-                            select the
-                            top institutions worldwide.</p>
+                        <p class="mt-2 text-sm text-slate-500">Génère des graphiques clairs et intuitifs qui vous permettent de visualiser les variations de votre glycémie au fil du temps.</p>
                     </div>
 
               </div>
 
               <div class="w-full bg-gray-700 shadow-xl shadow-red-100 rounded-b-xl flex items-center
                 flex-col gap-4 py-6 px-8 lg:flex-row lg:py-10 lg:px-10 lg:justify-between">
-                    <p class=" text-white"> <span class="text-3xl font-medium lg:text-4xl">Still Confused ?</span> <br> <span
-                            class="text-lg">Book For Free Career Consultation Today ! </span></p>
-                    <button
-                        class="px-5 py-3  font-medium text-gray-700 shadow-xl  hover:bg-white duration-150  bg-red-400">BOOK
-                        AN APPOINTMENT </button>
+                    <p class=" text-white"><span class="text-3xl font-medium lg:text-4xl"> Avec ces avantages, KaK glycémie  </span> <br>
+                     <span class="text-base"> vous offre un suivi précis et personnalisé de votre glycémie </span>.</p>
+                    <a href="{{ route('register') }}"  class="px-5 py-3  font-medium text-gray-100 shadow-xl  hover:bg-white duration-150 hover:text-gray-700  bg-red-400 rounded-md">Rejoins nous </a >
               </div>
       </div>
     </section>
