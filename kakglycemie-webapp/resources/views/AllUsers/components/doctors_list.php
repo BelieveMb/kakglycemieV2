@@ -48,11 +48,11 @@
     <div class="flex-auto block py-2 px-8">
       <h3 class="mb-2 text-[2rem] font-semibold text-gray-700">Nos Médecins </h3>
       <div id="default-carousel" class="relative w-full" data-carousel="slide">
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+        <div class="relative overflow-hidden rounded-lg h-20 lg:h-64">
           <!-- Item 1 -->
-          <div class="hidden duration-1000 ease-in-out lg:flex-row" data-carousel-item>
+          <div class="hidden duration-1000 ease-in-out lg:flex-row" data-carousel-item id="choiceDoctor">
             <div class="flex flex-col lg:flex-row">
-              <div class="flex flex-col mr-5 text-center mb-11   ">
+              <div class="flex flex-col mr-5 text-center    ">
                 <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
                   <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
                     src="../images/img_med.png" alt="avarat image">
@@ -183,3 +183,7 @@
 
   </div>
 </section>
+
+<script>
+  const choiceDoctor = 
+</script>
