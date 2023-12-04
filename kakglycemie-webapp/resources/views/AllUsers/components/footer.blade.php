@@ -1,10 +1,58 @@
-    <!-- section of footer -->
+<button onclick="topFunction()" id="btnTotop" title="Go to top" 
+  class="fixed border-none bg-red-500 text-white text-2xl p-5 rounded-xl"><i class="bi bi-arrow-up"></i></button>
+<style>
+  #btnToto {
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+#btnTotop{
+  display: none;
+
+}
+
+#btnTotop:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+</style>   
+
+<script>
+    // Get the button:
+    let btnTotop = document.getElementById("btnTotop");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btnTotop.style.display = "block";
+      } else {
+        btnTotop.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+   <!-- section of footer -->
     <footer class="bg-gray-900 font-sans   px-8 lg:px-40 lg:py-20 ">
         <div class="container">
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:gap-8       lg:grid-cols-4">
                 <div class="flex flex-col  text-gray-50">
                   <div class="flex flex-col lg:flex-row items-center">
-                    <img src="./logo_white.png" alt="logo kak glycémie"class="w-[5rem] h-[5rem]">
+                    <img src="{{ asset('images/logo_white.png')}}" alt="logo kak glycémie"class="w-[5rem] h-[5rem]">
                     <h3 class="font-medium text-xl">KaK glycémie</h3>
                   </div>
                   <p>
@@ -21,7 +69,7 @@
                         hover:text-gray-100"><a href="{{ route('patientName')}}">Patient</a> </p>
                         <p class="text-gray-600 transition-colors duration-300
                         hover:underline hover:cursor-pointer
-                        hover:text-gray-100"> <a href="{{ route('patientName')}}">Médecin</a></p>
+                        hover:text-gray-100"> <a href="{{ route('doctorName')}}">Médecin</a></p>
                     </div>
                 </div>
 
@@ -47,8 +95,7 @@
             
             <hr class="my-6 border-gray-200 md:my-8  h-2" />
             
-            <p class="font-sans p-8 text-start md:text-center md:text-lg
-            md:p-4">© 2023 KaKglycémie. Tous les droits réservés. Développer par
-           <a href="" class="text-gray-200">Believe MB</a>.</p>
+            <p class="font-sans p-8 text-start md:text-center md:text-lg md:p-4 text-gray-300">© 2023 KaKglycémie. Tous les droits réservés. Développer par
+           <a href="" class="text-gray-200 font-semibold">Believe MB</a>.</p>
         </div>
     </footer>

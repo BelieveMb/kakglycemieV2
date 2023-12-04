@@ -195,6 +195,7 @@
     </section>
    
 
+    @include('AllUsers/components/footer')
 
 
 
