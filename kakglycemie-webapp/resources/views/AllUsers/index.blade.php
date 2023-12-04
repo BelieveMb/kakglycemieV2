@@ -146,46 +146,45 @@
         <div class="w-full md:w-4/12 ">
           <img alt="image votre avantage sur kak" class="max-w-full h-full rounded-lg shadow-lg" src="{{ asset('images/img_avantage.jpg') }}">
         </div>
-        <!-- <div class="w-full md:w-1/2 ml-auto mr-auto px-4"> -->
         <div class="w-full md:w-1/2 ml-auto mr-auto px-4">
           <div class="">
             <div class="text-red-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-red-500 mt-8">
-              <i class="bi bi-rocket text-xl"></i>
+              <i class="bi bi-person-hearts text-xl"></i>
             </div>
-            <h3 class="text-3xl font-semibold text-gray-700">A growing company</h3>
+            <h3 class="text-3xl font-semibold text-gray-700">Optimisez votre santé et suivez votre glycémie en toute simplicité !</h3>
             <p class="mt-4 text-lg leading-relaxed text-gray-700">
-              The extension comes with three pre-built pages to help you get started faster. You can change the text and images and you're
-              good to go.
+              Kak Glycémie est conçue pour vous offrir une expérience de suivi de la glycémie exceptionnelle. 
+              Vous pouvez bénéficier de nombreux avantages pour améliorer votre santé et mieux gérer votre diabète.
             </p>
             <ul class="list-none my-2">
 
               <li class="py-2">
                 <div class="flex items-center">
                   <div>
-                    <span class="text-xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-person"></i></span>
+                    <span class="text-xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-graph-up"></i></span>
                   </div>
                   <div>
-                    <h4 class="text-gray-700 font-semibold">Amazing page examples</h4>
-                  </div>
-                </div>
-              </li>
-              <li class="py-2">
-                <div class="flex items-center">
-                  <div>
-                    <span class="text-xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-person"></i></span>
-                  </div>
-                  <div>
-                    <h4 class="text-gray-700 font-semibold">Amazing page examples</h4>
+                    <h4 class="text-gray-700 font-semibold"> Suivi précis de la glycémie</h4>
                   </div>
                 </div>
               </li>
               <li class="py-2">
                 <div class="flex items-center">
                   <div>
-                    <span class="text-xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-person"></i></span>
+                    <span class="text-xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-bar-chart"></i></span>
                   </div>
                   <div>
-                    <h4 class="text-gray-700 font-semibold">Amazing page examples</h4>
+                    <h4 class="text-gray-700 font-semibold">Analyse des tendances et des variations</h4>
+                  </div>
+                </div>
+              </li>
+              <li class="py-2">
+                <div class="flex items-center">
+                  <div>
+                    <span class="text-xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-chat-dots"></i></span>
+                  </div>
+                  <div>
+                    <h4 class="text-gray-700 font-semibold">Communication avec votre médecin</h4>
                   </div>
                 </div>
               </li>
@@ -193,11 +192,10 @@
             </ul>
 
             <p class=" text-lg leading-relaxed text-gray-700">
-              Started faster. You can change the text and images and you're
-              good to go.
+              Avec Kak Glycémie, vous pouvez prendre le contrôle de votre santé en suivant votre glycémie avec précision...
             </p>
             <div class="mt-8">
-              <a href="#" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
+              <a href="{{ route('register') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
               focus:bg-red-200 focus:outline-none"> Commencez </a>
             </div>
           
@@ -218,7 +216,7 @@
         Suivez vos mesures, découvrez des tendances et échangez avec votre médecin en un seul endroit. Inscrivez-vous dès maintenant ou connectez-vous pour commencer votre parcours vers une meilleure gestion du diabète.
         </p>
         <div >
-          <a href="#" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
+          <a href="{{ route('register') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
           focus:bg-red-200 focus:outline-none"> Commencez </a>
         </div>
       </div>
@@ -290,18 +288,18 @@
     <!-- section compter number  -->
     <section class="bg-red-500  px-8 lg:px-40 lg:py-20 flex flex-col justify-between  lg:flex-row">
       <div class="text-gray-50 ">
-        <h3 class="text-7xl font-bold mb-4">+72 <span class="bi bi-person"></span></h3>
+        <h3 class="text-7xl font-bold mb-4">+72 <span class="bi bi-stethoscope"></span></h3>
         <span class="font-medium">Médecins à votre disposition</span>
       </div>
 
       <div class="text-gray-50 ">
-        <h3 class="text-7xl font-bold mb-4">+72 <span class="bi bi-person"></span></h3>
-        <span class="font-medium">Médecins à votre disposition</span>
+        <h3 class="text-7xl font-bold mb-4">+100 <span class="bi bi-users"></span></h3>
+        <span class="font-medium">Personnes pour vous compagner</span>
       </div>
 
       <div class="text-gray-50 ">
-        <h3 class="text-7xl font-bold mb-4">+72 <span class="bi bi-person"></span></h3>
-        <span class="font-medium">Médecins à votre disposition</span>
+        <h3 class="text-7xl font-bold mb-4">+6 <span class="bi bi-cogs"></span></h3>
+        <span class="font-medium">Outils technologies gratuits</span>
       </div>
 
     </section>

@@ -69,9 +69,7 @@
                     src="../images/img_med.png" alt="avarat image">
                 </div>
                 <div class="text-center">
-                  <a href="javascript:void(0)"
-                    class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha
-                    Reynolds</a>
+                  <a href="javascript:void(0)" id="choiceDoctor" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha Reynolds</a>
                   <span class="block font-medium text-red-300">Marketing Manager</span>
                 </div>
               </div>
@@ -82,8 +80,7 @@
                     src="../images/img_med.png" alt="avarat image">
                 </div>
                 <div class="text-center">
-                  <a href="javascript:void(0)"
-                    class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha
+                  <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha
                     Reynolds</a>
                   <span class="block font-medium text-red-300">Marketing Manager</span>
                 </div>
@@ -187,7 +184,7 @@
       <div class="modal-content" >
           <div class="flex justify-between items-center border-b-2 border-gray-200 pb-4">
               <h2 class="text-2xl font-semibold">Connectez-vous ou inscrivez-vous <i class="bi bi-check-fill"></i></h2>
-              <button  class="text-gray-500 hover:text-gray-700 focus:outline-none close">
+              <button  class="text-gray-500 hover:text-red-700 focus:outline-none close">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
                       <line x1="18" y1="6" x2="6" y2="18"></line>
                       <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -215,7 +212,6 @@
 
 
 <style>
-  /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -253,7 +249,7 @@
   cursor: pointer;
 }
 </style>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script> -->
+
 <script>
   var modal = document.getElementById("myModal");
 
