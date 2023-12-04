@@ -312,28 +312,25 @@
               <div class="flex flex-col items-center justify-between lg:flex-row ">
                   <div class=" relative ">
                       <div class=" absolute top-0 -left-48 z-0  opacity-50 ">
-                          <img src="https://placehold.co/200x100" class="w-36 z-0  h-full    object-fill fill-y text-y   ">
+                          <img src="" class="w-36 z-0  h-full    object-fill fill-y text-y   ">
                       </div>
                       <div class="lg:max-w-xl  relative z-40">
-                          <p class="flex text-sm uppercase text-g1  ">
-                              KaK glycémie pour médecin
-                          </p>
-                          <h2 class="mb-6 max-w-lg text-5xl font-light leading-snug tracking-tight text-g1 sm:text-7xl sm:leading-snug">
-                              KaK pour Médecin 
-                              <span class="my-1 inline-block border-b-8 border-g4 bg-white px-4 font-bold text-g4 animate__animated animate__flash">different</span>
+                          <p class="flex text-sm uppercase text-g1  "> Les avantages pour les médecins </p>
+                          <h2 class="text-4xl font-light text-g1 my-3  ">
+                              Améliorez la prise en charge de vos patients avec  
+                              <span class="my-1 inline-block border-b-8 border-g4 bg-white px-4 font-bold text-g4 animate__animated animate__flash">Kak Glycémie</span>
                           </h2>
-                          <p class="text-base text-gray-700">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                              accusantium doloremque it.</p>
+                          <p class="text-base text-gray-700">Kak Glycémie est une application de suivi de la glycémie en ligne qui offre de nombreux avantages pour les médecins. 
+                            En utilisant notre application, vous pouvez optimiser la prise en charge de vos patients diabétiques, suivre leur évolution et offrir un suivi personnalisé.</p>
                           <div class="mt-10 flex flex-col items-center md:flex-row">
-                              <a href="/" class="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-red-500 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-gray-600 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
-                                  View More</a>
-                              <a href="/" aria-label="" class="group inline-flex items-center font-semibold text-g1">Watch how
-                                  it works
+                              <a href="/" class="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-red-500 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-gray-600 focus:outline-none md:mr-4 md:mb-0 md:w-auto"> S'inscrire</a>
+                              <a href="/" aria-label="" class="group inline-flex items-center font-semibold text-g1"> Se connecter
                                   <svg xmlns="http://www.w3.org/2000/svg" class="ml-4 h-6 w-6 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                       <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                   </svg>
                               </a>
                           </div>
+                      </div>
                       </div>
                       
                     
@@ -343,7 +340,7 @@
                           <path stroke-linecap="round" stroke-linejoin="round" d="M16 17l-4 4m0 0l-4-4m4 4V3"></path>
                       </svg>
                       <div class="abg-orange-400 mx-auto w-fit overflow-hidden rounded-[6rem] rounded-br-none rounded-tl-none">
-                          <img src="./img_med.png" class="w-[35rem] h-[20rem]">
+                          <img src="{{ asset('images/img_avantage.jpg') }}" class="w-[35rem] h-[20rem]">
                       </div>
                   </div>
               </div>
