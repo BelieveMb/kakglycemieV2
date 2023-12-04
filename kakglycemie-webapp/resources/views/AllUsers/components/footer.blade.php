@@ -8,17 +8,20 @@
                     <h3 class="font-medium text-xl">KaK glycémie</h3>
                   </div>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Eius assumenda rem nam rerum. Similique praesentium vitae ea doloribus et in debitis!
+                    Avec Kak Glycémie, vous pouvez prendre le contrôle de votre santé en suivant votre glycémie avec précision, en analysant les tendances et en communiquant efficacement avec votre médecin. 
                   </p>
                 </div>
                 <div>
-                    <p class="font-semibold text-gray-800 dark:text-white">Quick Link</p>
+                    <p class="font-semibold text-gray-800 dark:text-white">Accès rapide</p>
 
                     <div class="flex flex-col items-start mt-5 space-y-2">
-                        <p class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Home</p>
-                        <p class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Who We Are</p>
-                        <p class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Our Philosophy</p>
+                        <p class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Accueil</p>
+                        <p class="text-gray-600 transition-colors duration-300
+                        hover:underline hover:cursor-pointer
+                        hover:text-gray-100"><a href="{{ route('patientName')}}">Patient</a> </p>
+                        <p class="text-gray-600 transition-colors duration-300
+                        hover:underline hover:cursor-pointer
+                        hover:text-gray-100"> <a href="{{ route('patientName')}}">Médecin</a></p>
                     </div>
                 </div>
 
@@ -44,6 +47,8 @@
             
             <hr class="my-6 border-gray-200 md:my-8  h-2" />
             
-            <p class="font-sans p-8 text-start md:text-center md:text-lg md:p-4">© 2023 You Company Inc. All rights reserved.</p>
+            <p class="font-sans p-8 text-start md:text-center md:text-lg
+            md:p-4">© 2023 KaKglycémie. Tous les droits réservés. Développer par
+           <a href="" class="text-gray-200">Believe MB</a>.</p>
         </div>
     </footer>
