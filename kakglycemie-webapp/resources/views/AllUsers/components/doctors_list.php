@@ -52,7 +52,7 @@
           <div class="hidden duration-1000 ease-in-out lg:flex-row" data-carousel-item  >
             <div class="flex flex-col lg:flex-row" >
               <div class="flex flex-col mr-5 text-center    ">
-                <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
+                <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]" id="choiceDoctor">
                   <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
                       src="../images/img_med.png" alt="avarat image">
                 </div>
@@ -64,7 +64,7 @@
               </div>
 
               <div class="flex flex-col mr-5 text-center mb-11   ">
-                <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
+                <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]" id="choiceDoctor">
                   <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
                     src="../images/img_med.png" alt="avarat image">
                 </div>
@@ -75,7 +75,7 @@
               </div>
 
               <div class="flex flex-col mr-5 text-center mb-11   ">
-                <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
+                <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]" id="choiceDoctor">
                   <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
                     src="../images/img_med.png" alt="avarat image">
                 </div>
@@ -180,7 +180,7 @@
 </section>
 
 <!-- modal bloc  -->
-  <div class="bg-white rounded-lg p-6 w-96 max-w-full shadow-lg transform transition-all duration-300 modal"  id="myModal" x-show.transition.opacity="showModal">
+  <div class="bg-white rounded-lg modal p-2 w-full shadow-lg transform transition-all duration-300  lg:p-6 lg:w-96"  id="myModal" x-show.transition.opacity="showModal">
       <div class="modal-content" >
           <div class="flex justify-between items-center border-b-2 border-gray-200 pb-4">
               <h2 class="text-2xl font-semibold">Connectez-vous ou inscrivez-vous <i class="bi bi-check-fill"></i></h2>
@@ -194,7 +194,7 @@
           
           <div class="mt-6 space-y-4">
               <p class="text-lg text-gray-600">Pour bénéficier de tous les avantages et commencer à prendre le contrôle de votre santé, veuillez vous connecter ou vous inscrire dès maintenant !</p>
-              <div class="flex flex-row space-x-4 justify-center">
+              <div class="flex flex-row space-x-4 justify-center text-sm lg:text-xl">
                   <a  href="{{ route('register') }}"  class="flex items-center justify-center gap-2 bg-gray-700 text-gray-100 px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300"> Inscrivez-vous <i class="bi bi-person-plus-fill"></i> </a>
                   <a  href="{{ route('login') }}"  class="flex items-center justify-center gap-2 bg-red-500 text-gray-100 px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300"> Connectez-vous <i class="bi bi-box-arrow-in-left"></i> </a>
               </div>
@@ -231,7 +231,16 @@
   margin: 10% 30%; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 40%; /* Could be more or less, depending on screen size */
+  width: 40%; 
+}
+
+@media (max-width: 854px) {
+  .modal-content{
+    margin: 2% 5%; /* 15% from the top and centered */
+    padding: 8px;
+    width: 90%; 
+
+  }
 }
 
 /* The Close Button */

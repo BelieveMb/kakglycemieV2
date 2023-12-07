@@ -14,9 +14,9 @@
     <section id="bgSection" class="bg-gray-700 bg-blend-multiply">
       <div class="  w-full text-center  ">
 
-        <div class=" flex-col justify-center hidden mySlides fade  h-[90vh] bg-no-repeat bg-cover bg-center py-40 " style="background-image: url('{{ asset('images/patient_kak.jpg') }}');">
+        <div class=" flex-col justify-center hidden mySlides fade  h-auto w-full bg-no-repeat bg-cover bg-center py-40 " style="background-image: url('{{ asset('images/patient_kak.jpg') }}');">
           <h1 class="mb-4 mx-4 text-4xl font-extrabold tracking-tight leading-none text-red-400 md:text-5xl lg:text-6xl lg:mx-20"> Prenez le contrôle de votre glycémie avec KaK glycémie </h1>
-          <p class="mb-8 text-lg font-bold text-red-100  lg:text-xl sm:px-16 lg:px-48">Suivez votre glycémie, découvrez des tendances et échangez avec votre médecin avec le meilleur outil de gestion du diabète.
+          <p class="mb-8 px-4 text-lg font-bold text-red-100  lg:text-xl sm:px-16 lg:px-48">Suivez votre glycémie, découvrez des tendances et échangez avec votre médecin avec le meilleur outil de gestion du diabète.
           </p>
 
           <div class="flex flex-col space-y-4 mx-20 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 lg:mx-0">
@@ -34,9 +34,9 @@
         </div>
 
         
-        <div class=" flex-col justify-center hidden mySlides fade  h-[90vh] bg-no-repeat bg-cover bg-center py-40 " style="background-image: url('{{ asset('images/med_pat.png') }}');">
+        <div class=" flex-col justify-center hidden mySlides fade  h-auto w-full bg-no-repeat bg-cover bg-center py-40 " style="background-image: url('{{ asset('images/med_pat.png') }}');">
           <h1 class="mb-4 mx-4 text-4xl font-extrabold tracking-tight leading-none text-red-400 md:text-5xl lg:text-6xl lg:mx-20"> Optimisez votre pratique médicale avec KaK glycémie</h1>
-          <p class="mb-8 text-lg font-normal text-gray-100 lg:text-xl sm:px-16 lg:px-48">          Suivez vos patients, analysez leurs données, échangez des messages sécurisés..., le tout dans un seul outil pratique.</p>
+          <p class="mb-8 text-lg font-normal px-4 text-gray-100 lg:text-xl sm:px-16 lg:px-48">          Suivez vos patients, analysez leurs données, échangez des messages sécurisés..., le tout dans un seul outil pratique.</p>
 
           <div class="flex flex-col space-y-4 mx-20 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 lg:mx-0">
             <a href="{{ route('register') }}"  class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
@@ -209,7 +209,7 @@
     <!-- components our doctors  -->
 
     <!-- section accordion  -->
-    <section class="flex gap-20 px-8  lg:px-40 lg:py-20 ">
+    <section class="flex flex-col gap-20 px-8  lg:px-40 lg:py-20 lg:flex-row ">
       <div class="w-1/2">
         <h2 class="text-red-500 text-[4rem] font-bold leading-none">La meilleure solution pour tous</h2>
         <p class="py-10">
