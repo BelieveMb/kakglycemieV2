@@ -209,9 +209,9 @@
     <!-- components our doctors  -->
 
     <!-- section accordion  -->
-    <section class="flex flex-col gap-20 px-8  lg:px-40 lg:py-20 lg:flex-row ">
-      <div class="w-1/2">
-        <h2 class="text-red-500 text-[4rem] font-bold leading-none">La meilleure solution pour tous</h2>
+    <section class="flex flex-col gap-20 px-8 py-10 lg:px-40 lg:py-20 lg:flex-row ">
+      <div class="w-full  lg:w-1/2">
+        <h2 class="text-red-500 text-[2rem] font-bold leading-none lg:text-[4rem] ">La meilleure solution pour tous</h2>
         <p class="py-10">
         Suivez vos mesures, découvrez des tendances et échangez avec votre médecin en un seul endroit. Inscrivez-vous dès maintenant ou connectez-vous pour commencer votre parcours vers une meilleure gestion du diabète.
         </p>
@@ -221,7 +221,7 @@
         </div>
       </div>
 
-      <div class="w-1/2 mx-auto bg-white rounded">
+      <div class="w-full  bg-white rounded lg:w-1/2 lg:mx-auto">
 
         <div id="accordion-collapse" data-accordion="collapse">
             <h2 id="accordion-collapse-heading-1">
@@ -286,9 +286,9 @@
     </section>
 
     <!-- section compter number  -->
-    <section class="bg-red-500  px-8 lg:px-40 lg:py-20 flex flex-col justify-between  lg:flex-row">
+    <section class="bg-red-500  px-8 py-10 lg:px-40 lg:py-20 flex flex-col items-center gap-y-10 lg:justify-between  lg:flex-row lg:gap-10">
       <div class="text-gray-50 ">
-        <h3 class="text-7xl font-bold mb-4">+72 <span class="bi bi-stethoscope"></span></h3>
+        <h3 class="text-7xl font-bold mb-4">+72 <span class="bi bi-person"></span></h3>
         <span class="font-medium">Médecins à votre disposition</span>
       </div>
 
@@ -305,7 +305,7 @@
     </section>
 
     <!-- section kak for doctor  -->
-    <section class=" px-8 lg:px-40 lg:py-10 ">
+    <section class=" px-8 py-10 lg:px-40 lg:py-10 ">
       <div class="bg-white relative   flex items-center  justify-center overflow-hidden z-50 ">
           
           <div class="relative mx-auto h-full   pb-20   md:pb-10 sm:max-w-xl md:max-w-full lg:max-w-screen-xl ">
