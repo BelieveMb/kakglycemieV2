@@ -40,7 +40,7 @@
     }
 </script>
    <!-- section of footer -->
-    <footer class="bg-gray-900 font-sans   px-8 lg:px-40 lg:py-20 ">
+    <footer class="bg-gray-900 font-sans   px-8 py-10 lg:px-40 lg:py-20 ">
         <div class="container">
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:gap-8       lg:grid-cols-4">
                 <div class="flex flex-col  text-gray-50">
