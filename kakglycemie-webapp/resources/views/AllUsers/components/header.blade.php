@@ -12,7 +12,7 @@
   <!-- flowbite link css  -->
   <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" href="../../../css/AllUsers.css">
+  <link rel="stylesheet" href="../../../css/AllUsers.css">  
 
 </head>
 
