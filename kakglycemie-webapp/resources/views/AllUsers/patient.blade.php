@@ -116,37 +116,37 @@
         <div class="flex flex-wrap flex-row text-center">
           <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
               <!-- service block -->
-              <div class="py-8 px-4 mb-12 bg-gray-400 border-b border-gray-700 rounded-xl transform transition duration-300 ease-in-out hover:-translate-y-2 hover:bg-gray-200">
+              <div class="py-8 px-4 mb-12 bg-gray-400 border-b border-gray-700 rounded-xl transform transition duration-300 ease-in-out hover:-translate-y-2 hover:bg-gray-500">
                   <div class="inline-block text-gray-800 mb-4 text-5xl">
                       <!-- icon -->
                       <span class="bi bi-stopwatch"></span>
                   </div>
                   <h3 class="text-lg leading-normal mb-2 font-semibold text-black"> Suivi précis et en temps réel</h3>
-                  <p class="text-gray-50 hover:text-gray-500 ">Vous pouvez suivre votre glycémie en temps réel et recevoir des notifications en temps réel lorsque vos mesures sont hors de la plage cible. Les données sont stockées dans le cloud et accessibles à tout moment, ce qui vous permet de suivre votre progression à distance.</p>
+                  <p class="text-gray-50  ">Vous pouvez suivre votre glycémie en temps réel et recevoir des notifications en temps réel lorsque vos mesures sont hors de la plage cible. Les données sont stockées dans le cloud et accessibles à tout moment, ce qui vous permet de suivre votre progression à distance.</p>
               </div>
           </div>
 
           <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
               <!-- service block -->
-              <div class="py-8 px-4 mb-12 bg-gray-400 border-b border-gray-700 rounded-xl transform transition duration-300 ease-in-out hover:-translate-y-2 hover:bg-gray-200">
+              <div class="py-8 px-4 mb-12 bg-gray-400 border-b border-gray-700 rounded-xl transform transition duration-300 ease-in-out hover:-translate-y-2 hover:bg-gray-500">
                   <div class="inline-block text-gray-800 mb-4 text-5xl">
                       <!-- icon -->
-                      <span class="bi bi-comment-dots"></span>
+                      <span class="bi bi-chat-dots"></span>
                   </div>
                   <h3 class="text-lg leading-normal mb-2 font-semibold text-black"> Échangez des messages sécurisés avec votre médecin </h3>
-                  <p class="text-gray-50 hover:text-gray-500 "> Kak Glycémie facilite la communication entre les patients diabétiques et leur médecin. Vous pouvez échanger des messages sécurisés avec votre médecin, ce qui permet une prise en charge personnalisée et rapide. </p>
+                  <p class="text-gray-50  "> Kak Glycémie facilite la communication entre les patients diabétiques et leur médecin. Vous pouvez échanger des messages sécurisés avec votre médecin, ce qui permet une prise en charge personnalisée et rapide. </p>
               </div>
           </div>
 
           <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
               <!-- service block -->
-              <div class="py-8 px-4 mb-12 bg-gray-400 border-b border-gray-700 rounded-xl transform transition duration-300 ease-in-out hover:-translate-y-2 hover:bg-gray-200">
+              <div class="py-8 px-4 mb-12 bg-gray-400 border-b border-gray-700 rounded-xl transform transition duration-300 ease-in-out hover:-translate-y-2 hover:bg-gray-500">
                   <div class="inline-block text-gray-800 mb-4 text-5xl">
                       <!-- icon -->
                       <span class="bi bi-clipboard2-data"></span>
                   </div>
                   <h3 class="text-lg leading-normal mb-2 font-semibold text-black"> Optimisez votre gestion du diabète avec Kak Glycémie. </h3>
-                  <p class="text-gray-50 hover:text-gray-500 "> Kak Glycémie offre une gestion personnalisée du diabète en fournissant des outils avancés d'analyse et de suivi. Grâce à des graphiques détaillés, vous pouvez visualiser les tendances de votre glycémie sur une période donnée...</p>
+                  <p class="text-gray-50  "> Kak Glycémie offre une gestion personnalisée du diabète en fournissant des outils avancés d'analyse et de suivi. Grâce à des graphiques détaillés, vous pouvez visualiser les tendances de votre glycémie sur une période donnée...</p>
               </div>
           </div>
 
@@ -165,24 +165,47 @@
       </div>
 
       <div class="flex flex-wrap flex-row text-center">
-          <div class="flex-shrink px-2 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+          <div class="flex flex-col lg:flex-row gap-5 lg:gap-16  px-2 max-w-full w-full  lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
               <!-- CCM block -->
               <div class="py-8 px-4 border-b border-gray-50 rounded-xl transform transition duration-300 ease-in-out hover:shadow-2xl ">
                   <div class="inline-block text-gray-50 mb-4 text-5xl">
                       <!-- icon -->
-                      <span class="bi bi-search"></span>
+                      <span class="bi bi-person-plus"></span>
                   </div>
-                  <h3 class="text-2xl leading-normal my-2 font-semibold text-white"> S'inscrire</h3>
-                  <p class="text-gray-100">This is a wider card with supporting text below as a natural content.</p>
+                  <h3 class="text-2xl leading-normal my-2 font-semibold text-white"> Création de profil</h3>
+                  <p class="text-gray-100">  L'utilisateur s'inscrit sur Kak Glycémie en fournissant les informations nécessaires. Une fois inscrit, l'utilisateur peut directement se connecter en utilisant ses identifiants</p>
+              </div>
+
+              <div class="py-8 px-4 border-b border-gray-50 rounded-xl transform transition duration-300 ease-in-out hover:shadow-2xl ">
+                  <div class="inline-block text-gray-50 mb-4 text-5xl">
+                      <!-- icon -->
+                      <span class="bi bi-box-arrow-in-left"></span>
+                  </div>
+                  <h3 class="text-2xl leading-normal my-2 font-semibold text-white"> Connexion sécurisée</h3>
+                  <p class="text-gray-100">L'utilisateur se connecte à Kak Glycémie chaque jour pour enregistrer sa glycémie. Il peut saisir les mesures de glycémie prises à différents moments de la journée, telles que le matin à jeun, avant les repas ou après les repas.   </p>
+              </div>
+
+              <div class="py-8 px-4 border-b border-gray-50 rounded-xl transform transition duration-300 ease-in-out hover:shadow-2xl ">
+                  <div class="inline-block text-gray-50 mb-4 text-5xl">
+                      <!-- icon -->
+                      <span class="bi bi-graph-up-arrow"></span>
+                  </div>
+                  <h3 class="text-2xl leading-normal my-2 font-semibold text-white"> Graphe de suivi</h3>
+                  <p class="text-gray-100"> À partir des données quotidiennes de glycémie saisies par l'utilisateur, Kak Glycémie génère automatiquement un graphe clair et informatif. Ces graphiques montrent la variation de la glycémie au fil du temps. </p>
               </div>
           </div>
 
         </div>
+
+        <div class="px-8 my-8 text-gray-100 font-medium">
+          <h3 class="text-sm lg:text-xl my-2"><i class="bi bi-chat"></i>  Communication avec le médecin  </h3>
+          <p> L'utilisateur peut facilement communiquer avec son médecin via la plateforme Kak Glycémie. Il peut échanger des messages sécurisés, poser des questions, partager des préoccupations et recevoir des conseils personnalisés pour améliorer sa gestion du diabète. Cette communication directe avec le médecin permet une prise en charge personnalisée et une réponse rapide aux besoins de l'utilisateur.</p>
+        </div>
     </section>
 
     <!-- section testimonials -->
-    <section class="bg-gray-100 flex gap-20 px-8  lg:px-40 lg:py-20 ">
-      <div class="flex items-center justify-center flex-row gap-2">
+    <section class="bg-gray-100 flex gap-20 px-8 py-10 lg:px-40 lg:py-20 ">
+      <div class="flex items-center justify-center flex-col gap-2 lg:flex-row">
           <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white">
             <p class="text-gray-700">I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.</p>
 
