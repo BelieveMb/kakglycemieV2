@@ -39,13 +39,13 @@
                 </svg>
               </button>
             </div>
-            <nav :class="{'flex': open, 'hidden': !open}"               class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                href="{{ route('patientName')}}">Patients</a>
+            <nav :class="{'flex': open, 'hidden': !open}"               class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row text-gray-200">
+              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 text-gray-200 focus:outline-none focus:shadow-outline"
+                href="{{ route('patientName')}}"> <span class="@if(request()->route()->getName()=== 'patientName') border-b-4 border-gray-50 text-white @endif">Patients</span> </a>
 
-              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 text-gray-200 focus:outline-none focus:shadow-outline"
                 href="{{ route('doctorName')}}">Médecins</a>
-              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg   md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg   md:mt-0 md:ml-4 hover:text-red-500 focus:text-red-400 hover:bg-gray-200 text-gray-200 focus:outline-none focus:shadow-outline"
                 href="{{ route('aboutName')}}">A propos de nous</a>
 
               <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-100 text-red-500 rounded-lg   md:mt-0 md:ml-4 
