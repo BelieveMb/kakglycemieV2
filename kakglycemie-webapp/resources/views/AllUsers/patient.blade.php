@@ -12,8 +12,9 @@
     @include('AllUsers/components/header')
 
     <section class="flex items-end  px-8 py-10 lg:px-40 lg:py-4 h-[80vh] bg-no-repeat bg-cover bg-center lg:h-[90vh] "   style="background-image: url('{{ asset('images/patient_kak.jpg') }}');">
+      
      
-      <div class="w-[90%] h-auto lg:w-[60%]  py-4 px-8  border-2 border-red-500 rounded-2xl shadow-4xl shadow-gray-800 bg-gray-50 opacity-80 mb-4 lg:text-xl">
+    <div class="w-[90%] h-auto lg:w-[60%]  py-4 px-8  border-2 border-red-500 rounded-2xl shadow-4xl shadow-gray-800 bg-gray-50 opacity-80 mb-4 lg:text-xl">
           <span>KaK Glycémie pour le diabètique</span>
           <h1 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-red-500 md:text-35xl lg:text-5xl "> Patients par KaK</h1>
           <p class="mb-8 text-lg font-normal text-gray-800 lg:text-xl ">Suivez votre glycémie en tout simplicité.</p>
