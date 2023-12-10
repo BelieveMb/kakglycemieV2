@@ -84,20 +84,26 @@
                     <h1 class="font-bold text-3xl text-gray-900">S'inscrire sur KaK Glycémie</h1>
                     <p>Vous voulez vous enregistrer comme :</p>
                     
-                    <div class="mt-3 flex justify-center md:items-center md:-mx-2">
-                        <button class="flex justify-center w-full px-6 py-3 text-white bg-blue-500 rounded-md md:w-auto md:mx-2 focus:outline-none">
+                    <div class="mt-3 flex justify-center md:items-center md:-mx-2 gap-3">
+                        <!-- <button class="flex justify-center w-full px-6 py-1 lg:py-3 text-white bg-red-500 rounded-md md:w-auto md:mx-2 focus:outline-none">
                             <i class="bi bi-person-plus"></i>
                             <span class="mx-2">
                                 Patient 
                             </span>
-                        </button>
+                        </button> -->
+                        <a class="flex justify-center w-full px-6 py-3 mt-4 bg-red-500 border border-gray-500 text-gray-50 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-red-300">
+                            <i class="bi bi-person-plus"></i>    
+                            <span class="mx-2">
+                                Patient 
+                            </span>
+                        </a>
 
-                        <button class="flex justify-center w-full px-6 py-3 mt-4 text-blue-500 border border-blue-500 rounded-md md:mt-0 md:w-auto md:mx-2 dark:border-blue-400 dark:text-blue-400 focus:outline-none">
+                        <a class="flex justify-center w-full px-6 py-3 mt-4 text-gray-700 border border-gray-700 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-gray-700 hover:text-white">
                             <i class="bi bi-file-person-fill"></i>    
                             <span class="mx-2">
                                 Médecin 
                             </span>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div>
@@ -171,8 +177,6 @@
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
                             <button class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold text-upp" type="submit">S'inscrire</button>
-                <!-- {{ __('Register') }} -->
-
                         </div>
                     </div>
                 </div>
