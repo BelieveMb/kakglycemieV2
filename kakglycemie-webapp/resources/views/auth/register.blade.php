@@ -86,19 +86,21 @@
                     
                     <div class="mt-3 flex justify-center md:items-center md:-mx-2 gap-3">
                         
-                        <button  id="showPatientForm"  class="flex justify-center w-full px-6 py-3 mt-4 bg-red-500 border border-gray-500 text-gray-50 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-red-700">
+                        <!-- <button  id="showPatientForm"  class="{ $activeForm === 'A' ? 'text-yellow' : '' }} flex justify-center w-full px-6 py-3 mt-4 bg-red-500 border border-gray-500 text-gray-50 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-red-700"> -->
+                        <a  id="showPatientForm"  
+                        class="{ $activeForm === 'PatientForm' ? 'text-yellow-500' : 'text-red-900' } ">
                             <i class="bi bi-person-plus"></i>    
                             <span class="mx-2">
                                 Patient 
                             </span>
-                        </button>
+                        </a>
 
-                        <a href="#" id="showMedecinForm" class="flex justify-center w-full px-6 py-3 mt-4 text-gray-700 border border-gray-700 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-gray-700 hover:text-white">
+                        <button href="#" id="showMedecinForm" class="flex justify-center w-full px-6 py-3 mt-4 text-gray-700 border border-gray-700 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-gray-700 hover:text-white">
                             <i class="bi bi-file-person-fill"></i>    
                             <span class="mx-2">
                                 Médecin 
                             </span>
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div>
@@ -194,6 +196,7 @@
         </div>
         </section>
     </main>
+    
 
    <script>
        document.addEventListener('DOMContentLoaded', function() {
@@ -201,15 +204,22 @@
             const buttonB = document.getElementById('showMedecinForm');
             const viewA = document.getElementById('PatientForm');
             const viewB = document.getElementById('MedecinForm');
+            <?php $activeForm="" ?>
 
             buttonA.addEventListener('click', function() {
                 viewA.style.display = 'block';
                 viewB.style.display = 'none';
+                <?php
+                    $activeForm = "PatientForm";
+                ?>
+                console.log("<?=$activeForm ?>")
             });
 
             buttonB.addEventListener('click', function() {
                 viewA.style.display = 'none';
                 viewB.style.display = 'block';
+                $activeForm = "MedecinForm";
+
             });
         });
    </script>
