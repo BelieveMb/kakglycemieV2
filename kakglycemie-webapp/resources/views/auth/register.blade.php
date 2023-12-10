@@ -102,6 +102,9 @@
                     </div>
                 </div>
                 <div>
+                    <div id="MedecinForm" style="display: none">
+                        @include('Auth/form_med')
+                    </div>
                     <form method="POST" action="{{ route('register') }}" style="display: none" id="PatientForm">
                         @csrf
                     <div class="flex flex-row gap-3">
@@ -195,14 +198,13 @@
    <script>
        document.addEventListener('DOMContentLoaded', function() {
             const buttonA = document.getElementById('showPatientForm');
-            const buttonB = document.getElementById('buttonB');
+            const buttonB = document.getElementById('showMedecinForm');
             const viewA = document.getElementById('PatientForm');
-            const viewB = document.getElementById('viewB');
+            const viewB = document.getElementById('MedecinForm');
 
             buttonA.addEventListener('click', function() {
                 viewA.style.display = 'block';
-                // viewB.style.display = 'none';
-                console.log("ddd")
+                viewB.style.display = 'none';
             });
 
             buttonB.addEventListener('click', function() {
