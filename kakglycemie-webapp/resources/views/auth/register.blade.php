@@ -20,21 +20,21 @@
 <div class="min-w-screen min-h-screen bg-gray-500 flex items-center justify-center px-5 py-5">
     <div class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style="max-width:1000px">
         <div class="md:flex w-full">
-            <div class="hidden md:block w-1/2 bg-indigo-500 py-10 px-10">
+            <div class="hidden md:block w-1/2  bg-red-500 py-10 px-10">
 
 
                 <div id="default-carousel" class="relative w-full" data-carousel="slide">
                     <!-- Carousel wrapper -->
-                    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                    <div class="relative h-full overflow-hidden rounded-lg md:h-[90vh]">
                         <!-- Item 1 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="{{ asset('images/patient.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            <img src="{{ asset('images/inscript_man.jpg') }}" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="image s'inscrire sur kak..">
                 <!-- <img alt="image s'inscrire sur kak" class="max-w-full h-full rounded-lg shadow-lg" > -->
 
                         </div>
                         <!-- Item 2 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="{{ asset('images/inscrip_man.jpg') }}"  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            <img src="{{ asset('images/img_avantage.jpg') }}"  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                         </div>
                         <!-- Item 3 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -46,7 +46,7 @@
                         </div>
                         <!-- Item 5 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="{{ asset('images/patient.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            <img src="{{ asset('images/doctor_special.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                         </div>
                     </div>
                     <!-- Slider indicators -->
@@ -85,20 +85,15 @@
                     <p>Vous voulez vous enregistrer comme :</p>
                     
                     <div class="mt-3 flex justify-center md:items-center md:-mx-2 gap-3">
-                        <!-- <button class="flex justify-center w-full px-6 py-1 lg:py-3 text-white bg-red-500 rounded-md md:w-auto md:mx-2 focus:outline-none">
-                            <i class="bi bi-person-plus"></i>
-                            <span class="mx-2">
-                                Patient 
-                            </span>
-                        </button> -->
-                        <a class="flex justify-center w-full px-6 py-3 mt-4 bg-red-500 border border-gray-500 text-gray-50 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-red-300">
+                        
+                        <button  id="showPatientForm"  class="flex justify-center w-full px-6 py-3 mt-4 bg-red-500 border border-gray-500 text-gray-50 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-red-700">
                             <i class="bi bi-person-plus"></i>    
                             <span class="mx-2">
                                 Patient 
                             </span>
-                        </a>
+                        </button>
 
-                        <a class="flex justify-center w-full px-6 py-3 mt-4 text-gray-700 border border-gray-700 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-gray-700 hover:text-white">
+                        <a href="#" id="showMedecinForm" class="flex justify-center w-full px-6 py-3 mt-4 text-gray-700 border border-gray-700 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-gray-700 hover:text-white">
                             <i class="bi bi-file-person-fill"></i>    
                             <span class="mx-2">
                                 Médecin 
@@ -107,14 +102,14 @@
                     </div>
                 </div>
                 <div>
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" style="display: none" id="PatientForm">
                         @csrf
                     <div class="flex flex-row gap-3">
                         <div class="w-1/2 px-3 mb-5">
                             <label for="name" class="text-xs font-semibold px-1">Nom complet</label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre nom" name="name" :value="old('name')" required autofocus autocomplete="name" >
+                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-red-500" placeholder="Votre nom" name="name" :value="old('name')" required autofocus autocomplete="name" >
                             </div>
                             <x-input-error :messages="$errors->get('name')" class="mt-2" />
                         </div>
@@ -122,7 +117,7 @@
                             <label for="sexePat" class="text-xs font-semibold px-1">Sexe</label>
                             <div class="flex ">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                <select id="sexePat"  class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" name="sexePat" :value="old('sexePat')" required autofocus autocomplete="sexePat" >
+                                <select id="sexePat"  class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-red-500" name="sexePat" :value="old('sexePat')" required autofocus autocomplete="sexePat" >
                                     <option disabled>Choisir...</option>
                                     <option value="Masculin">Masculin</option>
                                     <option value="Feminin">Feminin</option>
@@ -145,7 +140,7 @@
                         <div class="w-full px-3 mb-5">
                             <label for="telPat" class="text-xs font-semibold px-1">Téléphone </label>
                             <div class="flex">
-                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-phone text-gray-400 text-lg"></i></div>
                                 <input type="tel" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre numéro de téléphone" name="telPat" :value="old('telPat')" required autofocus autocomplete="telPat" >
                             </div>
                             <x-input-error :messages="$errors->get('telPat')" class="mt-2" />
@@ -156,17 +151,17 @@
                         <div class="w-1/2 px-3 mb-5">
                             <label for="password" class="text-xs font-semibold px-1" :value="__('Password')">Mot de passe </label>
                             <div class="flex">
-                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-lock text-gray-400 text-lg"></i></div>
                                 <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre mot de passe" name="password" :value="old('password')" required autofocus autocomplete="password" >
                             </div>
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                         </div>
 
                         <div class="w-1/2 px-3 mb-5">
-                            <label for="password_confirmation" class="text-xs font-semibold px-1" :value="__('Confirm Password')">Confirmer votre mot de passe </label>
+                            <label for="password_confirmation" class="text-xs font-semibold px-1" :value="__('Confirm Password')">Confirmer votre  </label>
                             <div class="flex">
-                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre nom" name="password_confirmation" :value="old('password_confirmation')" required autofocus autocomplete="password_confirmation" >
+                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-lock text-gray-400 text-lg"></i></div>
+                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Mot de passe" name="password_confirmation" :value="old('password_confirmation')" required autofocus autocomplete="password_confirmation" >
                             </div>
                             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                         </div>
@@ -176,7 +171,7 @@
                     
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
-                            <button class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold text-upp" type="submit">S'inscrire</button>
+                            <button class="block w-full max-w-xs mx-auto bg-red-500 hover:bg-red-700 focus:bg-red-700 text-white rounded-lg px-3 py-3 font-semibold text-upp" type="submit">S'inscrire</button>
                         </div>
                     </div>
                 </div>
@@ -186,15 +181,35 @@
     </div>
 </div>
 
-<!-- BUY ME A BEER AND HELP SUPPORT OPEN-SOURCE RESOURCES -->
-<div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
-    <div>
-        <a title="Buy me a beer" href="https://www.buymeacoffee.com/scottwindon" target="_blank" class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">
-            <img class="object-cover object-center w-full h-full rounded-full" src="https://i.pinimg.com/originals/60/fd/e8/60fde811b6be57094e0abc69d9c2622a.jpg"/>
-        </a>
-    </div>
-</div>
+        <!-- BUY ME A BEER AND HELP SUPPORT OPEN-SOURCE RESOURCES -->
+        <div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
+            <div>
+                <a title="Buy me a beer" href="https://www.buymeacoffee.com/scottwindon" target="_blank" class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">
+                    <img class="object-cover object-center w-full h-full rounded-full" src="https://i.pinimg.com/originals/60/fd/e8/60fde811b6be57094e0abc69d9c2622a.jpg"/>
+                </a>
+            </div>
+        </div>
         </section>
     </main>
+
+   <script>
+       document.addEventListener('DOMContentLoaded', function() {
+            const buttonA = document.getElementById('showPatientForm');
+            const buttonB = document.getElementById('buttonB');
+            const viewA = document.getElementById('PatientForm');
+            const viewB = document.getElementById('viewB');
+
+            buttonA.addEventListener('click', function() {
+                viewA.style.display = 'block';
+                // viewB.style.display = 'none';
+                console.log("ddd")
+            });
+
+            buttonB.addEventListener('click', function() {
+                viewA.style.display = 'none';
+                viewB.style.display = 'block';
+            });
+        });
+   </script>
 </body>
 </html>
