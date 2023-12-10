@@ -7,17 +7,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ asset('../css/AllUsers.css') }}">
 
-</head>
-<body> 
-    @include('AllUsers/components/header')
+    </head>
+    <body> 
+        @include('AllUsers/components/header')
+    <style>
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css');</style>
     <main>
         <section>
-            <!-- component
-                <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+                /* <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script> */
 
-                <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css')</style>
-            -->
 <div class="min-w-screen min-h-screen bg-gray-500 flex items-center justify-center px-5 py-5">
     <div class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style="max-width:1000px">
         <div class="md:flex w-full">
@@ -88,7 +87,6 @@
                     <div class="mt-3 flex justify-center md:items-center md:-mx-2">
                         <button class="flex justify-center w-full px-6 py-3 text-white bg-blue-500 rounded-md md:w-auto md:mx-2 focus:outline-none">
                             <i class="bi bi-person-plus"></i>
-
                             <span class="mx-2">
                                 Patient 
                             </span>
@@ -103,46 +101,80 @@
                     </div>
                 </div>
                 <div>
-                    <div class="flex -mx-3">
+                    <form method="POST" action="{{ route('register') }}">
+                        @csrf
+                    <div class="flex flex-row gap-3">
                         <div class="w-1/2 px-3 mb-5">
-                            <label for="" class="text-xs font-semibold px-1">First name</label>
+                            <label for="name" class="text-xs font-semibold px-1">Nom complet</label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="John">
+                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre nom" name="name" :value="old('name')" required autofocus autocomplete="name" >
                             </div>
+                            <x-input-error :messages="$errors->get('name')" class="mt-2" />
                         </div>
                         <div class="w-1/2 px-3 mb-5">
-                            <label for="" class="text-xs font-semibold px-1">Last name</label>
+                            <label for="sexePat" class="text-xs font-semibold px-1">Sexe</label>
+                            <div class="flex ">
+                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                <select id="sexePat"  class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" name="sexePat" :value="old('sexePat')" required autofocus autocomplete="sexePat" >
+                                    <option disabled>Choisir...</option>
+                                    <option value="Masculin">Masculin</option>
+                                    <option value="Feminin">Feminin</option>
+                                </select>
+                            </div>
+                            <x-input-error :messages="$errors->get('sexePat')" class="mt-2" />
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col gap-2">
+                        <div class="w-full px-3 mb-5">
+                            <label for="email" class="text-xs font-semibold px-1" :value="__('password')">password </label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Smith">
+                                <input type="password" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre nom" name="password" :value="old('password')" required autofocus autocomplete="password" >
                             </div>
+                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                        </div>
+
+                        <div class="w-full px-3 mb-5">
+                            <label for="telPat" class="text-xs font-semibold px-1">Téléphone </label>
+                            <div class="flex">
+                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                <input type="tel" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre nom" name="telPat" :value="old('telPat')" required autofocus autocomplete="telPat" >
+                            </div>
+                            <x-input-error :messages="$errors->get('telPat')" class="mt-2" />
                         </div>
                     </div>
+
+                    <div class="flex flex-col lg:flex-row gap-3">
+                        <div class="w-1/2 px-3 mb-5">
+                            <label for="password" class="text-xs font-semibold px-1" :value="__('Password')">Email </label>
+                            <div class="flex">
+                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                <input type="mail" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre nom" name="email" :value="old('email')" required autofocus autocomplete="email" >
+                            </div>
+                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                        </div>
+
+                        <div class="w-1/2 px-3 mb-5">
+                            <label for="password_confirmation" class="text-xs font-semibold px-1" :value="__('Confirm Password')">Téléphone </label>
+                            <div class="flex">
+                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                <input type="tel" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre nom" name="password_confirmation" :value="old('password_confirmation')" required autofocus autocomplete="password_confirmation" >
+                            </div>
+                            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+                        </div>
+                    </div>
+
+
+                    
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
-                            <label for="" class="text-xs font-semibold px-1">Email</label>
-                            <div class="flex">
-                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                                <input type="email" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="johnsmith@example.com">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex -mx-3">
-                        <div class="w-full px-3 mb-12">
-                            <label for="" class="text-xs font-semibold px-1">Password</label>
-                            <div class="flex">
-                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
-                                <input type="password" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex -mx-3">
-                        <div class="w-full px-3 mb-5">
-                            <button class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER NOW</button>
+                            <button class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold text-upp">S'inscrire</button>
                         </div>
                     </div>
                 </div>
+            </form>
             </div>
         </div>
     </div>
