@@ -85,15 +85,15 @@
                     <p>Vous voulez vous enregistrer comme :</p>
                     
                     <div class="mt-3 flex justify-center md:items-center md:-mx-2 gap-3">
+
                         
-                        <!-- <button  id="showPatientForm"  class="{ $activeForm === 'A' ? 'text-yellow' : '' }} flex justify-center w-full px-6 py-3 mt-4 bg-red-500 border border-gray-500 text-gray-50 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-red-700"> -->
-                        <a  id="showPatientForm"  
-                        class="{ $activeForm === 'PatientForm' ? 'text-yellow-500' : 'text-red-900' } ">
+                        <button  id="showPatientForm"  class=" flex justify-center w-full px-6 py-3 mt-4 bg-red-500 border border-gray-500 text-gray-50 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-red-700">
+                        
                             <i class="bi bi-person-plus"></i>    
                             <span class="mx-2">
                                 Patient 
                             </span>
-                        </a>
+                        </button>
 
                         <button href="#" id="showMedecinForm" class="flex justify-center w-full px-6 py-3 mt-4 text-gray-700 border border-gray-700 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-gray-700 hover:text-white">
                             <i class="bi bi-file-person-fill"></i>    
@@ -204,21 +204,25 @@
             const buttonB = document.getElementById('showMedecinForm');
             const viewA = document.getElementById('PatientForm');
             const viewB = document.getElementById('MedecinForm');
-            <?php $activeForm="" ?>
 
             buttonA.addEventListener('click', function() {
                 viewA.style.display = 'block';
                 viewB.style.display = 'none';
-                <?php
-                    $activeForm = "PatientForm";
-                ?>
-                console.log("<?=$activeForm ?>")
+                buttonB.classList.remove("bg-gray-700");
+                buttonA.classList.remove("text-red-500");
+                buttonA.classList.add("bg-red-500");
+                buttonA.classList.add("text-gray-50");
+                buttonB.classList.add("text-gray-700");
             });
 
             buttonB.addEventListener('click', function() {
                 viewA.style.display = 'none';
                 viewB.style.display = 'block';
-                $activeForm = "MedecinForm";
+                buttonA.classList.remove("bg-red-500");
+                buttonA.classList.remove("text-gray-50");
+                buttonA.classList.add("text-red-500");
+                buttonB.classList.add("bg-gray-700");
+                buttonB.classList.add("text-gray-100");
 
             });
         });
