@@ -2,12 +2,12 @@
                         @csrf
                     <div class="flex flex-row gap-3">
                         <div class="w-1/2 px-3 mb-5">
-                            <label for="name" class="text-xs font-semibold px-1">Nom Medec</label>
+                            <label for="nomMed" class="text-xs font-semibold px-1">Nom Medec</label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-red-500" placeholder="Votre nom" name="name" :value="old('name')" required autofocus autocomplete="name" >
+                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-red-500" placeholder="Votre nom" name="nomMed" :value="old('nomMed')" required autofocus autocomplete="nomMed" >
                             </div>
-                            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                            <x-input-error :messages="$errors->get('nomMed')" class="mt-2" />
                         </div>
                         <div class="w-1/2 px-3 mb-5">
                             <label for="sexePat" class="text-xs font-semibold px-1">Sexe</label>
@@ -24,14 +24,14 @@
                     </div>
                     
                     <div class="flex flex-col gap-2">
-                        <div class="w-full px-3 mb-5">
+                        <!-- <div class="w-full px-3 mb-5">
                             <label for="email" class="text-xs font-semibold px-1" :value="__('Email')">Email </label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-envelope text-gray-400 text-lg"></i></div>
                                 <input type="mail" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre email" name="email" :value="old('email')" required autofocus autocomplete="email" >
                             </div>
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                        </div>
+                        </div> -->
 
                         <div class="w-full px-3 mb-5">
                             <label for="telPat" class="text-xs font-semibold px-1">Téléphone </label>
@@ -60,6 +60,17 @@
                                 <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Mot de passe" name="password_confirmation" :value="old('password_confirmation')" required autofocus autocomplete="password_confirmation" >
                             </div>
                             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <div class="w-full px-3 mb-5">
+                            <label for="infosMed" class="text-xs font-semibold px-1" :value="__('infosMed')">Infos Médecin </label>
+                            <div class="flex">
+                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-envelope text-gray-400 text-lg"></i></div>
+                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre infosMed" name="infosMed" :value="old('infosMed')" required autofocus autocomplete="infosMed" >
+                            </div>
+                            <x-input-error :messages="$errors->get('infosMed')" class="mt-2" />
                         </div>
                     </div>
 
