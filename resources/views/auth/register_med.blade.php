@@ -1,7 +1,8 @@
                 <form method="POST" action="{{ route('register') }}">
                         @csrf
                     <div class="flex flex-row gap-3">
-                        <div class="w-1/2 px-3 mb-5">
+                        
+                        <div class="w-1/2 px-3 my-5">
                             <label for="nomMed" class="text-xs font-semibold px-1">Nom Medec</label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
@@ -10,16 +11,16 @@
                             <x-input-error :messages="$errors->get('nomMed')" class="mt-2" />
                         </div>
                         <div class="w-1/2 px-3 mb-5">
-                            <label for="sexePat" class="text-xs font-semibold px-1">Sexe</label>
+                            <label for="sexeMed" class="text-xs font-semibold px-1">Sexe</label>
                             <div class="flex ">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                <select id="sexePat"  class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-red-500" name="sexePat" :value="old('sexePat')" required autofocus autocomplete="sexePat" >
+                                <select id="sexeMed"  class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-red-500" name="sexeMed" :value="old('sexeMed')" required autofocus autocomplete="sexeMed" >
                                     <option disabled>Choisir...</option>
                                     <option value="Masculin">Masculin</option>
                                     <option value="Feminin">Feminin</option>
                                 </select>
                             </div>
-                            <x-input-error :messages="$errors->get('sexePat')" class="mt-2" />
+                            <x-input-error :messages="$errors->get('sexeMed')" class="mt-2" />
                         </div>
                     </div>
                     
@@ -34,12 +35,12 @@
                         </div> -->
 
                         <div class="w-full px-3 mb-5">
-                            <label for="telPat" class="text-xs font-semibold px-1">Téléphone </label>
+                            <label for="telMed" class="text-xs font-semibold px-1">Téléphone </label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-phone text-gray-400 text-lg"></i></div>
-                                <input type="tel" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre numéro de téléphone" name="telPat" :value="old('telPat')" required autofocus autocomplete="telPat" >
+                                <input type="tel" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre numéro de téléphone" name="telMed" :value="old('telMed')" required autofocus autocomplete="telMed" >
                             </div>
-                            <x-input-error :messages="$errors->get('telPat')" class="mt-2" />
+                            <x-input-error :messages="$errors->get('telMed')" class="mt-2" />
                         </div>
                     </div>
 

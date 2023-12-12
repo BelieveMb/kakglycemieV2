@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AllUsersController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\registerMedController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,10 @@ Route::get('/',[AllUsersController::class, 'index'])->name('accueilName');
 Route::get('/patient', [AllUsersController::class, 'patient'])->name('patientName');
 Route::get('/doctor', [AllUsersController::class, 'doctor'])->name('doctorName');
 Route::get('/about-us', [AllUsersController::class, 'about'])->name('aboutName');
+
+//register doctor
+Route::post('add', [registerMedController::class, 'addDoctor'])->name('addDoctor');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

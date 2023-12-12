@@ -102,6 +102,11 @@
                             </span>
                         </button>
                     </div>
+                    @if (Session::get('success'))
+                        <div class="bg-gray-500 my-2 py-3 px-4 text-gray-100 text-xl font-mono    font-semibold rounded-lg">
+                            <h3> {{Session::get('success')}} </h3>
+                        </div>
+                    @endif
                 </div>
                 <div>
                     <div id="MedecinForm" style="display: none">
