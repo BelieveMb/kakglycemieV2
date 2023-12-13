@@ -12,7 +12,8 @@
         buttonA.classList.remove("text-red-500");
         buttonA.classList.add("bg-red-500");
         buttonA.classList.add("text-gray-50");
-        buttonB.classList.add("text-gray-700");
+        buttonB.classList.remove("text-gray-100");
+        buttonB.classList.add("text-gray-800");
     });
 
     buttonB.addEventListener('click', function() {

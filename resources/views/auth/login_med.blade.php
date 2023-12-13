@@ -39,5 +39,9 @@
                             <button class="block w-full max-w-xs mx-auto bg-gray-800 hover:bg-gray-500 focus:bg-gray-600 text-white rounded-lg px-3 py-3 font-semibold text-upp" type="submit">Se connecter</button>
                         </div>
                     </div>
+
+                    <div class="px-5 flex items-center">
+                        <p>Pas de compte sur KaK glycémie, <a href="{{ route('register') }}" class="text-red-400 underline">S'inscrire  <i class="bi bi-person-plus-fill"></i></a></p>
+                    </div>
                 </div>
             </form>

@@ -183,6 +183,9 @@
                             <button class="block w-full max-w-xs mx-auto bg-red-500 hover:bg-red-700 focus:bg-red-700 text-white rounded-lg px-3 py-3 font-semibold text-upp" type="submit">S'inscrire</button>
                         </div>
                     </div>
+                    <div class="px-5 flex items-center">
+                        <p>Déjà un patient de KaK glycémie, <a href="{{ route('login') }}" class="text-red-400 underline">Se connecter  <i class="bi bi-box-arrow-in-left"></i></a></p>
+                    </div>
                 </div>
             </form>
             </div>

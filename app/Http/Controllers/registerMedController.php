@@ -32,7 +32,8 @@ class registerMedController extends Controller
 
         //message de confirmation
         if($query){
-            return back()->with('success', 'tout est okay');
+            // return back()->with('success', 'tout est okay');
+            return view('dashboard');
         }else{
             return back()->with('error', 'tout est puff');
         }

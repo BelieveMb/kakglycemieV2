@@ -88,14 +88,13 @@
 
                         
                         <button  id="showPatientForm"  class=" flex justify-center w-full px-6 py-3 mt-4 bg-red-500 border border-gray-500 text-gray-50 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-red-700">
-                        
                             <i class="bi bi-person-plus"></i>    
                             <span class="mx-2">
                                 Patient 
                             </span>
                         </button>
 
-                        <button href="#" id="showMedecinForm" class="flex justify-center w-full px-6 py-3 mt-4 text-gray-700 border border-gray-700 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-gray-700 hover:text-white">
+                        <button id="showMedecinForm" class="flex justify-center w-full px-6 py-3 mt-4 text-gray-700 border border-gray-700 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-gray-700 hover:text-white">
                             <i class="bi bi-file-person-fill"></i>    
                             <span class="mx-2">
                                 Médecin 
@@ -152,6 +151,10 @@
                         <div class="w-full px-3 mb-5">
                             <button class="block w-full max-w-xs mx-auto bg-red-500 hover:bg-red-700 focus:bg-red-700 text-white rounded-lg px-3 py-3 font-semibold text-upp" type="submit">Se connecter</button>
                         </div>
+                    </div>
+
+                    <div class="px-5 flex items-center">
+                        <p>Pas de compte sur KaK glycémie, <a href="{{ route('register') }}" class="text-red-400 underline">S'inscrire  <i class="bi bi-person-plus-fill"></i></a></p>
                     </div>
                 </div>
             </form>
