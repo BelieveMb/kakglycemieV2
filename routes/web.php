@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AllUsersController;
+use App\Http\Controllers\PatientControllers;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\registerMedController;
 use Illuminate\Support\Facades\Route;
@@ -39,9 +40,10 @@ Route::middleware('auth')->group(function () {
 });
 
 //les patients
-Route::prefix('/blog')->name('blog.')->controller(BlogController::class)->group(function () { 
+Route::prefix('/patient')->name('Patient.')->controller(PatientControllers::class)->group(function () { 
     //on peut dire qu'on use le controller
-    
+    Route::get('/dashboard','dashboardForm')->name('patient.dashboardForm');
+
 });
 
 require __DIR__.'/auth.php';
