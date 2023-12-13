@@ -38,4 +38,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//les patients
+Route::prefix('/blog')->name('blog.')->controller(BlogController::class)->group(function () { 
+    //on peut dire qu'on use le controller
+    
+});
+
 require __DIR__.'/auth.php';

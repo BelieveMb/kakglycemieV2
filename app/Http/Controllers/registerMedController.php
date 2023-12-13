@@ -33,6 +33,8 @@ class registerMedController extends Controller
         //message de confirmation
         if($query){
             // return back()->with('success', 'tout est okay');
+        // return to_route('auth.login');
+
             return view('dashboard');
         }else{
             return back()->with('error', 'tout est puff');
