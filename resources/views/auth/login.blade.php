@@ -17,8 +17,8 @@
                  <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>  -->
 
-<div class="min-w-screen min-h-screen bg-gray-500 flex items-center justify-center px-5 py-5">
-    <div class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style="max-width:1000px">
+<div class="min-w-screen min-h-screen bg-gray-800 flex items-center justify-center px-5 py-5">
+    <div class="bg-gray-100 text-gray-800 rounded-3xl shadow-xl w-full overflow-hidden" style="max-width:1000px">
         <div class="md:flex w-full">
             <div class="hidden md:block w-1/2  bg-red-500 py-10 px-10">
 
@@ -112,7 +112,7 @@
                     <div id="MedecinForm" style="display: none">
                         @include('Auth/login_med')
                     </div>
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login') }}" style="display: none" id="PatientForm">
                         @csrf
                     
                     <div class="flex flex-col gap-2">
@@ -137,7 +137,7 @@
                     </div>
 
                     <!-- Remember Me -->
-                    <div class="block mt-4">
+                    <div class="block my-4 pl-4">
                         <label for="remember_me" class="inline-flex items-center">
                             <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
                             <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
@@ -150,7 +150,7 @@
                     
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
-                            <button class="block w-full max-w-xs mx-auto bg-red-500 hover:bg-red-700 focus:bg-red-700 text-white rounded-lg px-3 py-3 font-semibold text-upp" type="submit">S'inscrire</button>
+                            <button class="block w-full max-w-xs mx-auto bg-red-500 hover:bg-red-700 focus:bg-red-700 text-white rounded-lg px-3 py-3 font-semibold text-upp" type="submit">Se connecter</button>
                         </div>
                     </div>
                 </div>
@@ -173,34 +173,7 @@
     </main>
     
 
-   <script>
-       document.addEventListener('DOMContentLoaded', function() {
-            const buttonA = document.getElementById('showPatientForm');
-            const buttonB = document.getElementById('showMedecinForm');
-            const viewA = document.getElementById('PatientForm');
-            const viewB = document.getElementById('MedecinForm');
+    @include('Auth/formRegisterLogin')
 
-            buttonA.addEventListener('click', function() {
-                viewA.style.display = 'block';
-                viewB.style.display = 'none';
-                buttonB.classList.remove("bg-gray-700");
-                buttonA.classList.remove("text-red-500");
-                buttonA.classList.add("bg-red-500");
-                buttonA.classList.add("text-gray-50");
-                buttonB.classList.add("text-gray-700");
-            });
-
-            buttonB.addEventListener('click', function() {
-                viewA.style.display = 'none';
-                viewB.style.display = 'block';
-                buttonA.classList.remove("bg-red-500");
-                buttonA.classList.remove("text-gray-50");
-                buttonA.classList.add("text-red-500");
-                buttonB.classList.add("bg-gray-700");
-                buttonB.classList.add("text-gray-100");
-
-            });
-        });
-   </script>
 </body>
 </html>

@@ -23,7 +23,7 @@
                     </div>
 
                     <!-- Remember Me -->
-                    <div class="block mt-4">
+                    <div class="block my-4 pl-4">
                         <label for="remember_me" class="inline-flex items-center">
                             <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
                             <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
@@ -36,7 +36,7 @@
                     
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
-                            <button class="block w-full max-w-xs mx-auto bg-red-500 hover:bg-red-700 focus:bg-red-700 text-white rounded-lg px-3 py-3 font-semibold text-upp" type="submit">Se connecter</button>
+                            <button class="block w-full max-w-xs mx-auto bg-gray-800 hover:bg-gray-500 focus:bg-gray-600 text-white rounded-lg px-3 py-3 font-semibold text-upp" type="submit">Se connecter</button>
                         </div>
                     </div>
                 </div>
