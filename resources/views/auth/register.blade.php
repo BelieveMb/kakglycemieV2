@@ -95,7 +95,7 @@
                             </span>
                         </button>
 
-                        <button href="#" id="showMedecinForm" class="flex justify-center w-full px-6 py-3 mt-4 text-gray-700 border border-gray-700 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-gray-700 hover:text-white">
+                        <button  id="showMedecinForm" class="flex justify-center w-full px-6 py-3 mt-4 text-gray-700 border border-gray-700 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-gray-700 hover:text-white">
                             <i class="bi bi-file-person-fill"></i>    
                             <span class="mx-2">
                                 Médecin 
@@ -112,7 +112,7 @@
                     <div id="MedecinForm" style="display: none">
                         @include('Auth/register_med')
                     </div>
-                    <form method="POST" action="{{ route('register') }}" >
+                    <form method="POST" action="{{ route('register') }}" id="PatientForm" >
                         @csrf
                     <div class="flex flex-row gap-3">
                         <div class="w-1/2 px-3 mb-5">
@@ -123,7 +123,7 @@
                             </div>
                             <x-input-error :messages="$errors->get('name')" class="mt-2" />
                         </div>
-                        <div class="w-1/2 px-3 mb-5">
+                        <div class="w-1/2 px-3 my-1">
                             <label for="sexePat" class="text-xs font-semibold px-1">Sexe</label>
                             <div class="flex ">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
