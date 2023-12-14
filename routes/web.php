@@ -42,7 +42,7 @@ Route::middleware('auth')->group(function () {
 //les patients
 Route::prefix('/patient')->name('Patient.')->controller(PatientControllers::class)->group(function () { 
     //on peut dire qu'on use le controller
-    Route::get('/dashboard','dashboardForm')->name('patient.dashboardForm');
+    Route::get('/dashboard','dashboardForm')->name('dashboardForm');
 
 });
 

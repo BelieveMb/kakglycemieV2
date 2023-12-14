@@ -42,8 +42,8 @@
 
       </div>
       <div class="flex  gap-4 flex-row lg:space-x-8 justify-center ">
-         <a href="#" class="px-4 py-2  text-sm font-semibold bg-red-300 border-red-300 border-4  text-gray-50 rounded-lg hover:bg-red-500   hover:text-gray-50 focus:text-gray-900  hover:shadow-outline focus:bg-red-200 focus:outline-none"> Connexion <i class="bi bi-box-arrow-in-left"></i>  </a>
-         <a href="#" class="px-4 py-2  text-sm font-semibold border-gray-100 border-4 text-gray-50 rounded-lg  hover:text-gray-600 focus:text-gray-900 hover:bg-gray-50  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> Inscription <i class="bi bi-person-plus-fill"></i></a>
+         <a href="{{ route('login') }}" class="px-4 py-2  text-sm font-semibold bg-red-300 border-red-300 border-4  text-gray-50 rounded-lg hover:bg-red-500   hover:text-gray-50 focus:text-gray-900  hover:shadow-outline focus:bg-red-200 focus:outline-none"> Connexion <i class="bi bi-box-arrow-in-left"></i>  </a>
+         <a href="{{ route('register') }}" class="px-4 py-2  text-sm font-semibold border-gray-100 border-4 text-gray-50 rounded-lg  hover:text-gray-600 focus:text-gray-900 hover:bg-gray-50  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> Inscription <i class="bi bi-person-plus-fill"></i></a>
       </div>
     </section>
 
