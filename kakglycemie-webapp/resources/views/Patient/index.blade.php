@@ -19,6 +19,7 @@
         <div class="pt-6 px-4">
             <div class="w-full grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4">
                 @include('Patient.graphe')
+                @include('Patient.formAdd')
 
             </div>
         </div>
