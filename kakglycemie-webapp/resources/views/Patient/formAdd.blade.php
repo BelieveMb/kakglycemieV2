@@ -1,11 +1,11 @@
 <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
     <div class="mb-4 flex items-center justify-between">
         <div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Latest Transactions</h3>
-            <span class="text-base font-normal text-gray-500">This is a list of latest transactions</span>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Ajouter votre glycémie <i class="bi bi-heart-pulse-fill"></i></h3>
+            <span class="text-base font-normal text-gray-500">Enregistrer vos taux de glycémie quotidiens et noter les traitements associés.</span>
         </div>
         <div class="flex-shrink-0">
-            <a href="#" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">View all</a>
+            <a href="#" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">En savoir plus ++</a>
         </div>
     </div>
     <div class="flex flex-col mt-8">
