@@ -43,7 +43,7 @@ Route::middleware('auth')->group(function () {
 Route::prefix('/patient')->name('Patient.')->controller(PatientControllers::class)->group(function () { 
     //on peut dire qu'on use le controller
     Route::get('/dashboard','dashboardForm')->name('dashboardForm');
-
+    Route::post('/dashboard','AddTauxTraitement')->name('addTauxTraitement');
 });
 
 require __DIR__.'/auth.php';

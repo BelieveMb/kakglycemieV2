@@ -10,4 +10,12 @@ class PatientControllers extends Controller
     function dashboardForm(){
         return view("Patient.index");
     }
+
+    function AddTauxTraitement(Request $request){
+        // $request->validate([
+        //     "taux"=>"required",
+
+        // ]);
+        // return view("aboutName");
+    }
 }
