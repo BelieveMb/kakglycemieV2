@@ -27,7 +27,8 @@ Route::get('/about-us', [AllUsersController::class, 'about'])->name('aboutName')
 
 //register doctor
 Route::post('add', [registerMedController::class, 'addDoctor'])->name('addDoctor');
-
+//login doctor
+Route::post('loginDoctor', [registerMedController::class, 'loginDoctor'])->name('loginDoctor');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

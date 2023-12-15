@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\LoginMedRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class registerMedController extends Controller
@@ -39,5 +41,18 @@ class registerMedController extends Controller
         }else{
             return back()->with('error', 'tout est puff');
         }
+    }
+
+    function loginDoctor(LoginMedRequest $request){
+        //pour la connexion du medecin
+        $credentials = $request->only('telMed','motdepasse');
+
+        if(Auth::attempt($credentials)){ //pour vérifier si le login est bon
+            $request->session()->regenerate(); //pour régénérer la session
+            return redirect()->intended(route('dashboard')); 
+            //pour rediriger vers la page dashboard, intended permet de protèger la route
+        }
+
+        return to_route('login')->withErrors()
     }
 }
