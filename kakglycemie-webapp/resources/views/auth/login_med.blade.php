@@ -15,10 +15,10 @@
                         </div>
 
                         <div class="w-full px-3 mb-5">
-                            <label for="password" class="text-xs font-semibold px-1" :value="__('Password')">Mot de passe </label>
+                            <label for="motdepasse" class="text-xs font-semibold px-1" :value="__('motdepasse')">Mot de passe </label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-lock text-gray-400 text-lg"></i></div>
-                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre mot de passe" name="password"   autofocus autocomplete="password" >
+                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre mot de passe" name="motdepasse"   autofocus autocomplete="motdepasse" >
                             </div>
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                         </div>
@@ -28,7 +28,7 @@
                     <!-- Remember Me -->
                     <div class="block my-4 pl-4">
                         <label for="remember_me" class="inline-flex items-center">
-                            <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
+                            <input id="rem²ember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
                             <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                         </label>
                     </div>
