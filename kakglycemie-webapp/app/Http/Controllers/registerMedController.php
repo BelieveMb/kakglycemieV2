@@ -24,7 +24,7 @@ class registerMedController extends Controller
             'sexeMed'=>$request->input('nomMed'),
             // 'sexeMed'=>$request->$valider,
             'telMed'=>$request->input('telMed'),
-            'motdepasse'=>$request->input('password'),
+            'password'=>$request->input('password'),
             'infosMed'=>$request->input('infosMed'),
             'avatarMed'=>$request->input('infosMed'),
             'valider'=>$request->input('infosMed'),
@@ -41,19 +41,28 @@ class registerMedController extends Controller
             return back()->with('error', 'tout est puff');
         }
     }
+    
 
     function loginDoctor(LoginMedRequest $request){
         //pour la connexion du medecin
-        $credentials = $request->only('telMed','motdepasse');
+        // $credentials = $request->only('telMed','password');
+        $credentials = $request->validated();
+        
 
-        if(Auth::attempt($credentials)){ //pour vérifier si le login est bon
-            $request->session()->regenerate(); //pour régénérer la session
-            return redirect()->intended(route('Patient.dashboardForm')); 
-            //pour rediriger vers la page dashboard, intended permet de protèger la route
-        }
+        // if(Auth::attempt($credentials)){ //pour vérifier si le login est bon
+        dd(Auth::attempt($credentials));
+    //     { //pour vérifier si le login est bon
+    //         $request->session()->regenerate(); //pour régénérer la session
+    //         return redirect()->intended(route('Patient.dashboardForm')); 
+    //         //pour rediriger vers la page dashboard, intended permet de protèger la route
+    //     }
 
-        return to_route('login')->withErrors([
-            'telMed' => 'Télephone invalide'
-        ])->onlyInput('telMed');
+    //     // return to_route('login')->withErrors([
+    //     //     'telMed' => 'Télephone invalide'
+    //     // ])->onlyInput('telMed');
+    //     return to_route('aboutName')->withErrors([
+    //         'main' => 'Il y a une erreur'
+    //     ]);
     }
+
 }

@@ -15,10 +15,10 @@
                         </div>
 
                         <div class="w-full px-3 mb-5">
-                            <label for="motdepasse" class="text-xs font-semibold px-1" :value="__('motdepasse')">Mot de passe </label>
+                            <label for="password" class="text-xs font-semibold px-1" :value="__('password')">Mot de passe </label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-lock text-gray-400 text-lg"></i></div>
-                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre mot de passe" name="motdepasse"   autofocus autocomplete="motdepasse" >
+                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre mot de passe" name="password"   autofocus autocomplete="password" >
                             </div>
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                         </div>

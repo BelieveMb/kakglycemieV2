@@ -24,8 +24,8 @@ class LoginMedRequest extends FormRequest
     public function rules()
     {
         return [
-            'telMed' => 'required|numeric',
-            'motdepasse' => 'required',
+            'telMed' => 'required',
+            'password' => 'required',
         ];
     }
 }
