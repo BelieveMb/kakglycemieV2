@@ -18,5 +18,7 @@ class PatientControllers extends Controller
         // ]);
         // return view("aboutName");
     }
+
+   
     
 }

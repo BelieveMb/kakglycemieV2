@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\AllUsers;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AllUsersController extends Controller
 {
@@ -31,7 +33,22 @@ class AllUsersController extends Controller
         //for patient
         return view('AllUsers.about', ["title"=>"à propos de nous"]);
     }
-   
+    public function loginPatient(Request $request): RedirectResponse
+    {
+        $credentials = $request->validate([
+            'telPat' => 'required|max:15',
+            'password' => 'required',
+        ]);
+
+        if(Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended(route('Patient.dashboardForm')); 
+        }
+        return back()->withErrors([
+            'mainError' => 'The provided blabla do not match our records.',
+        ])->onlyInput('mainError');
+        
+    }
     public function store(Request $request)
     {
         //
