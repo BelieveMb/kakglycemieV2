@@ -30,9 +30,9 @@ Route::post('add', [registerMedController::class, 'addDoctor'])->name('addDoctor
 //login doctor
 Route::post('loginDoctor', [registerMedController::class, 'loginDoctor'])->name('loginDoctor');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -44,8 +44,8 @@ Route::middleware('auth')->group(function () {
 Route::prefix('/patient')->name('Patient.')->controller(PatientControllers::class)->group(function () { 
     //on peut dire qu'on use le controller
     Route::get('/dashboard','dashboardForm')->name('dashboardForm');
-    Route::post('/dashboard','AddTauxTraitement')->name('addTauxTraitement');
-    Route::post('/logout','l')->name('addTauxTraitement');
+    // Route::post('/dashboard','AddTauxTraitement')->name('addTauxTraitement');
+    // Route::post('/logout','l')->name('addTauxTraitement');
 });
 
 require __DIR__.'/auth.php';

@@ -15,6 +15,7 @@ use Illuminate\View\View;
 
 class RegisteredUserController extends Controller
 {
+
     /**
      * Display the registration view.
      */
@@ -31,11 +32,11 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'sexePat' => ['required', 'string', 'max:15'],
+            // 'name' => 'required',
+            // 'sexePat' => ['required', 'string', 'max:15'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'telPat' => ['required', 'string', 'max:15'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            // 'telPat' => ['required', 'unique', 'max:15'],
+            'password' => ['required', 'confirmed', 'min:4'],
         ]);
 
         $user = User::create([
@@ -46,10 +47,22 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        event(new Registered($user));
+        if($user){
+            event(new Registered($user));
+            Auth::login($user);
+            return to_route('login');
+        }else{
+            return back()->withErrors("une erreur, veuillez recommencez");
+            // withErrors([
+            //     'email'=>'cet adresse mail est déjà utilisé',
+            //     'telPat' => 'ce numéro est incomplet',
+            // ]);
 
-        Auth::login($user);
+        }
 
-        return redirect(RouteServiceProvider::HOME);
+
+
+        // return redirect(RouteServiceProvider::HOME);
+
     }
 }

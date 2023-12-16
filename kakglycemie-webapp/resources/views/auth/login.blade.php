@@ -111,7 +111,7 @@
                     <div id="MedecinForm" style="display: none">
                         @include('Auth/login_med')
                     </div>
-                    <form method="POST" action="{{ route('login') }}" style="display: none" id="PatientForm">
+                    <form method="POST" action="{{ route('login') }}"  id="PatientForm">
                         @csrf
                     
                     <div class="flex flex-col gap-2">
