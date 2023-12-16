@@ -45,6 +45,7 @@ Route::prefix('/patient')->name('Patient.')->controller(PatientControllers::clas
     //on peut dire qu'on use le controller
     Route::get('/dashboard','dashboardForm')->name('dashboardForm');
     Route::post('/dashboard','AddTauxTraitement')->name('addTauxTraitement');
+    Route::post('/logout','l')->name('addTauxTraitement');
 });
 
 require __DIR__.'/auth.php';

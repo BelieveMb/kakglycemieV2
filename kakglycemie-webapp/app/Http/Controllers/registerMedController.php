@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\LoginMedRequest;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class registerMedController extends Controller
 {
@@ -22,13 +24,12 @@ class registerMedController extends Controller
             'idmedecin'=>random_int(10, 258),
             'nomMed'=>$request->input('nomMed'),
             'sexeMed'=>$request->input('nomMed'),
-            // 'sexeMed'=>$request->$valider,
             'telMed'=>$request->input('telMed'),
-            'password'=>$request->input('password'),
+            'password' => Hash::make($request->password),
+
             'infosMed'=>$request->input('infosMed'),
             'avatarMed'=>$request->input('infosMed'),
-            'valider'=>$request->input('infosMed'),
-            // 'valider'=>$request->$valider,
+            'valider'=>$request->input('nomMed'),
         ]);
 
         //message de confirmation
@@ -41,28 +42,37 @@ class registerMedController extends Controller
             return back()->with('error', 'tout est puff');
         }
     }
-    
+    public function loginDoctor(Request $request): RedirectResponse
+    {
+        $credentials = $request->validate([
+            'telMed' => ['required'],
+            'password' => ['required'],
+        ]);
+ 
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+ 
+            // return redirect()->intended('dashboardForm');
+            return redirect()->intended(route('Patient.dashboardForm')); 
 
-    function loginDoctor(LoginMedRequest $request){
-        //pour la connexion du medecin
-        // $credentials = $request->only('telMed','password');
-        $credentials = $request->validated();
-        
-
-        // if(Auth::attempt($credentials)){ //pour vérifier si le login est bon
-        dd(Auth::attempt($credentials));
-    //     { //pour vérifier si le login est bon
-    //         $request->session()->regenerate(); //pour régénérer la session
-    //         return redirect()->intended(route('Patient.dashboardForm')); 
-    //         //pour rediriger vers la page dashboard, intended permet de protèger la route
-    //     }
-
-    //     // return to_route('login')->withErrors([
-    //     //     'telMed' => 'Télephone invalide'
-    //     // ])->onlyInput('telMed');
-    //     return to_route('aboutName')->withErrors([
-    //         'main' => 'Il y a une erreur'
-    //     ]);
+        }
+ 
+        return back()->withErrors([
+            'main' => 'The provided blabla do not match our records.',
+        ])->onlyInput('main');
     }
+
+    public function logoutDoctor(Request $request): RedirectResponse
+    {
+        Auth::logout();
+    
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+        return redirect('/');
+    }
+
+    
 
 }
