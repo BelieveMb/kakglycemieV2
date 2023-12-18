@@ -19,7 +19,7 @@ class AllUsersController extends Controller
     
     public function patient()
     {
-        //for patient
+        //for patient redirect
         return view('AllUsers.patient', ["title"=>"patient"]);
     }
 

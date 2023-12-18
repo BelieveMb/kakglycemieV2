@@ -16,7 +16,7 @@ class registerMedController extends Controller
         $request->validate([
             'nomMed' =>'required',
             'telMed' =>'required|unique:medecin',
-            // 'password' =>'required|password|unique:crud',
+            // 'password' =>'required|password|unique:crud,
         ]);
 
         //Insert query
