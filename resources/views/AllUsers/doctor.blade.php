@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenu.e sur KaK /{{$title}}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('../css/AllUsers.css') }}">
+
+</head>
+<body> 
+    @include('AllUsers/components/header')
+    <main>
+        <section class="relative  bg-blueGray-50">
+        <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
+            <div class="absolute top-0 w-full h-full bg-center bg-cover bg-no-repeat " style="background-image: url('{{ asset('images/bg_medecin.png') }}');">
+                <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+            </div>
+            <div class="container relative mx-auto">
+                <div class="items-center flex flex-wrap">
+                    <div class="w-full px-10  text-center lg:px-28">
+                        <div class="px-4 lg:px-20">
+                            <h1 class="text-white font-semibold text-3xl lg:text-5xl"> <span class="text-red-500">Un outil avancé </span> pour le suivi de la glycémie <span class="text-red-500">des patients diabétiques</span>.</h1>
+                            <p class="mt-4 text-lg text-red-200 text-justify lg:text-center">
+                                Kak Glycémie est une application innovante conçue pour
+                                faciliter le suivi de la glycémie des patients diabétiques.
+                                Grâce à son interface conviviale et à ses fonctionnalités
+                                avancées, Kak Glycémie permet aux médecins de mieux
+                                comprendre les variations de la glycémie de leurs patients,
+                                d'optimiser leur traitement et de fournir une prise en charge personnalisée.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-auto bottom-0 left-0 right-0 w-full absolute
+        pointer-events-none overflow-hidden h-70-px" s>
+                <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                    <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+            </div>
+        </div>
+
+        <!-- end hero section  -->
+
+        <section class="pb-10 bg-blueGray-200 -mt-24">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap">
+                    <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+                        <div
+                            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                            <div class="px-4 py-5 flex-auto">
+                                <div
+                                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                                    <i class="bi bi-clock"></i>
+                                </div>
+                                <h6 class="text-xl font-semibold">Accès en temps réel aux données de glycémie</h6>
+                                <p class="mt-2 mb-4 text-blueGray-500">
+                                    Vous avez un accès instantané aux données de glycémie de vos patients. Vous pouvez
+                                    consulter les mesures de glycémie en temps réel..
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-4/12 px-4 text-center">
+                        <div
+                            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                            <div class="px-4 py-5 flex-auto">
+                                <div
+                                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <h6 class="text-xl font-semibold">Suivez vos patients facilement</h6>
+                                <p class="mt-2 mb-4 text-blueGray-500">
+                                    Suivez facilement les données de glycémie de tous vos patients diabétiques en un
+                                    seul endroit. Vous pouvez voir les mesures de glycémie actuelles
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+                        <div
+                            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                            <div class="px-4 py-5 flex-auto">
+                                <div
+                                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
+                                    <i class="bi bi-chat-dots"></i>
+                                </div>
+                                <h6 class="text-xl font-semibold">Communication sécurisée avec les patients</h6>
+                                <p class="mt-2 mb-4 text-blueGray-500">
+                                    Kak Glycémie facilite la communication entre vous et vos patients diabétiques.
+                                     Vous pouvez échanger des messages sécurisés directement via la plateforme.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section >
+
+    <section class="bg-blueGray-200  px-8 py-10 lg:px-40 lg:py-8 ">
+        <div class="py-4 flex flex-col justify-center text-center">
+            <h3 class="text-3xl py-4 font-semibold text-gray-800">Comment ça <span class="text-red-500">marche</span> </h3>
+            <p class="text-gray-800">KaK glycémie est conçu pour aider les patients atteints de diabète à suivre leur taux de glycémie, d'échanger avec son médecin et à améliorer leur santé. </p>
+        </div>
+  
+        <div class="flex flex-wrap flex-row text-center ">
+            <div class="flex flex-col justify-center  gap-5 lg:gap-12  px-2  w-full  lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+                <!-- CCM block -->
+                <div class="flex flex-row justify-start items-center py-8 px-1 gap-4 border-b-4 border-red-700 rounded-xl transform transition duration-300 ease-in-out hover:shadow-2xl hover:shadow-red-300">
+                    <div class="inline-block text-gray-800  text-5xl hover:text-red-500">
+                        <!-- icon -->
+                        <span class="bi bi-file-person"></span>
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-2xl leading-normal my-2 font-semibold text-gray-800 "> Créer son compte </h3>
+                        <p class="text-black">  Inscrivez-vous en tant que médecin,  créez votre compte en tant que médecin
+                        sur Kak Glycémie. </p>
+                    </div>
+
+                </div>
+
+                <!-- CCM block -->
+                <div class="flex flex-row justify-start items-center py-8 px-1 gap-4 border-b-4 border-red-700 rounded-xl transform transition duration-300 ease-in-out hover:shadow-2xl hover:shadow-red-300">
+                    <div class="inline-block text-gray-800  text-5xl hover:text-red-500">
+                        <!-- icon -->
+                        <span class="bi bi-database-gear"></span>
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-2xl leading-normal my-2 font-semibold text-gray-800 ">  La glycémie de vos patients </h3>
+                        <p class="text-black">  Consultez les données de glycémie en temps réel de vos patients via votre tableau de bord personnalisé. </p>
+                    </div>
+                </div>
+
+                <!-- CCM block -->
+                <div class="flex flex-row justify-start items-center py-8 px-1 gap-4 border-b-4 border-red-700 rounded-xl transform transition duration-300 ease-in-out hover:shadow-2xl hover:shadow-red-300">
+                    <div class="inline-block text-gray-800  text-5xl hover:text-red-500">
+                        <!-- icon -->
+                        <span class="bi bi-chat-text-fill"></span>
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-2xl leading-normal my-2 font-semibold text-gray-800 ">  Communiquez avec vos patients </h3>
+                        <p class="text-black">  Échangez des messages sécurisés avec vos patients pour fournir des conseils personnalisés, répondre à leurs questions et ajuster leur traitement en conséquence.</p>
+                    </div>
+                </div>
+
+               
+            </div>
+  
+          </div>
+  
+          <div class="px-4 lg:px-8 my-14 flex justify-start">
+             <a href="{{ route('register') }}" class="inline-flex justify-center items-center py-1 px-3 lg:py-3 lg:px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-gray-800 hover:text-gray-200 focus:ring-4 focus:ring-red-300 ">Commencez dès maintenant</a>
+          </div>
+      </section>
+
+     
+      <section class="bg-gray-800  px-8 py-10 lg:px-40 lg:py-4 flex flex-col    justify-between gap-6 ">
+        <div class="font-bold flex  text-lg leading-5 text-white      opacity-100 lg:text-xl " >
+          <h3>Savez-vous que Kak Glycémie peut être un outil précieux pour le
+          suivi de la glycémie de vos patients.</h3>
+  
+        </div>
+        <div class="flex  gap-4 flex-row lg:space-x-8 justify-center ">
+           <a href="{{ route('login') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 border-red-500 border-4  text-gray-50 rounded-lg hover:bg-gray-800   hover:text-gray-50 focus:text-gray-900  hover:shadow-outline focus:bg-red-200 focus:outline-none"> Connexion <i class="bi bi-box-arrow-in-left"></i>  </a>
+           <a href="{{ route('register') }}" class="px-4 py-2  text-sm font-semibold border-gray-100 border-4 text-gray-50 rounded-lg  hover:text-gray-600 focus:text-gray-900 hover:bg-gray-50  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> Inscription <i class="bi bi-person-plus-fill"></i></a>
+        </div>
+      </section>
+
+            <section class="bg-gray-100 flex gap-20 px-8 py-10 lg:px-40 lg:py-20 ">
+                <div class="flex items-center justify-center flex-col gap-2 lg:flex-row">
+                    <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white">
+                        <p class="text-gray-700">I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.</p>
+
+                        <div class="mt-8 flex gap-4 items-center">
+                            <img class="h-12 w-12 rounded-full" src="https://pbs.twimg.com/profile_images/1599029039297077249/p0znhFdE_400x400.jpg" alt="" />
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-700">Oketa Fred</h3>
+                                <span class="text-sm tracking-wide text-gray-600">Fullstack Developer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white">
+                        <p class="text-gray-700">I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.</p>
+
+                        <div class="mt-8 flex gap-4 items-center">
+                            <img class="h-12 w-12 rounded-full" src="https://pbs.twimg.com/profile_images/1599029039297077249/p0znhFdE_400x400.jpg" alt="" />
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-700">Oketa Fred</h3>
+                                <span class="text-sm tracking-wide text-gray-600">Fullstack Developer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white">
+                        <p class="text-gray-700">I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.</p>
+
+                        <div class="mt-8 flex gap-4 items-center">
+                            <img class="h-12 w-12 rounded-full" src="https://pbs.twimg.com/profile_images/1599029039297077249/p0znhFdE_400x400.jpg" alt="" />
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-700">Oketa Fred</h3>
+                                <span class="text-sm tracking-wide text-gray-600">Fullstack Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+     
+  
+      
+    </main >
+
+            @include('AllUsers/components/footer')
+</body >
+</html >
