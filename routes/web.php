@@ -45,7 +45,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(PatientControllers::class)->group(function () { 
     //on peut dire qu'on use le controller
     Route::get('/dashboard','dashboardForm')->name('dashboardForm');
-    // Route::post('/dashboard','AddTauxTraitement')->name('addTauxTraitement');
+    Route::post('/dashboard','AddTauxTraitement')->name('addTauxTraitement');
     Route::get('/logout','logoutPatient')->name('logoutPatient');
 });
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PatientControllers extends Controller
 {
@@ -26,10 +27,34 @@ class PatientControllers extends Controller
     }
 
     function AddTauxTraitement(Request $request){
-        // $request->validate([
-        //     "taux"=>"required",
+        $request->validate([
+            'idpatient'=>"required",
+            'taux'=>"required|min:2|max:3",
+            "traitement"=>"required",
+        ]);
 
-        // ]);
+        $idpatient = $request->input('idpatient');
+        //recupere du patient
+        $dataJour = DB::table('traitement2')->where('idpatient', $idpatient)->orderByDesc('idtraitement')->value('jour');
+
+        $maDate = date('d-m-Y, H:i'); 
+        $jour = $dataJour + 1;
+
+        $query =  DB::table('traitement2')->insert([
+            "idpatient"=>$idpatient,
+            "jour"=>$jour,
+            "taux"=>$request->input('taux'),
+            "traitement"=>$request->input('traitement'),
+            "datetrait"=>$maDate,
+
+        ]);
+
+        if($query){
+            return back()->with('success','Taux ajouté avec succès');
+        }else{
+            return back()->with('fail','Taux non ajouté');
+        }
+
         // return view("aboutName");
     }
 
