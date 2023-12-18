@@ -22,7 +22,7 @@ class PatientControllers extends Controller
     
         $request->session()->regenerateToken();
     
-        return redirect('/');
+        return redirect()->route('accueilName');
     }
 
     function AddTauxTraitement(Request $request){

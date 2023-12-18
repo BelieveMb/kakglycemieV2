@@ -46,7 +46,7 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     //on peut dire qu'on use le controller
     Route::get('/dashboard','dashboardForm')->name('dashboardForm');
     // Route::post('/dashboard','AddTauxTraitement')->name('addTauxTraitement');
-    Route::post('/logout','logoutPatient')->name('logoutPatient');
+    Route::get('/logout','logoutPatient')->name('logoutPatient');
 });
 
 require __DIR__.'/auth.php';
