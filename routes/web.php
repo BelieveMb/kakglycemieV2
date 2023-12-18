@@ -17,21 +17,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-Route::get('/',[AllUsersController::class, 'index'])->name('accueilName');
-Route::get('/patient', [AllUsersController::class, 'patient'])->name('patientName');
-Route::get('/doctor', [AllUsersController::class, 'doctor'])->name('doctorName');
-Route::get('/about-us', [AllUsersController::class, 'about'])->name('aboutName');
+Route::prefix('/')->controller(AllUsersController::class)->group(function (){
+    Route::get('/', 'index')->name('accueilName');
+    Route::get('patient',  'patient')->name('patientName');
+    Route::get('doctor',  'doctor')->name('doctorName');
+    Route::get('about-us',  'about')->name('aboutName');
+    Route::post('loginPat','loginPatient')->name('loginPatient');
+
+});
 
 //register doctor
 Route::post('add', [registerMedController::class, 'addDoctor'])->name('addDoctor');
+//login doctor
+Route::post('loginDoctor', [registerMedController::class, 'loginDoctor'])->name('loginDoctor');
 
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -40,10 +42,11 @@ Route::middleware('auth')->group(function () {
 });
 
 //les patients
-Route::prefix('/patient')->name('Patient.')->controller(PatientControllers::class)->group(function () { 
+Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(PatientControllers::class)->group(function () { 
     //on peut dire qu'on use le controller
     Route::get('/dashboard','dashboardForm')->name('dashboardForm');
-
+    // Route::post('/dashboard','AddTauxTraitement')->name('addTauxTraitement');
+    Route::post('/logout','logoutPatient')->name('logoutPatient');
 });
 
 require __DIR__.'/auth.php';

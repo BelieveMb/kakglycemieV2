@@ -19,7 +19,7 @@
                <span class="self-center whitespace-nowrap text-gray-50">KaK glycémie</span>
                </a>
                <form action="#" method="GET" class="hidden lg:block lg:pl-32">
-                  <label for="topbar-search" class="sr-only">Trouvez un médecin...</label>
+                  <label for="topbar-search" class="sr-only">Trouvez un médecin</label>
                   <div class="mt-1 relative lg:w-64">
                      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +40,7 @@
                </button>
                
                
-               <a href="#" class="hidden sm:inline-flex ml-5 text-red-500 bg-gray-100 hover:bg-gray-500 hover:text-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3">
+               <a href="{{ route('logout') }}" class="hidden sm:inline-flex ml-5 text-red-500 bg-gray-100 hover:bg-gray-500 hover:text-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3">
                 <!--   <svg class="svg-inline--fa fa-out -ml-1 mr-2 h-4 w-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gem" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                      <path fill="currentColor" d="M378.7 32H133.3L256 182.7L378.7 32zM512 192l-107.4-141.3L289.6 192H512zM107.4 50.67L0 192h222.4L107.4 50.67zM244.3 474.9C247.3 478.2 251.6 480 256 480s8.653-1.828 11.67-5.062L510.6 224H1.365L244.3 474.9z"></path>
                   </svg> -->
