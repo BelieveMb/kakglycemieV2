@@ -20,12 +20,13 @@
                         </form>
                      </li>
                      <li>
-                        <a href="#" class="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
-                           
-                           <span class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75">
-                              <i class="ml-1 text-xl bi bi-heart-pulse-fill"></i>
+                        <a href="{{ route('Patient.dashboardForm') }}" class="@if(request()->route()->getName()=== 'Patient.dashboardForm') bg-gray-200 @endif text-gray-900 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
+                           <span class="@if(request()->route()->getName()=== 'Patient.dashboardForm') bg-gray-200 font-semibold text-red-500 @endif">
+                              <span class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75">
+                                 <i class="ml-1 text-xl bi bi-heart-pulse-fill"></i>
+                              </span>
+                              <span class="ml-3">Ma glycémie</span>
                            </span>
-                           <span class="ml-3">Ma glycémie</span>
                         </a>
                      </li>
 

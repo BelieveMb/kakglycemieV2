@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\patientModel;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -57,9 +58,12 @@ class PatientControllers extends Controller
 
     }
 
-    public function statistiqueGlycemie()
+    public function statistiqueGlycemie(Request $request)
     {
-        return view('Patient.statistiqueGlycemie');
+        $idpatient = auth()->id();
+
+        $traitementList = patientModel::where('idpatient', $idpatient)->get();
+        return view('Patient.statistiqueGlycemie', ['traitementList' => $traitementList ]);
     }
 
    
