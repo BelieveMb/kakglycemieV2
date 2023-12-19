@@ -47,6 +47,7 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::get('/dashboard','dashboardForm')->name('dashboardForm');
     Route::post('/dashboard','AddTauxTraitement')->name('addTauxTraitement');
     Route::get('/logout','logoutPatient')->name('logoutPatient');
+    Route::get('/statistiqueGlycemie','statistiqueGlycemie')->name('statistiqueGlycemie');
 });
 
 require __DIR__.'/auth.php';

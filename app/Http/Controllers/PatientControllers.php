@@ -55,7 +55,11 @@ class PatientControllers extends Controller
             return back()->with('fail','Taux non ajouté');
         }
 
-        // return view("aboutName");
+    }
+
+    public function statistiqueGlycemie()
+    {
+        return view('Patient.statistiqueGlycemie');
     }
 
    
