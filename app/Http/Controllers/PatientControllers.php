@@ -62,10 +62,17 @@ class PatientControllers extends Controller
     {
         $idpatient = auth()->id();
 
-        $traitementList = patientModel::where('idpatient', $idpatient)->get();
-        return view('Patient.statistiqueGlycemie', ['traitementList' => $traitementList ]);
-    }
+        $traitementList = patientModel::where('idpatient', $idpatient);
 
+        $searchDate = $request->input('searchDate');
+        if(!empty($searchDate)){
+            $traitementList = $traitementList->where('datetrait', 'like', '%'. $searchDate. '%');
+        }
+
+        $traitementList = $traitementList->get();
+        // return redirect()->route('Patient.statistiqueGlycemie', ['traitementList' => $traitementList])->withErrors(['error' => 'Aucun traitement trouvé pour la date spécifiée']);
+        return view('Patient.statistiqueGlycemie', ['traitementList' => $traitementList]);
+    }
    
     
 }
