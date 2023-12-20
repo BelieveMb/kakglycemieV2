@@ -48,7 +48,7 @@
                                 <script src="https://unpkg.com/flowbite@1.3.3/dist/flowbite.js"></script>
                             </div>
 
-                            <div class="max-w-2xl mx-auto  py-4 px-10 rounded">
+                            <div class="max-w-2xl mx-auto  py-4 px-2 lg:px-10 rounded">
 
                                 <h2 class="text-xl font-medium lg:text-2xl mb-4 ">Statistique Glycémie</h2>
                                 <p class=" text-lg leading-relaxed text-gray-700">

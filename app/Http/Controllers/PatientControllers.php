@@ -66,6 +66,15 @@ class PatientControllers extends Controller
         return view('Patient.statistiqueGlycemie', ['traitementList' => $traitementList ]);
     }
 
+    public function patientProfile(Request $request)
+    {
+        $idpatient = auth()->id();
+
+        $traitementList = patientModel::where('idpatient', $idpatient)->get();
+        return view('Patient.patientProfile', ['traitementList' => $traitementList ]);
+    
+    }
+
    
     
 }

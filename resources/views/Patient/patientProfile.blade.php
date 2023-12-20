@@ -22,13 +22,14 @@
             </div>
             <!-- component -->
                 <div class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5">
-                    <img class="w-32 h-32 rounded-full mx-auto" src="https://picsum.photos/200" alt="Profile picture">
+                    <img class="w-32 h-32 rounded-full mx-auto" src="{{ asset('../images/patient_kak.jpg') }}" alt="Profile picture">
                     <h2 class="text-center text-2xl font-semibold mt-3">John Doe</h2>
-                    <p class="text-center text-gray-600 mt-1">Software Engineer</p>
+                    <p class="text-center text-gray-600 mt-1">Statut glycémie : Normal </p>
+
                     <div class="flex justify-center mt-5">
-                    <a href="#" class="text-blue-500 hover:text-blue-700 mx-3">Twitter</a>
-                    <a href="#" class="text-blue-500 hover:text-blue-700 mx-3">LinkedIn</a>
-                    <a href="#" class="text-blue-500 hover:text-blue-700 mx-3">GitHub</a>
+                        <a href="{{ route('Patient.dashboardForm') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-heart-pulse-fill"></i> 450 dl/ml</a>
+                        <a href="{{ route('Patient.statistiqueGlycemie') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-clipboard2-pulse-fill"></i>  4e jour</a>
+                        <a href="{{ route('Patient.patientProfile') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-calendar-heart"></i> 20/5/2023</a>
                     </div>
                     <div class="mt-5">
                     <h3 class="text-xl font-semibold">Bio</h3>
