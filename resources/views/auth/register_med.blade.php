@@ -1,8 +1,8 @@
                 <form method="POST" action="{{ route('addDoctor') }}">
                         @csrf
-                    <div class="flex flex-row gap-3">
+                    <div class="flex flex-col lg:flex-row gap-3">
                         
-                        <div class="w-1/2 px-3 my-5">
+                        <div class="w-full px-3 mb-2">
                             <label for="nomMed" class="text-xs font-semibold px-1">Nom Medec</label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
@@ -10,7 +10,7 @@
                             </div>
                             <x-input-error :messages="$errors->get('nomMed')" class="mt-2" />
                         </div>
-                        <div class="w-1/2 px-3 my-5">
+                        <div class="w-full px-3 mb-2">
                             <label for="sexeMed" class="text-xs font-semibold px-1">Sexe</label>
                             <div class="flex ">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>

@@ -24,7 +24,7 @@
               <span class="ml-2 -mr-1 text-lg" >
                 <i class="bi bi-arrow-right"></i>
               </span>
-              
+              0812815951
             </a>
             <a href="{{ route('login') }}" class="inline-flex justify-center hover:text-gray-50 items-center py-1 px-3 lg:py-3 lg:px-5 text-base font-medium text-center border-gray-700 text-red-500 rounded-lg border  hover:bg-gray-700 focus:ring-4 focus:ring-gray-400 ml-4 ">
               Connexion
