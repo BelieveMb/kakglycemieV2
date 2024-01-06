@@ -1,16 +1,18 @@
-<button onclick="topFunction()" id="btnTotop" title="Go to top" class="bg-red-500/70 text-gray-200 hover:bg-gray-700 font-semibold" ><i class="bi bi-arrow-up"></i></button>
+<a href="#top" onclick="topFunction()" id="btnTotop" title="Go to top" class="bg-red-500/70 text-gray-200 hover:bg-gray-700 font-semibold" >
+  <i class="bi bi-arrow-up"></i>
+</a>
 <style>
-  #btnTotop {
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  #btnTotop {  
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
 }
 
 
@@ -19,8 +21,7 @@
 
 <script>
     // Get the button:
-    let btnTotop = document.getElementById("btnTotop");l;
-    :
+    let btnTotop = document.getElementById("btnTotop");
 
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function() {scrollFunction()};

@@ -72,7 +72,7 @@
 
 
                      <li>
-                        <a href="#" class="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">                           
+                        <a href="{{ route('Patient.logoutPatient') }}" class="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">                           
                            <span class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75">
                               <i class="ml-1 text-xl bi bi-box-arrow-right"></i>
                            </span>

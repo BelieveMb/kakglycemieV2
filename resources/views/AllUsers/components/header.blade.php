@@ -19,7 +19,7 @@
 <body>
   <header>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <div class="">
+    <div class=""  id="top">
       <div class="antialiased ">
         <div class="w-full text-gray-200 bg-red-500 ">
           <div x-data="{ open: false }"

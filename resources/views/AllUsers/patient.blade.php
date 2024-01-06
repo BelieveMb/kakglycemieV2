@@ -20,14 +20,14 @@
           <p class="mb-8 text-lg font-normal text-gray-800 lg:text-xl ">Suivez votre glycémie en tout simplicité.</p>
         <div class="flex  justify-center gap-4 text-xs flex-row lg:justify-start lg:space-x-8 lg:text-xl">
             <a href="{{ route('register') }}" class="inline-flex justify-center items-center py-1 px-3 lg:py-3 lg:px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-gray-700 hover:text-gray-200 focus:ring-4 focus:ring-red-300 ">
-              S'inscrire
+              Inscription
               <span class="ml-2 -mr-1 text-lg" >
                 <i class="bi bi-arrow-right"></i>
               </span>
               
             </a>
             <a href="{{ route('login') }}" class="inline-flex justify-center hover:text-gray-50 items-center py-1 px-3 lg:py-3 lg:px-5 text-base font-medium text-center border-gray-700 text-red-500 rounded-lg border  hover:bg-gray-700 focus:ring-4 focus:ring-gray-400 ml-4 ">
-              Se connecter
+              Connexion
             </a>
           </div>
        

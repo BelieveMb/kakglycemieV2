@@ -115,8 +115,8 @@
                     <form method="POST" action="{{ route('register') }}" id="PatientForm" >
                         @csrf
                     
-                    <div class="flex flex-row gap-3">
-                        <div class="w-1/2 px-3 mb-5">
+                    <div class="flex flex-col gap-2">
+                        <div class="w-full px-3">
                             <label for="name" class="text-xs font-semibold px-1">Nom complet</label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
@@ -124,7 +124,7 @@
                             </div>
                             <x-input-error :messages="$errors->get('name')" class="mt-2" />
                         </div>
-                        <div class="w-1/2 px-3 my-1">
+                        <div class="w-full px-3 my-1">
                             <label for="sexePat" class="text-xs font-semibold px-1">Sexe</label>
                             <div class="flex ">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
@@ -139,7 +139,7 @@
                     </div>
                     
                     <div class="flex flex-col gap-2">
-                        <div class="w-full px-3 mb-5">
+                        <div class="w-full px-3 mb-2">
                             <label for="email" class="text-xs font-semibold px-1" :value="__('Email')">Email </label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-envelope text-gray-400 text-lg"></i></div>
@@ -148,7 +148,7 @@
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
 
-                        <div class="w-full px-3 mb-5">
+                        <div class="w-full px-3 mb-2">
                             <label for="telPat" class="text-xs font-semibold px-1">Téléphone </label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-phone text-gray-400 text-lg"></i></div>
@@ -158,8 +158,8 @@
                         </div>
                     </div>
 
-                    <div class="flex flex-row gap-3">
-                        <div class="w-1/2 px-3 mb-5">
+                    <div class="flex flex-col lg:flex-row gap-2">
+                        <div class="w-full px-3 ">
                             <label for="password" class="text-xs font-semibold px-1" :value="__('password')">Mot de passe </label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-lock text-gray-400 text-lg"></i></div>
@@ -168,7 +168,7 @@
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                         </div>
 
-                        <div class="w-1/2 px-3 mb-5">
+                        <div class="w-full px-3 mb-5">
                             <label for="password_confirmation" class="text-xs font-semibold px-1" :value="__('Confirm Password')">Confirmer votre  </label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-lock text-gray-400 text-lg"></i></div>
