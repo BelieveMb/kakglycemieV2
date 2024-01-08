@@ -12,62 +12,128 @@
     @include('AllUsers/components/header')
 
     <main>
-        <section>
-            <h1>About</h1>
-            <form method="POST" action="{{ route('loginDoctor') }}">
-                        @csrf
-                    
-                    <div class="flex flex-col gap-2">
-                        <div class="w-full px-3 mb-5">
-                            <label for="telMed" class="text-xs font-semibold px-1">Id médecin </label>
-                            <div class="flex">
-                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-phone text-gray-400 text-lg"></i></div>
-                                <input type="tel" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre numéro de téléphone" name="telMed" :value="{{old('telMed')}}"  autofocus autocomplete="telMed" >
-                            </div>
-                            @error('telMed')
-                                {{ $message }}
-                            @enderror
-                            <!-- <x-input-error :messages="$errors->get('telMed')" class="mt-2" /> -->
-                        </div>
+        <section class="px-8 py-8 lg:px-40 lg:py-20  border-t border-b  rounded-b-xl  bg-opacity-10">
+            <div class="flex flex-col lg:flex-row gap-5 justify-center mb-16">
+                <div class="w-full">
+                   <img alt="image de l'équipe sur kak" class="max-w-full h-full rounded-lg shadow-lg" src="{{ asset('images/img_team2.png') }}">
+                </div>
+                <div class="flex flex-col items-start justify-center w-full lg:w-1/2 gap-4">
+                    <h5 class="text-2xl font-semibold" >A propos de Nous</h5>
+                    <h1 class="text-4xl font-semibold">Nous proposons un service de qualité</h1>
+                    <p>KaK glycémie est là pour vous aider ! Grâce à notre solution, vous pouvez facilement enregistrer vos taux de glycémie, votre traitement, et accéder à ces informations à tout moment. Vous pouvez également communiquer directement avec votre médecin pour recevoir des conseils personnalisés et ajuster votre traitement en conséquence. </p>
+                </div>
+            </div>
 
-                        <div class="w-full px-3 mb-5">
-                            <label for="password" class="text-xs font-semibold px-1" :value="__('password')">Mot de passe </label>
-                            <div class="flex">
-                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-lock text-gray-400 text-lg"></i></div>
-                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre mot de passe" name="password"   autofocus autocomplete="password" >
-                            </div>
-                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                        </div>
-
+            <div class="flex flex-col lg:flex-row content-center gap-8">
+                <div class="flex flex-col items-center content-center text-center w-full">
+                    <div>
+                        <span class="text-2xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-chat-dots"></i></span>
                     </div>
-                    @error('main')
-                                {{ $message }}
-                     @enderror
+                    <h3 class="text-2xl font-semibold mb-4">Suivi personnalisé</h3>
+                    <p>KaK Glycémie est facile à utiliser et accessible à partir de n'importe quel appareil connecté à Internet.</p>
+                </div>
+                <div class="w-[100%] ">
+                    <img alt="image votre avantage sur kak" class="max-w-full h-full rounded-lg shadow-lg" src="{{ asset('images/patient.jpg') }}">
+                </div>
 
-                    <!-- Remember Me -->
-                    <div class="block my-4 pl-4">
-                        <label for="remember_me" class="inline-flex items-center">
-                            <input id="rem²ember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                            <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                        </label>
+                <div class="flex flex-col items-center content-center text-center w-full">
+                    <div>
+                        <span class="text-2xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-chat-dots"></i></span>
                     </div>
+                    <h3 class="text-2xl font-semibold mb-4">Médecins de qualités</h3>
+                    <p>Rejoignez nous et prenez le contrôle de votre santé dès maintenant !.</p>
+                </div>
+                <div class="w-[100%]">
+                    <img alt="image votre avantage sur kak" class="max-w-full h-full rounded-lg shadow-lg" src="{{ asset('images/doctor.jpg') }}">
+                </div>
+            </div>
+        </section>
 
-
-
-                 
-                    
-                    <div class="flex -mx-3">
-                        <div class="w-full px-3 mb-5">
-                            <button class="block w-full max-w-xs mx-auto bg-gray-800 hover:bg-gray-500 focus:bg-gray-600 text-white rounded-lg px-3 py-3 font-semibold text-upp">Se connecter</button>
-                        </div>
-                    </div>
-
-                    <div class="px-5 flex items-center">
-                        <p>Pas de compte sur KaK glycémie, <a href="{{ route('register') }}" class="text-red-400 underline">S'inscrire  <i class="bi bi-person-plus-fill"></i></a></p>
+        <section class="  fade  h-auto w-full bg-no-repeat bg-cover bg-center py-40 " style="background-image: url('{{ asset('images/img_team.png') }}');">
+            <aside class="flex flex-col lg:flex-row justify-center gap-6 mx-10 my-5">
+                <div class="flex flex-col gap-4  bg-red-950/25  ">
+                    <span class="bg-red-500 py-2"></span>
+                    <div class="px-3 py-1 pb-4 hover:-translate-y-5 hover:duration-700">
+                        <h3 class="text-red-500 text-2xl mb-2">Who we work is </h3>
+                        <p class="my-5">Classes curated and developed by the industry’s best talent, bringing results through innovation.</p> 
+                        <a href="" class="border-b-4 border-gray-50 font-semibold text-gray-50 hover:text-red-500 hover:border-red-500 duration-500">Learn More</a>
                     </div>
                 </div>
+                <div class="flex flex-col gap-4  bg-red-950/25">
+                    <span class="bg-red-500 py-2"></span>
+                    <div class="px-3 py-1 pb-4 hover:-translate-y-5 hover:duration-700">
+                        <h3 class="text-red-500 text-2xl mb-2">Who we work is </h3>
+                        <p class="my-5">Classes curated and developed by the industry’s best talent, bringing results through innovation.</p> 
+                        <a href="" class="border-b-4 border-gray-50 font-semibold text-gray-50 hover:text-red-500 hover:border-red-500 duration-500">Learn More</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4  bg-red-950/25">
+                    <span class="bg-red-500 py-2"></span>
+                    <div class="px-3 py-1 pb-4 hover:-translate-y-5 hover:duration-700">
+                        <h3 class="text-red-500 text-2xl mb-2">Who we work is </h3>
+                        <p class="my-5">Classes curated and developed by the industry’s best talent, bringing results through innovation.</p> 
+                        <a href="" class="border-b-4 border-gray-50 font-semibold text-gray-50 hover:text-red-500 hover:border-red-500 duration-500">Learn More</a>
+                    </div>
+                </div>
+
+
+            </aside>
+
+
+        </section>
+
+        <section class="flex flex-col gap-4 items-center py-24 px-10">
+            <h2 class="text-2xl font-semibold lg:text-[4rem] mb-3">Contactez nous</h2>
+            <h5 class="text-xl lg:text-2xl">Pour toutes vos préoccupations, laissez nous un message!</h5>
+
+            <form action="" class='flex flex-col content-center gap-6 my-10 '>
+               <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="flex flex-col">
+                        <label for="">Email</label>
+                        <input type="text" class="rounded-2xl bg-gray-400 p-2" placeholder="Ecrivez un email">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="">Message</label>
+                        <input type="text" class="rounded-2xl bg-gray-400 p-2" placeholder="Ecrivez votre message">
+                    </div>
+               </div>
+                <button  class="rounded-2xl bg-red-500 p-2 my-4 w-full font-semibold text-gray-50 hover:bg-red-400" >Envoyer</button>
             </form>
         </section>
+
+        <section class="  py-10 px-10 bg-red-500">
+            <div class="flex flex-col items-center content-center justify-center gap-8 lg:flex-row bg-gray-200  -mt-14 lg:-mt-20 py-16 ">
+                <div class="flex flex-col justify-center items-center text-center -mt-20 lg:-mt-40 px-10 py-8    hover:animate-pulse cursor-pointer">
+                    <div class="mb-4">
+                        <span class="text-[4rem] font-semibold inline-block px-6 py-2  uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-chat-dots"></i></span>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Apropos de KaK Glycémie</h3>
+                    <p class="lg:w-[80%]">Le contrôle de votre santé  !.</p>
+                </div>
+
+                <div class="flex flex-col justify-center items-center text-center px-10 py-8 mt-1 lg:-mt-40  hover:animate-ping cursor-pointer">
+                    <div class="mb-4">
+                        <span class="text-[4rem] font-semibold inline-block px-6 py-2  uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-phone"></i></span>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Téléphone</h3>
+                    <p> <a href="tel:+243817723066">+243 817 723 066</a></p>
+                </div>
+
+                <div class="flex flex-col justify-center items-center text-center mt-1 lg:-mt-40 px-10 py-8 hover:animate-spin cursor-pointer">
+                    <div class="mb-4">
+                        <span class="text-[4rem] font-semibold inline-block px-6 py-2  uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-chat-dots"></i></span>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Retrouvez nous sur :</h3>
+                    <p>125, avenue du port, Kinshasa-Gombe.</p>
+                </div>
+            </div>
+
+        </section>
+
+        @include('AllUsers/components/footer')
+
+
+
     </main>
 </body>
 </html>

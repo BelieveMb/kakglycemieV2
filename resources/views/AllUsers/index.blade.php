@@ -148,8 +148,8 @@
         </div>
         <div class="w-full md:w-1/2 ml-auto mr-auto px-4">
           <div class="">
-            <div class="text-red-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-red-500 mt-8">
-              <i class="bi bi-person-hearts text-xl"></i>
+            <div class="text-gray-50 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-red-500 mt-8">
+              <i class="bi bi-heart-pulse-fill text-xl"></i>
             </div>
             <h3 class="text-3xl font-semibold text-gray-700">Optimisez votre santé et suivez votre glycémie en toute simplicité !</h3>
             <p class="mt-4 text-lg leading-relaxed text-gray-700">
@@ -333,7 +333,7 @@
                           <path stroke-linecap="round" stroke-linejoin="round" d="M16 17l-4 4m0 0l-4-4m4 4V3"></path>
                       </svg>
                       <div class="abg-orange-400 mx-auto w-fit overflow-hidden rounded-[6rem] rounded-br-none rounded-tl-none">
-                          <img src="{{ asset('images/img_avantage.jpg') }}" class="w-[35rem] h-[20rem]">
+                          <img src="{{ asset('images/doctor.jpg') }}" class="w-[35rem] h-[20rem]">
                       </div>
                   </div>
                  

@@ -15,7 +15,7 @@
                     </div>
                     <div class="text-center">
                       <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha Reynolds</a>
-                      <span class="block font-medium text-red-300">Marketing Manager</span>
+                      <span class="block font-medium text-red-300">Choisir</span>
                     </div>
                   </div>
 
@@ -26,7 +26,7 @@
                     </div>
                     <div class="text-center">
                       <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha Reynolds</a>
-                      <span class="block font-medium text-red-300">Marketing Manager</span>
+                      <span class="block font-medium text-red-300">Choisir</span>
                     </div>
                   </div>
 
@@ -70,7 +70,7 @@
                 </div>
                 <div class="text-center">
                   <a href="javascript:void(0)" id="choiceDoctor" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha Reynolds</a>
-                  <span class="block font-medium text-red-300">Marketing Manager</span>
+                  <span class="block font-medium text-red-300">Choisir</span>
                 </div>
               </div>
 
@@ -82,7 +82,7 @@
                 <div class="text-center">
                   <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha
                     Reynolds</a>
-                  <span class="block font-medium text-red-300">Marketing Manager</span>
+                  <span class="block font-medium text-red-300">Choisir</span>
                 </div>
               </div>
 
@@ -100,7 +100,7 @@
                   <a href="javascript:void(0)"
                     class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">2
                     Reynolds</a>
-                  <span class="block font-medium text-red-300">Marketing Manager</span>
+                  <span class="block font-medium text-red-300">Choisir</span>
                 </div>
               </div>
 
@@ -113,7 +113,7 @@
                   <a href="javascript:void(0)"
                     class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha
                     Reynolds</a>
-                  <span class="block font-medium text-red-300">Marketing Manager</span>
+                  <span class="block font-medium text-red-300">Choisir</span>
                 </div>
               </div>
 
@@ -126,7 +126,7 @@
                   <a href="javascript:void(0)"
                     class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha
                     Reynolds</a>
-                  <span class="block font-medium text-red-300">Marketing Manager</span>
+                  <span class="block font-medium text-red-300">Choisir</span>
                 </div>
               </div>
 

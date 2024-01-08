@@ -60,6 +60,7 @@
                         <p class=" text-gray-600 transition-colors duration-300  hover:underline hover:cursor-pointer hover:text-blue-500"><a href="{{ route('accueilName')}}" class="@if(request()->route()->getName()=== 'accueilName')  text-gray-50 @endif">Accueil</a></p>
                         <p class="text-gray-600 transition-colors duration-300                        hover:underline hover:cursor-pointer hover:text-gray-100"><a href="{{ route('patientName')}}" class="@if(request()->route()->getName()=== 'patientName')  text-gray-50 @endif">Patient</a> </p>
                         <p class="text-gray-600 transition-colors duration-300 hover:underline hover:cursor-pointer hover:text-gray-100"> <a href="{{ route('doctorName')}}" class="@if(request()->route()->getName()=== 'doctorName')  text-gray-50 @endif">Médecin</a></p>
+                        <p class="text-gray-600 transition-colors duration-300 hover:underline hover:cursor-pointer hover:text-gray-100"> <a href="{{ route('aboutName')}}" class="@if(request()->route()->getName()=== 'aboutName')  text-gray-50 @endif">Apropos de nous</a></p>
                     </div>
                 </div>
 
@@ -75,9 +76,10 @@
                       
                   </div>
                   <ul class="text-gray-50 text-xl my-4 flex gap-4">
-                    <li><a href="tel:+243817723066"><i class="bi bi-phone"></i></a></li>
-                    <li><a href="mailto:mbolokobelieve@gmail.com"><i class="bi bi-enveloppe"></i></a></li>
+                    <li><a href="tel:+243817723066"><i class="bi bi-telephone"></i></a></li>
+                    <li><a href="mailto:mbolokobelieve@gmail.com"><i class="bi bi-envelope"></i></a></li>
                     <li><a href=""><i class="bi bi-facebook"></i></a></li>
+                    <li><a href=""><i class="bi bi-instagram"></i></a></li>
                     <li><a href=""><i class="bi bi-whatsapp"></i></a></li>
                   </ul>
               </div>
