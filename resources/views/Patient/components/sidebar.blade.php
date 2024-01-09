@@ -32,7 +32,6 @@
 
                      <li>
                         <a href="{{ route('Patient.patientChat') }}" class="@if(request()->route()->getName()=== 'Patient.patientChat') bg-gray-200 @endif text-gray-900 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
-
                            <span class="@if(request()->route()->getName()=== 'Patient.patientChat') bg-gray-200 font-semibold text-red-500 @endif">
 
                               <i class="ml-1 text-xl bi bi-chat-left-text"></i>

@@ -74,7 +74,10 @@ class PatientControllers extends Controller
         return view('Patient.patientProfile', ['traitementList' => $traitementList ]);
     
     }
-
+    
+    public function patientChat(){
+        return view('Patient.patientChat');
+    }
    
     
 }
