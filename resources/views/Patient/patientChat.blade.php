@@ -13,8 +13,8 @@
             @include('Patient.components.header')
             <div class="flex overflow-hidden bg-red-900 pt-16">
                 @include('Patient.components.sidebar')
-                <div class="bg-gray-900 opacity-50 hidden fixed inset-0 z-10" id="sidebarBackdrop"></div>
-                <div id="main-content" class="h-full w-full bg-gray-300 relative overflow-hidden lg:ml-64">
+                {{-- <div class="bg-gray-900 opacity-50 hidden fixed inset-0 z-10" id="sidebarBackdrop"></div> --}}
+                <div id="main-content" class="h-full w-full bg-gray-300 relative overflow-y-auto lg:ml-64">
                     <div class="w-full pt-[7rem] ">
                         {{-- <div class="max-w-full mx-1 lg:mx-auto  bg-red-200 py-4 px-0 lg:px-10 rounded"> --}}
                         <div class="w-full h-auto bg-gray-300/100 " >
@@ -149,7 +149,8 @@
                                       </div>                  
                  
                                       <!-- Right -->
-                                      <div class="w-full lg:w-2/3 border flex flex-col">
+                                      <div class="w-full lg:w-2/3 border flex
+                                      flex-col ">
                   
                                           <!-- Header -->
                                           <div class="py-2 px-3 bg-grey-lighter flex flex-row justify-between items-center">
