@@ -14,7 +14,7 @@
             <div class="flex overflow-hidden bg-red-900 pt-16">
                 @include('Patient.components.sidebar')
                 {{-- <div class="bg-gray-900 opacity-50 hidden fixed inset-0 z-10" id="sidebarBackdrop"></div> --}}
-                <div id="main-content" class="h-full w-full bg-gray-300 relative overflow-y-auto lg:ml-64">
+                <div id="main-content" class="h-full w-full lg:w-[81%] bg-gray-300 p-0 m-0 fixed lg:ml-64">
                     <div class="w-full pt-[7rem] ">
                         {{-- <div class="max-w-full mx-1 lg:mx-auto  bg-red-200 py-4 px-0 lg:px-10 rounded"> --}}
                         <div class="w-full h-auto bg-gray-300/100 " >
@@ -182,10 +182,8 @@
                                           </div>
                   
                                           <!-- Messages background-color: #DAD3CC-->
-                                          <div class="flex-1 overflow-auto
-                                          bg-no-repeat bg-cover  bg-center"
-                                          style="background-image:
-                                          url('{{asset('images/chatMed.jpg')
+                                          <div class="flex-1 overflow-scroll bg-no-repeat bg-cover  bg-center"
+                                          style="background-image:url('{{asset('images/chatMed.jpg')
                                           }}');">
                                               <div class="py-2 px-3">
                   
@@ -219,9 +217,7 @@
                                                               12:45 pm
                                                           </p>
                                                       </div>
-                                                  </div>
-                  
-                                                 
+                                                  </div>             
                   
                                                   <div class="flex justify-end mb-2">
                                                       <div class="rounded py-2 px-3 text-red-100 bg-gray-800" >
@@ -244,21 +240,95 @@
                                                           </p>
                                                       </div>
                                                   </div>
-                  
-                                                  <div class="flex mb-2">
-                                                      <div class="rounded py-2 px-3" style="background-color: #F2F2F2">
-                                                          <p class="text-sm text-purple">
-                                                              Tom Cruise
-                                                          </p>
-                                                          <p class="text-sm mt-1">
-                                                              Get Andrés on this movie ASAP!
-                                                          </p>
-                                                          <p class="text-right text-xs text-grey-dark mt-1">
-                                                              12:45 pm
-                                                          </p>
-                                                      </div>
+
+                                                  <div class="flex justify-end mb-2">
+                                                    <div class="rounded py-2 px-3 text-red-100 bg-gray-800" >
+                                                        <p class="text-sm mt-1">
+                                                            Count me in
+                                                        </p>
+                                                        <p class="text-right text-xs text-red-500 mt-1">
+                                                            12:45 pm
+                                                        </p>
+                                                    </div>
                                                   </div>
-                  
+
+                                                  <div class="flex mb-2">
+                                                    <div class="rounded py-2 px-3 bg-gray-300">
+                                                       
+                                                        <p class="text-sm mt-1">
+                                                            Hi everyone! Glad you could join! I am making a new movie.
+                                                        </p>
+                                                        <p class="text-right text-xs text-red-500 mt-1">
+                                                            12:45 pm
+                                                        </p>
+                                                    </div>
+                                                  </div>
+                                                  <div class="flex justify-end mb-2">
+                                                    <div class="rounded py-2 px-3 text-red-100 bg-gray-800" >
+                                                        <p class="text-sm mt-1">
+                                                            Count me in
+                                                        </p>
+                                                        <p class="text-right text-xs text-red-500 mt-1">
+                                                            12:45 pm
+                                                        </p>
+                                                    </div>
+                                                  </div>
+
+                                                  <div class="flex mb-2">
+                                                    <div class="rounded py-2 px-3 bg-gray-300">
+                                                       
+                                                        <p class="text-sm mt-1">
+                                                            Hi everyone! Glad you could join! I am making a new movie.
+                                                        </p>
+                                                        <p class="text-right text-xs text-red-500 mt-1">
+                                                            12:45 pm
+                                                        </p>
+                                                    </div>
+                                                  </div>
+                                                  <div class="flex justify-end mb-2">
+                                                    <div class="rounded py-2 px-3 text-red-100 bg-gray-800" >
+                                                        <p class="text-sm mt-1">
+                                                            Count me in
+                                                        </p>
+                                                        <p class="text-right text-xs text-red-500 mt-1">
+                                                            12:45 pm
+                                                        </p>
+                                                    </div>
+                                                  </div>
+
+                                                  <div class="flex mb-2">
+                                                    <div class="rounded py-2 px-3 bg-gray-300">
+                                                       
+                                                        <p class="text-sm mt-1">
+                                                            Hi everyone! Glad you could join! I am making a new movie.
+                                                        </p>
+                                                        <p class="text-right text-xs text-red-500 mt-1">
+                                                            12:45 pm
+                                                        </p>
+                                                    </div>
+                                                  </div>
+                                                  <div class="flex justify-end mb-2">
+                                                    <div class="rounded py-2 px-3 text-red-100 bg-gray-800" >
+                                                        <p class="text-sm mt-1">
+                                                            Count me in
+                                                        </p>
+                                                        <p class="text-right text-xs text-red-500 mt-1">
+                                                            12:45 pm
+                                                        </p>
+                                                    </div>
+                                                  </div>
+
+                                                  <div class="flex mb-2">
+                                                    <div class="rounded py-2 px-3 bg-gray-300">
+                                                       
+                                                        <p class="text-sm mt-1">
+                                                            Hi everyone! Glad you could join! I am making a new movie.
+                                                        </p>
+                                                        <p class="text-right text-xs text-red-500 mt-1">
+                                                            12:45 pm
+                                                        </p>
+                                                    </div>
+                                                  </div>
                                               </div>
                                           </div>
                   
