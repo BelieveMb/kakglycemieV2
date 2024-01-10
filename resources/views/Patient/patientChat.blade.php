@@ -11,10 +11,10 @@
     <main>
         <div>
             @include('Patient.components.header')
-            <div class="flex overflow-hidden bg-white pt-16">
+            <div class="flex overflow-hidden bg-red-900 pt-16">
                 @include('Patient.components.sidebar')
                 <div class="bg-gray-900 opacity-50 hidden fixed inset-0 z-10" id="sidebarBackdrop"></div>
-                <div id="main-content" class="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64">
+                <div id="main-content" class="h-full w-full bg-gray-300 relative overflow-hidden lg:ml-64">
                     <div class="w-full pt-[7rem] ">
                         {{-- <div class="max-w-full mx-1 lg:mx-auto  bg-red-200 py-4 px-0 lg:px-10 rounded"> --}}
                         <div class="w-full h-auto bg-gray-300/100 " >
@@ -146,9 +146,8 @@
                                               </div>
                                           </div>
                   
-                                      </div>
-                  
-                  
+                                      </div>                  
+                 
                                       <!-- Right -->
                                       <div class="w-full lg:w-2/3 border flex flex-col">
                   
@@ -159,135 +158,87 @@
                                                       <img class="w-10 h-10 rounded-full" src="https://darrenjameseeley.files.wordpress.com/2014/09/expendables3.jpeg"/>
                                                   </div>
                                                   <div class="ml-4">
-                                                      <p class="text-grey-darkest">
-                                                          New Movie! Expendables 4
+                                                      <p class="text-red-500 font-semibold">
+                                                          Dr. Jean Louis
                                                       </p>
-                                                      <p class="text-grey-darker text-xs mt-1">
-                                                          Andrés, Tom, Harrison, Arnold, Sylvester
+                                                      <p class="text-gray-700 text-xs mt-1">
+                                                          HJ Hopitals, Saint Joseph
                                                       </p>
                                                   </div>
                                               </div>
                   
-                                              <div class="flex">
-                                                  <div>
-                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#263238" fill-opacity=".5" d="M15.9 14.3H15l-.3-.3c1-1.1 1.6-2.7 1.6-4.3 0-3.7-3-6.7-6.7-6.7S3 6 3 9.7s3 6.7 6.7 6.7c1.6 0 3.2-.6 4.3-1.6l.3.3v.8l5.1 5.1 1.5-1.5-5-5.2zm-6.2 0c-2.6 0-4.6-2.1-4.6-4.6s2.1-4.6 4.6-4.6 4.6 2.1 4.6 4.6-2 4.6-4.6 4.6z"></path></svg>
+                                              <div class="flex cursor-pointer">
+                                                  <div class="hover:text-red-500">
+                                                      <i class="bi bi-search"></i>
                                                   </div>
-                                                  <div class="ml-6">
-                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#263238" fill-opacity=".5" d="M1.816 15.556v.002c0 1.502.584 2.912 1.646 3.972s2.472 1.647 3.974 1.647a5.58 5.58 0 0 0 3.972-1.645l9.547-9.548c.769-.768 1.147-1.767 1.058-2.817-.079-.968-.548-1.927-1.319-2.698-1.594-1.592-4.068-1.711-5.517-.262l-7.916 7.915c-.881.881-.792 2.25.214 3.261.959.958 2.423 1.053 3.263.215l5.511-5.512c.28-.28.267-.722.053-.936l-.244-.244c-.191-.191-.567-.349-.957.04l-5.506 5.506c-.18.18-.635.127-.976-.214-.098-.097-.576-.613-.213-.973l7.915-7.917c.818-.817 2.267-.699 3.23.262.5.501.802 1.1.849 1.685.051.573-.156 1.111-.589 1.543l-9.547 9.549a3.97 3.97 0 0 1-2.829 1.171 3.975 3.975 0 0 1-2.83-1.173 3.973 3.973 0 0 1-1.172-2.828c0-1.071.415-2.076 1.172-2.83l7.209-7.211c.157-.157.264-.579.028-.814L11.5 4.36a.572.572 0 0 0-.834.018l-7.205 7.207a5.577 5.577 0 0 0-1.645 3.971z"></path></svg>
+                                                  <div class="ml-3 hover:text-red-500">
+                                                      <i class="bi bi-three-dots-vertical"></i>
                                                   </div>
-                                                  <div class="ml-6">
-                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#263238" fill-opacity=".6" d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z"></path></svg>
+                                                  <div class="ml-3 hover:text-red-500">
+                                                    <i class="bi bi-person-fill"></i>
                                                   </div>
                                               </div>
                                           </div>
                   
-                                          <!-- Messages -->
-                                          <div class="flex-1 overflow-auto" style="background-color: #DAD3CC">
+                                          <!-- Messages background-color: #DAD3CC-->
+                                          <div class="flex-1 overflow-auto
+                                          bg-no-repeat bg-cover  bg-center"
+                                          style="background-image:
+                                          url('{{asset('images/chatMed.jpg')
+                                          }}');">
                                               <div class="py-2 px-3">
                   
                                                   <div class="flex justify-center mb-2">
-                                                      <div class="rounded py-2 px-4" style="background-color: #DDECF2">
+                                                      <div class="rounded py-2 px-4 bg-red-500 text-gray-50" >
                                                           <p class="text-sm uppercase">
-                                                              February 20, 2018
+                                                              20/01/2024
                                                           </p>
                                                       </div>
                                                   </div>
                   
-                                                  <div class="flex justify-center mb-4">
-                                                      <div class="rounded py-2 px-4" style="background-color: #FCF4CB">
-                                                          <p class="text-xs">
-                                                              Messages to this chat and calls are now secured with end-to-end encryption. Tap for more info.
-                                                          </p>
-                                                      </div>
-                                                  </div>
                   
                                                   <div class="flex mb-2">
-                                                      <div class="rounded py-2 px-3" style="background-color: #F2F2F2">
-                                                          <p class="text-sm text-teal">
-                                                              Sylverter Stallone
-                                                          </p>
+                                                      <div class="rounded py-2 px-3 bg-gray-300">
+                                                         
                                                           <p class="text-sm mt-1">
                                                               Hi everyone! Glad you could join! I am making a new movie.
                                                           </p>
-                                                          <p class="text-right text-xs text-grey-dark mt-1">
+                                                          <p class="text-right text-xs text-red-500 mt-1">
                                                               12:45 pm
                                                           </p>
                                                       </div>
                                                   </div>
                   
                                                   <div class="flex mb-2">
-                                                      <div class="rounded py-2 px-3" style="background-color: #F2F2F2">
-                                                          <p class="text-sm text-purple">
-                                                              Tom Cruise
-                                                          </p>
+                                                      <div class="rounded py-2 px-3 bg-gray-300  ">
                                                           <p class="text-sm mt-1">
                                                               Hi all! I have one question for the movie
                                                           </p>
-                                                          <p class="text-right text-xs text-grey-dark mt-1">
+                                                          <p class="text-right text-xs text-red-500 mt-1">
                                                               12:45 pm
                                                           </p>
                                                       </div>
                                                   </div>
                   
-                                                  <div class="flex mb-2">
-                                                      <div class="rounded py-2 px-3" style="background-color: #F2F2F2">
-                                                          <p class="text-sm text-orange">
-                                                              Harrison Ford
-                                                          </p>
-                                                          <p class="text-sm mt-1">
-                                                              Again?
-                                                          </p>
-                                                          <p class="text-right text-xs text-grey-dark mt-1">
-                                                              12:45 pm
-                                                          </p>
-                                                      </div>
-                                                  </div>
-                  
-                                                  <div class="flex mb-2">
-                                                      <div class="rounded py-2 px-3" style="background-color: #F2F2F2">
-                                                          <p class="text-sm text-orange">
-                                                              Russell Crowe
-                                                          </p>
-                                                          <p class="text-sm mt-1">
-                                                              Is Andrés coming for this one?
-                                                          </p>
-                                                          <p class="text-right text-xs text-grey-dark mt-1">
-                                                              12:45 pm
-                                                          </p>
-                                                      </div>
-                                                  </div>
-                  
-                                                  <div class="flex mb-2">
-                                                      <div class="rounded py-2 px-3" style="background-color: #F2F2F2">
-                                                          <p class="text-sm text-teal">
-                                                              Sylverter Stallone
-                                                          </p>
-                                                          <p class="text-sm mt-1">
-                                                              He is. Just invited him to join.
-                                                          </p>
-                                                          <p class="text-right text-xs text-grey-dark mt-1">
-                                                              12:45 pm
-                                                          </p>
-                                                      </div>
-                                                  </div>
+                                                 
                   
                                                   <div class="flex justify-end mb-2">
-                                                      <div class="rounded py-2 px-3" style="background-color: #E2F7CB">
+                                                      <div class="rounded py-2 px-3 text-red-100 bg-gray-800" >
                                                           <p class="text-sm mt-1">
                                                               Hi guys.
                                                           </p>
-                                                          <p class="text-right text-xs text-grey-dark mt-1">
+                                                          <p class="text-right text-xs text-red-500 mt-1">
                                                               12:45 pm
                                                           </p>
                                                       </div>
                                                   </div>
                   
                                                   <div class="flex justify-end mb-2">
-                                                      <div class="rounded py-2 px-3" style="background-color: #E2F7CB">
+                                                      <div class="rounded py-2 px-3 text-red-100 bg-gray-800" >
                                                           <p class="text-sm mt-1">
                                                               Count me in
                                                           </p>
-                                                          <p class="text-right text-xs text-grey-dark mt-1">
+                                                          <p class="text-right text-xs text-red-500 mt-1">
                                                               12:45 pm
                                                           </p>
                                                       </div>
