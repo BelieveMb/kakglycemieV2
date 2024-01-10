@@ -27,7 +27,7 @@
                         </svg>
                         
                      </div>
-                     <input type="text" name="email" id="topbar-search" class="bg-gray-200 border border-gray-400  text-gray-900 sm:text-sm rounded-lg hover:bg-gray-100 focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 p-2.5" placeholder="Trouvez un médecin...">
+                     <input type="text" name="email" id="topbar-search" class="bg-gray-200 border border-gray-400  text-gray-900 sm:text-sm rounded-lg hover:bg-gray-100 outline-none block w-full pl-10 p-2.5" placeholder="Trouvez un médecin...">
                   </div>
                </form>
             </div>
