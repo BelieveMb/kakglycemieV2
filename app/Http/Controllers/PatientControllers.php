@@ -70,9 +70,12 @@ class PatientControllers extends Controller
     {
         $idpatient = auth()->id();
 
-        $traitementList = patientModel::where('idpatient', $idpatient)->get();
-        return view('Patient.patientProfile', ['traitementList' => $traitementList ]);
-    
+        $lastTraitement = patientModel::
+            where('idpatient', $idpatient)
+            ->latest('jour')
+            ->first();
+        
+        return view('Patient.patientProfile', ['lastTraitement' => $lastTraitement ]);
     }
     
     public function patientChat(){

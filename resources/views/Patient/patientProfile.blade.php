@@ -23,13 +23,17 @@
             <!-- component -->
                 <div class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5">
                     <img class="w-32 h-32 rounded-full mx-auto" src="{{ asset('../images/patient_kak.jpg') }}" alt="Profile picture">
-                    <h2 class="text-center text-2xl font-semibold mt-3">John Doe</h2>
+                    <h2 class="text-center text-2xl font-semibold mt-3">John </h2>
                     <p class="text-center text-gray-600 mt-1">Statut glycémie : Normal </p>
 
                     <div class="flex justify-center mt-5">
-                        <a href="{{ route('Patient.dashboardForm') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-heart-pulse-fill"></i> 450 dl/ml</a>
-                        <a href="{{ route('Patient.statistiqueGlycemie') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-clipboard2-pulse-fill"></i>  4e jour</a>
-                        <a href="{{ route('Patient.patientProfile') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-calendar-heart"></i> 20/5/2023</a>
+                        @if ($lastTraitement)
+                                <a href="{{ route('Patient.dashboardForm') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-heart-pulse-fill"></i> {{ $lastTraitement->taux }} dl/ml</a>
+                                <a href="{{ route('Patient.statistiqueGlycemie') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-clipboard2-pulse-fill"></i>  {{ $lastTraitement->jour }}e jour</a>
+                                <a href="{{ route('Patient.patientProfile') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-calendar-heart"></i> {{ $lastTraitement->datetrait }}</a>
+                        @else
+                            <a href="{{ route('Patient.dashboardForm') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-heart-pulse-fill"></i>  Commencez votre traitement </a>
+                        @endif
                     </div>
                     <div class="mt-5">
                     <h3 class="text-xl font-semibold">Bio</h3>
