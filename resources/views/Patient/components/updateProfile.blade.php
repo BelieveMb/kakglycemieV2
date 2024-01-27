@@ -1,18 +1,25 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Profile Information') }}
+            {{ __('Information du profil') }}
         </h2>
 
         <p class="mt-1 text-sm text-gray-600">
-            {{ __("Update your account's profile information and email address.") }}
+            {{ __("Vous pouvez modifier votre nom, votre numéro de téléphone et votre mail.") }}
         </p>
     </header>
 
     <form id="send-verification" method="post" action="{{ route('verification.send') }}">
         @csrf
     </form>
-
+    @if (Session::has('status'))
+        <div class="bg-gray-900 my-2  rounded-xl flex justify-between p-3 text-gray-100 font-semibold">
+            {{ Session::get('status') }}
+            <div class="text-gray-50">
+                <i class="bi bi-info-circle"></i>
+            </div>
+        </div>
+    @endif
     <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6">
         @csrf
         @method('patch')
@@ -21,6 +28,12 @@
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full"  required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
+        </div>
+
+        <div>
+            <x-input-label for="telPat" :value="__('Téléphone')" />
+            <x-text-input id="telPat" name="telPat" type="tel" class="mt-1 block w-full"  required autofocus autocomplete="telPat" />
+            <x-input-error class="mt-2" :messages="$errors->get('telPat')" />
         </div>
 
         {{-- :value="old('email', $user->email)" --}}

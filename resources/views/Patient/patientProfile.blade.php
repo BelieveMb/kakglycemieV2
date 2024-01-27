@@ -55,7 +55,6 @@
                     </div>
                     
                     <div class="mt-5 bg-white rounded-lg shadow-md p-5">
-                        <h3 class="text-xl font-semibold">Information personnelle</h3>
                         {{-- to include the update-Profile --}}
                         @include('Patient.components.updateProfile')
                     </div>
