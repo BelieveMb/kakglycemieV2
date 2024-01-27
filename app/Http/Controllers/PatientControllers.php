@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\patientModel;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -69,13 +70,16 @@ class PatientControllers extends Controller
     public function patientProfile(Request $request)
     {
         $idpatient = auth()->id();
+        $infoPatient = User::
+            where('id', $idpatient)
+            ->first();
 
         $lastTraitement = patientModel::
             where('idpatient', $idpatient)
             ->latest('jour')
             ->first();
         
-        return view('Patient.patientProfile', ['lastTraitement' => $lastTraitement ]);
+        return view('Patient.patientProfile', ['lastTraitement' => $lastTraitement, 'infoPatient' => $infoPatient ]);
     }
     
     public function patientChat(){

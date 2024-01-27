@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenu.e sur KaK /</title>
+    <title>Bienvenu.e sur KaK /Mon profil</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ asset('../css/AllUsers.css') }}">
 
@@ -21,23 +21,49 @@
 
             </div>
             <!-- component -->
-                <div class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5">
-                    <img class="w-32 h-32 rounded-full mx-auto" src="{{ asset('../images/patient_kak.jpg') }}" alt="Profile picture">
-                    <h2 class="text-center text-2xl font-semibold mt-3">John </h2>
-                    <p class="text-center text-gray-600 mt-1">Statut glycémie : Normal </p>
-
-                    <div class="flex justify-center mt-5">
+                <div class="max-w-lg mx-auto my-10 ">
+                    <div class="bg-white rounded-lg shadow-md p-5">
+                        <img class="w-32 h-32 rounded-full mx-auto" src="{{ asset('../images/profil.jpg') }}" alt="Profile picture">
                         @if ($lastTraitement)
+                            <h2 class="text-center text-2xl font-semibold mt-3">{{ $infoPatient->name }} </h2>
+                            @php $taux = $lastTraitement->taux @endphp                            
+                                @if ($taux >= 150 && $taux <= 450) 
+                                    @php $danger = "Danger,Voir un médecin"; $statut=$danger @endphp    
+                                @elseif ($taux >= 130 && $taux < 150) 
+                                    @php $confort = "Confort, Soyez regardant sur votre glycémie"; $statut=$confort @endphp
+                                @elseif ($taux >= 90 && $taux < 130)
+                                    @php $assurance = "Assurance, Surveiller votre traitement"; $statut=$assurance @endphp    
+                                @elseif ($taux >= 0 && $taux < 90)
+                                    @php $statut = "Hypoglycémie,Voir un médecin"; $statut=$danger @endphp    
+                                @else
+                                    @php $statut = "Rien à signaler" @endphp    
+                                @endif
+
+
+                            <p class="text-center text-gray-600 mt-1 flex flex-col lg:flex-row">Statut glycémie :  
+                                <span class="font-semibold text-red-500 ">{{$statut}} </span>
+                            </p>
+
+                            <div class="flex justify-center flex-wrap mt-5">
                                 <a href="{{ route('Patient.dashboardForm') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-heart-pulse-fill"></i> {{ $lastTraitement->taux }} dl/ml</a>
                                 <a href="{{ route('Patient.statistiqueGlycemie') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-clipboard2-pulse-fill"></i>  {{ $lastTraitement->jour }}e jour</a>
                                 <a href="{{ route('Patient.patientProfile') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-calendar-heart"></i> {{ $lastTraitement->datetrait }}</a>
+                            </div>
                         @else
                             <a href="{{ route('Patient.dashboardForm') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-heart-pulse-fill"></i>  Commencez votre traitement </a>
                         @endif
                     </div>
-                    <div class="mt-5">
-                    <h3 class="text-xl font-semibold">Bio</h3>
-                    <p class="text-gray-600 mt-2">John is a software engineer with over 10 years of experience in developing web and mobile applications. He is skilled in JavaScript, React, and Node.js.</p>
+                    
+                    <div class="mt-5 bg-white rounded-lg shadow-md p-5">
+                        <h3 class="text-xl font-semibold">Information personnelle</h3>
+                        {{-- to include the update-Profile --}}
+                        @include('Patient.components.updateProfile')
+                    </div>
+
+                    <div class="mt-5 bg-white rounded-lg shadow-md p-5">
+                        {{-- to include the update-password --}}
+                        @include('Patient.components.updatePassword')
+                        <p class="text-gray-600 mt-2">John is a software engineer with over 10 years of experience in developing web and mobile applications. He is skilled in JavaScript, React, and Node.js.</p>
                     </div>
                 </div>
         </div>
