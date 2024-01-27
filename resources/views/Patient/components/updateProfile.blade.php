@@ -25,25 +25,25 @@
         @method('patch')
         {{-- :value="old('name', $user->name)" --}}
         <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" name="name" type="text" class="mt-1 block w-full"  required autofocus autocomplete="name" />
+            <x-input-label for="name" :value="__('Nom')" />
+            <x-text-input id="name" name="name" type="text" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500"  required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
 
         <div>
             <x-input-label for="telPat" :value="__('Téléphone')" />
-            <x-text-input id="telPat" name="telPat" type="tel" class="mt-1 block w-full"  required autofocus autocomplete="telPat" />
+            <x-text-input id="telPat" name="telPat" type="tel" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500"  required autofocus autocomplete="telPat" />
             <x-input-error class="mt-2" :messages="$errors->get('telPat')" />
         </div>
 
         {{-- :value="old('email', $user->email)" --}}
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" required autocomplete="username" />
+            <x-text-input id="email" name="email" type="email" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
             {{-- @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail()) --}}
-                <div>
+                {{-- <div>
                     <p class="text-sm mt-2 text-gray-800">
                         {{ __('Your email address is unverified.') }}
 
@@ -57,12 +57,12 @@
                             {{ __('A new verification link has been sent to your email address.') }}
                         </p>
                     @endif
-                </div>
+                </div> --}}
             {{-- @endif --}}
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button>{{ __('Enregistrer') }}</x-primary-button>
 
             @if (session('status') === 'profile-updated')
                 <p
