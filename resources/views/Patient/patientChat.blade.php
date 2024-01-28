@@ -47,9 +47,7 @@
                   
                                           <!-- Contacts -->
                                           <div class="bg-grey-lighter flex-1 overflow-auto">
-                                              <div class="px-3 flex items-center
-                                              bg-grey-light cursor-pointer
-                                              hover:bg-red-100/80">
+                                              <div class="px-3 flex items-center bg-grey-light cursor-pointer hover:bg-red-100/80">
                                                   <div>
                                                       <img class="h-12 w-12 rounded-full"
                                                           src="https://darrenjameseeley.files.wordpress.com/2014/09/expendables3.jpeg"/>

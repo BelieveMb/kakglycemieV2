@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DoctorModel;
 use App\Models\patientModel;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
@@ -102,8 +103,15 @@ class PatientControllers extends Controller
     }
     
     public function patientChat(){
+
         return view('Patient.patientChat');
     }
+
+    public function patientMedecinList(){
+        $doctorList = DoctorModel::all();
+        return view('Patient.doctorAdd', ['doctorList' => $doctorList]);
+    }
+    
    
     
 }

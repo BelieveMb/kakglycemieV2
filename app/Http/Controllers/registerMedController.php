@@ -14,22 +14,22 @@ class registerMedController extends Controller
 {
     function addDoctor(Request $request){
         $request->validate([
-            'nomMed' =>'required',
+            'nomMed' =>'required|min:4',
             'telMed' =>'required|unique:medecin',
-            // 'password' =>'required|password|unique:crud,
+            'password' =>'required|password|unique:medecin',
         ]);
 
         //Insert query
         $query = DB::table('medecin')->insert([
-            'idmedecin'=>random_int(10, 258),
+            'idmedecin'=>random_int(10, 2558),
             'nomMed'=>$request->input('nomMed'),
-            'sexeMed'=>$request->input('nomMed'),
+            'sexeMed'=>$request->input('sexeMed'),
             'telMed'=>$request->input('telMed'),
             'password' => Hash::make($request->password),
 
-            'infosMed'=>$request->input('infosMed'),
-            'avatarMed'=>$request->input('infosMed'),
-            'valider'=>$request->input('nomMed'),
+            'hopital'=>$request->input('hopital'),
+            'avatarMed'=>$request->string('null'),
+            'valider'=>$request->string('no'),
         ]);
 
         //message de confirmation
@@ -52,7 +52,6 @@ class registerMedController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
  
-            // return redirect()->intended('dashboardForm');
             return redirect()->intended(route('Patient.dashboardForm')); 
 
         }

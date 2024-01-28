@@ -3,7 +3,7 @@
                     <div class="flex flex-col lg:flex-row gap-3">
                         
                         <div class="w-full px-3 mb-2">
-                            <label for="nomMed" class="text-xs font-semibold px-1">Nom Medec</label>
+                            <label for="nomMed" class="text-xs font-semibold px-1">Votre Nom et Prénom </label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
                                 <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-red-500" placeholder="Votre nom" name="nomMed" :value="old('nomMed')" required autofocus autocomplete="nomMed" >
@@ -25,15 +25,6 @@
                     </div>
                     
                     <div class="flex flex-col gap-2">
-                        <!-- <div class="w-full px-3 mb-5">
-                            <label for="email" class="text-xs font-semibold px-1" :value="__('Email')">Email </label>
-                            <div class="flex">
-                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-envelope text-gray-400 text-lg"></i></div>
-                                <input type="mail" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre email" name="email" :value="old('email')" required autofocus autocomplete="email" >
-                            </div>
-                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                        </div> -->
-
                         <div class="w-full px-3 mb-5">
                             <label for="telMed" class="text-xs font-semibold px-1">Téléphone </label>
                             <div class="flex">
@@ -66,12 +57,12 @@
 
                     <div class="flex flex-col gap-2">
                         <div class="w-full px-3 mb-5">
-                            <label for="infosMed" class="text-xs font-semibold px-1" :value="__('infosMed')">Infos Médecin </label>
+                            <label for="hopital" class="text-xs font-semibold px-1" :value="__('hopital')">Hôpital de préstation </label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-envelope text-gray-400 text-lg"></i></div>
-                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre infosMed" name="infosMed" :value="old('infosMed')" required autofocus autocomplete="infosMed" >
+                                <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre institution de préstation" name="hopital" :value="old('hopital')" required autofocus autocomplete="hopital" >
                             </div>
-                            <x-input-error :messages="$errors->get('infosMed')" class="mt-2" />
+                            <x-input-error :messages="$errors->get('hopital')" class="mt-2" />
                         </div>
                     </div>
 
