@@ -128,6 +128,7 @@ class ComposerStaticInitbdf03d23dffefe37ec8478fe7f7919aa
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
             'Laravel\\Breeze\\' => 15,
+            'LaravelDaily\\LaravelCharts\\' => 27,
         ),
         'I' => 
         array (
@@ -436,6 +437,10 @@ class ComposerStaticInitbdf03d23dffefe37ec8478fe7f7919aa
         'Laravel\\Breeze\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/breeze/src',
+        ),
+        'LaravelDaily\\LaravelCharts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laraveldaily/laravel-charts/src',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -2737,6 +2742,8 @@ class ComposerStaticInitbdf03d23dffefe37ec8478fe7f7919aa
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'LaravelDaily\\LaravelCharts\\Classes\\LaravelChart' => __DIR__ . '/..' . '/laraveldaily/laravel-charts/src/Classes/LaravelChart.php',
+        'LaravelDaily\\LaravelCharts\\LaravelChartsServiceProvider' => __DIR__ . '/..' . '/laraveldaily/laravel-charts/src/LaravelChartsServiceProvider.php',
         'Laravel\\Breeze\\BreezeServiceProvider' => __DIR__ . '/..' . '/laravel/breeze/src/BreezeServiceProvider.php',
         'Laravel\\Breeze\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallCommand.php',
         'Laravel\\Breeze\\Console\\InstallsApiStack' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallsApiStack.php',
