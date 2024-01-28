@@ -8,12 +8,31 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 
 class PatientControllers extends Controller
 {
     //fct show dashboard
     function dashboardForm(){
-        return view("Patient.patientDash");
+        $idpatient = auth()->id();
+        $lastTaux = patientModel::
+            where('idpatient', $idpatient)
+            ->orderBy('jour', 'desc')
+            ->first();
+
+        $chart_options = [
+            'chart_title' => 'Taux de glycémie',
+            'report_type' => 'group_by_string',
+            'model' => 'App\Models\patientModel',
+            'group_by_field' => 'jour',
+            'aggregate_function' => 'avg',
+            'aggregate_field' => 'taux',
+
+            // 'group_by_period' => 'day',
+            'chart_type' => 'line',
+        ];
+        $chart = new LaravelChart($chart_options);
+        return view("Patient.patientDash", compact('chart'),[ 'lastTaux'=>$lastTaux]);
     }
 
     public function logoutPatient(Request $request): RedirectResponse

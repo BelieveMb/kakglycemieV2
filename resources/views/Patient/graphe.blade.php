@@ -2,22 +2,44 @@
     <div class="flex items-center justify-between mb-4">
         <div class="flex-shrink-0">
             <span class="text-base font-normal text-gray-500" >Votre taux de glycémie <i class="bi bi-heart-pulse-fill"></i></span>
-            <h3 class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">152 dl/ml </h3>
+            <h3 class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">{{$lastTaux->taux}} dl/ml </h3>
         </div>
-        <div class="flex items-center justify-end flex-1 flex-col text-green-500 text-base font-bold">
-            <span class="text-red-500">
-                Urgence
-                <i class=" bi bi-exclamation-circle-fill"></i>
-            </span>
-            <span class="text-yellow-500" >
-                Normal
-                <i class="bi bi-emoji-smile-fill"></i>
-            </span>
-            <span class="text-green-600">
-                Très bien
-                <i class=" bi bi-heart-fill"></i>
-            </span>
+        <div class="flex items-center justify-end content-end flex-1 flex-col  text-base font-bold">
+            @php $taux = $lastTaux->taux @endphp                            
+            @if ($taux >= 150 && $taux <= 450) 
+                <span class="text-red-500">
+                    Urgence
+                    <i class=" bi bi-exclamation-circle-fill"></i>
+                </span>
+            @elseif ($taux >= 130 && $taux < 150) 
+                <span class="text-yellow-500" >
+                    Normal
+                    <i class="bi bi-emoji-smile-fill"></i>
+                </span>
+            @elseif ($taux >= 90 && $taux < 130)
+                <span class="text-green-600">
+                    Très bien
+                    <i class=" bi bi-heart-fill"></i>
+                </span>         
+            @elseif ($taux >= 0 && $taux < 90)
+                <span class="text-red-500">
+                    Urgence
+                    <i class=" bi bi-exclamation-circle-fill"></i>
+                </span>
+            @else
+                @php $statut = "Rien à signaler" @endphp    
+            @endif
+
+            
+            
+            
         </div>
     </div>
-    <div id="main-chart"></div>
+    {{-- <div id="main-chart"></div> --}}
+
+    <div>
+        {!! $chart->renderChartJsLibrary() !!}
+        {!! $chart->renderHtml() !!}
+        {!! $chart->renderJs() !!}
+    </div>
 </div>
