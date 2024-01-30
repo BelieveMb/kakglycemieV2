@@ -103,13 +103,16 @@ class PatientControllers extends Controller
     }
     
     public function patientChat(){
-
         return view('Patient.patientChat');
     }
 
     public function patientMedecinList(){
         $doctorList = DoctorModel::all();
         return view('Patient.doctorAdd', ['doctorList' => $doctorList]);
+    }
+
+    public function addNewDoctor(){
+        return view('Patient.doctorAdd');
     }
     
    

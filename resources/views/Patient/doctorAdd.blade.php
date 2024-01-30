@@ -28,7 +28,9 @@
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center  font-semibold text-gray-900 dark:text-white">
-                                    <button class="bg-red-500 text-white text-base rounded-lg px-2 py-1 font-semibold hover:bg-transparent hover:text-gray-300 hover:border-gray-300 hover:border-2">Ajouter <i class="bi bi-plus-circle-fill"></i></button>
+                                    <form action="{{ pa }}" method="post">
+                                        <button class="bg-red-500 text-white text-base rounded-lg px-2 py-1 font-semibold hover:bg-transparent hover:text-gray-300 hover:border-gray-300 hover:border-2">Ajouter <i class="bi bi-plus-circle-fill"></i></button>
+                                    </form>
                                 </div>
                             </div>
                         </li>
