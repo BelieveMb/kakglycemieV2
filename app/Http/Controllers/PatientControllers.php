@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AddMedecin;
 use App\Models\DoctorModel;
 use App\Models\patientModel;
 use App\Models\User;
@@ -113,8 +114,28 @@ class PatientControllers extends Controller
         return view('Patient.doctorAdd', ['doctorList' => $doctorList]);
     }
 
-    public function addNewDoctor(){
-        return view('Patient.doctorAdd');
+    public function addNewDoctor(Request $request){
+        $idpatient = auth()->id();
+        $idmedecin = $request->doctor;
+
+        $query =  DB::table('amisChat')->insert([
+            "idpatient"=>$idpatient,
+            "idmedecin"=>$idmedecin
+        ]);
+
+        
+        // if ($query) {
+        //     return response()->json(['success' => true]);
+        // } else {
+        //     return response()->json(['success' => false]);
+        // }
+
+        if($query){
+            // return view('Patient.patientChat');
+            return redirect('patient/patientChat');
+        }else{
+            return back()->with('fail','Ajouter');
+        }
     }
     
    

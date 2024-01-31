@@ -123,7 +123,8 @@
                             <label for="telPat" class="text-xs font-semibold px-1">Téléphone </label>
                             <div class="flex">
                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="bi bi-phone text-gray-400 text-lg"></i></div>
-                                <input type="tel" name="telPat" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre numéro de téléphone" name="telPat" :value="old('telPat')" required autofocus autocomplete="telPat" >
+                                <input type="tel" name="telPat" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Votre numéro de téléphone" name="telPat" 
+                                :value="old('telPat')" required autofocus autocomplete="telPat" >
                             </div>
                             <x-input-error :messages="$errors->get('telPat')" class="mt-2" />
                         </div>
