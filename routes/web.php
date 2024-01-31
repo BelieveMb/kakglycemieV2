@@ -50,6 +50,8 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::get('/statistiqueGlycemie','statistiqueGlycemie')->name('statistiqueGlycemie');
     Route::get('/patientProfile','patientProfile')->name('patientProfile');
     Route::get('/patientChat','patientChat')->name('patientChat');
+    Route::get('/medecins', 'patientMedecinList')->name('patientMedecinList');
+    Route::post('/medecins','addNewDoctor')->name('addNewDoctor');
 });
 
 require __DIR__.'/auth.php';

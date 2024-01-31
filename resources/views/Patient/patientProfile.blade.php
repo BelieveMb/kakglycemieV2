@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenu.e sur KaK /Mon profil</title>
+    <title>Mon profil sur KaK glycémie</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ asset('../css/AllUsers.css') }}">
 
@@ -23,7 +23,7 @@
             <!-- component -->
                 <div class="max-w-lg mx-auto my-10 ">
                     <div class="bg-white rounded-lg shadow-md p-5">
-                        <img class="w-32 h-32 rounded-full mx-auto" src="{{ asset('../images/profil.jpg') }}" alt="Profile picture">
+                        <img class="w-32 h-32 rounded-full mx-auto" src="{{ asset('../images/profil.jpg') }}" alt="Profile image">
                         @if ($lastTraitement)
                             <h2 class="text-center text-2xl font-semibold mt-3">{{ $infoPatient->name }} </h2>
                             @php $taux = $lastTraitement->taux @endphp                            

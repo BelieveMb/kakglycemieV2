@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DoctorModel;
 use App\Models\patientModel;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
@@ -14,21 +15,23 @@ class PatientControllers extends Controller
 {
     //fct show dashboard
     function dashboardForm(){
+        // $lastTaux = patientModel::
+        //     where('idpatient', $idpatient)
+        //     ->orderBy('jour', 'desc')
+        //     ->first();
+        // $lastTaux = DB::table('traitement2')->where('idpatient', $idpatient)->orderByDesc('idtraitement')->get();
         $idpatient = auth()->id();
-        $lastTaux = patientModel::
-            where('idpatient', $idpatient)
-            ->orderBy('jour', 'desc')
-            ->first();
+        $lastTaux = patientModel::where('idpatient', $idpatient)->orderByDesc('jour')->first();
+
 
         $chart_options = [
             'chart_title' => 'Taux de glycémie',
             'report_type' => 'group_by_string',
             'model' => 'App\Models\patientModel',
             'group_by_field' => 'jour',
+            'where_raw' => 'idpatient ='.$idpatient,
             'aggregate_function' => 'avg',
             'aggregate_field' => 'taux',
-
-            // 'group_by_period' => 'day',
             'chart_type' => 'line',
         ];
         $chart = new LaravelChart($chart_options);
@@ -104,6 +107,16 @@ class PatientControllers extends Controller
     public function patientChat(){
         return view('Patient.patientChat');
     }
+
+    public function patientMedecinList(){
+        $doctorList = DoctorModel::all();
+        return view('Patient.doctorAdd', ['doctorList' => $doctorList]);
+    }
+
+    public function addNewDoctor(){
+        return view('Patient.doctorAdd');
+    }
+    
    
     
 }

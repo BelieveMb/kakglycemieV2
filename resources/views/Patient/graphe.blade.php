@@ -2,9 +2,13 @@
     <div class="flex items-center justify-between mb-4">
         <div class="flex-shrink-0">
             <span class="text-base font-normal text-gray-500" >Votre taux de glycémie <i class="bi bi-heart-pulse-fill"></i></span>
-            <h3 class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">{{$lastTaux->taux}} dl/ml </h3>
+            @if (isset($lastTaux->taux))
+                <h3 class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">{{$lastTaux->taux}} dl/ml </h3>
+            @endif
         </div>
         <div class="flex items-center justify-end content-end flex-1 flex-col  text-base font-bold">
+           {{ auth()->id()}}
+            @if (isset($lastTaux->taux))
             @php $taux = $lastTaux->taux @endphp                            
             @if ($taux >= 150 && $taux <= 450) 
                 <span class="text-red-500">
@@ -29,6 +33,8 @@
             @else
                 @php $statut = "Rien à signaler" @endphp    
             @endif
+            @endif
+
 
             
             
