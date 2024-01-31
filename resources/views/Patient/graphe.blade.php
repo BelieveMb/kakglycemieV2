@@ -7,7 +7,7 @@
                 <h3 class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">{{$lastTaux->taux}} dl/ml </h3>
             @endif
         </div>
-        <div class="flex flex-col items-center justify-end content-end flex-1 flex-col  text-base font-bold">
+        <div class="flex items-center justify-end content-end flex-1 flex-col  text-base font-bold">
             @if (isset($lastTaux->taux))
                 @php $taux = $lastTaux->taux @endphp                            
                 @if ($taux >= 150 && $taux <= 450) 

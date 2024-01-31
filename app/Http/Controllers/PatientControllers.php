@@ -106,11 +106,14 @@ class PatientControllers extends Controller
     }
     
     public function patientChat(){
-        return view('Patient.patientChat');
+        $doctorList = DoctorModel::all();
+        return view('Patient.patientChat', ['doctorList' => $doctorList]);
+
     }
 
     public function patientMedecinList(){
         $doctorList = DoctorModel::all();
+        
         return view('Patient.doctorAdd', ['doctorList' => $doctorList]);
     }
 
@@ -131,7 +134,6 @@ class PatientControllers extends Controller
         // }
 
         if($query){
-            // return view('Patient.patientChat');
             return redirect('patient/patientChat');
         }else{
             return back()->with('fail','Ajouter');
