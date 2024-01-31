@@ -1,3 +1,4 @@
+
 @extends('Patient.components.dashboard')
 
 @section('dashboardPatient')
