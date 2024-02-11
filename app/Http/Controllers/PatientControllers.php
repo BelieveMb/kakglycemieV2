@@ -126,6 +126,10 @@ class PatientControllers extends Controller
             "idmedecin"=>$idmedecin
         ]);
 
+        $detailMedecin = DoctorModel::
+            where('idmedecin', $idmedecin)
+            ->first();
+        
         
         // if ($query) {
         //     return response()->json(['success' => true]);
@@ -134,7 +138,8 @@ class PatientControllers extends Controller
         // }
 
         if($query){
-            return redirect('patient/patientChat');
+            // return redirect('patient/');
+            return view('Patient.doctorDetail', ['detailMedecin' => $detailMedecin]);
         }else{
             return back()->with('fail','Ajouter');
         }

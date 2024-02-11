@@ -4,7 +4,7 @@
 <div class="w-full flex justify-center items-center content-center">
     <div class="p-4 max-w-full min-h-screen bg-gray-400 rounded-lg border shadow-md sm:p-8 ">
         <div class="flex justify-between items-center mb-4">
-            <h3 class="text-xl font-bold leading-none text-white">Ajouter un médecin</h3>
+            <h3 class="text-base lg:text-xl font-bold leading-none text-white">Ajouter un médecin</h3>
             <a href="#" class="text-2xl font-medium text-red-500 hover:text-red-800">
                 <i class="bi bi-person-plus"></i>
             </a>
@@ -23,11 +23,12 @@
                                     {{$doctor->nomMed}} 
                                 </p>
                                 <p class="text-sm text-gray-800 truncate ">
-                                    {{$doctor->infosMed}}
+                                    {{$doctor->specialiste}}
                                 </p>
                             </div>
                             <div class="inline-flex items-center  font-semibold text-gray-900 dark:text-white">
                                 <form action="{{ route('Patient.addNewDoctor', ['doctor' => $doctor->idmedecin]) }}" method="post">
+                                {{-- <form method="POST"> --}}
                                     @csrf
                                     @if (Session::has('success'))
                                         <div class="bg-gray-700 mb-2  rounded-xl flex justify-between p-3 text-gray-100 font-semibold">
