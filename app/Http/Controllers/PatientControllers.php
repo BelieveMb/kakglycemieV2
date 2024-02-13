@@ -114,25 +114,14 @@ class PatientControllers extends Controller
     public function patientMedecinList(){
         $idpatient = auth()->id();
 
-        $doctorList2 = DB::table('medecin')
-            ->whereNotIn('idmedecin', function($query) {
-                $query->select('idmedecin')->from('amischat');
-            })
-            ->get();
 
-        $doctorList = DB::table('medecin')
+        $doctorFriends = DB::table('medecin')
             ->whereNotIn('idmedecin', function($query) use ($idpatient) {
                 $query->select('idmedecin')->from('amischat')->where('idpatient', $idpatient);
             })
             ->get();
-            
-
- 
-
-
-        
         return view('Patient.doctorAdd', [
-            'doctorList' => $doctorList
+            'doctorFriends' => $doctorFriends
         ]);
     }
 
@@ -161,6 +150,18 @@ class PatientControllers extends Controller
         }else{
             return back()->with('fail','Ajouter');
         }
+    }
+    public function doctorOfPatient(){
+        $idpatient = auth()->id();
+
+        $doctorList = DB::table('medecin')
+            ->join('amischat', 'medecin.idmedecin', '=', 'amischat.idmedecin')
+            ->where('amischat.idpatient', $idpatient)
+            ->get();
+        
+        return view('Patient.doctorOfPatient', [
+            'doctorList' => $doctorList
+        ]);
     }
     
    

@@ -4,20 +4,21 @@
 <div class="w-full flex justify-center items-center content-center gap-10">
     
 
-    <div class="py-1 px-2 max-w-[80%] lg:max-w-[70%] min-h-auto bg-gray-300/70 rounded-lg border shadow-md sm:p-8 ">
+    <div class="py-1 px-2 max-w-[80%] lg:max-w-[60%] min-h-auto bg-gray-300/70 rounded-lg border shadow-md sm:p-8 ">
 
         <div class="flex justify-between items-center mb-4 gap-[5rem] ">
-            <h3 class="text-base lg:text-xl font-bold leading-none text-gray-800">Ajouter un médecin</h3>
-            <a href="{{ route('Patient.doctorOfPatient') }}" 
+            <h3 class="text-base lg:text-xl font-bold leading-none text-gray-800">Mes médecins</h3>
+            <a href="{{ route('Patient.addNewDoctor') }}" 
             class="bg-transparent text-red-500 text-base rounded-lg px-2 py-1 font-semibold hover:bg-red-500 hover:text-gray-50  hover:border border border-red-400 hover:duration-700">
-                 Mes médecins <i class="bi bi-list"></i>
+                 Ajouter <i class="bi bi-person-plus"></i>
             </a>
         </div>
         <div class="flow-root">
             <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                @foreach ($doctorFriends as $doctor) 
+                @if (empty($doctorList))
+                    @foreach ($doctorList as $doctor) 
                     <li class="py-3 sm:py-4 hover:bg-gray-400/30 cursor-pointer">
-                        <div class="flex items-center space-x-4 ">
+                        <div class="flex items-center space-x-4">
                             <div class="flex-shrink-0">
                                 <img class="w-8 h-8 rounded-full"
                                     src="{{ asset('../images/profil.jpg') }}" alt="Doctor image" />
@@ -39,7 +40,11 @@
                             </div>
                         </div>
                     </li>
-                @endforeach
+                    @endforeach
+                @else
+                    <h3 class="font-semibold">Vous avez aucun médecin, appuyez sur le <span class="text-red-500">bouton</span>  pour ajouter vos médecins</h3>
+                @endif
+              
 
             </ul>
         </div>
@@ -48,32 +53,4 @@
 
 
 </div>
-{{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    function ajouterMedecin(idMedecin) {
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-
-        $.ajax({
-            type: 'POST',
-            url: '/Patient.addNewDoctor',
-            data: {
-                doctor: idMedecin
-            },
-            success: function(response) {
-                if (response.success) {
-                    alert('Médecin ajouté avec succès!');
-                } else {
-                    alert('Une erreur s\'est produite lors de l\'ajout du médecin.');
-                }
-            },
-            error: function(xhr, status, error) {
-                console.log(error);
-            }
-        });
-    }
-</script> --}}
 @endsection

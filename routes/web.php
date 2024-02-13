@@ -52,6 +52,7 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::get('/patientChat','patientChat')->name('patientChat');
     Route::get('/medecins', 'patientMedecinList')->name('patientMedecinList');
     Route::post('/medecins','addNewDoctor')->name('addNewDoctor');
+    Route::get('/mesMedecins', 'doctorOfPatient')->name('doctorOfPatient');
 });
 
 require __DIR__.'/auth.php';
