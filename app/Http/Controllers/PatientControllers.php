@@ -112,9 +112,28 @@ class PatientControllers extends Controller
     }
 
     public function patientMedecinList(){
-        $doctorList = DoctorModel::all();
+        $idpatient = auth()->id();
+
+        $doctorList2 = DB::table('medecin')
+            ->whereNotIn('idmedecin', function($query) {
+                $query->select('idmedecin')->from('amischat');
+            })
+            ->get();
+
+        $doctorList = DB::table('medecin')
+            ->whereNotIn('idmedecin', function($query) use ($idpatient) {
+                $query->select('idmedecin')->from('amischat')->where('idpatient', $idpatient);
+            })
+            ->get();
+            
+
+ 
+
+
         
-        return view('Patient.doctorAdd', ['doctorList' => $doctorList]);
+        return view('Patient.doctorAdd', [
+            'doctorList' => $doctorList
+        ]);
     }
 
     public function addNewDoctor(Request $request){
@@ -138,7 +157,6 @@ class PatientControllers extends Controller
         // }
 
         if($query){
-            // return redirect('patient/');
             return view('Patient.doctorDetail', ['detailMedecin' => $detailMedecin]);
         }else{
             return back()->with('fail','Ajouter');

@@ -2,7 +2,7 @@
 
 @section('dashboardPatient')
 <div class="w-full flex justify-center items-center content-center">
-    <div class="py-1 px-2 max-w-[80%]lg:max-w-[50%] min-h-screen bg-gray-100/20 rounded-lg border shadow-md sm:p-8 ">
+    <div class="py-1 px-2 max-w-[80%] lg:max-w-[50%] min-h-screen bg-gray-100/20 rounded-lg border shadow-md sm:p-8 ">
         <div class="flex justify-between items-center mb-4">
             <h3 class="text-base lg:text-2xl font-bold leading-none text-gray-600 flex items-center gap-2 "> 
                 <a href="{{ route('Patient.patientMedecinList') }}" class="text-red-600" title="Voir la liste">
@@ -23,7 +23,7 @@
                 <p class="text-sm text-gray-600"> {{$detailMedecin->specialite}} </p>
                 <div class="mt-5">
                   <a
-                    href=""
+                    href="{{ route('Patient.patientChat') }}"
                     class="border rounded-full py-2 px-4 text-xs font-bold text-gray-50 bg-red-500 hover:bg-transparent hover:text-red-500 hover:border-red-500"
                   >
                     <i class="bi bi-chat-left-text"></i>  Contactez maintenant 
