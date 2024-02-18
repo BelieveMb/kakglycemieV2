@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AllUsersController;
+use App\Http\Controllers\medecinController;
 use App\Http\Controllers\PatientControllers;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\registerMedController;
@@ -55,6 +56,11 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::get('/mesMedecins', 'doctorOfPatient')->name('doctorOfPatient');
 });
 Route::get('/dashboardMedecin', 'medecinController@dashboardMedecin')->middleware('medecin.auth');
+
+Route::middleware('medecin.auth')->prefix('/medecin')->name('Medecin.')->controller(medecinController::class)->group(function () {
+    Route::get('/dashboard', 'medecinController@dashboardMedecin')->name('dashboard');
+    
+});
 
 //Les médecins
 

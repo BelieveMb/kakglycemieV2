@@ -26,3 +26,47 @@ l'autre partie (contenu)
 
 # hebergement
 SANCTUM_STATEFUL_DOMAINS=<your-app-domain> in env
+
+# mon propre middleware
+medecin.auth
+1. php artisan make:middleware CheckMedecinAuth -> pour créer un middlware perso
+2. dans le fichier CheckMedecinAuth, la logique de la redirection -> if
+   (!Auth::guard('medecin')->check()) { return
+   redirect()->route('login.medecin');     }
+3. save le middleware dans app/Http/Kernel.php -> protected $routeMiddleware = [
+    'medecin.auth' => \App\Http\Middleware\CheckMedecinAuth::class,
+];
+4. Définir le garde medecin dans le fichier de configuration config/auth.php -> 'guards' => [
+    'web' => [
+        'driver' => 'session',
+        'provider' => 'users',
+    ],
+
+    'api' => [
+        'driver' => 'token',
+        'provider' => 'users',
+        'hash' => false,
+    ],
+
+    'medecin' => [
+        'driver' => 'session',
+        'provider' => 'medecins',
+    ],
+],
+
+5. Configurer le fournisseur de données pour le garde medecin #dans le même
+   fichier -> 'providers' => [
+    'users' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\User::class,
+    ],
+
+    'medecins' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Medecin::class,
+    ],
+],
+
+6. implementer Route::get('/dashboard', 'DashboardController@index')->middleware('medecin.auth');
+ 
+

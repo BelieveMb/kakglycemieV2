@@ -16,7 +16,11 @@ class registerMedController extends Controller
         $request->validate([
             'nomMed' =>'required|min:4',
             'telMed' =>'required|unique:medecin',
-            'password' =>'required|password|unique:medecin',
+            // 'password' =>'required|password|min:8',
+            'password' => ['required', 'confirmed', 'min:4'],
+
+            'hopital' => 'required',
+            
         ]);
 
         //Insert query
@@ -35,7 +39,7 @@ class registerMedController extends Controller
         //message de confirmation
         if($query){
             // return back()->with('success', 'tout est okay');
-            return to_route('');
+            return to_route('Medecin.dashboard');
             // return to_route('login');
             // return view('doctorName');
         }else{
