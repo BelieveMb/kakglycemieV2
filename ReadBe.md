@@ -23,3 +23,6 @@ Auth::attempt($credentials); -> tout sur l'authentification. #à voir
 le container doit avoir @yield("nomducontenu") dans l'espace resérvé pour
 l'autre partie (contenu)
 -dans le contenu on a @extends("nomdela vue") et @section("nomducontenu")
+
+# hebergement
+SANCTUM_STATEFUL_DOMAINS=<your-app-domain> in env
