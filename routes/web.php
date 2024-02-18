@@ -54,6 +54,7 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::post('/medecins','addNewDoctor')->name('addNewDoctor');
     Route::get('/mesMedecins', 'doctorOfPatient')->name('doctorOfPatient');
 });
+Route::get('/dashboardMedecin', 'medecinController@dashboardMedecin')->middleware('medecin.auth');
 
 //Les médecins
 

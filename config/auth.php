@@ -39,8 +39,19 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],    
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'users',
+            'hash' => false,
+        ],
+    
+        'medecin' => [
+            'driver' => 'session',
+            'provider' => 'medecins',
         ],
     ],
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -63,6 +74,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'medecins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\DoctorModel::class,
         ],
 
         // 'users' => [
@@ -105,6 +120,7 @@ return [
     | confirmation screen. By default, the timeout lasts for three hours.
     |
     */
+    
 
     'password_timeout' => 10800,
 
