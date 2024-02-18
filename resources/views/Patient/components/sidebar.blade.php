@@ -30,7 +30,7 @@
                </a>
             </li>
 
-            <li>
+            {{-- <li>
                <a href="{{ route('Patient.patientChat') }}" class="@if(request()->route()->getName()=== 'Patient.patientChat') bg-gray-200 @endif text-gray-900 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
                   <span class="@if(request()->route()->getName()=== 'Patient.patientChat') bg-gray-200 font-semibold text-red-500 @endif">
 
@@ -39,7 +39,7 @@
                   <span class="ml-3 flex-1 whitespace-nowrap">Discussions</span>
                   <span class="bg-gray-200 text-gray-800 ml-3 text-sm font-medium inline-flex items-center justify-center px-2 rounded-full">+125</span>
                </a>
-            </li>
+            </li> --}}
 
             <li>
                <a href="{{route('Patient.patientMedecinList') }}" class="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
