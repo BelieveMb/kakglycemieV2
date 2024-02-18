@@ -55,4 +55,6 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::get('/mesMedecins', 'doctorOfPatient')->name('doctorOfPatient');
 });
 
+//Les médecins
+
 require __DIR__.'/auth.php';
