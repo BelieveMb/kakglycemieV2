@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -43,7 +44,17 @@ class medecinController extends Controller
         }
     }
     public function dashboardMedecin(){
-        return view("Medecin.layout.dashMed");
+        $patientList = DB::table('users')->get();
+
+        return view('Medecin.ListMedecin',
+            ['patientList'=>$patientList]
+        );
     }
+
+    public function logoutMedecin(Request $request): RedirectResponse {
+
+        return redirect()->route('doctorName');
+    }
+
 
 }

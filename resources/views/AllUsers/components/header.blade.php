@@ -49,7 +49,7 @@
                 href="{{ route('aboutName')}}"> <span class="@if(request()->route()->getName()=== 'aboutName') border-b-4 border-gray-50 text-white hover:text-red-500 @endif">A propos de nous</span> </a>
 
               <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-100 text-red-500 rounded-lg   md:mt-0 md:ml-4 
-                      hover:text-red-600 focus:text-gray-900 hover:bg-gray-200  hover:shadow-outline focus:bg-gray-200 focus:outline-none " href="{{ route('login') }}">Connexion</a>
+                      hover:text-red-600 focus:text-gray-900 hover:bg-gray-200  hover:shadow-outline focus:bg-gray-200 focus:outline-none " href="{{ route('loginVuePatient') }}">Connexion</a>
 
 
             </nav>

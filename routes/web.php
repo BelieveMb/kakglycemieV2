@@ -24,7 +24,7 @@ Route::prefix('/')->controller(AllUsersController::class)->group(function (){
     Route::get('doctor',  'doctor')->name('doctorName');
     Route::get('about-us',  'about')->name('aboutName');
     Route::post('loginPat','loginPatient')->name('loginPatient');
-    Route::get('loginVuePatient','loginVuePatient')->name('loginVuePatient');
+    Route::get('ConnexionPatient','loginVuePatient')->name('loginVuePatient');
     Route::get('loginMedecin','loginMedecin')->name('loginMedecin');
 
 });
@@ -66,6 +66,8 @@ Route::prefix('/')->name('medecin.')->controller(medecinController::class)->grou
 //middleware('medecin.auth')->
 Route::prefix('/medecin')->name('Medecin.')->controller(medecinController::class)->group(function () {
     Route::get('/dashboard', 'dashboardMedecin')->name('dashboard');
+    Route::get('/logout','logoutMedecin')->name('logoutMedecin');
+
 
 });
 

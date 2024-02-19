@@ -22,7 +22,7 @@
                         {{-- <div class="w-full grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4"> --}}
                         {{-- @include('Medecin.graphe')
                 @include('Medecin.formAdd') --}}
-                        @yield('medDash')
+                        @yield('dashMedecin')
 
                         {{-- </div> --}}
                     </div>

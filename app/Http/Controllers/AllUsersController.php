@@ -52,11 +52,6 @@ class AllUsersController extends Controller
     public function loginVuePatient(){
         return view('auth.loginPatient');
     }
-    public function loginMedecin(Request $request)
-    {
-        //
-        return view('auth.loginMedecin');
-    }
 
 
     public function show(AllUsers $allUsers)
