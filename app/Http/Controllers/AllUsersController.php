@@ -49,9 +49,13 @@ class AllUsersController extends Controller
         ])->onlyInput('mainError');
         
     }
-    public function store(Request $request)
+    public function loginVuePatient(){
+        view('auth.loginPatient');
+    }
+    public function loginMedecin(Request $request)
     {
         //
+        return view('auth.loginMedecin');
     }
 
 

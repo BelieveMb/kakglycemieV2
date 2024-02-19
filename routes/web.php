@@ -23,7 +23,9 @@ Route::prefix('/')->controller(AllUsersController::class)->group(function (){
     Route::get('patient',  'patient')->name('patientName');
     Route::get('doctor',  'doctor')->name('doctorName');
     Route::get('about-us',  'about')->name('aboutName');
-    Route::post('loginPat','loginPatient')->name('loginPatient');
+    // Route::post('loginPat','loginPatient')->name('loginPatient');
+    Route::get('loginPatient','loginVuePatient')->name('loginVuePatient');
+    Route::get('loginMedecin','loginMedecin')->name('loginMedecin');
 
 });
 
@@ -59,7 +61,7 @@ Route::get('/dashboardMedecin', 'medecinController@dashboardMedecin')->middlewar
 
 Route::middleware('medecin.auth')->prefix('/medecin')->name('Medecin.')->controller(medecinController::class)->group(function () {
     Route::get('/dashboard', 'medecinController@dashboardMedecin')->name('dashboard');
-    
+
 });
 
 //Les médecins
