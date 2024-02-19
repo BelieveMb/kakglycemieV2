@@ -29,10 +29,6 @@ Route::prefix('/')->controller(AllUsersController::class)->group(function (){
 
 });
 
-//register doctor
-Route::post('add', [registerMedController::class, 'addDoctor'])->name('addDoctor');
-//login doctor
-Route::post('loginDoctor', [registerMedController::class, 'loginDoctor'])->name('loginDoctor');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -57,10 +53,19 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::post('/medecins','addNewDoctor')->name('addNewDoctor');
     Route::get('/mesMedecins', 'doctorOfPatient')->name('doctorOfPatient');
 });
-Route::get('/dashboardMedecin', 'medecinController@dashboardMedecin')->middleware('medecin.auth');
 
-Route::middleware('medecin.auth')->prefix('/medecin')->name('Medecin.')->controller(medecinController::class)->group(function () {
-    Route::get('/dashboard', 'medecinController@dashboardMedecin')->name('dashboard');
+Route::prefix('/')->name('medecin.')->controller(medecinController::class)->group(function () {
+    //register doctor
+    Route::post('add', 'addDoctor')->name('addDoctor');
+    //login doctor
+    Route::post('loginDoctor',  'loginDoctor')->name('loginDoctor');
+});
+    
+
+// Route::get('/dashboardMedecin', 'medecinController@dashboardMedecin')->middleware('medecin.auth');
+//middleware('medecin.auth')->
+Route::prefix('/medecin')->name('Medecin.')->controller(medecinController::class)->group(function () {
+    Route::get('/dashboard', 'dashboardMedecin')->name('dashboard');
 
 });
 

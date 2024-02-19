@@ -1,4 +1,4 @@
-                <form method="POST" action="{{ route('addDoctor') }}">
+                <form method="POST" action="{{ route('medecin.addDoctor') }}">
                         @csrf
                     <div class="flex flex-col lg:flex-row gap-3">
                         
