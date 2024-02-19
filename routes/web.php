@@ -23,8 +23,8 @@ Route::prefix('/')->controller(AllUsersController::class)->group(function (){
     Route::get('patient',  'patient')->name('patientName');
     Route::get('doctor',  'doctor')->name('doctorName');
     Route::get('about-us',  'about')->name('aboutName');
-    // Route::post('loginPat','loginPatient')->name('loginPatient');
-    Route::get('loginPatient','loginVuePatient')->name('loginVuePatient');
+    Route::post('loginPat','loginPatient')->name('loginPatient');
+    Route::get('loginVuePatient','loginVuePatient')->name('loginVuePatient');
     Route::get('loginMedecin','loginMedecin')->name('loginMedecin');
 
 });

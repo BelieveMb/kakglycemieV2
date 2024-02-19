@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\LoginMedRequest;
+use App\Models\DoctorModel;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -49,19 +50,24 @@ class registerMedController extends Controller
     public function loginDoctor(Request $request): RedirectResponse
     {
         $credentials = $request->validate([
-            'telMed' => ['required'],
-            'password' => ['required'],
+            'telMed' => 'required|max:15',
+            'password' => 'required',
         ]);
- 
-        if (Auth::attempt($credentials)) {
+        // Auth::setModel(DoctorModel::class);
+
+        // Auth::guard('web')->setProvider(new \Illuminate\Auth\EloquentUserProvider($app['hash'], DoctorModel::class)); // Spécifiez le modèle Medecin comme fournisseur d'utilisateurs
+    
+        Auth::guard('web')->provider('medecin', function($app, array $config) {
+            return new DoctorModel(); // Spécifiez le modèle Medecin comme fournisseur d'utilisateurs
+        });
+        if (Auth::guard('web')->attempt($credentials)) {
             $request->session()->regenerate();
- 
-            return redirect()->intended(route('Patient.dashboardForm')); 
+            return redirect()->intended(route('Medecin.dashboard')); 
 
         }
  
         return back()->withErrors([
-            'main' => 'The provided blabla do not match our records.',
+            'main' => 'Erreur, votre numéro de téléphone ou votre mot de passe est incorrect.',
         ])->onlyInput('main');
     }
 

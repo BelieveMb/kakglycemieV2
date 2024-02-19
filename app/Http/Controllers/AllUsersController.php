@@ -45,12 +45,12 @@ class AllUsersController extends Controller
             return redirect()->intended(route('Patient.dashboardForm')); 
         }
         return back()->withErrors([
-            'mainError' => 'The provided blabla do not match our records.',
+            'mainError' => 'Erreur, votre numéro de téléphone ou votre mot de passe est incorrect.',
         ])->onlyInput('mainError');
         
     }
     public function loginVuePatient(){
-        view('auth.loginPatient');
+        return view('auth.loginPatient');
     }
     public function loginMedecin(Request $request)
     {

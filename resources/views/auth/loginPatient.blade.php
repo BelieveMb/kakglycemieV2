@@ -33,7 +33,6 @@
                 <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
             </label>
         </div>
-<h1>Corriger la séparation login patient et login med</h1>
         <div class="flex -mx-3">
             <div class="w-full px-3 mb-5">
                 <button class="block w-full max-w-xs mx-auto bg-red-500 hover:bg-red-700 focus:bg-red-700 text-white rounded-lg px-3 py-3 font-semibold text-upp" type="submit">Se connecter</button>
