@@ -33,8 +33,7 @@ class AllUsersController extends Controller
         //for patient
         return view('AllUsers.about', ["title"=>"à propos de nous"]);
     }
-    public function loginPatient(Request $request): RedirectResponse
-    {
+    public function loginPatient(Request $request): RedirectResponse{
         $credentials = $request->validate([
             'telPat' => 'required|max:15',
             'password' => 'required',
@@ -54,15 +53,26 @@ class AllUsersController extends Controller
     }
 
 
-    public function show(AllUsers $allUsers)
-    {
-        //
+    public function loginVueMedecin(){
+        return view('auth.loginMedecin');
     }
 
 
-    public function edit(AllUsers $allUsers)
+    public function loginMedecin(Request $request)
     {
-        //
+        $credentials = $request->validate([
+            'telMed' => 'required|max:15',
+            'password' => 'required',
+        ]);
+
+        if(Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended(route('Medecin.dashboard')); 
+        }
+        return back()->withErrors([
+            'mainError' => 'Erreur, votre numéro de téléphone ou votre mot de passe est incorrect.',
+        ])->onlyInput('mainError');
+
     }
 
    

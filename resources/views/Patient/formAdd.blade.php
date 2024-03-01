@@ -27,7 +27,7 @@
 
                         <input type="hidden" name="idpatient" value="{{auth()->user()->id}}" placeholder="Votre taux de glycémie" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500">
                         <div class="mb-4">
-                            <label for="taux" class="font-semibold mb-2 block">Votre Taux de glycémie ml/dl</label>
+                            <label for="taux" class="font-semibold mb-2 block">Votre Taux de glycémie  mg/dl</label>
                             <input type="text" name="taux" placeholder="Votre taux de glycémie" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500">
                             <x-input-error :messages="$errors->get('taux')" class="mt-2" />
                         </div>

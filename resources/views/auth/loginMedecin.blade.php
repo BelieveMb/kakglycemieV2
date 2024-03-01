@@ -1,12 +1,12 @@
 @extends('auth.login')
 
 @section('loginType')
-    <form method="POST" action="{{ route('loginDoctor') }}">
+    <form method="POST" action="{{ route('medecin.loginDoctor') }}">
         @csrf
 
         <div class="flex flex-col gap-2">
             <div class="w-full px-3 mb-5">
-                <label for="telMed" class="text-xs font-semibold px-1">Id médecin </label>
+                <label for="telMed" class="text-xs font-semibold px-1">Votre numéro de téléphone </label>
                 <div class="flex">
                     <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
                         <i class="bi bi-phone text-gray-400 text-lg"></i>
@@ -43,7 +43,7 @@
             <label for="remember_me" class="inline-flex items-center">
                 <input id="rem²ember_me" type="checkbox"
                     class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                <span class="ml-2 text-sm text-gray-600">{{ __('Se souvenir de moi') }}</span>
             </label>
         </div>
 

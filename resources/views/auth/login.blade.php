@@ -112,7 +112,8 @@
                                 <div class="mt-3 flex justify-center md:items-center md:-mx-2 gap-3">
 
                                     <a  href="{{ route('loginVuePatient') }}"
-                                        class=" flex justify-center w-full px-6 py-3 mt-4 bg-red-500 border border-gray-500 text-gray-50 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-red-700">
+                                        class="@if (Route::currentRouteName() == 'loginVuePatient') bg-red-500 text-gray-50 @else text-gray-500  @endif 
+                                             flex justify-center w-full px-6 py-3 mt-4  border border-gray-500  rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-red-700 hover:text-gray-50">
                                         <i class="bi bi-person-plus"></i>
                                         <span class="mx-2">
                                             Patient
@@ -120,7 +121,8 @@
                                     </a>
 
                                     <a href="{{ route('loginMedecin') }}"
-                                        class="flex justify-center w-full px-6 py-3 mt-4 text-gray-700 border border-gray-700 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-gray-700 hover:text-white">
+                                        class="@if (Route::currentRouteName()== 'loginMedecin') bg-gray-600 text-gray-50 @else text-gray-700  @endif
+                                        flex justify-center w-full px-6 py-3 mt-4  border border-gray-700 rounded-md md:mt-0 md:w-auto md:mx-2  focus:outline-none hover:bg-gray-700 hover:text-white">
                                         <i class="bi bi-file-person-fill"></i>
                                         <span class="mx-2">
                                             Médecins

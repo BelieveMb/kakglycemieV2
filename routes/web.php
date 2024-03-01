@@ -25,7 +25,8 @@ Route::prefix('/')->controller(AllUsersController::class)->group(function (){
     Route::get('about-us',  'about')->name('aboutName');
     Route::post('loginPat','loginPatient')->name('loginPatient');
     Route::get('ConnexionPatient','loginVuePatient')->name('loginVuePatient');
-    Route::get('loginMedecin','loginMedecin')->name('loginMedecin');
+    Route::get('loginMedecin','loginVueMedecin')->name('loginVueMedecin');
+    Route::post('loginMedecin','loginMedecin')->name('loginMedecin');
 
 });
 

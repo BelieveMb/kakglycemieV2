@@ -21,14 +21,7 @@
                 />
                 <p class="pt-2 text-lg font-semibold">{{$detailMedecin->nomMed}} </p>
                 <p class="text-sm text-gray-600"> {{$detailMedecin->specialite}} </p>
-                <div class="mt-5">
-                  <a
-                    href="{{ route('Patient.patientChat') }}"
-                    class="border rounded-full py-2 px-4 text-xs font-bold text-gray-50 bg-red-500 hover:bg-transparent hover:text-red-500 hover:border-red-500"
-                  >
-                    <i class="bi bi-chat-left-text"></i>  Contactez maintenant 
-                  </a>
-                </div>
+               
               </div>
               <div class="border-b">
                 <a href="#" class="px-4 py-2 hover:bg-gray-100 flex">
