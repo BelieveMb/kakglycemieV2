@@ -15,7 +15,7 @@
                            <i class="ml-1 text-xl bi bi-person"></i>
                         </span>
                      </div>
-                     <input type="text" name="email" id="mobile-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-red-600  block w-full pl-10 p-2.5" placeholder="Trouvez un médecin...">
+                     <input type="text" name="email" id="mobile-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-gray-300  block w-full pl-10 p-2.5" placeholder="Trouvez un patient...">
                   </div>
                </form>
             </li>

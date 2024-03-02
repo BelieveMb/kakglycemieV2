@@ -1,7 +1,7 @@
 @extends('auth.login')
 
 @section('loginType')
-    <form method="POST" action="{{ route('medecin.loginDoctor') }}">
+    <form method="POST" >
         @csrf
 
         <div class="flex flex-col gap-2">

@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <script src="https://cdn.tailwindcss.com"></script>
 
-<nav class="bg-gray-400 border-b border-gray-700 text-gray-50 fixed z-30 w-full">
+<nav class="bg-gray-700 border-b border-gray-700 text-gray-50 fixed z-30 w-full">
       <div class="px-3 py-3 lg:px-5 lg:pl-3">
          <div class="flex items-center justify-between">
             <div class="flex items-center justify-start">
