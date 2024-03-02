@@ -52,8 +52,12 @@ class medecinController extends Controller
     }
 
     public function logoutMedecin(Request $request): RedirectResponse {
-
         return redirect()->route('doctorName');
+    }
+
+    public function profilMedecin(){
+        
+        return view('Medecin.ProfilMedecin');
     }
 
 

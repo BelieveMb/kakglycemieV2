@@ -23,7 +23,7 @@ Route::prefix('/')->controller(AllUsersController::class)->group(function (){
     Route::get('patient',  'patient')->name('patientName');
     Route::get('doctor',  'doctor')->name('doctorName');
     Route::get('about-us',  'about')->name('aboutName');
-    Route::post('loginPat','loginPatient')->name('loginPatient');
+    Route::post('ConnexionPatient','loginPatient')->name('loginPatient');
     Route::get('ConnexionPatient','loginVuePatient')->name('loginVuePatient');
     Route::get('loginMedecin','loginVueMedecin')->name('loginVueMedecin');
     Route::post('loginMedecin','loginMedecin')->name('loginMedecin');
@@ -55,12 +55,12 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::get('/mesMedecins', 'doctorOfPatient')->name('doctorOfPatient');
 });
 
-Route::prefix('/')->name('medecin.')->controller(medecinController::class)->group(function () {
-    //register doctor
-    Route::post('add', 'addDoctor')->name('addDoctor');
-    //login doctor
-    Route::post('loginDoctor',  'loginDoctor')->name('loginDoctor');
-});
+// Route::prefix('/')->name('medecin.')->controller(medecinController::class)->group(function () {
+//     //register doctor
+//     Route::post('add', 'addDoctor')->name('addDoctor');
+//     //login doctor
+//     Route::post('loginDoctor',  'loginDoctor')->name('loginDoctor');
+// });
     
 
 // Route::get('/dashboardMedecin', 'medecinController@dashboardMedecin')->middleware('medecin.auth');
@@ -68,6 +68,7 @@ Route::prefix('/')->name('medecin.')->controller(medecinController::class)->grou
 Route::prefix('/medecin')->name('Medecin.')->controller(medecinController::class)->group(function () {
     Route::get('/dashboard', 'dashboardMedecin')->name('dashboard');
     Route::get('/logout','logoutMedecin')->name('logoutMedecin');
+    Route::get('/monProfil',  'profilMedecin')->name('monProfil');
 
 
 });
