@@ -55,12 +55,13 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::get('/mesMedecins', 'doctorOfPatient')->name('doctorOfPatient');
 });
 
-// Route::prefix('/')->name('medecin.')->controller(medecinController::class)->group(function () {
-//     //register doctor
-//     Route::post('add', 'addDoctor')->name('addDoctor');
-//     //login doctor
-//     Route::post('loginDoctor',  'loginDoctor')->name('loginDoctor');
-// });
+//for save doctor in using controller med
+Route::prefix('/')->name('medecin.')->controller(medecinController::class)->group(function () {
+    //register doctor
+    Route::post('add', 'addDoctor')->name('addDoctor');
+    //login doctor
+    Route::post('loginDoctor',  'loginDoctor')->name('loginDoctor');
+});
     
 
 // Route::get('/dashboardMedecin', 'medecinController@dashboardMedecin')->middleware('medecin.auth');
