@@ -40,8 +40,8 @@ class AllUsersController extends Controller
     public function registerVue(){
         return view('auth.registerUser');
     }
-     public function userRegister(Request $request)
-     {
+    public function userRegister(Request $request)
+    {
         $request->validate([
             'name' => ['required', 'max:255' ],
             'sexe' => 'required|in:Masculin,Feminin' ,
@@ -91,7 +91,7 @@ class AllUsersController extends Controller
             // ]);
 
         }
-     }
+    }
 
     public function loginPatient(Request $request): RedirectResponse{
         $credentials = $request->validate([
@@ -108,26 +108,27 @@ class AllUsersController extends Controller
         ])->onlyInput('mainError');
         
     }
-    public function loginVuePatient(){
-        return view('auth.loginPatient');
+    public function loginUserVue(){
+        return view('auth.loginUser');
     }
 
-
-    public function loginVueMedecin(){
-        return view('auth.loginMedecin');
-    }
-
-
-    public function loginMedecin(Request $request)
+    public function loginUser(Request $request)
     {
         $credentials = $request->validate([
-            'telMed' => 'required|max:15',
+            'phone' => 'required|max:15',
             'password' => 'required',
         ]);
 
         if(Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended(route('Medecin.dashboard')); 
+            $user = Auth::user();
+    
+            if($user->type == 'patient') {
+                return redirect()->route('Patient.dashboardForm');
+            } else {
+                return redirect()->route('Medecin.dashboard');
+            }
+            // return redirect()->intended(route('Medecin.dashboard')); 
         }
         return back()->withErrors([
             'mainError' => 'Erreur, votre numéro de téléphone ou votre mot de passe est incorrect.',

@@ -20,7 +20,7 @@
           </p>
 
           <div class="flex flex-col space-y-4 mx-20 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 lg:mx-0">
-            <a href="{{ route('register') }}" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
+            <a href="{{ route('inscription') }}" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
               S'inscrire
               <span class="ml-2 -mr-1 text-lg" >
                 <i class="bi bi-arrow-right"></i>
@@ -39,7 +39,7 @@
           <p class="mb-8 text-lg font-normal px-4 text-gray-100 lg:text-xl sm:px-16 lg:px-48">          Suivez vos patients, analysez leurs données, échangez des messages sécurisés..., le tout dans un seul outil pratique.</p>
 
           <div class="flex flex-col space-y-4 mx-20 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 lg:mx-0">
-            <a href="{{ route('register') }}"  class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
+            <a href="{{ route('inscription') }}"  class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
               Commencez 
               <span class="ml-2 -mr-1 text-lg" >
                 <i class="bi bi-arrow-right"></i>
@@ -87,7 +87,7 @@
 
       </div>
       <div>
-        <a href="{{ route('register') }}" class="px-4 py-2  text-sm font-semibold bg-gray-100 text-red-500 rounded-lg     
+        <a href="{{ route('inscription') }}" class="px-4 py-2  text-sm font-semibold bg-gray-100 text-red-500 rounded-lg     
         hover:text-red-700 focus:text-gray-900 hover:bg-gray-200  hover:shadow-outline         focus:bg-gray-200 focus:outline-none"> Commencez  </a>
       </div>
       
@@ -129,7 +129,7 @@
                 flex-col gap-4 py-6 px-8 lg:flex-row lg:py-10 lg:px-10 lg:justify-between">
                     <p class=" text-white"><span class="text-3xl font-medium lg:text-4xl"> Avec ces avantages, KaK glycémie  </span> <br>
                      <span class="text-base"> vous offre un suivi précis et personnalisé de votre glycémie </span>.</p>
-                    <a href="{{ route('register') }}"  class="px-5 py-3  font-medium text-gray-100 shadow-xl  hover:bg-white duration-150 hover:text-gray-700  bg-red-400 rounded-md">Rejoins nous </a >
+                    <a href="{{ route('inscription') }}"  class="px-5 py-3  font-medium text-gray-100 shadow-xl  hover:bg-white duration-150 hover:text-gray-700  bg-red-400 rounded-md">Rejoins nous </a >
               </div>
       </div>
     </section>
@@ -195,7 +195,7 @@
               Avec Kak Glycémie, vous pouvez prendre le contrôle de votre santé en suivant votre glycémie avec précision...
             </p>
             <div class="mt-8">
-              <a href="{{ route('register') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
+              <a href="{{ route('inscription') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
               focus:bg-red-200 focus:outline-none"> Commencez </a>
             </div>
           
@@ -216,7 +216,7 @@
         Suivez vos mesures, découvrez des tendances et échangez avec votre médecin en un seul endroit. Inscrivez-vous dès maintenant ou connectez-vous pour commencer votre parcours vers une meilleure gestion du diabète.
         </p>
         <div >
-          <a href="{{ route('register') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
+          <a href="{{ route('inscription') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
           focus:bg-red-200 focus:outline-none"> Commencez </a>
         </div>
       </div>
@@ -319,7 +319,7 @@
                       <p class="text-base text-gray-700">Kak Glycémie est une application de suivi de la glycémie en ligne qui offre de nombreux avantages pour les médecins. 
                         En utilisant notre application, vous pouvez optimiser la prise en charge de vos patients diabétiques, suivre leur évolution et offrir un suivi personnalisé.</p>
                       <div class="mt-10 flex flex-col items-center md:flex-row">
-                          <a href="/" class="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-red-500 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-gray-600 focus:outline-none md:mr-4 md:mb-0 md:w-auto"> S'inscrire</a>
+                          <a href="{{route ('inscription')}}" class="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-red-500 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-gray-600 focus:outline-none md:mr-4 md:mb-0 md:w-auto"> S'inscrire</a>
                           <a href="/" aria-label="" class="group inline-flex items-center font-semibold text-g1"> Se connecter
                               <svg xmlns="http://www.w3.org/2000/svg" class="ml-4 h-6 w-6 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                   <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
