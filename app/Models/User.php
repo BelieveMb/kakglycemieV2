@@ -25,9 +25,10 @@ class User extends Authenticatable implements BasementUserContract
      */
     protected $fillable = [
         'name',
-        'sexePat',
+        'sexe',
         'email',
-        'telPat',
+        'phone',
+        'type',
         'password',
 
     ];
