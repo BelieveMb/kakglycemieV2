@@ -51,6 +51,8 @@ class AllUsersController extends Controller
         ]);
 
         
+        
+        $iduser = random_int(3, 2998);
         $user = User::create([
             'name' => $request->name,
             'sexe' => $request->sexe,
@@ -61,6 +63,23 @@ class AllUsersController extends Controller
         ]);
 
         if($user){
+            $type = $request->input('type');
+            if($type=="patient"){
+                //add patient
+                $maDate = date('d-m-Y, H:i'); 
+                $query = DB::table('patient')->insert([
+                    'idpatient'=>$iduser,
+                    'datePat'=>$maDate,
+                ]);
+            }else{
+                //  dd medecin
+                $valider = 'non';
+                $query = DB::table('medecin')->insert([
+                    'idmedecin'=>$iduser,
+                    'valider'=>$valider,
+                ]);
+                return to_route('Medecin.dashboard');
+            }
             event(new Registered($user));
             Auth::login($user);
             return to_route('login');
