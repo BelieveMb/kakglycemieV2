@@ -49,7 +49,10 @@ class PatientControllers extends Controller
 
         $idpatient = $request->input('idpatient');
         //recupere du patient
-        $dataJour = DB::table('traitement2')->where('idpatient', $idpatient)->orderByDesc('idtraitement')->value('jour');
+        $dataJour = DB::table('traitement2')
+                    ->where('idpatient', $idpatient)
+                    ->orderByDesc('idtraitement')
+                    ->value('jour');
 
         $maDate = date('d-m-Y, H:i'); 
         $jour = $dataJour + 1;

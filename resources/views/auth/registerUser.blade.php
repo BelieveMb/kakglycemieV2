@@ -9,9 +9,6 @@
             <h1 class="font-bold text-3xl text-gray-600">S'inscrire sur KaK Glycémie</h1>
         </div>
         <div>
-            <div id="MedecinForm" style="display: none">
-                @include('Auth/register_med')
-            </div>
             <form method="POST"  >
                 @csrf
 
@@ -136,7 +133,7 @@
                     </div>
                 </div>
                 <div class="px-5 flex items-center">
-                    <p>Déjà un patient de KaK glycémie, <a href="{{ route('login') }}" class="text-red-400 underline">Se
+                    <p>Déjà un patient de KaK glycémie, <a href="{{ route('loginUserVue') }}" class="text-red-400 underline">Se
                             connecter <i class="bi bi-box-arrow-in-left"></i></a></p>
                 </div>
             </form>

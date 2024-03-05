@@ -24,6 +24,7 @@ class User extends Authenticatable implements BasementUserContract
      * @var array<int, string>
      */
     protected $fillable = [
+        'id',
         'name',
         'sexe',
         'email',

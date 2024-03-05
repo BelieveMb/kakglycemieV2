@@ -54,6 +54,7 @@ class AllUsersController extends Controller
         
         $iduser = random_int(3, 2998);
         $user = User::create([
+            'id' => $iduser,
             'name' => $request->name,
             'sexe' => $request->sexe,
             'email' => $request->email,
@@ -82,7 +83,7 @@ class AllUsersController extends Controller
             }
             event(new Registered($user));
             Auth::login($user);
-            return to_route('login');
+            return to_route('Patient.dashboardForm');
         }else{
             return back()->withErrors("une erreur, veuillez recommencez");
             // withErrors([
@@ -131,8 +132,8 @@ class AllUsersController extends Controller
             // return redirect()->intended(route('Medecin.dashboard')); 
         }
         return back()->withErrors([
-            'mainError' => 'Erreur, votre numéro de téléphone ou votre mot de passe est incorrect.',
-        ])->onlyInput('mainError');
+            'loginError' => 'Erreur, votre numéro de téléphone ou votre mot de passe est incorrect.',
+        ])->onlyInput('loginError');
 
     }
 

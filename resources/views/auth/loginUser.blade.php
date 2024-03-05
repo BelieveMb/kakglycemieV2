@@ -9,6 +9,11 @@
             <h1 class="font-bold text-3xl text-gray-600">Se connecter sur KaK Glycémie</h1>
         </div>
 
+        <div class="text-red-500 text-center font-bold  animate-pulse delay-700">
+            @error('loginError')
+                {{ $message }}
+            @enderror
+        </div>
         <form method="POST">
             @csrf
 
