@@ -27,6 +27,7 @@ Route::prefix('/')->controller(AllUsersController::class)->group(function (){
     Route::post('Connexion','loginUser')->name('loginUser');
     Route::get('Inscription', 'registerVue')->name('registerVue');
     Route::post('Inscription', 'userRegister')->name('inscription');
+    Route::get('/logout','logoutUser')->name('logoutUser');
 
 });
 
@@ -46,7 +47,6 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     //on peut dire qu'on use le controller
     Route::get('/dashboard','dashboardForm')->name('dashboardForm');
     Route::post('/dashboard','AddTauxTraitement')->name('addTauxTraitement');
-    Route::get('/logout','logoutPatient')->name('logoutPatient');
     Route::get('/statistiqueGlycemie','statistiqueGlycemie')->name('statistiqueGlycemie');
     Route::get('/patientProfile','patientProfile')->name('patientProfile');
     Route::get('/patientChat','patientChat')->name('patientChat');

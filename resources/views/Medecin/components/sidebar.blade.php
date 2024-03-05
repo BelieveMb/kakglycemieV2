@@ -66,7 +66,7 @@
 
 
             <li>
-               <a href="{{ route('Medecin.logoutMedecin') }}" class="text-base text-gray-50 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">                           
+               <a href="{{ route('logoutUser') }}" class="text-base text-gray-50 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">                           
                   <span class="@if(request()->route()->getName()=== 'me')  text-red-500 @endif w-6 h-6 flex-shrink-0 hover:text-red-500 transition duration-75">
 
                      <i class="ml-1 text-xl bi bi-box-arrow-right"></i>

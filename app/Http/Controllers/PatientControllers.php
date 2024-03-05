@@ -39,18 +39,7 @@ class PatientControllers extends Controller
         return view("Patient.patientDash", compact('chart'),[ 'lastTaux'=>$lastTaux]);
     }
 
-    public function logoutPatient(Request $request): RedirectResponse
-    {
-        //la deconnexion de l'user
-        Auth::logout();  
-    
-        $request->session()->invalidate();
-    
-        $request->session()->regenerateToken();
-    
-        return redirect()->route('accueilName');
-    }
-
+  
     function AddTauxTraitement(Request $request){
         $request->validate([
             'idpatient'=>"required",

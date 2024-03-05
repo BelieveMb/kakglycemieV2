@@ -136,6 +136,18 @@ class AllUsersController extends Controller
 
     }
 
+    public function logoutUser(Request $request): RedirectResponse
+    {
+        //la deconnexion de l'user
+        Auth::logout();  
+    
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+        return redirect()->route('accueilName');
+    }
+
    
     public function update(Request $request, AllUsers $allUsers)
     {
