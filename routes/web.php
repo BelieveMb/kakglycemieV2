@@ -50,9 +50,8 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::get('/statistiqueGlycemie','statistiqueGlycemie')->name('statistiqueGlycemie');
     Route::get('/patientProfile','patientProfile')->name('patientProfile');
     Route::get('/patientChat','patientChat')->name('patientChat');
-    Route::get('/medecins', 'patientMedecinList')->name('patientMedecinList');
-    Route::post('/medecins','addNewDoctor')->name('addNewDoctor');
-    Route::get('/mesMedecins', 'doctorOfPatient')->name('doctorOfPatient');
+    Route::get('/Mes-medecins', 'patientMedecinList')->name('patientMedecinList');
+    Route::get('/ajouter-un-medecin','addDoctorVue')->name('addDoctorVue');
 });
 
 //for save doctor in using controller med

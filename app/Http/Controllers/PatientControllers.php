@@ -106,18 +106,36 @@ class PatientControllers extends Controller
     public function patientMedecinList(){
         $idpatient = auth()->id();
 
+        //pause à corriger après validation
 
-        $doctorFriends = DB::table('medecin')
-            ->whereNotIn('idmedecin', function($query) use ($idpatient) {
-                $query->select('idmedecin')->from('amischat')->where('idpatient', $idpatient);
-            })
+        // $doctorFriends = DB::table('medecin')
+        //     ->whereNotIn('idmedecin', function($query) use ($idpatient) {
+        //         $query->select('idmedecin')->from('amischat')->where('idpatient', $idpatient);
+        //     })
+        //     ->get();
+        $doctorFriends = DB::table('users')
+            ->where('type', 'medecin')
+            ->join('medecin', 'users.id', '=', 'medecin.idmedecin')  
             ->get();
-        return view('Patient.doctorAdd', [
+        return view('Patient.myDoctorList', [
             'doctorFriends' => $doctorFriends
         ]);
     }
 
-    public function addNewDoctor(Request $request){
+    //bon à savoir #
+    # l'ajout et le retrait de médecin se feront à la fin, après avoir fini avec
+    # l"admin part
+    public function addDoctorVue(Request $request){
+        $doctorFriends = DB::table('users')
+                ->where('type', 'medecin')
+                ->join('medecin', 'users.id', '=', 'medecin.idmedecin')  
+                ->get();
+        
+        return view('Patient.doctorAdd', [
+            'doctorFriends' => $doctorFriends
+        ]);
+    }
+    public function addDoctor(Request $request){
         $idpatient = auth()->id();
         $idmedecin = $request->doctor;
 
@@ -143,19 +161,6 @@ class PatientControllers extends Controller
             return back()->with('fail','Ajouter');
         }
     }
-    public function doctorOfPatient(){
-        $idpatient = auth()->id();
-
-        $doctorList = DB::table('medecin')
-            ->join('amischat', 'medecin.idmedecin', '=', 'amischat.idmedecin')
-            ->where('amischat.idpatient', $idpatient)
-            ->get();
-        
-        return view('Patient.doctorOfPatient', [
-            'doctorList' => $doctorList
-        ]);
-    }
-    
    
     
 }

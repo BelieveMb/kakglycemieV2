@@ -1,6 +1,5 @@
 @extends('Patient.components.dashboard')
-{{-- la liste de médecin validé par KaK --}}
-
+{{-- elle présente les docteurs du patient --}}
 @section('dashboardPatient')
 <div class="w-full flex justify-center items-center content-center gap-10">
     
@@ -8,10 +7,9 @@
     <div class="py-1 px-2 max-w-[80%] lg:max-w-[70%] min-h-auto bg-gray-300/70 rounded-lg border shadow-md sm:p-8 ">
 
         <div class="flex justify-between items-center mb-4 gap-[5rem] ">
-            <h3 class="text-base lg:text-xl font-bold leading-none text-gray-800">La liste des médecins</h3>
-            <a href="{{ route('Patient.patientMedecinList') }}" 
-            class="bg-transparent text-red-500 text-base rounded-lg px-2 py-1 font-semibold hover:bg-red-500 hover:text-gray-50  hover:border border border-red-400 hover:duration-700">
-                Mes médecins <i class="bi bi-list"></i>
+            <h3 class="text-base lg:text-xl font-bold leading-none text-gray-800">Mes médecins</h3>
+            <a href="{{ route('Patient.addDoctorVue') }}" class="bg-transparent text-red-500 text-base rounded-lg px-2 py-1 font-semibold hover:bg-red-500 hover:text-gray-50  hover:border border border-red-400 hover:duration-700">
+                 Ajouter <i class="bi bi-plus-circle"></i>
             </a>
         </div>
         <div class="flow-root">
@@ -32,10 +30,9 @@
                                 </p>
                             </div>
                             <div class="inline-flex items-center  font-semibold text-gray-900 dark:text-white">
-                                <form action="{{ route('Patient.addDoctorVue', ['doctor' => $doctor->idmedecin]) }}" method="post">
+                                <form action="{{ route('Patient.addTauxTraitement', ['doctor' => $doctor->idmedecin]) }}" method="post">
                                     @csrf
-                                    <button class="bg-red-500 text-white text-base rounded-lg px-2 py-1 font-semibold hover:bg-transparent hover:text-red-500 hover:border-red-300 hover:border border border-red-500 hover:duration-700">
-                                        Ajouter <i class="bi bi-plus-circle"></i></button>
+                                    <button class="bg-red-500 text-white text-base rounded-lg px-2 py-1 font-semibold hover:bg-transparent hover:text-red-500 hover:border-red-300 hover:border border border-red-500 hover:duration-700">Retirer <i class="bi bi-minus-circle-fill"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -49,4 +46,32 @@
 
 
 </div>
+{{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function ajouterMedecin(idMedecin) {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            type: 'POST',
+            url: '/Patient.addNewDoctor',
+            data: {
+                doctor: idMedecin
+            },
+            success: function(response) {
+                if (response.success) {
+                    alert('Médecin ajouté avec succès!');
+                } else {
+                    alert('Une erreur s\'est produite lors de l\'ajout du médecin.');
+                }
+            },
+            error: function(xhr, status, error) {
+                console.log(error);
+            }
+        });
+    }
+</script> --}}
 @endsection

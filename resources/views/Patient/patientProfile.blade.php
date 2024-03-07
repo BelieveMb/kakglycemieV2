@@ -39,10 +39,12 @@
                                     @php $statut = "Rien à signaler" @endphp    
                                 @endif
 
-
-                            <p class="text-center text-gray-600 mt-1 flex flex-col lg:flex-row">Statut glycémie :  
-                                <span class="font-semibold text-red-500 ">{{$statut}} </span>
-                            </p>
+                                <div class="flex justify-center">
+                                    <p class="text-center text-gray-600 mt-1  flex flex-col lg:flex-row">Statut glycémie :  
+                                        <span class="font-semibold text-red-500 ">{{$statut}} </span>
+                                    </p>
+                                </div>
+                            
 
                             <div class="flex justify-center flex-wrap mt-5">
                                 <a href="{{ route('Patient.dashboardForm') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-heart-pulse-fill"></i> {{ $lastTraitement->taux }} dl/ml</a>
