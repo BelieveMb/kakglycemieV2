@@ -31,16 +31,17 @@
                                 d'optimiser leur traitement et de fournir une prise en charge personnalisée.
                             </p>
                             <div class="flex my-4 gap-4 flex-row lg:space-x-8 justify-center ">
-                                <a  href="{{ route('loginMedecin') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 border-red-500 border-4  text-gray-50 rounded-lg hover:bg-gray-800   hover:text-gray-50 focus:text-gray-900  hover:shadow-outline focus:bg-red-200 focus:outline-none"> Connexion <i class="bi bi-box-arrow-in-left"></i>  </a>
-                                <a href="{{ route('inscription') }}" class="px-4 py-2  text-sm font-semibold border-gray-100 border-4 text-gray-50 rounded-lg  hover:text-gray-600 focus:text-gray-900 hover:bg-gray-50  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> Inscription <i class="bi bi-person-plus-fill"></i></a>
+                                <a  href="{{ route('inscription') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 border-red-500 border-4  text-gray-50 rounded-lg hover:bg-gray-800   hover:text-gray-50 focus:text-gray-900  hover:shadow-outline focus:bg-red-200 focus:outline-none"> 
+                                    Connexion <i class="bi bi-box-arrow-in-left"></i>  </a>
+                                <a href="{{ route('registerVue') }}" class="px-4 py-2  text-sm font-semibold border-gray-100 border-4 text-gray-50 rounded-lg  hover:text-gray-600 focus:text-gray-900 hover:bg-gray-50  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> 
+                                    Inscription <i class="bi bi-person-plus-fill"></i></a>
                              </div>
                    
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="top-auto bottom-0 left-0 right-0 w-full absolute
-        pointer-events-none overflow-hidden h-70-px" s>
+            <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px">
                 <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg"
                     preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
                     <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
@@ -170,7 +171,7 @@
   
         </div>
         <div class="flex  gap-4 flex-row lg:space-x-8 justify-center ">
-           <a  href="{{ route('loginMedecin') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 border-red-500 border-4  text-gray-50 rounded-lg hover:bg-gray-800   hover:text-gray-50 focus:text-gray-900  hover:shadow-outline focus:bg-red-200 focus:outline-none"> Connexion <i class="bi bi-box-arrow-in-left"></i>  </a>
+           <a  href="{{ route('registerVue') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 border-red-500 border-4  text-gray-50 rounded-lg hover:bg-gray-800   hover:text-gray-50 focus:text-gray-900  hover:shadow-outline focus:bg-red-200 focus:outline-none"> Connexion <i class="bi bi-box-arrow-in-left"></i>  </a>
            <a href="{{ route('inscription') }}" class="px-4 py-2  text-sm font-semibold border-gray-100 border-4 text-gray-50 rounded-lg  hover:text-gray-600 focus:text-gray-900 hover:bg-gray-50  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> Inscription <i class="bi bi-person-plus-fill"></i></a>
         </div>
       </section>

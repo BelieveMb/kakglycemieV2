@@ -28,7 +28,9 @@ Route::prefix('/')->controller(AllUsersController::class)->group(function (){
     Route::get('Inscription', 'registerVue')->name('registerVue');
     Route::post('Inscription', 'userRegister')->name('inscription');
     Route::get('/logout','logoutUser')->name('logoutUser');
-
+    //en cas de redirection inattendue vers login
+    Route::get('login','loginUserVue')->name('loginUserVue');
+    Route::post('login','loginUser')->name('loginUser');
 });
 
 
@@ -64,8 +66,8 @@ Route::prefix('/')->name('medecin.')->controller(medecinController::class)->grou
     
 
 // Route::get('/dashboardMedecin', 'medecinController@dashboardMedecin')->middleware('medecin.auth');
-//middleware('medecin.auth')->
-Route::prefix('/medecin')->name('Medecin.')->controller(medecinController::class)->group(function () {
+//
+Route::middleware('auth')->prefix('/medecin')->name('Medecin.')->controller(medecinController::class)->group(function () {
     Route::get('/dashboard', 'dashboardMedecin')->name('dashboard');
     Route::get('/logout','logoutMedecin')->name('logoutMedecin');
     Route::get('/monProfil',  'profilMedecin')->name('monProfil');

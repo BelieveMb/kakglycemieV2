@@ -21,7 +21,7 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.registerPatient');
+        return view('auth.registerUser');
     }
 
     /**
@@ -51,7 +51,7 @@ class RegisteredUserController extends Controller
         if($user){
             event(new Registered($user));
             Auth::login($user);
-            return to_route('login');
+            return to_route('loginUserVue');
         }else{
             return back()->withErrors("une erreur, veuillez recommencez");
             // withErrors([

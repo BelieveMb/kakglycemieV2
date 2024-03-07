@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\DoctorModel;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
@@ -52,12 +55,32 @@ class medecinController extends Controller
     }
 
     public function logoutMedecin(Request $request): RedirectResponse {
-        return redirect()->route('doctorName');
+       //la deconnexion de l'user
+       Auth::logout();  
+    
+       $request->session()->invalidate();
+   
+       $request->session()->regenerateToken();
+   
+       return redirect()->route('doctorName');
     }
 
     public function profilMedecin(){
+        // $idmedecin = auth()->id();
+        $idmedecin = auth()->id();
+        $infosUser = User::
+            where('id', $idmedecin)
+            ->first();
+
+        $infosDoctor = DoctorModel::
+            where('idmedecin', $idmedecin)
+            ->first();
         
-        return view('Medecin.ProfilMedecin');
+        return view('Medecin.ProfilMedecin', [
+            'infosDoctor' => $infosDoctor,
+            'infosUser' => $infosUser,
+            'idmedecin' => $idmedecin
+        ]);
     }
 
 
