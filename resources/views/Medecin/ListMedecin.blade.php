@@ -8,11 +8,9 @@
 
             <div class="flex justify-between items-center mb-4 gap-[5rem] ">
                 <h3 class="text-base lg:text-xl font-bold leading-none text-gray-50">Mes patients</h3>
-                <a href="{{ route('Patient.addNewDoctor') }}"
-                    class="text-xl text-red-500"
-                >
-                     <i class="bi bi-people"></i>
-                </a>
+                <span  class="text-xl text-red-500" >
+                    <i class="bi bi-people"></i>
+                </span>
             </div>
             <div class="flow-root">
                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
@@ -33,7 +31,7 @@
                                         </p>
                                     </div>
                                     <div class="inline-flex items-center  font-semibold text-gray-900 dark:text-white">
-                                        <form action="{{ route('Patient.addNewDoctor', ['doctor' => $doctor->idmedecin]) }}"
+                                        <form action="{{ route('Medecin.dashboard', ['doctor' => $doctor->idmedecin]) }}"
                                             method="post">
                                             {{-- <form method="POST"> --}}
                                             @csrf
