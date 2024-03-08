@@ -5,8 +5,9 @@
         </h2>
 
         <p class="mt-1 text-sm text-gray-600">
-            {{ __("Vous pouvez ajouter ou modifier votre information professionnelle pour être valider par l'administration de 
+            {{ __("Vous pouvez ajouter ou modifier vos infos professionnelle pour être valider par l'administration de 
             KaK Glycémie.") }}
+            {{-- à continuer demain, formu de medecin --}}
         </p>
     </header>
 
@@ -21,51 +22,42 @@
             </div>
         </div>
     @endif
-    <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6">
+    <form method="post"  class="mt-6 space-y-6">
         @csrf
         @method('patch')
         {{-- :value="old('name', $user->name)" --}}
         <div>
-            <x-input-label for="name" :value="__('Nom')" />
-            <x-text-input id="name" name="name" type="text" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500"  required autofocus autocomplete="name" />
-            <x-input-error class="mt-2" :messages="$errors->get('name')" />
+            <x-input-label for="ordreMed" :value="__("Notification de l'ordre de médecin (pdf)")" />
+            <x-text-input id="ordreMed" name="ordreMed" type="file" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500"  required autofocus autocomplete="name" />
+            <x-input-error class="mt-2" :messages="$errors->get('ordreMed')" />
         </div>
 
         <div>
-            <x-input-label for="telPat" :value="__('Téléphone')" />
-            <x-text-input id="telPat" name="telPat" type="tel" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500"  required autofocus autocomplete="telPat" />
-            <x-input-error class="mt-2" :messages="$errors->get('telPat')" />
+            <x-input-label for="hopital" :value="__('Hôpital ( Institution de prestation) ')" />
+            <x-text-input id="hopital" name="hopital" type="text" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500"  required  autocomplete="hopital" />
+            <x-input-error class="mt-2" :messages="$errors->get('hopital')" />
         </div>
 
-        {{-- :value="old('email', $user->email)" --}}
         <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" name="email" type="email" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500" required autocomplete="username" />
-            <x-input-error class="mt-2" :messages="$errors->get('email')" />
+            <x-input-label for="specialite" :value="__('Votre  Spécialité  ')" />
+            <x-text-input id="specialite" name="specialite" type="text" aria-placeholder="votre domaine de spécialisation" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500"  required  autocomplete="specialite" />
+            <x-input-error class="mt-2" :messages="$errors->get('specialite')" />
+        </div>
 
-            {{-- @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail()) --}}
-                {{-- <div>
-                    <p class="text-sm mt-2 text-gray-800">
-                        {{ __('Your email address is unverified.') }}
+        {{-- :value="old('description', $user->email)" --}}
+        <div>
+            <x-input-label for="description" :value="__('description')" />
+            <textarea id="description" name="description"  
+            class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500" required autocomplete="descritpion" >
+            </textarea>
+            <x-input-error class="mt-2" :messages="$errors->get('description')" />
 
-                        <button form="send-verification" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            {{ __('Click here to re-send the verification email.') }}
-                        </button>
-                    </p>
-
-                    @if (session('status') === 'verification-link-sent')
-                        <p class="mt-2 font-medium text-sm text-green-600">
-                            {{ __('A new verification link has been sent to your email address.') }}
-                        </p>
-                    @endif
-                </div> --}}
-            {{-- @endif --}}
         </div>
 
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Enregistrer') }}</x-primary-button>
 
-            @if (session('status') === 'profile-updated')
+            @if (session('status') === 'saved')
                 <p
                     x-data="{ show: true }"
                     x-show="show"
