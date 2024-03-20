@@ -27,7 +27,7 @@
     <div class="mt-5 bg-white rounded-lg shadow-md p-5">
         {{-- to include the update-password --}}
         @include('Patient.components.updatePassword')
-        <p class="text-gray-600 mt-2">John is a software engineer with over 10 years of experience in developing web and mobile applications. He is skilled in JavaScript, React, and Node.js.</p>
+        <p class="text-gray-600 mt-2"> <b>Important à savoir </b> : pour plus de sécurité, vous devez mettre un mot de passe qui comporte plus de 8 caractères.</p>
     </div>
 </div>    
 @endsection

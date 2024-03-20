@@ -71,7 +71,7 @@
 
                      <i class="ml-1 text-xl bi bi-box-arrow-right"></i>
                   </span>
-                  <span class="ml-3 flex-1 whitespace-nowrap">Deconnexion</span>
+                  <span class="ml-3 flex-1 whitespace-nowrap ">Deconnexion</span>
 
                </a>
             </li>

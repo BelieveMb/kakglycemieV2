@@ -66,7 +66,6 @@ class medecinController extends Controller
     }
 
     public function profilMedecin(){
-        // $idmedecin = auth()->id();
         $idmedecin = auth()->id();
         $infosUser = User::
             where('id', $idmedecin)
@@ -82,6 +81,45 @@ class medecinController extends Controller
             'idmedecin' => $idmedecin
         ]);
     }
+    public function updateProfilMedecin(Request $request): RedirectResponse
+    {        
+        $idmedecin = auth()->id();
+        
+        $request->validate([
+            'ordreMed' => 'required|string|max:250',
+            'hopital' => 'required|string|max:5',
+            'specialite' => 'required|string|max:100|min:5',
+            'description' => 'required|string|min:10'
+        ]);
+    
+        $ordreMed = $request->input('hopital');
+        $hopital = $request->input('orderMed');
+        $specialite = $request->input('specialite');
+        $description = $request->input('description');
+
+        // Mettre à jour l'enregistrement du médecin
+        $query  = DB::table('medecin')
+                ->where('idmedecin', $idmedecin)
+                ->update([
+                    'ordreMed' => $ordreMed,
+                    'hopital' => $hopital,
+                    'specialite' => $specialite,
+                    'description' => $description
+                ]);
+    
+        // Rediriger avec message de confirmation
+        if($query){
+            return back()->with('success', 'Profil modifié avec succès!');
+        }else{
+            return back()->with('fail','Profil non modifié, recommencez ');
+        }
+        
+    }        
+     // DoctorModel::where('idmedecin', $idmedecin)
+        // ->update([
+        //     'hopital' => 'Nouveau nom', 
+        //     'specialite' => 'nouveau@email.com'
+        // ]);
 
 
 }

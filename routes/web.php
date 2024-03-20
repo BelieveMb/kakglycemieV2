@@ -71,7 +71,7 @@ Route::middleware('auth')->prefix('/medecin')->name('Medecin.')->controller(mede
     Route::get('/dashboard', 'dashboardMedecin')->name('dashboard');
     Route::get('/logout','logoutMedecin')->name('logoutMedecin');
     Route::get('/monProfil',  'profilMedecin')->name('monProfil');
-    Route::post('/monProfil',  'profilMedecin')->name('monProfil');
+    Route::post('/monProfil',  'updateProfilMedecin')->name('monProfil');
 
 
 });
