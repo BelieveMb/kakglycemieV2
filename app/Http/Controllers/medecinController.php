@@ -93,41 +93,37 @@ class medecinController extends Controller
         ]);
     
         
-    if ($request->hasFile('pdf')) {
-        $ordreMed = $request->file('ordreMed');
-        $ordreMedName = $idmedecin . '.pdf';
-        $ordreMed->storeAs('public/pdf/ordreMedecin',$ordreMedName);
-        
-        $hopital = $request->input('hopital');
-        $specialite = $request->input('specialite');
-        $description = $request->input('description');
+        if ($request->hasFile('pdf')) {
+            $ordreMed = $request->file('ordreMed');
+            $ordreMedName = $idmedecin . '.pdf';
+            $ordreMed->storeAs('public/pdf/ordreMedecin',$ordreMedName);
+            
+            $hopital = $request->input('hopital');
+            $specialite = $request->input('specialite');
+            $description = $request->input('description');
 
-        // Mettre à jour l'enregistrement du médecin
-        $query  = DB::table('medecin')
-                ->where('idmedecin', $idmedecin)
-                ->update([
-                    'ordreMed' => $ordreMedName,
-                    'hopital' => $hopital,
-                    'specialite' => $specialite,
-                    'description' => $description
-                ]);
+            // Mettre à jour l'enregistrement du médecin
+            $query  = DB::table('medecin')
+                    ->where('idmedecin', $idmedecin)
+                    ->update([
+                        'ordreMed' => $ordreMedName,
+                        'hopital' => $hopital,
+                        'specialite' => $specialite,
+                        'description' => $description
+                    ]);
 
-        // Rediriger avec message de confirmation
-        if($query){
-            return back()->with('success', 'Profil modifié avec succès!');
-        }else{
-            return back()->with('fail','Profil non modifié, recommencez ');
+            // Rediriger avec message de confirmation
+            if($query){
+                return back()->with('success', 'Profil modifié avec succès!');
+            }else{
+                return back()->with('fail','Profil non modifié, recommencez ');
+            }
         }
-    }
         return back()->with('fail','Profil non modifié, Vous devez envoyé un fichier .pdf ');
 
-    
-    }        
-     // DoctorModel::where('idmedecin', $idmedecin)
-        // ->update([
-        //     'hopital' => 'Nouveau nom', 
-        //     'specialite' => 'nouveau@email.com'
-        // ]);
-
+    } 
+    public function contactKaK(){
+        return view('Medecin.KakAdmin');
+    }       
 
 }

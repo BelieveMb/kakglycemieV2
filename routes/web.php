@@ -72,6 +72,7 @@ Route::middleware('auth')->prefix('/medecin')->name('Medecin.')->controller(mede
     Route::get('/logout','logoutMedecin')->name('logoutMedecin');
     Route::get('/monProfil',  'profilMedecin')->name('monProfil');
     Route::post('/monProfil',  'updateProfilMedecin')->name('monProfil');
+    Route::get('/Contact-Kak',  'contactKaK')->name('contactKaK');
 
 
 });
