@@ -86,14 +86,19 @@ class medecinController extends Controller
         $idmedecin = auth()->id();
         
         $request->validate([
-            'ordreMed' => 'required|string|max:250',
-            'hopital' => 'required|string|max:5',
+            'ordreMed' => 'required',
+            'hopital' => 'required|string|max:50',
             'specialite' => 'required|string|max:100|min:5',
             'description' => 'required|string|min:10'
         ]);
     
-        $ordreMed = $request->input('hopital');
-        $hopital = $request->input('orderMed');
+        
+    if ($request->hasFile('pdf')) {
+        $ordreMed = $request->file('ordreMed');
+        $ordreMedName = $idmedecin . '.pdf';
+        $ordreMed->storeAs('public/pdf/ordreMedecin',$ordreMedName);
+        
+        $hopital = $request->input('hopital');
         $specialite = $request->input('specialite');
         $description = $request->input('description');
 
@@ -101,19 +106,22 @@ class medecinController extends Controller
         $query  = DB::table('medecin')
                 ->where('idmedecin', $idmedecin)
                 ->update([
-                    'ordreMed' => $ordreMed,
+                    'ordreMed' => $ordreMedName,
                     'hopital' => $hopital,
                     'specialite' => $specialite,
                     'description' => $description
                 ]);
-    
+
         // Rediriger avec message de confirmation
         if($query){
             return back()->with('success', 'Profil modifié avec succès!');
         }else{
             return back()->with('fail','Profil non modifié, recommencez ');
         }
-        
+    }
+        return back()->with('fail','Profil non modifié, Vous devez envoyé un fichier .pdf ');
+
+    
     }        
      // DoctorModel::where('idmedecin', $idmedecin)
         // ->update([
