@@ -36,15 +36,35 @@
 
                 </div>
                 <div class="flex flex-col gap-5 justify-center items-center py-5 px-10 bg-gray-50 text-gray-700 rounded-xl w-full lg:w-1/2">
-                    <form action="" method="post">
-
+                    <form  method="post">
                         <h4 class="text-2xl font-bold mb-5">Laissez nous un message</h4>
-                    
+
+                        @csrf
+                        @if (Session::has('success'))
+                        <div class="bg-gray-900 my-2  rounded-xl flex justify-between p-3 text-gray-100 font-semibold animate-pulse delay-700">
+                            {{ Session::get('success') }}
+                            <div class="text-gray-50">
+                                <i class="bi bi-check-circle"></i>
+                            </div>
+                        </div>
+                        @elseif (Session::has('fail'))
+                        <div class="bg-red-500 my-2  rounded-xl flex justify-between p-3 text-gray-50 font-semibold animate-pulse delay-700">
+                            {{ Session::get('fail') }}
+                            <div class="text-gray-50">
+                                <i class="bi bi-close-circle"></i>
+                            </div>
+                        </div>
+                        @endif
+                        <div class="my-4">
+                            <input type="text"  name="nom"   placeholder="Votre nom"
+                            class="font-semibold  border-b-4 border-red-500 rounded-2xl px-2 py-1 w-full focus:border-2 outline-none focus:border-red-500" required autocomplete="nom" >
+                            <x-input-error class="mt-2" :messages="$errors->get('nom')" />
+                        </div>
+
                         <div class="my-4">
                             <textarea id="message" name="message"   placeholder="Votre message"
                             class="font-semibold  border-b-4 border-red-500 rounded-2xl px-2 py-1 w-full focus:border-2 outline-none focus:border-red-500" required autocomplete="message" ></textarea>
                             <x-input-error class="mt-2" :messages="$errors->get('message')" />
-            
                         </div>
 
                         <div>

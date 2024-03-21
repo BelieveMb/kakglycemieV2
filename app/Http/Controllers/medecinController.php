@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Hash;
 class medecinController extends Controller
 {
     //login
-    function addDoctor(Request $request){
+    public function addDoctor(Request $request){
         $request->validate([
             'nomMed' =>'required|min:4',
             'telMed' =>'required|unique:medecin',
@@ -124,6 +124,33 @@ class medecinController extends Controller
     } 
     public function contactKaK(){
         return view('Medecin.KakAdmin');
-    }       
+    }    
+    public function contactSendMessage(Request $request){
+        $idmedecin = auth()->id();
+        
+        $request->validate([
+            'nom' => 'required|min:3',
+            'message' => 'required'
+        ]);
+        $nom = $request->input('nom');
+        $message = $request->input('message');
+        //créer la table pour ça
+         $query  = DB::table('contact')
+         ->where('idmedecin', $idmedecin)
+         ->insert([
+             'iduser' => $idmedecin,
+             'nom' => $nom,
+             'message' => $message,
+         ]);
+
+        // Rediriger avec message de confirmation
+        if($query){
+            return back()->with('success', 'Votre message est envoyé avec succès !');
+        }else{
+            return back()->with('fail','Erreur, recommencez ');
+        }
+
+    }
+
 
 }

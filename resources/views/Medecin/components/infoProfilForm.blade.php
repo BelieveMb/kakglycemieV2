@@ -7,7 +7,6 @@
         <p class="mt-1 text-sm text-gray-600">
             {{ __("Vous pouvez ajouter ou modifier vos infos professionnelle pour être valider par l'administration de 
             KaK Glycémie.") }}
-            {{-- à continuer demain, formu de medecin --}}
         </p>
     </header>
 
