@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\adminController;
 use App\Http\Controllers\AllUsersController;
 use App\Http\Controllers\medecinController;
 use App\Http\Controllers\PatientControllers;
@@ -74,9 +75,10 @@ Route::middleware('auth')->prefix('/medecin')->name('Medecin.')->controller(mede
     Route::post('/monProfil',  'updateProfilMedecin')->name('monProfil');
     Route::get('/Contact-Kak',  'contactKaK')->name('contactKaK');
     Route::post('/Contact-Kak',  'contactSendMessage')->name('contactKaK');
-
-
 });
+
+Route::get('/kak-admin', [adminController::class, 'connexionAdminVue'])->name('connexionVue');
+
 
 //Les médecins
 
