@@ -83,6 +83,7 @@ Route::post('/kak-admin', [adminController::class, 'connexionAdmin'])->name('con
 //middleware('auth')->
 Route::prefix('/kak-admin')->name('admin.')->controller(adminController::class)->group(function () {
     Route::get('/dashboard',  'dashboardAdmin')->name('dashboardAdmin');
+    Route::get('/logout','logoutAdmin')->name('logoutAdmin');
 
 });
 

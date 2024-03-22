@@ -44,7 +44,18 @@ class adminController extends Controller
             return back()->with('fail', 'Agent non trouvé est puff');
 
         }
-    }                                     
+    }  
+    public function logoutAdmin(Request $request): RedirectResponse
+    {
+        //la deconnexion de l'user
+        Auth::logout();  
+    
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+        return redirect()->route('accueilName');
+    }                                   
     public function dashboardAdmin(){
         return view("Admin.layout.dashboard");
     }                                                          
