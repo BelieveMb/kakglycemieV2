@@ -33,7 +33,7 @@ class medecinController extends Controller
 
             'hopital'=>$request->input('hopital'),
             'avatarMed'=>$request->string('null'),
-            'valider'=>$request->string('no'),
+            'valider'=>$request->string('non'),
         ]);
 
         //message de confirmation

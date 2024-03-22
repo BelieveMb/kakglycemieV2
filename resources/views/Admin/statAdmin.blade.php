@@ -3,7 +3,7 @@
         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
            <div class="flex items-center">
               <div class="flex-shrink-0">
-                 <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">2,340</span>
+                 <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">{{$listPatientCount}} </span>
                  <h3 class="text-base font-normal text-gray-500">Patients inscrits</h3>
               </div>
               <div class="ml-5 w-0 flex items-center justify-end flex-1 text-red-500 text-[3rem] font-bold">
@@ -14,7 +14,7 @@
         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
             <div class="flex items-center">
                <div class="flex-shrink-0">
-                  <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">2,340</span>
+                  <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">{{$listMedecinCount}} </span>
                   <h3 class="text-base font-normal text-gray-500">Médecins inscrits</h3>
                </div>
                <div class="ml-5 w-0 flex items-center justify-end flex-1 text-red-500 text-[3rem] font-bold">
@@ -25,7 +25,7 @@
          <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
             <div class="flex items-center">
                <div class="flex-shrink-0">
-                  <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">2,340</span>
+                  <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">{{$listCandidatCount}} </span>
                   <h3 class="text-base font-normal text-gray-500">Candidatures déposés</h3>
                </div>
                <div class="ml-5 w-0 flex items-center justify-end flex-1 text-red-500 text-[3rem] font-bold">

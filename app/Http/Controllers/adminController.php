@@ -7,6 +7,7 @@ use App\Models\AgentModel;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 
@@ -57,6 +58,18 @@ class adminController extends Controller
         return redirect()->route('accueilName');
     }                                   
     public function dashboardAdmin(){
-        return view("Admin.layout.dashboard");
+        $listPatientCount = DB::table('patient')->count();
+        $listCandidatCount = DB::table('medecin')
+            ->where('valider', 'non')
+            ->count();
+        $listMedecinCount = DB::table('medecin')
+            ->where('valider', 'oui')
+            ->count();
+
+        return view("Admin.layout.dashboard", [
+            'listPatientCount' => $listPatientCount,
+            'listCandidatCount' => $listCandidatCount,
+            'listMedecinCount' => $listMedecinCount,
+        ]);
     }                                                          
 }
