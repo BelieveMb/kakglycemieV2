@@ -59,6 +59,9 @@ class adminController extends Controller
     }                                   
     public function dashboardAdmin(){
         $listPatientCount = DB::table('patient')->count();
+        $listPatient = DB::table('users')
+            ->where('type','patient')
+            ->get();
         $listCandidatCount = DB::table('medecin')
             ->where('valider', 'non')
             ->count();
@@ -67,6 +70,7 @@ class adminController extends Controller
             ->count();
 
         return view("Admin.layout.dashboard", [
+            'listPatient' => $listPatient,
             'listPatientCount' => $listPatientCount,
             'listCandidatCount' => $listCandidatCount,
             'listMedecinCount' => $listMedecinCount,
