@@ -1,56 +1,68 @@
 @extends('Admin.layout.dashboard')
 
 @section('dashAdmin')
-    <div class="w-full flex justify-center items-center content-center gap-10">
-
-
-        <div class="py-1 px-2 max-w-[80%] lg:max-w-[60%] min-h-auto bg-gray-400 rounded-lg border shadow-md sm:p-8 ">
-
-            <div class="flex justify-between items-center mb-4 gap-[5rem] ">
-                <h3 class="text-base lg:text-xl font-bold leading-none text-gray-50">Mes patients</h3>
-                <span  class="text-xl text-red-500" >
-                    <i class="bi bi-people"></i>
-                </span>
+    <div class="w-full flex justify-center items-center content-center gap-10 overflow-hidden">
+        <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 h-screen mb-10 max-w-[95%] lg:max-w-[80%]">
+            <div class="py-4 flex items-center justify-between">
+               <div >
+                  <h3 class="text-xl font-bold text-gray-900 mt-6 mb-2">Les candidatures</h3>
+                  <span class="text-base font-normal text-gray-500  ">Voici la liste de tous les candidatures de médecins qui postule sur KaK glycémie</span>
+               </div>
             </div>
-            <div class="flow-root">
-                <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                    @foreach ($candidats as $candidat)
-                        <li class="py-3 sm:py-4 hover:bg-gray-400/30 cursor-pointer">
-                            <div class="flex items-center space-x-4">
-                                <div class="flex-shrink-0">
-                                    <img class="w-8 h-8 rounded-full" src="{{ asset('../images/profil.jpg') }}"
-                                        alt="candidat image" />
-                                </div>
-                                <div class="flex-1 min-w-0">
-                                    <p class="text-lg font-semibold truncate ">
-                                    </p>
-                                    <p class="text-sm text-gray-800 truncate ">
-                                        {{-- {{ $patient }} --}}
-                                    </p>
-                                </div>
-                                {{ $candidat->valider }}
+            <div class="flex flex-col mt-8">
+               <div class="overflow-x-auto rounded-lg ">
+                  <div class="align-middle inline-block ">
+                        <div class="shadow overflow-hidden rounded-lg ">
+                           <table class="divide-y divide-gray-200   ">
+                              <thead class="bg-gray-50  ">
+                                    <tr>
+                                       <th scope="col"
+                                          class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                          Nom complet 
+                                       </th>
+                                       <th scope="col"
+                                          class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                          Hôpital
+                                       </th>
+                                       <th scope="col"
+                                          class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                          Spécialité
+                                       </th>
+                                       <th scope="col"
+                                          class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                          Action
+                                       </th>
+                                    </tr>
+                              </thead>
+                              <tbody class="bg-white  ">
+                                 @foreach ( $candidats as $candidat )
+                                    
+                                    <tr class=" border-b-2 text-gray-700 hover:bg-gray-200 ">
+                                       <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
+                                          {{$candidat->name}} 
+                                       </td>
+                                       <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-500">
+                                          {{$candidat->hopital}}                          
+                                       </td>
+                                       <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-500">
+                                          {{$candidat->specialite}} 
+                                       </td>
+                                       <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900 cursor-pointer">
+                                            <span class="text-2xl hover:text-red-500 "> 
+                                                <i class="bi bi-plus-circle-dotted"></i>
+                                            </span>
+                                       </td>
 
-                                
-                                <div class="inline-flex items-center  font-semibold text-gray-900 dark:text-white">
-                                    {{-- <form action="{{ route('Medecin.dashboard', ['doctor' => $doctor->idmedecin]) }}" 
-                                        method="post">--}}
-                                        <form method="POST">
-                                        @csrf
-                                        <button
-                                            class="bg-red-500 text-white text-base rounded-lg px-2 py-1 font-semibold hover:bg-transparent hover:text-red-500 hover:border-red-300 hover:border border border-red-500 hover:duration-700">En savoir plus
-                                            <i class="bi bi-eye"></i></button>
-                                    </form>
-                                </div>
-                            </div>
-                        </li>
-                    @endforeach
-
-
-                </ul>
+                                    </tr>
+                                 @endforeach
+                                 
+                                    
+                              </tbody>
+                           </table>
+                        </div>
+                  </div>
+               </div>
             </div>
-        </div>
-
-
-
+      </div>
     </div>
 @endsection
