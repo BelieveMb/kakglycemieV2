@@ -5,9 +5,9 @@
             <ul class="space-y-2 pb-2">
               
                <li>
-                  <a href="{{ route('Medecin.dashboard') }}" class="@if(request()->route()->getName()=== 'Medecin.dashboard') bg-gray-200 @endif text-gray-50 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
-                     <span class="@if(request()->route()->getName()=== 'Medecin.dashboard') bg-gray-200 font-semibold text-red-500 @endif">
-                        <span class="@if(request()->route()->getName()=== 'Medecin.dashboard')  text-red-500 @endif w-6 h-6 flex-shrink-0 hover:text-red-500 transition duration-75">
+                  <a href="{{ route('admin.dashboardAdmin') }}" class="@if(request()->route()->getName()=== 'admin.dashboardAdmin') bg-gray-200 @endif text-gray-50 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
+                     <span class="@if(request()->route()->getName()=== 'admin.dashboardAdmin') bg-gray-200 font-semibold text-red-500 @endif">
+                        <span class="@if(request()->route()->getName()=== 'admin.dashboardAdmin')  text-red-500 @endif w-6 h-6 flex-shrink-0 hover:text-red-500 transition duration-75">
                            <i class="ml-1 text-xl bi bi-people-fill"></i>
                         </span>
                         <span class="ml-3">Nos patients</span>
@@ -16,19 +16,8 @@
                </li>
 
                <li>
-                  <a href="{{ route('Medecin.monProfil') }}" class="@if(request()->route()->getName()=== 'Medecin.monProfil') bg-gray-200 @endif text-gray-50 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
-                     <span class="@if(request()->route()->getName()=== 'Medecin.monProfil') bg-gray-200 font-semibold text-red-500 @endif">
-                        <span class="   w-6 h-6 flex-shrink-0 hover:text-red-500 transition duration-75">
-
-                           <i class="ml-1 text-xl bi bi-person-circle"></i>
-                        </span>
-                        <span class="ml-3 flex-1 whitespace-nowrap">Nos médecins</span>
-                     </span>
-                  </a>
-               </li>
-               <li>
-                  <a href="{{ route('Medecin.monProfil') }}" class="@if(request()->route()->getName()=== 'Medecin.monProfil') bg-gray-200 @endif text-gray-50 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
-                     <span class="@if(request()->route()->getName()=== 'Medecin.monProfil') bg-gray-200 font-semibold text-red-500 @endif">
+                  <a href="{{ route('admin.monProfil') }}" class="@if(request()->route()->getName()=== 'admin.monProfil') bg-gray-200 @endif text-gray-50 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
+                     <span class="@if(request()->route()->getName()=== 'admin.monProfil') bg-gray-200 font-semibold text-red-500 @endif">
                         <span class="   w-6 h-6 flex-shrink-0 hover:text-red-500 transition duration-75">
 
                            <i class="ml-1 text-xl bi bi-person-circle"></i>
@@ -37,20 +26,31 @@
                      </span>
                   </a>
                </li>
+
+               {{-- <li>
+                  <a href="{{ route('admin.monProfil') }}" class="@if(request()->route()->getName()=== 'admin.monProfil') bg-gray-200 @endif text-gray-50 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
+                     <span class="@if(request()->route()->getName()=== 'admin.monProfil') bg-gray-200 font-semibold text-red-500 @endif">
+                        <span class="   w-6 h-6 flex-shrink-0 hover:text-red-500 transition duration-75">
+
+                           <i class="ml-1 text-xl bi bi-person-circle"></i>
+                        </span>
+                        <span class="ml-3 flex-1 whitespace-nowrap">Nos médecins</span>
+                     </span>
+                  </a>
+               </li>
+               
                <li>
-                  <a href="{{ route('Medecin.contactKaK') }}" class="@if(request()->route()->getName()=== 'Patient.statistiqueGlycemie') bg-gray-200 @endif text-gray-50 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
+                  <a href="{{ route('admin.contactKaK') }}" class="@if(request()->route()->getName()=== 'Patient.statistiqueGlycemie') bg-gray-200 @endif text-gray-50 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
                         <span class=" w-6 h-6 flex-shrink-0 group-hover:text-red-500 transition duration-75 ">
                            <i class="ml-1 text-xl bi bi-person-workspace"></i>
                         </span>
                         <span class="ml-3 flex-1 whitespace-nowrap ">Messages </span> 
                      </span>
                   </a>
-               </li>
-
-
+               </li> --}}
                <li>
-                  <a href="{{ route('logoutUser') }}" class="text-base text-gray-50 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">                           
-                     <span class="@if(request()->route()->getName()=== 'me')  text-red-500 @endif w-6 h-6 flex-shrink-0 hover:text-red-500 transition duration-75">
+                  <a href="{{ route('admin.logoutAdmin') }}" class="text-base text-gray-50 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">                           
+                     <span class="@if(request()->route()->getName()=== 'admin.logoutAdmin')  text-red-500 @endif w-6 h-6 flex-shrink-0 hover:text-red-500 transition duration-75">
 
                         <i class="ml-1 text-xl bi bi-box-arrow-right"></i>
                      </span>
@@ -58,6 +58,7 @@
 
                   </a>
                </li>
+               
                
             </ul>
             

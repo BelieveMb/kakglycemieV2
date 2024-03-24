@@ -1,4 +1,4 @@
-<div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
+<div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 h-screen mb-10 ">
       <div class="mb-4 flex items-center justify-between">
          <div>
             <h3 class="text-xl font-bold text-gray-900 mb-2">Nos patients</h3>

@@ -1,6 +1,6 @@
-@extends('Medecin.layout.dashMed')
+@extends('Admin.layout.dashboard')
 
-@section('dashMedecin')
+@section('dashAdmin')
     <div class="w-full flex justify-center items-center content-center gap-10">
 
 
