@@ -50,11 +50,8 @@ class adminController extends Controller
     {
         //la deconnexion de l'user
         Auth::logout();  
-    
         $request->session()->invalidate();
-    
         $request->session()->regenerateToken();
-    
         return redirect()->route('accueilName');
     }                                   
     public function dashboardAdmin(){
@@ -75,5 +72,17 @@ class adminController extends Controller
             'listCandidatCount' => $listCandidatCount,
             'listMedecinCount' => $listMedecinCount,
         ]);
-    }                                                          
+    }  
+    public function candidatsList(){
+        // selection tous users medecin, et selection tous medecins where
+        // valider = non
+        $candidats = DB::table('users')
+                ->where('type', 'medecin')
+                ->join('medecin', 'users.id', '=', 'medecin.idmedecin')  
+                ->where('valider','non')
+                ->get();
+        return view("Admin.candidatList", [
+            "candidats" => $candidats
+        ]);
+    }                                           
 }

@@ -18,18 +18,15 @@
                 @include('Admin.components.sidebar')
                 <div class="bg-gray-900 opacity-50 hidden fixed inset-0 z-10" id="sidebarBackdrop"></div>
                 <div id="main-content" class="flex flex-col gap-4 h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64">
-                    <div class="flex flex-col gap-4 pt-6 px-4 ">
+                    <div class="flex flex-col gap-4 pt-6 px-4 h-screen ">
                         @if(request()->route()->getName()=== 'admin.dashboardAdmin') 
-                        <div class="flex flex-col gap-4 ">
-                                    @include('Admin.statAdmin') 
-                                    @include('Admin.patientList') 
+                            <div class="flex flex-col gap-4 ">
+                                @include('Admin.statAdmin') 
+                                @include('Admin.patientList') 
                             </div>  
                         @else
                             @yield('dashAdmin')
                         @endif
-
-
-                        {{-- </div> --}}
                     </div>
 
                    
