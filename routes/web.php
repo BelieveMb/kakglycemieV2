@@ -84,7 +84,8 @@ Route::post('/kak-admin', [adminController::class, 'connexionAdmin'])->name('con
 Route::prefix('/kak-admin')->name('admin.')->controller(adminController::class)->group(function () {
     Route::get('/dashboard',  'dashboardAdmin')->name('dashboardAdmin');
     Route::get('/candidats',  'candidatsList')->name('candidats');
-    Route::get('/candidat-Détail',  'candidatDetail')->name('candidatDetail');
+    Route::get('/candidat-Detail',  'candidatDetail')->name('candidatDetail');
+    Route::post('/candidat-Detail',  'candidatValidation')->name('candidatValidation');
     Route::get('/logout','logoutAdmin')->name('logoutAdmin');
 
 });
