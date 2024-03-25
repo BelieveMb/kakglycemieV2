@@ -95,5 +95,27 @@ class adminController extends Controller
         return view('Admin.candidatDetail', [
             'candidatDetails' => $candidatDetails
         ]);
-    }                                    
+    }      
+    
+    public function candidatValidation(Request $request){
+        $idCandidat = $request->query('candidat');
+        $choix = $request->input("choix");
+        $maDate = date('d-m-Y, H:i'); 
+
+        $query  = DB::table('medecin')
+            ->where('idmedecin', $idCandidat)
+            ->update([
+                'valider' => $choix,
+                'updated_on' => $maDate
+            ]);
+        
+        // Rediriger avec message de confirmation
+        if($query){
+            return back()->with('success', 'Le candidat est validé avec succès!');
+        }else{
+            return back()->with('fail','Candidat non validé, recommencez ');
+        }
+        
+
+    }
 }

@@ -40,10 +40,8 @@ class medecinController extends Controller
         if($query){
             // return back()->with('success', 'tout est okay');
             return to_route('Medecin.dashboard');
-            // return to_route('login');
-            // return view('doctorName');
         }else{
-            return back()->with('error', 'tout est puff');
+            return back()->with('error', 'Désolé, il y\' a une erreur ');
         }
     }
     public function dashboardMedecin(){
