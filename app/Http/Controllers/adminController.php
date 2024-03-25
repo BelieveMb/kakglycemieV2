@@ -84,5 +84,16 @@ class adminController extends Controller
         return view("Admin.candidatList", [
             "candidats" => $candidats
         ]);
-    }                                           
+    }       
+    public function candidatDetail(Request $request){
+        $idCandidat = $request->query('candidat');
+        $candidatDetails = DB::table('users')
+                    ->where('id', $idCandidat)
+                    ->join('medecin', 'users.id', '=', 'medecin.idmedecin')  
+                    ->first();
+
+        return view('Admin.candidatDetail', [
+            'candidatDetails' => $candidatDetails
+        ]);
+    }                                    
 }

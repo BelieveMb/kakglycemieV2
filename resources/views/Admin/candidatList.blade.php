@@ -2,6 +2,9 @@
 
 @section('dashAdmin')
     <div class="w-full flex justify-center items-center content-center gap-10 overflow-hidden">
+        <h2>Form de recherche et le style du tab</h2>
+    </div>
+    <div class="w-full flex justify-center items-center content-center gap-10 overflow-hidden">
         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 h-screen mb-10 max-w-[95%] lg:max-w-[80%]">
             <div class="py-4 flex items-center justify-between">
                <div >
@@ -48,9 +51,11 @@
                                           {{$candidat->specialite}} 
                                        </td>
                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900 cursor-pointer">
-                                            <span class="text-2xl hover:text-red-500 "> 
+                                            <a href="{{ route('admin.candidatDetail', ['candidat' => $candidat->idmedecin]) }}" class="text-2xl hover:text-red-500 "> 
                                                 <i class="bi bi-plus-circle-dotted"></i>
-                                            </span>
+                                            </a>
+                                {{-- "{{ route('Patient.addDoctorVue', ['doctor' => $doctor->idmedecin]) }}" method="post"> --}}
+
                                        </td>
 
                                     </tr>
