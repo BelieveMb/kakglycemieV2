@@ -87,6 +87,7 @@ Route::prefix('/kak-admin')->name('admin.')->controller(adminController::class)-
     Route::get('/candidat-Detail',  'candidatDetail')->name('candidatDetail');
     Route::post('/candidat-Detail',  'candidatValidation')->name('candidatValidation');
     Route::get('/Nos-medecins',  'medecinList')->name('medecinList');
+    Route::get('/medecin-Detail',  'medecinDetail')->name('medecinDetail');
     Route::get('/logout','logoutAdmin')->name('logoutAdmin');
 
 });

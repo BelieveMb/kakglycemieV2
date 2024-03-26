@@ -65,7 +65,7 @@
                                     {{$medecin->specialite}} 
                                  </td>
                                  <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900 cursor-pointer">
-                                    <a href="{{ route('admin.candidatDetail', ['medecin' => $medecin->idmedecin]) }}" class="text-2xl hover:text-red-500 "> 
+                                    <a href="{{ route('admin.medecinDetail', ['medecin' => $medecin->idmedecin]) }}" class="text-2xl hover:text-red-500 "> 
                                         <i class="bi bi-plus-circle-dotted"></i>
                                     </a>
                                </td>
