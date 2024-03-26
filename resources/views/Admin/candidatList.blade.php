@@ -33,6 +33,10 @@
                                        </th>
                                        <th scope="col"
                                           class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                          Validation
+                                       </th>
+                                       <th scope="col"
+                                          class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                           Action
                                        </th>
                                     </tr>
@@ -50,12 +54,13 @@
                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-500">
                                           {{$candidat->specialite}} 
                                        </td>
+                                       <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-500">
+                                          {{$candidat->valider}} 
+                                       </td>
                                        <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900 cursor-pointer">
                                             <a href="{{ route('admin.candidatDetail', ['candidat' => $candidat->idmedecin]) }}" class="text-2xl hover:text-red-500 "> 
                                                 <i class="bi bi-plus-circle-dotted"></i>
                                             </a>
-                                {{-- "{{ route('Patient.addDoctorVue', ['doctor' => $doctor->idmedecin]) }}" method="post"> --}}
-
                                        </td>
 
                                     </tr>

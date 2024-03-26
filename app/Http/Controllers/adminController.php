@@ -118,4 +118,17 @@ class adminController extends Controller
         
 
     }
+
+    public function medecinList(Request $request){
+        $medecinList = DB::table('users')
+                ->where('type', 'medecin')
+                ->join('medecin', 'users.id', '=', 'medecin.idmedecin')  
+                ->where('valider','oui')
+                ->get();
+        return view("Admin.medecinList", [
+            "medecinList" => $medecinList
+        ]);
+
+    }
+
 }
