@@ -7,8 +7,8 @@
             <h3 class="text-xl font-bold text-gray-900 mb-2">Nos médecins</h3>
             <span class="text-base font-normal text-gray-500">Voici la liste de tous les médecins qui sont validés sur KaK glycémie</span>
          </div>
-         <div class="flex-shrink-0">
-            <a href="#" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2">Voir plus</a>
+         <div class="flex-shrink-0 lg:flex hidden">
+            <a href="{{ route('admin.dashboardAdmin') }} " class="text-2xl font-medium text-red-500 hover:bg-gray-100 rounded-lg p-2"> <i class="bi bi-person-fill-check"></i> </a>
          </div>
       </div>
       <div class="flex flex-col mt-8">
@@ -65,7 +65,7 @@
                                     {{$medecin->specialite}} 
                                  </td>
                                  <td class="p-4 whitespace-nowrap text-sm font-semibold text-gray-900 cursor-pointer">
-                                    <a href="{{ route('admin.medecinDetail', ['medecin' => $medecin->idmedecin]) }}" class="text-2xl hover:text-red-500 "> 
+                                    <a href="{{ route('admin.candidatDetail', ['candidat' => $medecin->idmedecin]) }}" class="text-2xl hover:text-red-500 "> 
                                         <i class="bi bi-plus-circle-dotted"></i>
                                     </a>
                                </td>
