@@ -80,7 +80,7 @@ Route::middleware('auth')->prefix('/medecin')->name('Medecin.')->controller(mede
 Route::get('/kak-admin', [adminController::class, 'connexionAdminVue'])->name('connexionVue');
 Route::post('/kak-admin', [adminController::class, 'connexionAdmin'])->name('connexionAdmin');
 
-//middleware('auth')->
+//créer le middleware pour l'admin middleware('auth')->
 Route::prefix('/kak-admin')->name('admin.')->controller(adminController::class)->group(function () {
     Route::get('/dashboard',  'dashboardAdmin')->name('dashboardAdmin');
     Route::get('/candidats',  'candidatsList')->name('candidats');

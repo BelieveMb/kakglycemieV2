@@ -1,3 +1,17 @@
+# ToDO
+## Admin
+- form de recherche
+- le middleware  et other test
+
+## Medecin
+- voir ses patients et leurs glycémie
+- parler avec les patients qui l'ont  choisi
+
+## Patients
+- choisir les médecins
+- parler seulement aux médecins
+- signaler le médecin
+
 # Configuration  route
 
 / : la page d'acceuil
