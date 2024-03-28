@@ -113,9 +113,11 @@ class PatientControllers extends Controller
         //         $query->select('idmedecin')->from('amischat')->where('idpatient', $idpatient);
         //     })
         //     ->get();
-        $doctorFriends = DB::table('users')
-            ->where('type', 'medecin')
-            ->join('medecin', 'users.id', '=', 'medecin.idmedecin')  
+        //select * les medecins qui sont dans la table friends where id = à ce patient
+        $doctorFriends = DB::table('friends')
+            ->where('idpatient', $idpatient)
+            ->join('medecin', 'friends.idmedecin', '=', 'medecin.idmedecin')  
+            ->join('users', 'medecin.idmedecin', '=', 'users.id')  
             ->get();
         return view('Patient.myDoctorList', [
             'doctorFriends' => $doctorFriends
@@ -139,7 +141,7 @@ class PatientControllers extends Controller
         $idpatient = auth()->id();
         $idmedecin = $request->doctor;
 
-        $query =  DB::table('amisChat')->insert([
+        $query =  DB::table('friends')->insert([
             "idpatient"=>$idpatient,
             "idmedecin"=>$idmedecin
         ]);

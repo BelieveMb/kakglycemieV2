@@ -55,6 +55,7 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::get('/patientChat','patientChat')->name('patientChat');
     Route::get('/Mes-medecins', 'patientMedecinList')->name('patientMedecinList');
     Route::get('/ajouter-un-medecin','addDoctorVue')->name('addDoctorVue');
+    Route::post('/ajouter-un-medecin','addDoctor')->name('addDoctor');
 });
 
 //for save doctor in using controller med
