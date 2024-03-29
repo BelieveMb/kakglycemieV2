@@ -105,14 +105,6 @@ class PatientControllers extends Controller
 
     public function patientMedecinList(){
         $idpatient = auth()->id();
-
-        //pause à corriger après validation
-
-        // $doctorFriends = DB::table('medecin')
-        //     ->whereNotIn('idmedecin', function($query) use ($idpatient) {
-        //         $query->select('idmedecin')->from('amischat')->where('idpatient', $idpatient);
-        //     })
-        //     ->get();
         //select * les medecins qui sont dans la table friends where id = à ce patient
         $doctorFriends = DB::table('friends')
             ->where('idpatient', $idpatient)
@@ -128,10 +120,14 @@ class PatientControllers extends Controller
     # l'ajout et le retrait de médecin se feront à la fin, après avoir fini avec
     # l"admin part
     public function addDoctorVue(Request $request){
-        $doctorFriends = DB::table('users')
-                ->where('type', 'medecin')
-                ->join('medecin', 'users.id', '=', 'medecin.idmedecin')  
-                ->get();
+        $idpatient = auth()->id();
+        //select * les medecins qui sont pas dans la table friend ou 
+        $doctorFriends = DB::table('friends')
+            ->where('idpatient', $idpatient)
+            // ->join('medecin', 'friends.idmedecin', '=', 'medecin.idmedecin')  
+            // ->join('users', 'medecin.idmedecin', '=', 'users.id')  
+            ->get();
+            //corriger cette requete !!
         
         return view('Patient.doctorAdd', [
             'doctorFriends' => $doctorFriends

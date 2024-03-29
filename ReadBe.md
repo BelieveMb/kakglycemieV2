@@ -13,6 +13,7 @@
 - choisir les médecins
 - parler seulement aux médecins
 - signaler le médecin
+- enlever la redirection automatique vers login ♥
 
 # Configuration  route
 
