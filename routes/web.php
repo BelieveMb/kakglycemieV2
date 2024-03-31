@@ -55,6 +55,7 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::get('/patientChat','patientChat')->name('patientChat');
     Route::get('/Mes-medecins', 'patientMedecinList')->name('patientMedecinList');
     Route::get('/detail-du-medecin','detailDoctor')->name('detailDoctor');
+    Route::get('/ajouter-un-medecin', 'addDoctorVue')->name('addDoctorVue');
     Route::post('/detail-du-medecin','addSuiviDoctor')->name('addSuiviDoctor');
 });
 

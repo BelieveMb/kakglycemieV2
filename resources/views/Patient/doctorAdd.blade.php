@@ -5,7 +5,7 @@
 <div class="w-full flex justify-center items-center content-center gap-10">
     
 
-    <div class="py-1 px-2 max-w-[80%] lg:max-w-[70%] min-h-auto bg-gray-300/70 rounded-lg border shadow-md sm:p-8 ">
+    <div class="py-1 px-2 w-[80%] lg:w-[60%] min-h-auto bg-gray-100/30 rounded-lg border shadow-md sm:p-8 ">
 
         <div class="flex justify-between items-center mb-4 gap-[5rem] ">
             <h3 class="text-base lg:text-xl font-bold leading-none text-gray-800">La liste des médecins</h3>
@@ -16,9 +16,9 @@
         </div>
         <div class="flow-root">
             <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                {{$doctorNotFriends}}
                 @if ($doctorNotFriends)
                     @foreach ($doctorNotFriends as $doctor) 
+                        <a href="{{ route('Patient.detailDoctor', ['doctor' => $doctor->idmedecin]) }}">
                         <li class="py-3 sm:py-4 hover:bg-gray-400/30 cursor-pointer">
                             <div class="flex items-center space-x-4 ">
                                 <div class="flex-shrink-0">
@@ -30,18 +30,19 @@
                                         {{$doctor->name}} 
                                     </p>
                                     <p class="text-sm text-gray-800 truncate ">
-                                        {{-- {{$doctor->specialite}} --}}
+                                        {{$doctor->specialite}}
                                     </p>
                                 </div>
-                                <div class="inline-flex items-center  font-semibold text-gray-900 dark:text-white">
+                                {{-- <div class="inline-flex items-center  font-semibold text-gray-900 dark:text-white">
                                     <form action="{{ route('Patient.addDoctorVue', ['doctor' => $doctor->idmedecin]) }}" method="post">
                                         @csrf
                                         <button class="bg-red-500 text-white text-base rounded-lg px-2 py-1 font-semibold hover:bg-transparent hover:text-red-500 hover:border-red-300 hover:border border border-red-500 hover:duration-700">
                                             Ajouter <i class="bi bi-plus-circle"></i></button>
                                     </form>
-                                </div>
+                                </div> --}}
                             </div>
                         </li>
+                        </a>
                     @endforeach
                 @else
                     <h2>Vous avez choisi aucun médecin, cliquez sur le bouton <u>Ajouter</u> pour ajouter un médecin </h2>

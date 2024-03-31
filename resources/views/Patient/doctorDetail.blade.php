@@ -91,7 +91,7 @@
               </div>
               
               <div class="text-red-500 text-center font-bold  animate-pulse delay-700">
-                  here
+                  Keep error in save
                   @if (Session::has('success'))
                     <div class="bg-gray-700 mb-2  rounded-xl flex justify-between p-3 text-gray-100 font-semibold">
                         {{ Session::get('success') }}
@@ -124,10 +124,10 @@
                 </a>
               {{-- <a href="#" class="px-4 py-2 pb-4 hover:bg-gray-100 flex">
                 <p class="text-sm font-medium text-gray-800 leading-none">Supprimer le médecin</p>
-              </a>
+              </a>--}}
               <a href="#" class="px-4 py-2 pb-4 hover:bg-gray-100 flex">
                 <p class="text-sm font-medium text-gray-800 leading-none">Signaler un abus</p>
-              </a> --}}
+              </a> 
             </div>
           
           @else

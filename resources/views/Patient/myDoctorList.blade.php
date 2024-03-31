@@ -7,7 +7,12 @@
     <div class="py-1 px-2 w-[80%] lg:w-[50%] min-h-screen bg-gray-100/50 rounded-lg border shadow-xl sm:p-8 ">
 
         <div class="flex justify-between items-center mb-4 gap-[5rem] ">
-            <h3 class="text-base lg:text-2xl font-bold leading-none text-gray-800">Les médecins</h3>
+            <h3 class="text-base lg:text-2xl font-bold leading-none text-gray-800">Mes médecins</h3>
+            <a href="{{ route('Patient.addDoctorVue') }}" 
+            class="bg-transparent text-red-500 text-base rounded-lg px-2 py-1 font-semibold hover:bg-red-500 hover:text-gray-50  hover:border border border-red-400 hover:duration-700">
+                Ajouter <i class="bi bi-plus-circle"></i>
+            </a>
+
         </div>
         <div class="flow-root">
             <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
