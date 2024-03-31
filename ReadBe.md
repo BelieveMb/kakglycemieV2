@@ -13,6 +13,7 @@
 - choisir les médecins
 - retirer les médecins
   # pour l'instant, on enleve le deux, nous mettons juste une liste de médecin valider par kak, et il peut parler avec le médecin qu'il veut. 
+  # connaitre l'erreur dans tous les form de save
 - parler seulement aux médecins
 - signaler le médecin 
 - enlever la redirection automatique vers login ♥

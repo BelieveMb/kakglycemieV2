@@ -126,9 +126,10 @@ class PatientControllers extends Controller
     }
 
     //bon à savoir #
-    # l'ajout et le retrait de médecin se feront à la fin, après avoir fini avec
-    # l"admin part
+    # cette partie est à revoir pour l'instant on affiche la liste de médecin et
+    # le patient voit le détail pour donner la permission
     public function addDoctorVue(Request $request){
+        //pas utiliser
         $idpatient = auth()->id();
         //select * les medecins qui sont pas dans la table friend ou 
         $doctorNotFriends = DoctorModel::where('valider', 'oui')
@@ -146,32 +147,51 @@ class PatientControllers extends Controller
             'friendsList' => $friendsList
         ]);
     }
-    public function addDoctor(Request $request){
-        $idpatient = auth()->id();
+    public function detailDoctor(Request $request){
         $idmedecin = $request->doctor;
-
-        $query =  DB::table('friends')->insert([
-            "idpatient"=>$idpatient,
-            "idmedecin"=>$idmedecin
-        ]);
 
         $detailMedecin = DoctorModel::
             where('idmedecin', $idmedecin)
+            ->join('users','users.id','=', 'idmedecin')
             ->first();
         
-        
-        // if ($query) {
-        //     return response()->json(['success' => true]);
-        // } else {
-        //     return response()->json(['success' => false]);
-        // }
-
-        if($query){
+        if($detailMedecin){
             return view('Patient.doctorDetail', ['detailMedecin' => $detailMedecin]);
         }else{
-            return back()->with('fail','Ajouter');
+            return back()->with('fail','Une erreur s\'est produite, ressayer');
         }
     }
+    public function addSuiviDoctor(Request $request){
+        
+        $request->validate([
+            'idpatient'=>"required|numeric|max:5",
+            'idmedecin'=>"required|numeric|max:5",
+            'suivi'=>"required|max:3",
+        ]);
+        $idmedecin = $request->doctor;
+        $idpatient = auth()->id();
+        $suivi = $request->input('suivi');
+
+            $doSuivi = DB::table('patientsuivi')->insert([
+                "idpatient"=>$idpatient,
+                "idmedecin"=>$idmedecin,
+                "suivi"=>$suivi
+            ]);
+        // }else{
+
+        //     return back()->withErrors([
+        //         'suiviError'=>'Vous devez accepter ou refuser le suivi de ce médecin',
+        //     ])->onlyInput('suiviError');
+        // }    
+        
+        
+        if($doSuivi){
+            return back()->with('success','Desormais, ce médecin peut suivre votre glycémie');
+        }else{
+            return back()->with('fail','Une erreur s\'est produite, ressayer');
+        }
+    }
+    
    
     
 }

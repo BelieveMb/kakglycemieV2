@@ -8,18 +8,14 @@
 
         <div class="flex justify-between items-center mb-4 gap-[5rem] ">
             <h3 class="text-base lg:text-2xl font-bold leading-none text-gray-800">Les médecins</h3>
-            {{-- <a href="{{ route('Patient.addDoctorVue') }}" class="bg-transparent text-red-500 text-base rounded-lg px-2 py-1 font-semibold hover:bg-red-500 hover:text-gray-50  hover:border border border-red-400 hover:duration-700">
-                 Ajouter <i class="bi bi-plus-circle"></i>
-            </a> --}}
         </div>
         <div class="flow-root">
             <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
                 @if ($doctorFriends)
                     @foreach ($doctorFriends as $doctor) 
-                        <form action="{{ view('Patient.doctorDetail', ['doctor' => $doctor->idmedecin]) }}" method="post">
-                            @csrf
 
-                        <button  class="w-full py-3 sm:py-4 lg:hover:px-2 hover:rounded-lg hover:bg-gray-400/30 duration-150 cursor-pointer flex justify-start items-start">
+                        <a  href="{{ route('Patient.detailDoctor', ['doctor' => $doctor->idmedecin]) }}" 
+                        class="w-full py-3 sm:py-4 lg:hover:px-2 hover:rounded-lg hover:bg-gray-400/30 duration-150 cursor-pointer flex justify-start items-start">
                             <div class="flex justify-start items-start space-x-4 ">
                                 <div class="flex-shrink-0">
                                     <img class="w-8 h-8 rounded-full"
@@ -33,12 +29,8 @@
                                         {{$doctor->specialite}}
                                     </p>
                                 </div>
-                                {{-- <div class="inline-flex items-center  font-semibold text-gray-900 dark:text-white">
-                                        <button class="bg-red-500 text-white text-base rounded-lg px-2 py-1 font-semibold hover:bg-transparent hover:text-red-500 hover:border-red-300 hover:border border border-red-500 hover:duration-700">Retirer <i class="bi bi-minus-circle-fill"></i></button>
-                                </div> --}}
                             </div>
-                        </button>
-                     </form>
+                        </a>
 
                     @endforeach
                 @else
