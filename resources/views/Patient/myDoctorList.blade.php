@@ -4,10 +4,10 @@
 <div class="w-full flex justify-center items-center content-center gap-10">
     
 
-    <div class="py-1 px-2 w-[80%] lg:w-[50%] min-h-screen bg-gray-300/70 rounded-lg border shadow-md sm:p-8 ">
+    <div class="py-1 px-2 w-[80%] lg:w-[50%] min-h-screen bg-gray-100/50 rounded-lg border shadow-xl sm:p-8 ">
 
         <div class="flex justify-between items-center mb-4 gap-[5rem] ">
-            <h3 class="text-base lg:text-xl font-bold leading-none text-gray-800">Les médecins</h3>
+            <h3 class="text-base lg:text-2xl font-bold leading-none text-gray-800">Les médecins</h3>
             {{-- <a href="{{ route('Patient.addDoctorVue') }}" class="bg-transparent text-red-500 text-base rounded-lg px-2 py-1 font-semibold hover:bg-red-500 hover:text-gray-50  hover:border border border-red-400 hover:duration-700">
                  Ajouter <i class="bi bi-plus-circle"></i>
             </a> --}}
@@ -16,8 +16,11 @@
             <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
                 @if ($doctorFriends)
                     @foreach ($doctorFriends as $doctor) 
-                        <li class="py-3 sm:py-4 hover:bg-gray-400/30 cursor-pointer">
-                            <div class="flex items-center space-x-4 ">
+                        <form action="{{ view('Patient.doctorDetail', ['doctor' => $doctor->idmedecin]) }}" method="post">
+                            @csrf
+
+                        <button  class="w-full py-3 sm:py-4 lg:hover:px-2 hover:rounded-lg hover:bg-gray-400/30 duration-150 cursor-pointer flex justify-start items-start">
+                            <div class="flex justify-start items-start space-x-4 ">
                                 <div class="flex-shrink-0">
                                     <img class="w-8 h-8 rounded-full"
                                         src="{{ asset('../images/profil.jpg') }}" alt="Doctor image" />
@@ -30,14 +33,13 @@
                                         {{$doctor->specialite}}
                                     </p>
                                 </div>
-                                <div class="inline-flex items-center  font-semibold text-gray-900 dark:text-white">
-                                    <form action="{{ route('Patient.addTauxTraitement', ['doctor' => $doctor->idmedecin]) }}" method="post">
-                                        @csrf
+                                {{-- <div class="inline-flex items-center  font-semibold text-gray-900 dark:text-white">
                                         <button class="bg-red-500 text-white text-base rounded-lg px-2 py-1 font-semibold hover:bg-transparent hover:text-red-500 hover:border-red-300 hover:border border border-red-500 hover:duration-700">Retirer <i class="bi bi-minus-circle-fill"></i></button>
-                                    </form>
-                                </div>
+                                </div> --}}
                             </div>
-                        </li>
+                        </button>
+                     </form>
+
                     @endforeach
                 @else
                     <h2>Vous avez choisi aucun médecin, cliquez sur le bouton <u>Ajouter</u> pour ajouter un médecin </h2>
