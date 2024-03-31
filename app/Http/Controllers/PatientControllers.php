@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AddMedecin;
 use App\Models\DoctorModel;
+use App\Models\FriendsModel;
 use App\Models\patientModel;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
@@ -105,12 +106,20 @@ class PatientControllers extends Controller
 
     public function patientMedecinList(){
         $idpatient = auth()->id();
-        //select * les medecins qui sont dans la table friends where id = à ce patient
-        $doctorFriends = DB::table('friends')
-            ->where('idpatient', $idpatient)
-            ->join('medecin', 'friends.idmedecin', '=', 'medecin.idmedecin')  
-            ->join('users', 'medecin.idmedecin', '=', 'users.id')  
+        //select * les medecins qui sont dans la table friends where id = à ce
+        //patient
+        //#pour l'instant, il affiche tous les médecins et c'est au patient de
+        //faire son choix
+        // $doctorFriends = DB::table('friends')
+        //     ->where('idpatient', $idpatient)
+        //     ->join('medecin', 'friends.idmedecin', '=', 'medecin.idmedecin')  
+        //     ->join('users', 'medecin.idmedecin', '=', 'users.id')  
+        //     ->get();
+        $doctorFriends = DoctorModel::where('valider', 'oui')
+            ->join('users','medecin.idmedecin', '=' ,'users.id')
             ->get();
+
+
         return view('Patient.myDoctorList', [
             'doctorFriends' => $doctorFriends
         ]);
@@ -122,15 +131,19 @@ class PatientControllers extends Controller
     public function addDoctorVue(Request $request){
         $idpatient = auth()->id();
         //select * les medecins qui sont pas dans la table friend ou 
-        $doctorFriends = DB::table('friends')
-            ->where('idpatient', $idpatient)
-            // ->join('medecin', 'friends.idmedecin', '=', 'medecin.idmedecin')  
-            // ->join('users', 'medecin.idmedecin', '=', 'users.id')  
+        $doctorNotFriends = DoctorModel::where('valider', 'oui')
+            ->join('users','medecin.idmedecin', '=' ,'users.id')
+            // ->join('friends','friends.idpatient', '=' ,'medecin.idmedecin')
+            // ->where('friends.idpatient', '!=', $idpatient)
             ->get();
-            //corriger cette requete !!
+            //corriger cette requete !!, il doit lefaire seulement par% à ce patient
+        $friendsList = DB::table('friends')
+            ->where('idpatient', '!=', $idpatient)
+            ->get();
         
         return view('Patient.doctorAdd', [
-            'doctorFriends' => $doctorFriends
+            'doctorNotFriends' => $doctorNotFriends,
+            'friendsList' => $friendsList
         ]);
     }
     public function addDoctor(Request $request){

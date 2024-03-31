@@ -1,16 +1,16 @@
 @extends('Patient.components.dashboard')
-{{-- elle présente les docteurs du patient --}}
+{{-- elle présente tous les docteurs  --}}
 @section('dashboardPatient')
 <div class="w-full flex justify-center items-center content-center gap-10">
     
 
-    <div class="py-1 px-2 w-[80%] lg:w-[50%] min-h-auto bg-gray-300/70 rounded-lg border shadow-md sm:p-8 ">
+    <div class="py-1 px-2 w-[80%] lg:w-[50%] min-h-screen bg-gray-300/70 rounded-lg border shadow-md sm:p-8 ">
 
         <div class="flex justify-between items-center mb-4 gap-[5rem] ">
-            <h3 class="text-base lg:text-xl font-bold leading-none text-gray-800">Mes médecins</h3>
-            <a href="{{ route('Patient.addDoctorVue') }}" class="bg-transparent text-red-500 text-base rounded-lg px-2 py-1 font-semibold hover:bg-red-500 hover:text-gray-50  hover:border border border-red-400 hover:duration-700">
+            <h3 class="text-base lg:text-xl font-bold leading-none text-gray-800">Les médecins</h3>
+            {{-- <a href="{{ route('Patient.addDoctorVue') }}" class="bg-transparent text-red-500 text-base rounded-lg px-2 py-1 font-semibold hover:bg-red-500 hover:text-gray-50  hover:border border border-red-400 hover:duration-700">
                  Ajouter <i class="bi bi-plus-circle"></i>
-            </a>
+            </a> --}}
         </div>
         <div class="flow-root">
             <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">

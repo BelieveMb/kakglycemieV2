@@ -16,9 +16,9 @@
         </div>
         <div class="flow-root">
             <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                @if ($doctorFriends)
-                    
-                    @foreach ($doctorFriends as $doctor) 
+                {{$doctorNotFriends}}
+                @if ($doctorNotFriends)
+                    @foreach ($doctorNotFriends as $doctor) 
                         <li class="py-3 sm:py-4 hover:bg-gray-400/30 cursor-pointer">
                             <div class="flex items-center space-x-4 ">
                                 <div class="flex-shrink-0">
@@ -30,7 +30,7 @@
                                         {{$doctor->name}} 
                                     </p>
                                     <p class="text-sm text-gray-800 truncate ">
-                                        {{$doctor->specialite}}
+                                        {{-- {{$doctor->specialite}} --}}
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center  font-semibold text-gray-900 dark:text-white">
