@@ -134,7 +134,7 @@ class PatientControllers extends Controller
             'doctorNotFriends' => $doctorNotFriends,
         ]);
     }
-    public function detailDoctor(Request $request){
+    public function aproposDoctor(Request $request){
         $idmedecin = $request->doctor;
 
         $detailMedecin = DoctorModel::
@@ -151,25 +151,15 @@ class PatientControllers extends Controller
     public function addSuiviDoctor(Request $request){
         
         $request->validate([
-            'idpatient'=>"required|numeric|max:5",
             'idmedecin'=>"required|numeric|max:5",
-            'suivi'=>"required|max:3",
+            'suivi'=>"required",
         ]);
-        $idmedecin = $request->doctor;
-        $idpatient = auth()->id();
-        $suivi = $request->input('suivi');
 
-            $doSuivi = DB::table('suivi')->insert([
-                "idpatient"=>$idpatient,
-                "idmedecin"=>$idmedecin,
-                "suivi"=>$suivi
-            ]);
-        // }else{
-
-        //     return back()->withErrors([
-        //         'suiviError'=>'Vous devez accepter ou refuser le suivi de ce médecin',
-        //     ])->onlyInput('suiviError');
-        // }    
+        $doSuivi = DB::table('suivi')->insert([
+            "idpatient"=>5,
+            "idmedecin"=>2,
+            "suivi"=>"request->inputsuivi",
+        ]);
         
         
         if($doSuivi){
@@ -178,7 +168,67 @@ class PatientControllers extends Controller
             return back()->with('fail','Une erreur s\'est produite, ressayer');
         }
     }
+    public function suiviDoctor(Request $request){
+        $validatedData = $request->validate([
+            'doctor'=> ["required", 'max:25'],
+            'choix'=>"required|in:oui,non",
+        ]);
+
+        $query =  DB::table('suivi')->insert([
+            "idpatient"=> auth()->id(),
+            "idmedecin"=>$request->doctor,
+            "suivi"=> $validatedData['choix']
+            //  $request->input('choix'),
+        ]);
+
+        if($query){
+            return back()->with('success','Desormais, ce médecin peut suivre votre glycémie');
+        }else{
+            return back()->with('fail','Une erreur s\'est produite, ressayer');
+        }
+    }
     
+    public function signalerDoctor(Request $request) {
+        $request->validate([
+            'idpatient'=>"required|numeric|max:5",
+            'idmedecin'=>"required|numeric|max:5",
+            'signaler'=>"required|min:5",
+        ]);
+        $idmedecin = $request->doctor;
+        $idpatient = auth()->id();
+        $signaler = $request->input("signaler");
+
+
+            $doSignalement = DB::table('signaler')->insert([
+                "idpatient"=>$idpatient,
+                "idmedecin"=>$idmedecin,
+                "signaler"=>$signaler
+            ]);
+        if($doSignalement){
+                return back()->with('success','Desormais, ce médecin peut suivre votre glycémie');
+            }else{
+                return back()->with('fail','Une erreur s\'est produite, ressayer');
+            }
+    
+
+    }
+
+    public function supprimerDoctor(Request $request) {
+        $idmedecin = $request->doctor;
+        $idpatient = auth()->id();
+
+
+        $deleteDoctor = DB::table('signaler')
+        ->delete("idmedecin"); // à corriger
+        
+        if($deleteDoctor){
+                return back()->with('success','Desormais, ce médecin ne peut plus suivre votre glycémie');
+            }else{
+                return back()->with('fail','Une erreur s\'est produite, ressayer');
+            }
+    
+
+    }
    
     
 }

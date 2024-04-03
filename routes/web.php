@@ -54,9 +54,11 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::get('/patientProfile','patientProfile')->name('patientProfile');
     Route::get('/patientChat','patientChat')->name('patientChat');
     Route::get('/Mes-medecins', 'patientMedecinList')->name('patientMedecinList');
-    Route::get('/detail-du-medecin','detailDoctor')->name('detailDoctor');
+    Route::get('/apropos-du-medecin','aproposDoctor')->name('aproposDoctor');
+    Route::post('/apropos-du-medecin','suiviDoctor')->name('suiviDoctor');
     Route::get('/ajouter-un-medecin', 'addDoctorVue')->name('addDoctorVue');
-    Route::post('/detail-du-medecin','addSuiviDoctor')->name('addSuiviDoctor');
+    // Route::post('/detail-du-medecin','signalerDoctor')->name('signalerDoctor');
+    // Route::post('/detail-du-medecin','supprimerDoctor')->name('supprimerDoctor');
 });
 
 //for save doctor in using controller med

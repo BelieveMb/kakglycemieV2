@@ -75,23 +75,34 @@
               </a>
               
             </div>
-            <form method="post"  class="mt-6 space-y-6">
+            {{-- action="{{ route('Patient.addSuiviDoctor') }}" --}}
+            <form  method="post"  class="mt-6 space-y-6">
+              @if ($errors->any())
+                <div class="text-gray-50 text-center font-bold  animate-pulse delay-700">
+                    <ul class="bg-red-500 mb-2  rounded-xl flex flex-col justify-between p-3 text-gray-100 font-semibold">
+                        @foreach ($errors->all() as $error)
+                            <li> <i class="bi bi-exclamation-circle-fill"></i>  {{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
               @csrf
               <div class="main flex border rounded-xl overflow-hidden  select-none">
                   <div class="py-3  px-5 bg-red-500 text-white text-sm font-semibold mr-3">Voulez vous que ce médecin puisse suivre votre glycémie ?</div>
                   <label class="flex items-center radio p-2 cursor-pointer">
-                    <input class="my-auto transform scale-125" type="radio" name="suivi" value="non"  />
+                    <input class="my-auto transform scale-125" type="radio" name="choix" value="non"  />
                     <div class="title px-2">Non</div>
                   </label>
+
                 
                   <label class="flex items-center radio p-2 cursor-pointer">
-                    <input class="my-auto transform scale-125" type="radio" name="suivi" value="oui"  />
+                    <input class="my-auto transform scale-125" type="radio" name="choix" value="oui"  />
                     <div class="title px-2">Oui</div>
                   </label>
+
               </div>
               
               <div class="text-red-500 text-center font-bold  animate-pulse delay-700">
-                  Keep error in save
                   @if (Session::has('success'))
                     <div class="bg-gray-700 mb-2  rounded-xl flex justify-between p-3 text-gray-100 font-semibold">
                         {{ Session::get('success') }}
@@ -99,14 +110,6 @@
                             <i class="bi bi-info-circle"></i>
                         </div>
                     </div>
-                  @endif
-                  @if (Session::has('fail'))
-                    <div class="bg-red-500 mb-2  rounded-xl flex justify-between p-3 text-gray-100 font-semibold">
-                      {{ Session::get('fail') }}
-                      <div class="text-gray-50">
-                          <i class="bi bi-info-circle"></i>
-                      </div>
-                  </div>
                   @endif
               </div>
       
@@ -122,13 +125,26 @@
               <a href="{{ route('Patient.patientMedecinList') }}" class="px-4 py-2 pb-4 hover:bg-gray-100 flex underline hover:no-underline">
                   <p class="text-sm font-medium text-gray-800 leading-none"> <i class="ml-1 text-xl bi bi-person-plus"></i> Voir la liste des médecins</p>
                 </a>
-              {{-- <a href="#" class="px-4 py-2 pb-4 hover:bg-gray-100 flex">
-                <p class="text-sm font-medium text-gray-800 leading-none">Supprimer le médecin</p>
-              </a>--}}
               <a href="#" class="px-4 py-2 pb-4 hover:bg-gray-100 flex">
+                <p class="text-sm font-medium text-gray-800 leading-none">Supprimer ce médecin</p>
+              </a>
+              <a href="" class="px-4 py-2 pb-4 hover:bg-gray-100 flex">
                 <p class="text-sm font-medium text-gray-800 leading-none">Signaler un abus</p>
               </a> 
+           
             </div>
+            {{-- <form method="post">
+                @csrf
+                <div class="mb-6">
+                  <label for="signaler" class="font-semibold mb-2 block">Quel est votre soucis ? </label>
+                  <input type="text" name="suivi" placeholder="Dites ce que vous pensez de ce médecin" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500">
+                  <x-input-error :messages="$errors->get('signaler')" class="mt-2" />
+                </div>
+                <div class="flex justify-center items-center">
+                    <button class="bg-red-500 text-white rounded-2xl px-4 py-2 font-semibold hover:bg-transparent hover:text-red-500 hover:border-red-500 hover:border-2">Signaler <i class="bi bi-info-circle-fill"></i></button>
+                </div>
+
+            </form> --}}
           
           @else
               <h3>Une erreur s'est produite, recommencez s'il vous plait.</h3>

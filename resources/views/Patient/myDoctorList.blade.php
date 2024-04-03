@@ -19,7 +19,7 @@
                 @if ($doctorFriends)
                     @foreach ($doctorFriends as $doctor) 
 
-                        <a  href="{{ route('Patient.detailDoctor', ['doctor' => $doctor->idmedecin]) }}" 
+                        <a  href="{{ route('Patient.aproposDoctor', ['doctor' => $doctor->idmedecin]) }}" 
                         class="w-full py-3 sm:py-4 lg:hover:px-2 hover:rounded-lg hover:bg-gray-400/30 duration-150 cursor-pointer flex justify-start items-start">
                             <div class="flex justify-start items-start space-x-4 ">
                                 <div class="flex-shrink-0">

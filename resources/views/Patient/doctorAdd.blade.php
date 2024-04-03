@@ -18,7 +18,7 @@
             <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
                 @if ($doctorNotFriends)
                     @foreach ($doctorNotFriends as $doctor) 
-                        <a href="{{ route('Patient.detailDoctor', ['doctor' => $doctor->idmedecin]) }}">
+                        <a href="{{ route('Patient.aproposDoctor', ['doctor' => $doctor->idmedecin]) }}">
                         <li class="py-3 sm:py-4 hover:bg-gray-400/30 cursor-pointer">
                             <div class="flex items-center space-x-4 ">
                                 <div class="flex-shrink-0">
