@@ -4,8 +4,7 @@
 <div class="w-full flex justify-center items-center content-center gap-10">
     
 
-    <div class="py-1 px-2 w-[80%] lg:w-[50%] min-h-screen bg-gray-100/50 rounded-lg border shadow-xl sm:p-8 ">
-
+    <div class="py-1 px-2 w-[80%] lg:w-[60%] min-h-screen bg-gray-100/50 rounded-lg border shadow-xl sm:p-8 ">
         <div class="flex justify-between items-center mb-4 gap-[5rem] ">
             <h3 class="text-base lg:text-2xl font-bold leading-none text-gray-800">Mes médecins</h3>
             <a href="{{ route('Patient.addDoctorVue') }}" 

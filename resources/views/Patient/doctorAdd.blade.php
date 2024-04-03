@@ -3,9 +3,7 @@
 
 @section('dashboardPatient')
 <div class="w-full flex justify-center items-center content-center gap-10">
-    
-
-    <div class="py-1 px-2 w-[80%] lg:w-[60%] min-h-auto bg-gray-100/30 rounded-lg border shadow-md sm:p-8 ">
+    <div class="py-1 px-2 w-[80%] lg:w-[60%] min-h-screen bg-gray-100/30 rounded-lg border shadow-md sm:p-8 ">
 
         <div class="flex justify-between items-center mb-4 gap-[5rem] ">
             <h3 class="text-base lg:text-xl font-bold leading-none text-gray-800">La liste des médecins</h3>
@@ -18,8 +16,8 @@
             <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
                 @if ($doctorNotFriends)
                     @foreach ($doctorNotFriends as $doctor) 
-                        <a href="{{ route('Patient.aproposDoctor', ['doctor' => $doctor->idmedecin]) }}">
-                        <li class="py-3 sm:py-4 hover:bg-gray-400/30 cursor-pointer">
+                        <a href="{{ route('Patient.aproposDoctor', ['doctor' => $doctor->idmedecin]) }}"
+                            class="w-full py-3 sm:py-4 lg:hover:px-2 hover:rounded-lg hover:bg-gray-400/30 duration-150 cursor-pointer flex justify-start items-start">
                             <div class="flex items-center space-x-4 ">
                                 <div class="flex-shrink-0">
                                     <img class="w-8 h-8 rounded-full"
@@ -33,15 +31,7 @@
                                         {{$doctor->specialite}}
                                     </p>
                                 </div>
-                                {{-- <div class="inline-flex items-center  font-semibold text-gray-900 dark:text-white">
-                                    <form action="{{ route('Patient.addDoctorVue', ['doctor' => $doctor->idmedecin]) }}" method="post">
-                                        @csrf
-                                        <button class="bg-red-500 text-white text-base rounded-lg px-2 py-1 font-semibold hover:bg-transparent hover:text-red-500 hover:border-red-300 hover:border border border-red-500 hover:duration-700">
-                                            Ajouter <i class="bi bi-plus-circle"></i></button>
-                                    </form>
-                                </div> --}}
                             </div>
-                        </li>
                         </a>
                     @endforeach
                 @else

@@ -141,29 +141,15 @@ class PatientControllers extends Controller
             where('idmedecin', $idmedecin)
             ->join('users','users.id','=', 'idmedecin')
             ->first();
+        $suiviList = DB::table('suivi')
+            ->where('idmedecin', $idmedecin)
+            ->first();
         
         if($detailMedecin){
-            return view('Patient.doctorDetail', ['detailMedecin' => $detailMedecin]);
-        }else{
-            return back()->with('fail','Une erreur s\'est produite, ressayer');
-        }
-    }
-    public function addSuiviDoctor(Request $request){
-        
-        $request->validate([
-            'idmedecin'=>"required|numeric|max:5",
-            'suivi'=>"required",
-        ]);
-
-        $doSuivi = DB::table('suivi')->insert([
-            "idpatient"=>5,
-            "idmedecin"=>2,
-            "suivi"=>"request->inputsuivi",
-        ]);
-        
-        
-        if($doSuivi){
-            return back()->with('success','Desormais, ce médecin peut suivre votre glycémie');
+            return view('Patient.doctorDetail', [
+                'detailMedecin' => $detailMedecin,
+                'suiviList' => $suiviList,
+            ]);
         }else{
             return back()->with('fail','Une erreur s\'est produite, ressayer');
         }
