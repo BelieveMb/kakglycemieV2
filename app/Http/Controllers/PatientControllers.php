@@ -182,23 +182,24 @@ class PatientControllers extends Controller
     }
     
     public function signalerDoctor(Request $request) {
-        $request->validate([
-            'idpatient'=>"required|numeric|max:5",
-            'idmedecin'=>"required|numeric|max:5",
-            'signaler'=>"required|min:5",
+        $validatedData = $request->validate([
+            // 'doctor'=> ["required", 'max:5'],
+            'signaler'=>"required|max:25",
         ]);
         $idmedecin = $request->doctor;
         $idpatient = auth()->id();
         $signaler = $request->input("signaler");
 
 
-            $doSignalement = DB::table('signaler')->insert([
-                "idpatient"=>$idpatient,
-                "idmedecin"=>$idmedecin,
-                "signaler"=>$signaler
+        $doSignalement = DB::table('suivi')
+            ->where('idpatient', $idpatient)
+            ->where('idmedecin', $idmedecin)
+            ->update([
+                "signaler"=>$validatedData['signaler']
             ]);
+
         if($doSignalement){
-                return back()->with('success','Desormais, ce médecin peut suivre votre glycémie');
+                return back()->with('success','Nous avons récu votre demande avec succès');
             }else{
                 return back()->with('fail','Une erreur s\'est produite, ressayer');
             }

@@ -58,7 +58,6 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::post('/apropos-du-medecin','suiviDoctor')->name('suiviDoctor');
     Route::get('/ajouter-un-medecin', 'addDoctorVue')->name('addDoctorVue');
     // Route::post('/detail-du-medecin','signalerDoctor')->name('signalerDoctor');
-    // Route::post('/detail-du-medecin','supprimerDoctor')->name('supprimerDoctor');
 });
 
 //for save doctor in using controller med

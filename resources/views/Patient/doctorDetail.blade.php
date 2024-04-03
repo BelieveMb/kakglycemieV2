@@ -2,7 +2,7 @@
 
 @section('dashboardPatient')
     <div class="w-full flex justify-center items-center content-center">
-        <div class="py-1 px-2 w-[80%] lg:w-[50%] min-h-screen bg-gray-100/50 rounded-lg border shadow-md sm:p-8 ">
+        <div class="py-1 px-2 w-[96%] lg:w-[50%] min-h-screen bg-gray-100/50 rounded-lg border shadow-md sm:p-8 ">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-base lg:text-2xl font-bold leading-none text-gray-600 flex items-center gap-2 ">
                     <a href="{{ route('Patient.patientMedecinList') }}" class="text-red-600" title="Voir la liste">
@@ -78,8 +78,8 @@
                 </a>
 
             </div>
-            {{-- action="{{ route('Patient.addSuiviDoctor') }}" --}}
-            <form method="post" class="my-6 space-y-6">
+            {{-- --}}
+            <form method="post" action="{{ route('Patient.suiviDoctor') }}" class="my-6 space-y-6">
                 @if ($errors->any())
                     <div class="text-gray-50 text-center font-bold  animate-pulse delay-700">
                         <ul
@@ -91,19 +91,22 @@
                     </div>
                 @endif
                 @csrf
-                <div class="main flex border rounded-xl overflow-hidden  select-none">
+                <div class="main flex lg:flex-row flex-col border rounded-xl overflow-hidden  select-none">
                     <div class="py-3  px-5 bg-red-500 text-white text-sm font-semibold mr-3">Voulez vous que ce médecin
                         puisse suivre votre glycémie ?</div>
-                    <label class="flex items-center radio p-2 cursor-pointer">
-                        <input class="my-auto transform scale-125" type="radio" name="choix" value="non" />
-                        <div class="title px-2">Non</div>
-                    </label>
+                    <div class="flex gap-5 justify-between">
+
+                        <label class="flex items-center radio p-2 cursor-pointer">
+                            <input class="my-auto transform scale-125" type="radio" name="choix" value="non" />
+                            <div class="title px-2">Non</div>
+                        </label>
 
 
-                    <label class="flex items-center radio p-2 cursor-pointer">
-                        <input class="my-auto transform scale-125" type="radio" name="choix" value="oui" />
-                        <div class="title px-2">Oui</div>
-                    </label>
+                        <label class="flex items-center radio p-2 cursor-pointer">
+                            <input class="my-auto transform scale-125" type="radio" name="choix" value="oui" />
+                            <div class="title px-2">Oui</div>
+                        </label>
+                    </div>
 
                 </div>
 
@@ -133,24 +136,26 @@
                     <p class="text-sm font-medium text-gray-800 leading-none"> 
                         <i class="mr-3 text-xl bi bi-person-plus-fill"></i> Voir la liste des médecins</p>
                 </a>
-                <a href="" class="px-4 py-2 pb-4 hover:bg-red-200 hover:rounded-lg flex underline hover:no-underline">
+                <a href="#" id="showForm" class="px-4 py-2 pb-4 hover:bg-red-200 hover:rounded-lg flex underline hover:no-underline">
                     <p class="text-sm font-medium text-gray-800 leading-none">
                         <i class="mr-3 text-xl bi bi-exclamation-diamond-fill"></i> Signaler un abus</p>
                 </a>
 
-            </div>
-            {{-- <form method="post">
-                @csrf pour l'instant, ce n'est pas très important
-                <div class="mb-6">
-                  <label for="signaler" class="font-semibold mb-2 block">Quel est votre soucis ? </label>
-                  <input type="text" name="suivi" placeholder="Dites ce que vous pensez de ce médecin" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500">
-                  <x-input-error :messages="$errors->get('signaler')" class="mt-2" />
-                </div>
-                <div class="flex justify-center items-center">
-                    <button class="bg-red-500 text-white rounded-2xl px-4 py-2 font-semibold hover:bg-transparent hover:text-red-500 hover:border-red-500 hover:border-2">Signaler <i class="bi bi-info-circle-fill"></i></button>
-                </div>
+                {{-- <form id="formSignaler" class="hidden w-1/2 min-h-1/2" method="post" action="{{ route('Patient.signalerDoctor') }}">
+                    @csrf 
+                    <div class="mb-6">
+                        <label for="">A faire après</label>
+                    <input type="text" name="signaler" placeholder="Dites ce que vous pensez de ce médecin" value="{{ old('signaler') }}"
+                    class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500">
+                    <x-input-error :messages="$errors->get('signaler')" class="mt-2" />
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button class="bg-red-500 text-white rounded-2xl px-4 py-2 font-semibold hover:bg-transparent hover:text-red-500 hover:border-red-500 hover:border-2">Signaler <i class="bi bi-info-circle-fill"></i></button>
+                    </div>
 
-            </form> --}}
+                </form> --}}
+            </div>
+
         @else
             <h3>Une erreur s'est produite, recommencez s'il vous plait.</h3>
             @endif
@@ -160,4 +165,20 @@
 
 
     </div>
+    
+    <script  >
+        document.addEventListener('DOMContentLoaded', function() {
+        let showForm = document.getElementById('showForm');
+        let formSignaler = document.getElementById('formSignaler');
+
+        showForm.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            if(formSignaler.classList.contains("hidden")) {
+                formSignaler.classList.remove("hidden");
+            }else{
+                formSignaler.classList.add("hidden");
+            }
+        });   
+    });
+    </script>
 @endsection
