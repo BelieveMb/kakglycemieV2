@@ -70,6 +70,7 @@ Route::prefix('/')->name('medecin.')->controller(medecinController::class)->grou
 //
 Route::middleware('auth')->prefix('/medecin')->name('Medecin.')->controller(medecinController::class)->group(function () {
     Route::get('/dashboard', 'dashboardMedecin')->name('dashboard');
+    Route::get('/info-du-patient', 'infoPatient')->name('infoPatient');
     Route::get('/logout','logoutMedecin')->name('logoutMedecin');
     Route::get('/monProfil',  'profilMedecin')->name('monProfil');
     Route::post('/monProfil',  'updateProfilMedecin')->name('monProfil');

@@ -18,10 +18,9 @@
                             class="text-red-500">vous ajouter</span> </h3>
                     @else
                         @foreach ($patientList as $patient)
-                             {{-- {{ route('Medecin.contactKaK', ['patientId' => $patientList->idpatient]) }}" --}}
-                              <a href="#"  class="w-full py-3 sm:py-4 hover:px-2 hover:rounded-lg hover:bg-gray-400/30 duration-150 cursor-pointer flex justify-start items-start">
+                            <a href="{{ route('Medecin.infoPatient', ['idpatient' => $patient->idpatient]) }}" 
+                                class="w-full py-3 sm:py-4 hover:px-2 hover:rounded-lg hover:bg-gray-400/30 duration-150 cursor-pointer flex justify-start items-start">
                                  
-                                {{-- class="py-3 sm:py-4 hover:bg-gray-400/30 cursor-pointer"> --}}
                                 <div class="flex items-center space-x-4">
                                     <div class="flex-shrink-0">
                                         <img class="w-8 h-8 rounded-full" src="{{ asset('../images/profil.jpg') }}"
