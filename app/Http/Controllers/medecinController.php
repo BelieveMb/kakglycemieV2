@@ -45,7 +45,15 @@ class medecinController extends Controller
         }
     }
     public function dashboardMedecin(){
-        $patientList = DB::table('users')->get();
+        $idmedecin = auth()->id();
+        //selection tous les patients qui ont choisi ce médecin
+        $patientList = DB::table('users')
+                    ->where('type','patient')
+                    ->join("suivi","suivi.idpatient", "=", "id")
+                    ->where('idmedecin', $idmedecin)
+                    ->where('suivi', 'oui')
+                    ->get();
+
 
         return view('Medecin.ListMedecin',
             ['patientList'=>$patientList]
