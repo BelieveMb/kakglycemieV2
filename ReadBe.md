@@ -10,9 +10,9 @@
 - parler avec les patients qui l'ont  choisi
 
 ## Patients
-- choisir les médecins
-- retirer les médecins
-  # pour l'instant, on enleve le deux, nous mettons juste une liste de médecin valider par kak, et il peut parler avec le médecin qu'il veut. 
+- choisir les médecins ♥
+- retirer les médecins ♥
+  # pour l'instant, on enleve le deux, nous mettons juste une liste de médecin valider par kak, et il peut parler avec le médecin qu'il veut mais seulement les médecins validés par le patient peuvent voir sa glycémie ♥
   # connaitre l'erreur dans tous les form de save
 - parler seulement aux médecins
   # ajouter un title pour montrer au patient qu'il est suivi par le médecin

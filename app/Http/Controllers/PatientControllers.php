@@ -156,19 +156,26 @@ class PatientControllers extends Controller
     }
     public function suiviDoctor(Request $request){
         $validatedData = $request->validate([
-            'doctor'=> ["required", 'max:25'],
+            'doctor'=> ["required", 'max:5'],
             'choix'=>"required|in:oui,non",
         ]);
 
-        $query =  DB::table('suivi')->insert([
-            "idpatient"=> auth()->id(),
-            "idmedecin"=>$request->doctor,
-            "suivi"=> $validatedData['choix']
-            //  $request->input('choix'),
-        ]);
+        $idpatient = auth()->id();
+        $idmedecin = $request->doctor;
+        $suivi = $validatedData['choix'];
+    
+        $query = DB::table('suivi')->updateOrInsert(
+            ['idpatient' => $idpatient, 'idmedecin' => $idmedecin],
+            ['suivi' => $suivi]
+        );
+        //éviter d'enregistrer deux fois la meme infos updateOrInsert
 
         if($query){
-            return back()->with('success','Desormais, ce médecin peut suivre votre glycémie');
+            if ($suivi == "oui") {
+                return back()->with('success','Desormais, ce médecin peut suivre votre glycémie');
+            }else {
+                return back()->with('success','Desormais, ce médecin ne peut plus suivre votre glycémie');
+            }
         }else{
             return back()->with('fail','Une erreur s\'est produite, ressayer');
         }

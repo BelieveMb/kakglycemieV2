@@ -23,7 +23,7 @@
 
                     </div>
                     <div class="border-b">
-                        <a href="#" class="px-4 py-2 hover:bg-gray-100 flex">
+                        <a href="#" class="px-4 py-2 hover:bg-red-200 hover:rounded-lg flex">
                           @if (isset($suiviList->suivi))                            
                             <div class="text-gray-800 text-2xl">
                                 <i class="bi bi-shield-fill-check"></i>
@@ -48,7 +48,7 @@
 
                 </a>
 
-                <a href="#" class="px-4 py-2 hover:bg-gray-100 flex">
+                <a href="#" class="px-4 py-2 hover:bg-red-200 hover:rounded-lg flex">
                     <div class="text-gray-800 text-2xl">
                         <i class="bi bi-hospital-fill"></i>
                     </div>
@@ -58,7 +58,7 @@
                         <p class="text-xs text-gray-500">{{ $detailMedecin->hopital }} </p>
                     </div>
                 </a>
-                <a href="#" class="px-4 py-2 hover:bg-gray-100 flex">
+                <a href="#" class="px-4 py-2 hover:bg-red-200 hover:rounded-lg flex">
                     <div class="text-gray-800 text-2xl">
                         <i class="bi bi-telephone-fill"></i>
                     </div>
@@ -67,9 +67,9 @@
                         <p class="text-xs text-gray-500"> {{ $detailMedecin->phone }}</p>
                     </div>
                 </a>
-                <a href="#" class="px-4 py-2 hover:bg-gray-100 flex">
+                <a href="#" class="px-4 py-2 hover:bg-red-200 hover:rounded-lg flex">
                     <div class="text-gray-800 text-2xl">
-                        <i class="bi bi-person-fill-check"></i>
+                        <i class="bi bi-person-vcard-fill"></i>
                     </div>
                     <div class="pl-3">
                         <p class="text-sm font-medium text-gray-800 leading-none">Infos médecin</p>
@@ -79,7 +79,7 @@
 
             </div>
             {{-- action="{{ route('Patient.addSuiviDoctor') }}" --}}
-            <form method="post" class="mt-6 space-y-6">
+            <form method="post" class="my-6 space-y-6">
                 @if ($errors->any())
                     <div class="text-gray-50 text-center font-bold  animate-pulse delay-700">
                         <ul
@@ -121,7 +121,7 @@
                 <div class="flex items-center gap-4">
                     <button
                         class="bg-transparent text-red-500 text-base rounded-lg px-2 py-1 font-semibold hover:bg-red-500 hover:text-gray-50  hover:border border border-red-400 hover:duration-700">
-                        Enregistrer <i class="bi bi-check-circle"></i>
+                        Enregistrer <i class="bi bi-check-circle-fill"></i>
                     </button>
 
                 </div>
@@ -129,20 +129,18 @@
 
             <div class="">
                 <a href="{{ route('Patient.patientMedecinList') }}"
-                    class="px-4 py-2 pb-4 hover:bg-gray-100 flex underline hover:no-underline">
-                    <p class="text-sm font-medium text-gray-800 leading-none"> <i
-                            class="ml-1 text-xl bi bi-person-plus"></i> Voir la liste des médecins</p>
+                    class="px-4 py-2 pb-4 hover:bg-red-200 hover:rounded-lg flex underline hover:no-underline">
+                    <p class="text-sm font-medium text-gray-800 leading-none"> 
+                        <i class="mr-3 text-xl bi bi-person-plus-fill"></i> Voir la liste des médecins</p>
                 </a>
-                <a href="#" class="px-4 py-2 pb-4 hover:bg-gray-100 flex">
-                    <p class="text-sm font-medium text-gray-800 leading-none">Supprimer ce médecin</p>
-                </a>
-                <a href="" class="px-4 py-2 pb-4 hover:bg-gray-100 flex">
-                    <p class="text-sm font-medium text-gray-800 leading-none">Signaler un abus</p>
+                <a href="" class="px-4 py-2 pb-4 hover:bg-red-200 hover:rounded-lg flex underline hover:no-underline">
+                    <p class="text-sm font-medium text-gray-800 leading-none">
+                        <i class="mr-3 text-xl bi bi-exclamation-diamond-fill"></i> Signaler un abus</p>
                 </a>
 
             </div>
             {{-- <form method="post">
-                @csrf
+                @csrf pour l'instant, ce n'est pas très important
                 <div class="mb-6">
                   <label for="signaler" class="font-semibold mb-2 block">Quel est votre soucis ? </label>
                   <input type="text" name="suivi" placeholder="Dites ce que vous pensez de ce médecin" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500">

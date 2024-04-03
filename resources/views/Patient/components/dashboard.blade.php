@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau de board du Patient /Kak glycémie</title>
-    <link rel="shortcut icon" href="images/logo_white.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/logo_white.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ asset('../css/AllUsers.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
