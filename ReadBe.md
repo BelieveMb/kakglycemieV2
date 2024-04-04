@@ -6,8 +6,10 @@
 - le middleware  et other test
 
 ## Medecin
-- voir ses patients et leurs glycémie
+- voir ses patients et leurs glycémie  ♥
 - parler avec les patients qui l'ont  choisi
+- recherche la glycémie
+- pagination pour Stats du patient
 
 ## Patients
 - choisir les médecins ♥
@@ -18,6 +20,8 @@
   # ajouter un title pour montrer au patient qu'il est suivi par le médecin ♥
 - signaler le médecin -> after
 - enlever la redirection automatique vers login ♥
+- pagination pour Stats du patient
+
 
 # Configuration  route
 

@@ -4,7 +4,7 @@
     <div class="w-full flex justify-center items-center content-center gap-10">
         <div class="py-1 px-2 w-[96%] lg:w-[60%] min-h-screen bg-gray-300/30 rounded-lg border-2 shadow-md p-2 lg:p-8 ">
 
-            <div class="flex justify-between items-center mb-4 gap-[5rem] ">
+            <div class="flex justify-between items-center mb-4 gap-[5rem] py-2 ">
                 <h3 class="text-base lg:text-xl font-bold leading-none text-gray-700">Mes patients</h3>
                 <span  class="text-xl text-red-500" >
                     <i class="bi bi-people"></i>

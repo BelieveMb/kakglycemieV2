@@ -1,6 +1,6 @@
     <div class="flex flex-col items-center justify-between mb-4">
-        <div class="flex-shrink-0">
-            <span class="text-base font-normal text-gray-500" >Votre taux de glycémie <i class="bi bi-heart-pulse-fill"></i></span>
+        <div class="flex-shrink-0 text-center">
+            <span class="text-base font-normal text-gray-500" >Le taux de glycémie du patient<i class="bi bi-heart-pulse-fill"></i></span>
             @if (isset($lastTaux->taux))
                 <h3 class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">{{$lastTaux->taux}} mg/dl </h3>
             @endif
@@ -33,7 +33,7 @@
                 @endif
             @else
                 <div class="flex gap-0  w-[21rem] text-center text-gray-700 animate-pulse delay-600 hover:text-red-400 ">
-                    Commencez votre traitement dès maintenant 
+                    Le patient n'a pas commencé son traitement
                     <i class="lg:flex hidden"> <i class="bi bi-arrow-right "></i></i>
                     <span class="lg:hidden flex"> <i class="bi bi-arrow-down "></i></span>
                 </div>
@@ -50,4 +50,12 @@
         {!! $chart->renderChartJsLibrary() !!}
         {!! $chart->renderHtml() !!}
         {!! $chart->renderJs() !!}
+    </div>
+
+    <div class="mt-10 lg:mt-[10rem] px-5 flex flex-col items-baseline justify-end text-gray-600">
+        <p>Voici la présentation de la glycémie du patient** :</p>
+        <ul class="list-disc px-6">
+            <li>La colonne c'est le taux de glycémie du patient</li>
+            <li>La ligne c'est le jour de traitement pris par le patient</li>
+        </ul>
     </div>
