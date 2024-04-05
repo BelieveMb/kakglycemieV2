@@ -18,25 +18,37 @@
                             class="text-red-500">vous ajouter</span> </h3>
                     @else
                         @foreach ($patientList as $patient)
-                            <a href="{{ route('Medecin.infoPatient', ['idpatient' => $patient->idpatient]) }}" 
-                                class="w-full py-3 sm:py-4 hover:px-2 hover:rounded-lg hover:bg-gray-400/30 duration-150 cursor-pointer flex justify-start items-start">
-                                 
-                                <div class="flex items-center space-x-4">
-                                    <div class="flex-shrink-0">
-                                        <img class="w-8 h-8 rounded-full" src="{{ asset('../images/profil.jpg') }}"
-                                            alt="patient image" />
-                                    </div>
-                                    <div class="flex-1 min-w-0">
-                                        <p class="text-lg font-semibold truncate text-gray-800 ">
-                                            {{ $patient->name }}
-                                        </p>
-                                        <p class="text-sm text-gray-800 truncate ">
-                                            {{ $patient->phone }}
-                                        </p>
-                                    </div>
-                                   
-                                </div>
-                            </a>
+                            {{-- <a href="{{ route('Medecin.infoPatient', ['idpatient' => $patient->idpatient]) }}" 
+                                class="w-full py-3 sm:py-4 hover:px-2
+                                hover:rounded-lg hover:bg-gray-400/30
+                                duration-150 cursor-pointer flex justify-start
+                                items-start">     
+                            </a>--}}
+                                <form action="{{ route('Medecin.infoPatient') }}" method="post">
+                                    @csrf <!-- Ajoutez ceci pour inclure le jeton CSRF -->
+                                
+                                    <input type="hidden" name="idpatient" value="{{ $patient->idpatient }}">
+                                    <button type="submit" class="w-full py-3 sm:py-4 hover:px-2 hover:rounded-lg hover:bg-gray-400/30 duration-150 cursor-pointer flex justify-start items-start">
+                                        <!-- Votre contenu de lien ici -->
+                                         
+                                        <div class="flex items-center space-x-4">
+                                            <div class="flex-shrink-0">
+                                                <img class="w-8 h-8 rounded-full" src="{{ asset('../images/profil.jpg') }}"
+                                                    alt="patient image" />
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-lg font-semibold truncate text-gray-800 ">
+                                                    {{ $patient->name }}
+                                                </p>
+                                                <p class="text-sm text-gray-800 truncate ">
+                                                    {{ $patient->phone }}
+                                                </p>
+                                            </div>
+                                        
+                                        </div>
+                                    </button>
+                                </form>
+                           
                         @endforeach
                     @endif
 
