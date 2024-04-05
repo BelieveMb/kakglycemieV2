@@ -8,8 +8,9 @@
 ## Medecin
 - voir ses patients et leurs glycémie  ♥
 - parler avec les patients qui l'ont  choisi
-- recherche la glycémie
-- pagination pour Stats du patient
+- recherche la glycémie ♥
+- pagination pour Stats du patient 
+  # pour la pagination, on doit lui afficher un nouveau blade en utilisant path  
 
 ## Patients
 - choisir les médecins ♥

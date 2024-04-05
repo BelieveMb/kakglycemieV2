@@ -88,7 +88,13 @@ class medecinController extends Controller
             ->where('datetrait', 'like', '%' . $dateSearch . '%')
             ->get();
         } else {
-            $traitementList = patientModel::where('idpatient', $idpatient)->get();
+            $traitementList = patientModel::
+             where('idpatient', $idpatient)
+             ->paginate(1);
+            $traitementList->withPath('/', [
+                'idpatient'=>$idpatient,
+            ]);
+            
         }
 
         return view('Medecin.infoPatient', compact('chart'),[ 

@@ -34,7 +34,7 @@
         <!-- <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script> -->
     </div>
 
-    <div id="accordion-collapse" data-accordion="collapse">
+    <div id="accordion-collapse" data-accordion="collapse" class="w-full">
         @forelse($traitementList as $traitement)
             <h2 id="accordion-collapse-heading-{{ $traitement->idtraitement }}" class="w-full">
                 <button type="button"
@@ -71,6 +71,9 @@
                  Aucun traitement trouvé pour la date du {{$dateTraitement}}  </h6>
         @endforelse
         
+    </div>
+    <div class="my-6 flex justify-between items-start">
+        {{ $traitementList->onEachSide(5)->Links() }}
     </div>
     <div class="my-6 flex items-center">
         @if (empty(request('dateTraitement'))) 

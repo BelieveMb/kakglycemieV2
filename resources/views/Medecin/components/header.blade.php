@@ -19,7 +19,7 @@
                <span class="self-center whitespace-nowrap text-gray-50">KaK glycémie</span>
                </a>
                <form action="#" method="GET" class="hidden lg:block lg:pl-32">
-                  <label for="topbar-search" class="sr-only">Trouvez un médecin</label>
+                  <label for="topbar-search" class="sr-only">Trouvez un médecin*</label>
                   <div class="mt-1 relative lg:w-64">
                      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +27,8 @@
                         </svg>
                         
                      </div>
-                     <input type="text" name="email" id="topbar-search" class="bg-gray-200 border border-gray-400  text-gray-900 sm:text-sm rounded-lg hover:bg-gray-100 outline-none block w-full pl-10 p-2.5" placeholder="Trouvez un médecin...">
+                     <input type="text" name="search" id="topbar-search" class="bg-gray-200 border border-gray-400  text-gray-900 sm:text-sm rounded-lg hover:bg-gray-100 outline-none block w-full pl-10 p-2.5" 
+                     placeholder="Trouvez un patient...">
                   </div>
                </form>
             </div>
