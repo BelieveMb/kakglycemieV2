@@ -65,47 +65,45 @@ class medecinController extends Controller
     public function infoPatient(Request $request){
         $idpatient = $request->input('idpatient');
 
-        // $lastTaux = patientModel::where('idpatient', $idpatient)->orderByDesc('jour')->first();
+        $lastTaux = patientModel::where('idpatient', $idpatient)->orderByDesc('jour')->first();
 
-        // $chart_options = [
-        //     'chart_title' => 'Taux de glycémie',
-        //     'report_type' => 'group_by_string',
-        //     'model' => 'App\Models\patientModel',
-        //     'group_by_field' => 'jour',
-        //     'where_raw' => 'idpatient ='.$idpatient,
-        //     'aggregate_function' => 'avg',
-        //     'aggregate_field' => 'taux',
-        //     'chart_type' => 'line',
-        // ];
-        // $chart = new LaravelChart($chart_options);
+        $chart_options = [
+            'chart_title' => 'Taux de glycémie',
+            'report_type' => 'group_by_string',
+            'model' => 'App\Models\patientModel',
+            'group_by_field' => 'jour',
+            'where_raw' => 'idpatient ='.$idpatient,
+            'aggregate_function' => 'avg',
+            'aggregate_field' => 'taux',
+            'chart_type' => 'line',
+        ];
+        $chart = new LaravelChart($chart_options);
         
         $dateTraitement = $request->input('dateTraitement');
         // Check for search input
         if ($dateTraitement) {
+            $dateSearch = date("d-m-Y", strtotime($dateTraitement));
             $traitementList = patientModel::
             where('idpatient', $idpatient)
-            ->where('datetrait', 'like', '%' . $dateTraitement . '%')
+            ->where('datetrait', 'like', '%' . $dateSearch . '%')
             ->get();
         } else {
             $traitementList = patientModel::where('idpatient', $idpatient)->get();
         }
 
-        return view('Medecin.infoPatient', 
-        // compact('chart'),
-        [ 
+        return view('Medecin.infoPatient', compact('chart'),[ 
             'idpatient'=>$idpatient,
-            'traitementList' => $traitementList 
+            'traitementList' => $traitementList,            
+            'lastTaux' => $lastTaux,            
         ]);
     }
 
-    public function searchTraitementByDate(Request $request){
-        $dateTraitement = $request->input('dateTraitement');
-        $searchQuery = DB::table('traitement2')
-                ->where('datetrait', 'like', "%{$dateTraitement}%")
-                // ->pluck('name', 'id')
-                ->get();
+    public function showAllTraitementByDate(Request $request){
+        $idpatient = $request->input('idpatient');
+ 
+        $traitementList = patientModel::where('idpatient', $idpatient)->get();
         return view('Medecin.infoPatient',[
-            "searchQuery"=>$searchQuery
+            'traitementList' => $traitementList 
         ]);
     }
 

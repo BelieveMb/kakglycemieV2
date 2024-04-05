@@ -34,14 +34,6 @@
         <!-- <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script> -->
     </div>
 
-    @error('searchDate')
-        <div class="bg-red-500 mb-2  rounded-xl flex justify-between p-3 text-gray-700 font-semibold">
-            {{ $message }}
-            <div class="text-red-500">
-                <i class="bi bi-info-circle"></i>
-            </div>
-        </div>
-    @enderror
     <div id="accordion-collapse" data-accordion="collapse">
         @forelse($traitementList as $traitement)
             <h2 id="accordion-collapse-heading-{{ $traitement->idtraitement }}" class="w-full">
@@ -70,16 +62,26 @@
                 </div>
             </div>
         @empty
-            <h6
-                class="flex items-center focus:ring-2 focus:ring-gray-700  justify-between p-5 w-[25rem] lg:w-[30rem] font-medium text-left border border-gray-300  border-b-4 text-gray-900 bg-gray-100 hover:bg-gray-300 hover:text-red-500  rounded-t-xl rounded-b-xl"
-            > Aucun traitement trouvé pour la date du {{ request('dateTraitement') }}
-
-
-            </h6>
+            @php
+             $dateSearch = request('dateTraitement');
+             $dateTraitement = date("d-m-Y", strtotime($dateSearch));
+                
+            @endphp
+            <h6 class="flex items-center focus:ring-2 focus:ring-gray-700  justify-between p-5 w-[25rem] lg:w-[30rem] font-medium text-left border border-gray-300  border-b-4 text-gray-900 bg-gray-100 hover:bg-gray-300 hover:text-red-500  rounded-t-xl rounded-b-xl" >
+                 Aucun traitement trouvé pour la date du {{$dateTraitement}}  </h6>
         @endforelse
-        {{-- @foreach ($traitementList as $traitement)
-           
-        @endforeach --}}
+        
+    </div>
+    <div class="my-6 flex items-center">
+        @if (empty(request('dateTraitement'))) 
+            <span>.</span>
+        @else
+        <a href="{{ route('Medecin.infoPatient', [ 'idpatient' => $idpatient]) }}" 
+            class=" text-red-500  text-[0.8rem] lg:text-base rounded-lg p-1 lg:px-2 lg:py-1 font-semibold hover:bg-red-500 hover:text-gray-50  hover:border border border-red-400 hover:duration-700">
+                Voir toutes les dates <i class="bi bi-calendar"></i>
+            </a>
+
+        @endif
 
     </div>
 
