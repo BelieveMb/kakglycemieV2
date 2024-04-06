@@ -24,8 +24,8 @@
                     </div>
                     @include('Medecin.components.footer')
                     <p class="text-center text-sm text-gray-500 my-10">
-                        &copy; 2023-2024 <a href="#" class="hover:underline" target="_blank">KaK glycémie</a>. All
-                        rights reserved.
+                        &copy; 2023-2024 <a href="#" class="hover:underline" target="_blank">KaK glycémie</a>. Tous 
+                        les droits réservés.
                     </p>
                 </div>
 
@@ -35,7 +35,7 @@
         </div>
 
     </main>
-    {{-- <x-basement::chat-box /> --}}
+    <x-basement::chat-box />
     <script src="{{ asset('vendor/basement/basement.bundle.min.js') }}"></script>
 
 </body>

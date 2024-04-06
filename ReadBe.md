@@ -1,6 +1,12 @@
 # ToDO
-## Git
-- 
+- pour demarrer le chat
+# npx soketi start
+#  This version of uWS.js supports only Node.js 14, 16 and 18 
+## chat
+- faire le trier 
+    - pour medecin, affiche r seulement les patients choisi
+    - pour patient, afficher seulement les médecins validés
+- Changer le design
 ## Admin
 - form de recherche
 - le middleware  et other test
@@ -22,6 +28,7 @@
 - signaler le médecin -> after
 - enlever la redirection automatique vers login ♥
 - pagination pour Stats du patient
+- ajouter les notifications comme sur duolingo
 
 
 # Configuration  route
