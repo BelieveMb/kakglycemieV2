@@ -90,7 +90,8 @@ class medecinController extends Controller
         } else {
             $traitementList = patientModel::
              where('idpatient', $idpatient)
-             ->paginate(1);
+             ->orderByDesc('jour')
+             ->paginate(10);
             $traitementList->withPath('/', [
                 'idpatient'=>$idpatient,
             ]);

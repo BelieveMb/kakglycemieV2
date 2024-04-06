@@ -34,7 +34,7 @@
         <!-- <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script> -->
     </div>
 
-    <div id="accordion-collapse" data-accordion="collapse" class="w-full">
+    <div id="accordion-collapse" data-accordion="collapse" class="lg:w-full w-1/2">
         @forelse($traitementList as $traitement)
             <h2 id="accordion-collapse-heading-{{ $traitement->idtraitement }}" class="w-full">
                 <button type="button"
