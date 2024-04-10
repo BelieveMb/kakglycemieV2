@@ -7,6 +7,8 @@
     - pour medecin, affiche r seulement les patients choisi
     - pour patient, afficher seulement les médecins validés
 - Changer le design
+# Home 
+- personnaliser le medecin list dans index
 ## Admin
 - form de recherche
 - le middleware  et other test

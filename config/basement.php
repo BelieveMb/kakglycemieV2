@@ -5,6 +5,7 @@ declare(strict_types=1);
 use App\Models\User;
 use BasementChat\Basement\Enums\AvatarStyle;
 use BasementChat\Basement\Enums\ChatBoxPosition;
+use App\Models\AgentModel;
 
 return [
 
@@ -86,7 +87,11 @@ return [
     */
 
     'user_model' => User::class,
-
+    // 'user_model' => [
+    //     'class' => User::class,
+    //     // 'scope' => 'admins',
+    // ],
+    
     /*
     |--------------------------------------------------------------------------
     | Avatar
