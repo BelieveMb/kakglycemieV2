@@ -27,7 +27,7 @@ Route::prefix('/')->controller(AllUsersController::class)->group(function (){
     Route::get('Connexion','loginUserVue')->name('loginUserVue');
     Route::post('Connexion','loginUser')->name('loginUser');
     Route::get('Inscription', 'registerVue')->name('registerVue');
-    Route::post('Inscription', 'userRegister')->name('inscription');
+    Route::post('Inscription', 'userRegister')->name('register');
     Route::get('/logout','logoutUser')->name('logoutUser');
     //en cas de redirection inattendue vers login
     // Route::get('login','loginUserVue')->name('loginUserVue');

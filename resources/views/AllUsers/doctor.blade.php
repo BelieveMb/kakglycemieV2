@@ -31,7 +31,7 @@
                                 d'optimiser leur traitement et de fournir une prise en charge personnalisée.
                             </p>
                             <div class="flex my-4 gap-4 flex-row lg:space-x-8 justify-center ">
-                                <a  href="{{ route('inscription') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 border-red-500 border-4  text-gray-50 rounded-lg hover:bg-gray-800   hover:text-gray-50 focus:text-gray-900  hover:shadow-outline focus:bg-red-200 focus:outline-none"> 
+                                <a  href="{{ route('loginUserVue') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 border-red-500 border-4  text-gray-50 rounded-lg hover:bg-gray-800   hover:text-gray-50 focus:text-gray-900  hover:shadow-outline focus:bg-red-200 focus:outline-none"> 
                                     Connexion <i class="bi bi-box-arrow-in-left"></i>  </a>
                                 <a href="{{ route('registerVue') }}" class="px-4 py-2  text-sm font-semibold border-gray-100 border-4 text-gray-50 rounded-lg  hover:text-gray-600 focus:text-gray-900 hover:bg-gray-50  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> 
                                     Inscription <i class="bi bi-person-plus-fill"></i></a>
@@ -159,7 +159,7 @@
           </div>
   
           <div class="px-4 lg:px-8 my-14 flex justify-start">
-             <a  href="{{ route('inscription') }}" class="inline-flex justify-center items-center py-1 px-3 lg:py-3 lg:px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-gray-800 hover:text-gray-200 focus:ring-4 focus:ring-red-300 ">Commencez dès maintenant</a>
+             <a  href="{{ route('register') }}" class="inline-flex justify-center items-center py-1 px-3 lg:py-3 lg:px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-gray-800 hover:text-gray-200 focus:ring-4 focus:ring-red-300 ">Commencez dès maintenant</a>
           </div>
       </section>
 
@@ -171,8 +171,8 @@
   
         </div>
         <div class="flex  gap-4 flex-row lg:space-x-8 justify-center ">
-           <a  href="{{ route('registerVue') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 border-red-500 border-4  text-gray-50 rounded-lg hover:bg-gray-800   hover:text-gray-50 focus:text-gray-900  hover:shadow-outline focus:bg-red-200 focus:outline-none"> Connexion <i class="bi bi-box-arrow-in-left"></i>  </a>
-           <a href="{{ route('inscription') }}" class="px-4 py-2  text-sm font-semibold border-gray-100 border-4 text-gray-50 rounded-lg  hover:text-gray-600 focus:text-gray-900 hover:bg-gray-50  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> Inscription <i class="bi bi-person-plus-fill"></i></a>
+           <a  href="{{ route('loginUserVue') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 border-red-500 border-4  text-gray-50 rounded-lg hover:bg-gray-800   hover:text-gray-50 focus:text-gray-900  hover:shadow-outline focus:bg-red-200 focus:outline-none"> Connexion <i class="bi bi-box-arrow-in-left"></i>  </a>
+           <a href="{{ route('registerVue') }}" class="px-4 py-2  text-sm font-semibold border-gray-100 border-4 text-gray-50 rounded-lg  hover:text-gray-600 focus:text-gray-900 hover:bg-gray-50  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> Inscription <i class="bi bi-person-plus-fill"></i></a>
         </div>
       </section>
 

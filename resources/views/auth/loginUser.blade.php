@@ -4,7 +4,7 @@
 
 
 @section('formSide')
-    <div class="w-full md:w-1/2  px-5 md:px-10 lg:mt-[6rem]">
+    <div class="w-full md:w-1/2  px-5 md:px-10 lg:mt-[6rem] py-10">
         <div class="text-center mb-10">
             <h1 class="font-bold text-3xl text-gray-600">Se connecter sur KaK Glycémie</h1>
         </div>
@@ -75,7 +75,7 @@
             </div>
 
             <div class="px-5 flex items-center">
-                <p>Pas de compte sur KaK glycémie, <a href="{{ route('inscription') }}"
+                <p>Pas de compte sur KaK glycémie, <a href="{{ route('registerVue') }}"
                         class="text-red-400 underline">S'inscrire
                         <i class="bi bi-person-plus-fill"></i></a></p>
             </div>
