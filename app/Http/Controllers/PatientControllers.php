@@ -208,9 +208,6 @@ class PatientControllers extends Controller
     }
 
     public function supprimerDoctor(Request $request) {
-        $idmedecin = $request->doctor;
-        $idpatient = auth()->id();
-
 
         $deleteDoctor = DB::table('signaler')
         ->delete("idmedecin"); // à corriger
