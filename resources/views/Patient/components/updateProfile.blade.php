@@ -26,20 +26,23 @@
         {{-- :value="old('name', $user->name)" --}}
         <div>
             <x-input-label for="name" :value="__('Nom')" />
-            <x-text-input id="name" name="name" type="text" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500"  required autofocus autocomplete="name" />
+            <x-text-input id="name" name="name" type="text" value=" {{ $infoPatient->name }}"
+             class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500"  required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
 
         <div>
-            <x-input-label for="telPat" :value="__('Téléphone')" />
-            <x-text-input id="telPat" name="telPat" type="tel" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500"  required autofocus autocomplete="telPat" />
-            <x-input-error class="mt-2" :messages="$errors->get('telPat')" />
+            <x-input-label for="phone" :value="__('Téléphone')" />
+            <x-text-input id="phone" name="phone" type="tel" value=" {{ $infoPatient->phone }}"
+            class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500"  required autofocus autocomplete="phone" />
+            <x-input-error class="mt-2" :messages="$errors->get('phone')" />
         </div>
 
         {{-- :value="old('email', $user->email)" --}}
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" name="email" type="email" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500" required autocomplete="username" />
+            <x-text-input id="email" name="email" type="email" value=" {{ $infoPatient->email }}"
+            class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
             {{-- @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail()) --}}

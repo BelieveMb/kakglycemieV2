@@ -48,7 +48,7 @@
         </div>
         <div class="flex flex-col mt-4 gap-4">
             <span class="text-base font-normal text-gray-500">Enregistrer vos taux de glycémie quotidiens et noter les traitements associés.</span>
-            <a href="#" class="text-sm font-medium text-red-500 hover:text-gray-500 hover:underline ">En savoir plus</a>
+            {{-- <a href="#" class="text-sm font-medium text-red-500 hover:text-gray-500 hover:underline ">En savoir plus</a> --}}
         </div>
     </div>
 </div>

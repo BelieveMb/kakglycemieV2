@@ -34,9 +34,10 @@
                                 @elseif ($taux >= 90 && $taux < 130)
                                     @php $assurance = "Assurance, Surveiller votre traitement"; $statut=$assurance @endphp    
                                 @elseif ($taux >= 0 && $taux < 90)
-                                    @php $statut = "Hypoglycémie,Voir un médecin"; $statut=$danger @endphp    
+                                    @php
+                                        $danger = "Hypoglycémie,Voir un médecin"; $statut = $danger; @endphp    
                                 @else
-                                    @php $statut = "Rien à signaler" @endphp    
+                                    @php $statut = "Rien à signaler"; $statut=$danger; @endphp    
                                 @endif
 
                                 <div class="flex justify-center">
@@ -52,7 +53,7 @@
                                 <a href="{{ route('Patient.patientProfile') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-calendar-heart"></i> {{ $lastTraitement->datetrait }}</a>
                             </div>
                             <div class="flex justify-center flex-wrap mt-5">
-                                <a href="{{ route('Patient.dashboardForm') }}" class="text-gray-500 font-semibold hover:text-gray-700  mx-3"> <i class="bi bi-telephone"></i> {{ $infoPatient->telPat }} </a>
+                                <a href="{{ route('Patient.dashboardForm') }}" class="text-gray-500 font-semibold hover:text-gray-700  mx-3"> <i class="bi bi-telephone"></i> {{ $infoPatient->phone }} </a>
                                 <a href="{{ route('Patient.statistiqueGlycemie') }}" class="text-gray-500 font-semibold hover:text-gray-700  mx-3"> <i class="bi bi-envelope"></i>  {{ $infoPatient->email }}</a>
                             </div>
                         @else
@@ -68,7 +69,7 @@
                     <div class="mt-5 bg-white rounded-lg shadow-md p-5">
                         {{-- to include the update-password --}}
                         @include('Patient.components.updatePassword')
-                        <p class="text-gray-600 mt-2">John is a software engineer with over 10 years of experience in developing web and mobile applications. He is skilled in JavaScript, React, and Node.js.</p>
+                        {{-- <p class="text-gray-600 mt-2">John is a software engineer with over 10 years of experience in developing web and mobile applications. He is skilled in JavaScript, React, and Node.js.</p> --}}
                     </div>
                 </div>
         </div>
