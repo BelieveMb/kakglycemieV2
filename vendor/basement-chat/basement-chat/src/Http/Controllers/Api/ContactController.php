@@ -20,7 +20,7 @@ class ContactController extends Controller
         /** @var \Illuminate\Foundation\Auth\User&\BasementChat\Basement\Contracts\User $user */
         $user = Auth::user();
         $contacts = $allContacts->all($user);
-        // $contacts = $allContacts->where('type', 'patient')->all($user);
+
         return JsonResource::collection($contacts->values())->response();
     }
 }

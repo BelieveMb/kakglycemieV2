@@ -1,24 +1,13 @@
 # ToDO
-- pour demarrer le chat
-# npx soketi start
-#  This version of uWS.js supports only Node.js 14, 16 and 18 
-## chat
-- faire le trier 
-    - pour medecin, affiche r seulement les patients choisi
-    - pour patient, afficher seulement les médecins validés
-- Changer le design
-# Home 
-- personnaliser le medecin list dans index
+## Git
+- 
 ## Admin
 - form de recherche
 - le middleware  et other test
 
 ## Medecin
-- voir ses patients et leurs glycémie  ♥
+- voir ses patients et leurs glycémie
 - parler avec les patients qui l'ont  choisi
-- recherche la glycémie ♥
-- pagination pour Stats du patient 
-  # pour la pagination, on doit lui afficher un nouveau blade en utilisant path  
 
 ## Patients
 - choisir les médecins ♥
@@ -29,9 +18,6 @@
   # ajouter un title pour montrer au patient qu'il est suivi par le médecin ♥
 - signaler le médecin -> after
 - enlever la redirection automatique vers login ♥
-- pagination pour Stats du patient
-- ajouter les notifications comme sur duolingo
-
 
 # Configuration  route
 

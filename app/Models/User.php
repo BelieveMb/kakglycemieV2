@@ -52,12 +52,4 @@ class User extends Authenticatable implements BasementUserContract
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    /**
-     * pour mettre une condition dans le model
-     */
-    public function scopeAdmins($query)
-    {
-        return $query->where('type', 'patient');
-    }
-
 }

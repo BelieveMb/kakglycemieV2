@@ -26,7 +26,7 @@
                 <i class="bi bi-arrow-right"></i>
               </span>
             </a>
-            <a href="{{ route('loginUserVue') }}" class="inline-flex justify-center hover:text-gray-50 items-center py-1 px-3 lg:py-3 lg:px-5 text-base font-medium text-center border-gray-700 text-red-500 rounded-lg border  hover:bg-gray-700 focus:ring-4 focus:ring-gray-400 ml-4 ">
+            <a href="{{ route('loginUser') }}" class="inline-flex justify-center hover:text-gray-50 items-center py-1 px-3 lg:py-3 lg:px-5 text-base font-medium text-center border-gray-700 text-red-500 rounded-lg border  hover:bg-gray-700 focus:ring-4 focus:ring-gray-400 ml-4 ">
               Connexion
             </a>
           </div>
@@ -42,7 +42,7 @@
 
       </div>
       <div class="flex  gap-4 flex-row lg:space-x-8 justify-center ">
-         <a href="{{ route('loginUserVue') }}" class="px-4 py-2  text-sm font-semibold bg-red-300 border-red-300 border-4  text-gray-50 rounded-lg hover:bg-red-500   hover:text-gray-50 focus:text-gray-900  hover:shadow-outline focus:bg-red-200 focus:outline-none"> Connexion <i class="bi bi-box-arrow-in-left"></i>  </a>
+         <a href="{{ route('loginUser') }}" class="px-4 py-2  text-sm font-semibold bg-red-300 border-red-300 border-4  text-gray-50 rounded-lg hover:bg-red-500   hover:text-gray-50 focus:text-gray-900  hover:shadow-outline focus:bg-red-200 focus:outline-none"> Connexion <i class="bi bi-box-arrow-in-left"></i>  </a>
          <a href="{{ route('inscription') }}" class="px-4 py-2  text-sm font-semibold border-gray-100 border-4 text-gray-50 rounded-lg  hover:text-gray-600 focus:text-gray-900 hover:bg-gray-50  hover:shadow-outline focus:bg-gray-200 focus:outline-none"> Inscription <i class="bi bi-person-plus-fill"></i></a>
       </div>
     </section>
