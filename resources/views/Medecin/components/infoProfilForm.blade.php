@@ -42,21 +42,24 @@
 
         <div>
             <x-input-label for="hopital" :value="__('Hôpital ( Institution de prestation) ')" />
-            <x-text-input id="hopital" name="hopital" type="text" aria-valuetext="{{ old('hopital') }}" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500 font-semibold "  required  autocomplete="hopital" />
+            <x-text-input id="hopital" name="hopital" type="text" value=" {{ old('hopital', $infosDoctor->hopital ) }}"
+             class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500 font-semibold "  required  autocomplete="hopital" />
             <x-input-error class="mt-2" :messages="$errors->get('hopital')" />
         </div>
 
         <div>
             <x-input-label for="specialite" :value="__('Votre  Spécialité  ')" />
-            <x-text-input id="specialite" name="specialite" type="text"  aria-placeholder="votre domaine de spécialisation" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500 font-semibold "  required  autocomplete="specialite" />
+            <x-text-input id="specialite" name="specialite" type="text" value=" {{ old('specialite', $infosDoctor->specialite ) }}"
+             aria-placeholder="votre domaine de spécialisation" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500 font-semibold "  required  autocomplete="specialite" />
             <x-input-error class="mt-2" :messages="$errors->get('specialite')" />
         </div>
 
         <div>
-            <x-input-label for="description" :value="__('description')" />
+            <x-input-label for="description" :value="__('Description')" />
             <textarea id="description" name="description"  
-            class="font-semibold  border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500" required autocomplete="descritpion" >
-            {{ old('description') }}
+                class="font-semibold p-0 text-left border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500" required autocomplete="descritpion" >
+                {{ old('hopital', $infosDoctor->description ) }}
+          
             </textarea>
             <x-input-error class="mt-2" :messages="$errors->get('description')" />
 

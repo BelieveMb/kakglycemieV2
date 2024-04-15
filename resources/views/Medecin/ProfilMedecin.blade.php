@@ -8,7 +8,7 @@
 
             <div class="flex justify-center flex-wrap mt-5">
                 <a href="{{ route('Patient.dashboardForm') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-heart-pulse-fill"></i> {{ $infosUser->phone }} dl/ml</a>
-                <a href="{{ route('Patient.statistiqueGlycemie') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-clipboard2-pulse-fill"></i>  {{ $infosUser->email }}e jour</a>
+                <a href="{{ route('Patient.statistiqueGlycemie') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-clipboard2-pulse-fill"></i>  {{ $infosUser->email }}</a>
                 {{-- <a href="{{ route('Patient.patientProfile') }}" class="text-red-500 font-semibold hover:text-red-700  mx-3"> <i class="bi bi-calendar-heart"></i> {{ $infosUser->datetrait }}</a> --}}
             </div>
             <div class="flex justify-center flex-wrap mt-5">
@@ -20,8 +20,6 @@
     
     <div class="mt-5 bg-white rounded-lg shadow-md p-5">
         @include('Medecin.components.infoProfilForm')
-        {{-- to include the update-Profile 
-        @include('Patient.components.updateProfile')--}}
     </div>
 
     <div class="mt-5 bg-white rounded-lg shadow-md p-5">
