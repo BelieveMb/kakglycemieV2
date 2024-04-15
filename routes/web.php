@@ -35,6 +35,9 @@ Route::prefix('/')->controller(AllUsersController::class)->group(function (){
 });
 
 
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -70,9 +73,6 @@ Route::prefix('/')->name('medecin.')->controller(medecinController::class)->grou
 //
 Route::middleware('auth')->prefix('/medecin')->name('Medecin.')->controller(medecinController::class)->group(function () {
     Route::get('/dashboard', 'dashboardMedecin')->name('dashboard');
-    Route::get('/info-du-patient', 'infoPatient')->name('infoPatient');
-    Route::post('/info-du-patient', 'infoPatient')->name('infoPatientSearch');
-    Route::get('/toutes-les-dates', 'showAllTraitementByDate')->name('showAllTraitementByDate');
     Route::get('/logout','logoutMedecin')->name('logoutMedecin');
     Route::get('/monProfil',  'profilMedecin')->name('monProfil');
     Route::post('/monProfil',  'updateProfilMedecin')->name('monProfil');

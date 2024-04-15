@@ -4,14 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\DoctorModel;
-use App\Models\patientModel;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 
 class medecinController extends Controller
 {
@@ -47,71 +45,11 @@ class medecinController extends Controller
         }
     }
     public function dashboardMedecin(){
-        $idmedecin = auth()->id();
-        //selection tous les patients qui ont choisi ce médecin
-        $patientList = DB::table('users')
-                ->where('type','patient')
-                ->join("suivi","suivi.idpatient", "=", "id")
-                ->where('idmedecin', $idmedecin)
-                ->where('suivi', 'oui')
-                ->get();
-
+        $patientList = DB::table('users')->get();
 
         return view('Medecin.ListMedecin',
             ['patientList'=>$patientList]
         );
-    }
-
-    public function infoPatient(Request $request){
-        $idpatient = $request->input('idpatient');
-
-        $lastTaux = patientModel::where('idpatient', $idpatient)->orderByDesc('jour')->first();
-
-        $chart_options = [
-            'chart_title' => 'Taux de glycémie',
-            'report_type' => 'group_by_string',
-            'model' => 'App\Models\patientModel',
-            'group_by_field' => 'jour',
-            'where_raw' => 'idpatient ='.$idpatient,
-            'aggregate_function' => 'avg',
-            'aggregate_field' => 'taux',
-            'chart_type' => 'line',
-        ];
-        $chart = new LaravelChart($chart_options);
-        
-        $dateTraitement = $request->input('dateTraitement');
-        // Check for search input
-        if ($dateTraitement) {
-            $dateSearch = date("d-m-Y", strtotime($dateTraitement));
-            $traitementList = patientModel::
-            where('idpatient', $idpatient)
-            ->where('datetrait', 'like', '%' . $dateSearch . '%')
-            ->get();
-        } else {
-            $traitementList = patientModel::
-             where('idpatient', $idpatient)
-             ->orderByDesc('jour')
-             ->paginate(10);
-            $traitementList->withPath('/', [
-                'idpatient'=>$idpatient,
-            ]);
-            
-        }
-
-        return view('Medecin.infoPatient', compact('chart'),[ 
-            'idpatient'=>$idpatient,
-            'traitementList' => $traitementList,            
-            'lastTaux' => $lastTaux,            
-        ]);
-    }
-
-    public function showAllTraitementByDate(Request $request){
-        $idpatient = $request->input('idpatient');
- 
-        $traitementList = patientModel::where('idpatient', $idpatient)->get();
-        return view('Medecin.infoPatient',[
-            'traitementList' => $traitementList 
-        ]);
     }
 
     public function logoutMedecin(Request $request): RedirectResponse {

@@ -227,46 +227,56 @@
         <div id="accordion-collapse" data-accordion="collapse">
             <h2 id="accordion-collapse-heading-1">
               <button type="button" class="flex items-center focus:ring-4 focus:ring-gray-200 justify-between p-5 w-full font-medium text-left border border-gray-200 border-b-0 text-gray-900 bg-gray-100 hover:bg-gray-100 rounded-t-xl" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
-              <span>Qu'est-ce que KaK Glycémie ?</span>
+              <span>What is Flowbite?</span>
               <svg data-accordion-icon class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
             </h2>
             <div id="accordion-collapse-body-1" aria-labelledby="accordion-collapse-heading-1">
               <div class="p-5 border border-gray-200 border-b-0">
-                <p class="mb-2 text-gray-500"> KaK Glycémie est une plateforme qui permet aux patients diabétiques de suivre leur glycémie en ligne, où qu'ils se trouvent et à tout moment. Les patients peuvent visualiser un graphique détaillé expliquant les variations de leur glycémie, voir leurs historiques de traitements et recevoir des alertes concernant leur taux de sucre dans le sang. KaK Glycémie offre également la possibilité aux patients d'échanger facilement et rapidement avec leur(s) médecin(s). Les médecins peuvent créer un profil professionnel sur KaK Glycémie pour suivre la glycémie de leurs patients.  </p>
+                <p class="mb-2 text-gray-500">Flowbite is an open-source library of interactive
+                  components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
+                <p class="text-gray-500">Check out this guide to learn how to <a
+                    href="#" target="_blank"
+                    class="text-blue-600 hover:underline">get started</a> and start developing
+                  websites even faster with components on top of Tailwind CSS.</p>
               </div>
             </div>
             <h2 id="accordion-collapse-heading-2">
               <button type="button" class="flex items-center focus:ring-4 focus:ring-gray-200 justify-between p-5 w-full font-medium border border-gray-200 border-b-0 text-left text-gray-500 hover:bg-gray-100" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-              <span>Pourquoi utiliser Kak glycémie ?</span>
+              <span>Is there a Figma file available?</span>
               <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
             </h2>
             <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
               <div class="p-5 border border-gray-200 border-b-0">
-                <p class="mb-2 text-gray-500">
-                  KaK Glycémie est un assistant qui permet aux patients d'avoir un contrôle sur leur taux de sucre dans le sang et une communication permanente avec leur médecin. Cet outil aide les patients à atteindre la stabilisation de leur glycémie. De plus, KaK Glycémie est un outil professionnel qui aide les patients à stabiliser leur glycémie et permet aux médecins d'exercer efficacement leur travail en ligne et de manière plus aisée. Il facilite le suivi et la centralisation de la glycémie de tous les patients, aidant ainsi les médecins à prendre des décisions éclairées sur les traitements à administrer
-                </p>
-               
+                <p class="mb-2 text-gray-500">Flowbite is first conceptualized and designed using the
+                  Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
+                <p class="text-gray-500">Check out the <a href="https://flowbite.com/figma/"
+                    target="_blank" class="text-blue-600 hover:underline">Figma design system</a>
+                  based on the utility classes from Tailwind CSS and components from Flowbite.</p>
               </div>
             </div>
             <h2 id="accordion-collapse-heading-3">
               <button type="button" class="flex items-center border focus:ring-4 focus:ring-gray-200 border-gray-200 justify-between p-5 w-full font-medium text-left text-gray-500 hover:bg-gray-100" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
-              <span>Que retenir de KaK glycémie ?</span>
+              <span>What are the differences between Flowbite and Tailwind UI?</span>
               <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
             </h2>
             <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
               <div class="p-5 border border-gray-200 border-t-0">
-                <p class="mb-2 text-gray-500 italic">
-                  KaK Glycémie : Un outil professionnel pour stabiliser votre glycémie et faciliter le travail en ligne des médecins." 
-                </p>
-                <p class="mb-2 text-gray-500">Tout savoir sur le comment utiliser KaK glycémie étant :</p>
+                <p class="mb-2 text-gray-500">The main difference is that the core components from
+                  Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another
+                  difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers
+                  sections of pages.</p>
+                <p class="mb-2 text-gray-500">However, we actually recommend using both Flowbite,
+                  Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best
+                  of two worlds.</p>
+                <p class="mb-2 text-gray-500">Learn more about these technologies:</p>
                 <ul class="list-disc pl-5 text-gray-500">
-                  <li><a href="route('patientName')"  target="_blank"
-                      class="text-blue-600 hover:underline">Un patient</a></li>
-                  <li><a href="route('doctorName')"  target="_blank"
-                      class="text-blue-600 hover:underline">Un médecin </a></li>
+                  <li><a href="https://flowbite.com/pro/" target="_blank"
+                      class="text-blue-600 hover:underline">Flowbite Pro</a></li>
+                  <li><a href="https://tailwindui.com/" rel="nofollow" target="_blank"
+                      class="text-blue-600 hover:underline">Tailwind UI</a></li>
                 </ul>
               </div>
             </div>
@@ -331,7 +341,7 @@
               </div>
           </div> 
           <div class="hidden text-9xl varien absolute top-6 left-1/4 text-g/10 z-40    ">
-              A propos de nous
+              About Us
           </div>
           <div class=" absolute -bottom-24 left-10 z-0  opacity-10 "> 
               <svg width="800px" height="800px" viewBox="0 0 24 24" class="w-96 z-0  h-full    object-fill fill-gray-300 text-gray-300" fill="none" xmlns="http://www.w3.org/2000/svg">
