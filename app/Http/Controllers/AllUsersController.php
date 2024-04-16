@@ -47,6 +47,7 @@ class AllUsersController extends Controller
             'sexe' => 'required|in:Masculin,Feminin' ,
             'email' => ['required', 'email', 'max:255', 'unique:'.User::class],
             'phone' => ['required', 'unique:'.User::class, 'min:10','max:15'],
+            'type' => 'required|in:patient,medecin' ,
             'password' => ['required', 'confirmed', 'min:8'],
         ]);
 

@@ -78,12 +78,12 @@
                     <label for="type" class="text-xs font-semibold px-1">Qui êtes-vous ? </label>
                     <div class="flex justify-between pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 ">
                         <label>
-                            <input type="radio" name="type" value="patient" value="{{ old('type') }}" >
+                            <input type="radio" name="type" value="patient"  >
                             {{ __('Patient') }}
                             <i class="bi bi-person"></i>
                         </label>
                         <label class="ml-6">
-                            <input type="radio" name="type" value="medecin" value="{{ old('type') }}">
+                            <input type="radio" name="type" value="medecin" >
                             {{ __('Medecin') }}
                             <i class="bi bi-person-plus"></i>
                         </label>
@@ -98,9 +98,9 @@
                         <label for="password" class="text-xs font-semibold px-1" :value="__('password')">Mot de passe
                         </label>
                         <div class="flex">
-                            <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i
-                                    class="bi bi-lock text-gray-400 text-lg"></i></div>
-                            <input type="text"
+                            <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                                <i class="bi bi-lock text-gray-400 text-lg"></i></div>
+                            <input type="password"  id="password"
                                 class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
                                 placeholder="Votre mot de passe" name="password" value="{{ old('password') }}" required
                                 autofocus autocomplete="password">
@@ -114,7 +114,7 @@
                         <div class="flex">
                             <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i
                                     class="bi bi-lock text-gray-400 text-lg"></i></div>
-                            <input type="text"
+                            <input type="password"  id="passwordConfirm"
                                 class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
                                 placeholder="Mot de passe" name="password_confirmation"
                                 :value="{{ old('password_confirmation') }}" required autofocus
@@ -122,6 +122,14 @@
                         </div>
                         <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                     </div>
+                </div>
+
+                <div class="block mt-2 mb-5 pl-4">
+                    <label for="see_password" class="inline-flex items-center">
+                        <input id="see_password" type="checkbox" onclick="actionPassword()"
+                            class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" >
+                        <span class="ml-2 text-sm text-gray-600">{{ __('Afficher le mot de passe') }}</span>
+                    </label>
                 </div>
 
 
@@ -139,5 +147,19 @@
             </form>
         </div>
     </div>
+    <script>
+        const actionPassword = () => {
+            var password = document.getElementById("password");
+            var passwordConfirm = document.getElementById("passwordConfirm");
+            if (password.type === "password") {
+                password.type = "text";
+                passwordConfirm.type = "text";
+            } else {
+                password.type = "password";
+                passwordConfirm.type = "password";
+            }
+        }
+    </script>
+
 
 @endsection
