@@ -21,11 +21,10 @@ class PatientControllers extends Controller
             'searchDoctor' => 'required|max:50',
         ]);
         $searchDoctor = $request->input('searchDoctor');
-        // $searchResult = User::where('name', $searchDoctor)->get();
-        $searchResult = User::where('name', 'like', '%' . $searchDoctor . '%')->get();
-        
-        // ->join('users','users.id', '=' ,'medecin.idmedecin')
-        // ->where('valider', 'oui')
+        $searchResult = User::where('name', 'like', '%' . $searchDoctor . '%') 
+            ->join('medecin','medecin.idmedecin', '=' ,'users.id')
+            ->where('valider', 'oui')
+            ->get();
 
         $doctorNotFriends = $searchResult;
         return view('Patient.doctorAdd',[
