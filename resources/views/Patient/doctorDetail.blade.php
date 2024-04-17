@@ -91,6 +91,11 @@
                     </div>
                 @endif
                 @csrf
+                @php
+                    $doctor = request('doctor');
+                @endphp
+                <input type="hidden" name="idmedecin" value="{{ $doctor }}">
+
                 <div class="main flex lg:flex-row flex-col border rounded-xl overflow-hidden  select-none">
                     <div class="py-3  px-5 bg-red-500 text-white text-sm font-semibold mr-3">Voulez vous que ce médecin
                         puisse suivre votre glycémie ?</div>

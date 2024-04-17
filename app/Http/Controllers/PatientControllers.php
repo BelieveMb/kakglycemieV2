@@ -15,7 +15,6 @@ use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 
 class PatientControllers extends Controller
 {
-    //fct show dashboard
     public function searchDoctorByName(Request $request){
         $request->validate([
             'searchDoctor' => 'required|max:50',
@@ -171,12 +170,12 @@ class PatientControllers extends Controller
     }
     public function suiviDoctor(Request $request){
         $validatedData = $request->validate([
-            'doctor'=> ["required", 'max:5'],
+            'idmedecin'=> ["required", 'max:5'],
             'choix'=>"required|in:oui,non",
         ]);
 
         $idpatient = auth()->id();
-        $idmedecin = $request->doctor;
+        $idmedecin = $request->input('idmedecin');
         $suivi = $validatedData['choix'];
     
         $query = DB::table('suivi')->updateOrInsert(
