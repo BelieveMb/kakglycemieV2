@@ -4,7 +4,9 @@
       <div class="flex-1 px-3 bg-gray-50 divide-y space-y-1">
          <ul class="space-y-2 pb-2">
             <li>
-               <form action="#" method="GET" class="lg:hidden">
+               <form class="lg:hidden" method="GET"
+                action="{{ route('Patient.searchDoctorByName') }}">
+                  @csrf
                   <label for="mobile-search" class="sr-only">Trouvez un médecin</label>
                   <div class="relative">
                      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -15,7 +17,8 @@
                            <i class="ml-1 text-xl bi bi-person"></i>
                         </span>
                      </div>
-                     <input type="text" name="email" id="mobile-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-red-600  block w-full pl-10 p-2.5" placeholder="Trouvez un médecin...">
+                     <input type="text" name="searchDoctor" value="{{ request('searchDoctor') }}"
+                     id="mobile-search" class="bg-gray-50 border border-gray-300 text-gray-700 text-sm font-bold rounded-lg focus:bg-gray-100  block w-full pl-10 p-2.5 outline-none" placeholder="Trouvez un médecin...">
                   </div>
                </form>
             </li>
@@ -51,7 +54,7 @@
             </li>
 
             <li>
-               <a href="{{ route('Patient.patientProfile') }}" class="@if(request()->route()->getName()=== 'Patient.statistiqueGlycemie') bg-gray-200 @endif text-gray-900 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
+               <a href="{{ route('Patient.patientProfile') }}" class="@if(request()->route()->getName()=== 'Patient.patientProfile') bg-gray-200 @endif text-gray-900 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
                   <span class="@if(request()->route()->getName()=== 'Patient.patientProfile') bg-gray-200 font-semibold text-red-500 @endif">
                      <span class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75">
                         <i class="ml-1 text-xl bi bi-person-circle"></i>

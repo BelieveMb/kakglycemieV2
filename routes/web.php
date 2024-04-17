@@ -54,6 +54,7 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::get('/apropos-du-medecin','aproposDoctor')->name('aproposDoctor');
     Route::post('/apropos-du-medecin','suiviDoctor')->name('suiviDoctor');
     Route::get('/ajouter-un-medecin', 'addDoctorVue')->name('addDoctorVue');
+    Route::get('/resultat-recherche', 'searchDoctorByName')->name('searchDoctorByName');
     // Route::post('/detail-du-medecin','signalerDoctor')->name('signalerDoctor');
 });
 

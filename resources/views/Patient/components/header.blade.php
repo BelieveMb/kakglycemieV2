@@ -18,7 +18,9 @@
                <img src="{{ asset('../images/logo_white.png') }}" class="h-6 mr-2" alt="Kak glycémie Logo">
                <span class="self-center whitespace-nowrap text-gray-50">KaK glycémie</span>
                </a>
-               <form action="#" method="GET" class="hidden lg:block lg:pl-32">
+               <form action="{{ route('Patient.searchDoctorByName') }}" method="GET" 
+               class="hidden lg:block lg:pl-32">
+               @csrf
                   <label for="topbar-search" class="sr-only">Trouvez un médecin</label>
                   <div class="mt-1 relative lg:w-64">
                      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -27,7 +29,7 @@
                         </svg>
                         
                      </div>
-                     <input type="text" name="email" id="topbar-search" class="bg-gray-200 border border-gray-400  text-gray-900 sm:text-sm rounded-lg hover:bg-gray-100 outline-none block w-full pl-10 p-2.5" placeholder="Trouvez un médecin...">
+                     <input type="text" name="searchDoctor" value="{{ request('searchDoctor') }}"id="topbar-search" class="bg-gray-200 border border-gray-400  text-gray-900 sm:text-sm rounded-lg hover:bg-gray-100 outline-none block w-full pl-10 p-2.5" placeholder="Trouvez un médecin...">
                   </div>
                </form>
             </div>

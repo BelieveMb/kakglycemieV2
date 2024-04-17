@@ -16,6 +16,22 @@ use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 class PatientControllers extends Controller
 {
     //fct show dashboard
+    public function searchDoctorByName(Request $request){
+        $request->validate([
+            'searchDoctor' => 'required|max:50',
+        ]);
+        $searchDoctor = $request->input('searchDoctor');
+        // $searchResult = User::where('name', $searchDoctor)->get();
+        $searchResult = User::where('name', 'like', '%' . $searchDoctor . '%')->get();
+        
+        // ->join('users','users.id', '=' ,'medecin.idmedecin')
+        // ->where('valider', 'oui')
+
+        $doctorNotFriends = $searchResult;
+        return view('Patient.doctorAdd',[
+            'doctorNotFriends' => $doctorNotFriends
+        ]);
+    }
     function dashboardForm(){
         // $lastTaux = patientModel::
         //     where('idpatient', $idpatient)
