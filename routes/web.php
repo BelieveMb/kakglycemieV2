@@ -48,6 +48,8 @@ Route::middleware('auth')->prefix('/patient')->name('Patient.')->controller(Pati
     Route::get('/dashboard','dashboardForm')->name('dashboardForm');
     Route::post('/dashboard','AddTauxTraitement')->name('addTauxTraitement');
     Route::get('/statistiqueGlycemie','statistiqueGlycemie')->name('statistiqueGlycemie');
+    Route::post('/statistiqueGlycemie','statistiqueGlycemie')->name('statistiqueGlycemieSearch');
+    Route::get('/toutes-les-dates', 'showAllTraitementByDate')->name('showAllTraitementByDate');
     Route::get('/patientProfile','patientProfile')->name('patientProfile');
     Route::get('/patientChat','patientChat')->name('patientChat');
     Route::get('/Mes-medecins', 'patientMedecinList')->name('patientMedecinList');

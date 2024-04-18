@@ -92,10 +92,32 @@ class PatientControllers extends Controller
     public function statistiqueGlycemie(Request $request)
     {
         $idpatient = auth()->id();
+        $dateTraitement = $request->input('dateTraitement');
+        
+        // Check for search input
+        if ($dateTraitement) {
+            $dateSearch = date("d-m-Y", strtotime($dateTraitement));
+            $traitementList = patientModel::
+            where('idpatient', $idpatient)
+            ->where('datetrait', 'like', '%' . $dateSearch . '%')
+            ->get();
+        } else {
+            $traitementList = patientModel::
+             where('idpatient', $idpatient)
+             ->orderByDesc('jour')
+             ->paginate(10);
+            $traitementList->withPath('/', [
+                'idpatient'=>$idpatient,
+            ]);
+            
+        }
 
-        $traitementList = patientModel::where('idpatient', $idpatient)->get();
-        return view('Patient.statistiqueGlycemie', ['traitementList' => $traitementList ]);
+        return view('Patient.statistiqueGlycemie', [ 
+            'traitementList' => $traitementList,            
+        ]);
     }
+
+   
 
     public function patientProfile(Request $request)
     {
