@@ -1,0 +1,16 @@
+KAk suite
+
+.Inscription et connexion | À tester | Patients et Médecins
+--> ok, apres inscription add a text or alerte  pour lui demander de se connecter 
+Responsive mode |  À tester | Patients et Médecins
+--> 
+Ajout d'un médecin | À tester | Patients
+--> *si medecin n'existe pas, il faut afficher le message
+Check suivi medecin
+
+
+
+Crediantials
+pat = 0899954912
+med = 0899954911
+pqss= 123456789

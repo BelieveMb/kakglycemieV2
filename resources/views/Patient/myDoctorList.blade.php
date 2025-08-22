@@ -15,7 +15,7 @@
         </div>
         <div class="flow-root">
             <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                @if ($doctorFriends)
+                @if (!$doctorFriends)
                     @foreach ($doctorFriends as $doctor) 
 
                         <a  href="{{ route('Patient.aproposDoctor', ['doctor' => $doctor->idmedecin]) }}" 
@@ -38,7 +38,8 @@
 
                     @endforeach
                 @else
-                    <h2>Vous avez choisi aucun médecin, cliquez sur le bouton <u>Ajouter</u> pour ajouter un médecin </h2>
+                    <h2>Vous avez choisi aucun médecin, cliquez sur le bouton  <a href="{{ route('Patient.addDoctorVue') }}"  class=" text-red-500 text-[0.8rem] lg:text-base rounded-lg  p-1 lg:px-2 lg:py-1  font-semibold hover:bg-red-500 hover:text-gray-50  hover:border border border-red-400 hover:duration-700">
+                Ajouter <i class="bi bi-plus-circle"></i>  </a> pour ajouter un médecin </h2>
                 @endif
 
             </ul>

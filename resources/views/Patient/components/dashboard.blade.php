@@ -42,9 +42,7 @@
         </div>
 
     </main>
-    <x-basement::chat-box />
-    <script src="{{ asset('vendor/basement/basement.bundle.min.js') }}"></script>
-
+   <!--- <x-basement::chat-box />   <script src="{{ asset('vendor/basement/basement.bundle.min.js') }}"></script>  -->
 </body>
 
 </html>
