@@ -8,9 +8,22 @@ Ajout d'un médecin | À tester | Patients
 --> *si médecin n'existe pas, il faut afficher le message
 Check suivi médecin ok
 
-Affichage de la liste des médecins
-<À Développer
-Patients
+Affichage de la liste des médecins | À Développer | Patients
+--->is okay
+
+Recherche de traitement selon les statistiques | À Développer | Patients --> is okay
+
+Validation du médecin par Kak glycémie| À Développer | Admin
+-->
+Accéder à la glycémie et le traitement du patient
+À tester
+Médecin
+Accéder  aux statistiques du patient
+À Développer
+Médecin
+Recherche de traitement du patient
+À Développer
+Médecin
 
 
 
