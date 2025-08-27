@@ -13,11 +13,14 @@
             </a>
 
         </div>
+        {{-- <pre>  {{ print_r($doctorFriends, true) }}</pre> --}}
         <div class="flow-root">
             <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                @if (!$doctorFriends)
-                    @foreach ($doctorFriends as $doctor) 
 
+                {{-- @if ($doctorFriends===[]) || $suivi === 'oui'--}}
+                @if (!$doctorFriends->isEmpty() ) 
+
+                    @foreach ($doctorFriends as $doctor) 
                         <a  href="{{ route('Patient.aproposDoctor', ['doctor' => $doctor->idmedecin]) }}" 
                         class="w-full py-3 sm:py-4 hover:px-2 hover:rounded-lg hover:bg-gray-400/30 duration-150 cursor-pointer flex justify-start items-start">
                             <div class="flex justify-start items-start space-x-4 ">

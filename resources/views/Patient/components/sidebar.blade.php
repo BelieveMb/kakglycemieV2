@@ -45,11 +45,11 @@
             </li> --}}
 
             <li>
-               <a href="{{route('Patient.patientMedecinList') }}" class="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
-                  <span class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75">
+              <a href="{{ route('Patient.patientMedecinList') }}" class="@if(request()->route()->getName()=== 'Patient.patientMedecinList') bg-gray-200 @endif text-gray-900 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
+                  <span class="@if(request()->route()->getName()=== 'Patient.patientMedecinList') bg-gray-200 font-semibold text-red-500 @endif">
                      <i class="ml-1 text-xl bi bi-person-plus"></i>
                   </span>
-                  <span class="ml-3 flex-1 whitespace-nowrap">Médecins</span>
+                  <span class="ml-3 flex-1 whitespace-nowrap @if(request()->route()->getName()=== 'Patient.patientMedecinList') bg-gray-200 font-semibold text-red-500 @endif">Médecins</span>
                </a>
             </li>
 

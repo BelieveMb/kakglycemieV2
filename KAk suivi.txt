@@ -5,12 +5,18 @@ KAk suite
 Responsive mode |  À tester | Patients et Médecins
 --> 
 Ajout d'un médecin | À tester | Patients
---> *si medecin n'existe pas, il faut afficher le message
-Check suivi medecin
+--> *si médecin n'existe pas, il faut afficher le message
+Check suivi médecin ok
+
+Affichage de la liste des médecins
+<À Développer
+Patients
 
 
 
-Crediantials
+
+
+Crédenciales
 pat = 0899954912
 med = 0899954911
-pqss= 123456789
+pass= 123456789

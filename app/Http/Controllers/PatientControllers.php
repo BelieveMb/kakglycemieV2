@@ -150,7 +150,7 @@ class PatientControllers extends Controller
             ->join('medecin','medecin.idmedecin', '=' ,'suivi.idmedecin')
             ->get();
 
-
+            
         return view('Patient.myDoctorList', [
             'doctorFriends' => $doctorFriends
         ]);
