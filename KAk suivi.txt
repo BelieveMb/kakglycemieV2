@@ -14,7 +14,7 @@ Affichage de la liste des médecins | À Développer | Patients
 Recherche de traitement selon les statistiques | À Développer | Patients --> is okay
 
 Validation du médecin par Kak glycémie| À Développer | Admin
---> checker laconnx admin et reception ordre med
+--> checker laconnx admin et reception ordre med->...okay
 
 Accéder à la glycémie et le traitement du patient
 À tester

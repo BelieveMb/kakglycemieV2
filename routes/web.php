@@ -90,6 +90,7 @@ Route::prefix('/kak-admin')->name('admin.')->controller(adminController::class)-
     Route::get('/dashboard',  'dashboardAdmin')->name('dashboardAdmin');
     Route::get('/candidats',  'candidatsList')->name('candidats');
     Route::get('/candidat-Detail',  'candidatDetail')->name('candidatDetail');
+    Route::get('/candidatShowDocument',  'candidatShowDocument')->name('candidatShowDocument');
     Route::post('/candidat-Detail',  'candidatValidation')->name('candidatValidation');
     Route::get('/Nos-medecins',  'medecinList')->name('medecinList');
     Route::get('/medecin-Detail',  'medecinDetail')->name('medecinDetail');

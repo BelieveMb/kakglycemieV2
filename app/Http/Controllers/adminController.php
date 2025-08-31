@@ -91,12 +91,32 @@ class adminController extends Controller
                     ->where('id', $idCandidat)
                     ->join('medecin', 'users.id', '=', 'medecin.idmedecin')  
                     ->first();
-
+        
         return view('Admin.candidatDetail', [
-            'candidatDetails' => $candidatDetails
+            'candidatDetails' => $candidatDetails,
         ]);
-    }      
-    
+    }
+
+    public function candidatShowDocument(Request $request){
+       $idCandidat = $request->query('candidat');
+        $candidatDetails = DB::table('users')
+                    ->where('id', $idCandidat)
+                    ->join('medecin', 'users.id', '=', 'medecin.idmedecin')  
+                    ->first();
+
+        $filename = $idCandidat. '.pdf'; // Modifiez l'extension si nécessaire
+        $candidatDocument = storage_path('app/public/ordreMedecin/' . $filename);
+
+        if (file_exists($candidatDocument)) {
+            return response()->file($candidatDocument);
+        }
+        
+        return view('Admin.candidatDetail', [
+            'candidatDetails' => $candidatDetails,
+            'candidatDocument' => $candidatDocument
+        ]);
+    } 
+
     public function candidatValidation(Request $request){
         $idCandidat = $request->query('candidat');
         $choix = $request->input("choix");

@@ -32,7 +32,7 @@
     </div>
     <div >
         <p class="mb-2 text-gray-600 font-semibold"> L'ordre de médecin</p>
-        <p>{{$candidatDetails->ordreMed}} afficher le pdf</p>
+        <a href="{{ route('admin.candidatShowDocument',['candidat' => $candidatDetails->idmedecin] ) }}" class="text-2xl hover:text-red-500 " target="_blank">Afficher </a>
     </div>
     <form method="post"  class="mt-6 space-y-6">
         @csrf
