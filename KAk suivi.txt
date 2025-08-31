@@ -16,9 +16,7 @@ Recherche de traitement selon les statistiques | À Développer | Patients --> i
 Validation du médecin par Kak glycémie| À Développer | Admin
 --> checker laconnx admin et reception ordre med->...okay
 
-Accéder à la glycémie et le traitement du patient
-À tester
-Médecin
+Accéder à la glycémie et le traitement du patient | À tester | Médecin
 Accéder  aux statistiques du patient
 À Développer
 Médecin
@@ -26,8 +24,10 @@ Recherche de traitement du patient
 À Développer
 Médecin
 
-Admin | Form de recherche et le style du tab | à developper|
+Admin | Form de recherche et le style du tab -> patient, candidat, medecin list| à developper
 
+Medecin | Dans le dashboard, demander aux medecins de dire aux patients des les
+ajouter pour suivre sa glycemie
   
 
 
