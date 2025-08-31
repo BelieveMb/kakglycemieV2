@@ -28,7 +28,7 @@
         </div>
     </div>
     @endif
-    <form method="post" enctype="multipart/form-data"  class="mt-6 space-y-6">
+    <form method="post" enctype="multipart/form-data"  class="mt-6 space-y-6" action="{{ route('Medecin.updateProfilMedecin') }}">
         @csrf
         {{-- @method('patch') --}}
         {{-- :value="old('name', $user->name)" --}}

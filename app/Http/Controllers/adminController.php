@@ -23,10 +23,10 @@ class adminController extends Controller
             'phone' => ['required', 'string'],
             'password' => ['required'],
         ]);
+        // check login admina§//
         
         // Récupérer les informations de l'agent à partir de la table "agents" en fonction du numéro de téléphone
-        $agent = AgentModel::where('phone', $credentials['phone'])->first();
-        
+        /*$agent = AgentModel::where('phone', $credentials['phone'])->first();
         if ($agent) {
             // Vérifier le mot de passe
             if (Hash::check($credentials['password'], $agent->password)) {
@@ -38,13 +38,13 @@ class adminController extends Controller
 
             } else {
                 // Mot de passe incorrect
-                return back()->with('fail', 'tout est puff');
+                return back()->with('fail', 'Le numero ou le mot de passe est incorrect !');
             }
         } else {
             // Agent non trouvé
-            return back()->with('fail', 'Agent non trouvé est puff');
-
-        }
+            return back()->with('fail', 'Agent non trouvé.');
+        }*/
+    
     }  
     public function logoutAdmin(Request $request): RedirectResponse
     {

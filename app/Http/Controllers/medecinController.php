@@ -146,18 +146,20 @@ class medecinController extends Controller
         $idmedecin = auth()->id();
         
         $request->validate([
-            'ordreMed' => 'required',
+            //'ordreMed' => 'required',
+            'ordreMed' => 'required|file|mimes:pdf,doc,docx|max:2048',
             'hopital' => 'required|string|max:50',
             'specialite' => 'required|string|max:100|min:5',
             'description' => 'required|string|min:10'
         ]);
     
-        
-        if ($request->hasFile('pdf')) {
+        if ($request->hasFile('ordreMed')) {
             $ordreMed = $request->file('ordreMed');
-            $ordreMedName = $idmedecin . '.pdf';
-            $ordreMed->storeAs('public/pdf/ordreMedecin',$ordreMedName);
-            
+            $ordreMedName = $idmedecin . '.'.$ordreMed->getClientOriginalExtension();
+            $path = $ordreMed->storeAs('ordreMedecin', $ordreMedName, 'public');
+           
+          //  $path = $ordreMed->store('ordreMedecin', ,'public');           
+        
             $hopital = $request->input('hopital');
             $specialite = $request->input('specialite');
             $description = $request->input('description');

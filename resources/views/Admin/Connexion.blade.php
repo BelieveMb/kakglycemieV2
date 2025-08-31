@@ -82,6 +82,7 @@
                                 <button 
                                     class="block w-full max-w-xs mx-auto bg-gray-900 hover:bg-gray-500 focus:bg-gray-600 text-white rounded-lg px-3 py-3 font-semibold text-upp">Se
                                     connecter</button>
+                                        {{-- <a href="{{ route('Admin.statistiqueGlycemie') }}"  class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-red-700 bg-gray-100 rounded-lg border border-red-700 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-gray-300 dark:hover:bg-gray-300 dark:focus:ring-gray-500"> --}}
                             </div>
                         </form>
                         <p class="text-center text-sm text-gray-50">
