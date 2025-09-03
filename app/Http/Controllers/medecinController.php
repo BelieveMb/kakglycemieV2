@@ -64,7 +64,6 @@ class medecinController extends Controller
 
     public function infoPatient(Request $request){
         $idpatient = $request->input('idpatient');
-
         $lastTaux = patientModel::where('idpatient', $idpatient)->orderByDesc('jour')->first();
 
         $chart_options = [
@@ -108,7 +107,27 @@ class medecinController extends Controller
     public function showAllTraitementByDate(Request $request){
         $idpatient = $request->input('idpatient');
  
-        $traitementList = patientModel::where('idpatient', $idpatient)->get();
+        // $traitementList = patientModel::where('idpatient', $idpatient)->get();
+         $dateTraitement = $request->input('dateTraitement');
+        
+        // Check for search input
+        if ($dateTraitement) {
+            $dateSearch = date("d-m-Y", strtotime($dateTraitement));
+            $traitementList = patientModel::
+            where('idpatient', $idpatient)
+            ->where('datetrait', 'like', '%' . $dateSearch . '%')
+            ->get();
+        } else {
+            $traitementList = patientModel::
+             where('idpatient', $idpatient)
+             ->orderByDesc('jour')
+             ->paginate(10);
+            $traitementList->withPath('/', [
+                'idpatient'=>$idpatient,
+            ]);
+            
+        }
+        
         return view('Medecin.infoPatient',[
             'traitementList' => $traitementList 
         ]);

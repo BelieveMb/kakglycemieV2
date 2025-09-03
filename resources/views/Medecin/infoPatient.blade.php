@@ -1,5 +1,5 @@
 @extends('Medecin.layout.dashMed')
-
+ 
 @section('dashMedecin')
     <div class="flex justify-between items-center mb-4 gap-[5rem] ">
         <a href="{{ route('Medecin.dashboard') }}">
