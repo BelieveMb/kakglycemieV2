@@ -1,5 +1,5 @@
 
-<div class=" py-4 px-2 rounded">
+<div class=" mb-4">
     <h2 class="text-xl font-semibold lg:text-2xl lg:hidden mb-4">Historique de sa glycémie</h2>
 
     <div class="max-w-2xl mx-auto my-4">
@@ -74,7 +74,7 @@
     <div class="my-6 flex justify-between items-start">
          {{-- @if ($dateSearch->isNotEmpty())
             {{ $traitementList->onEachSide(10)->Links() }}
-        @endif --}}
+            @endif --}}
     
     </div>
     <div class="my-6 flex items-center">

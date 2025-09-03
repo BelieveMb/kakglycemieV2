@@ -12,12 +12,13 @@
             <i class="bi bi-person"></i>
         </span>
     </div>
-    <div class="w-full flex lg:flex-row flex-col justify-between items-center content-center gap-2">
-        <div class="py-1 px-2 w-[96%] lg:w-[50%] min-h-auto lg:min-h-screen rounded-lg border-2 shadow-md p-2 lg:p-8 ">
+    <div class="w-full flex lg:flex-row flex-col justify-between gap-2">
+        <div class="px-2 w-[96%] lg:w-[50%] min-h-auto lg:min-h-screen rounded-lg border-2 shadow-md p-2 lg:p-8 ">
             @include('Medecin.components.patientGraphe')
         </div>
-        <div class=" w-[96%] lg:w-[50%] min-h-auto lg:min-h-screen rounded-lg border-2 shadow-md p-2 lg:p-1 ">
+        <div class=" w-[96%] lg:w-[50%] min-h-auto lg:.min-h-screen rounded-lg border-2 shadow-md p-2 lg:p-8 ">
             @include('Medecin.components.patientStat')
         </div>
+    </div>
     </section>
 @endsection

@@ -17,13 +17,11 @@ Validation du médecin par Kak glycémie| À Développer | Admin
 --> checker laconnx admin et reception ordre med->...okay
 
 Accéder à la glycémie et le traitement du patient | À tester | Médecin
----> okkay
+---> okay
 Accéder  aux statistiques du patient | À Développer | Médecin
-----> okk
-Recherche de traitement du patient
-À Développer
-Médecin
-
+----> ok
+Recherche de traitement du patient | À Développer | Médecin
+---->  okay
 Admin | Form de recherche et le style du tab -> patient, candidat, medecin list| à developper
 
 Medecin | Dans le dashboard, demander aux medecins de dire aux patients des les
