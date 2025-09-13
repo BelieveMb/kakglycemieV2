@@ -72,10 +72,9 @@
         
     </div>
     <div class="my-6 flex justify-between items-start">
-         {{-- @if ($dateSearch->isNotEmpty())
-            {{ $traitementList->onEachSide(10)->Links() }}
-            @endif --}}
-    
+         {{-- @if ($traitementList)
+        {{ $traitementList->onEachSide(5)->Links("") }}
+        @endif --}}
     </div>
     <div class="my-6 flex items-center">
         @if (empty(request('dateTraitement'))) 

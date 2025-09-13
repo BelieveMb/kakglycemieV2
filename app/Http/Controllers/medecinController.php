@@ -90,10 +90,13 @@ class medecinController extends Controller
             $traitementList = patientModel::
              where('idpatient', $idpatient)
              ->orderByDesc('jour')
-             ->paginate(10);
-            $traitementList->withPath('/', [
-                'idpatient'=>$idpatient,
-            ]);
+             ->limit(7)
+             ->get();
+            //  ->paginate(5);
+            // $traitementList->withPath('info-du-patient', [
+            //     'idpatient'=>$idpatient
+            // ]);
+
             
         }
 

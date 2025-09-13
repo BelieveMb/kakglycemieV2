@@ -23,12 +23,29 @@ Accéder  aux statistiques du patient | À Développer | Médecin
 Recherche de traitement du patient | À Développer | Médecin
 ---->  okay
 Admin | Form de recherche et le style du tab -> patient, candidat, medecin list| à developper
+-->
 
-Medecin | Dans le dashboard, demander aux medecins de dire aux patients des les
-ajouter pour suivre sa glycemie
+Medecin | Dans le dashboard, demander aux medecins de dire aux patients des les ajouter pour suivre sa glycemie
+---> okay
 
 Medecin | check pagition on stat patient | a checker
+--> after on the 2rd version
 
+AllUsers | homepage show medecin validate | a developper
+-->
+
+AllUsers | add tesmonials on patient-medecin screen; and accordion | a developper
+-->
+
+AllUsers | about-us | a developper
+-->
+
+Patients | check graph for 30  days | to check
+-->
+addd 404 page
+--> okay
+
+check send message on footer / footer
 
 Crédenciales
 pat = 0899954912

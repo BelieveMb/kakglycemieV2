@@ -13,7 +13,7 @@
 
             <div class="flow-root">
                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                    @if (empty($patientList))
+                    @if ($patientList->count() == 0)
                         <h3 class="font-semibold text-xl">Vous avez aucun patient qui vous a choisi, demander à vos patients de  <span
                             class="text-red-500">vous ajouter</span> </h3>
                     @else

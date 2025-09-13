@@ -34,7 +34,7 @@ Route::prefix('/')->controller(AllUsersController::class)->group(function (){
     Route::post('login','loginUser')->name('loginUser');
 });
 
-
+Route::get('/*', [AllUsersController::class, 'errorPage'])->name('errorPage');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

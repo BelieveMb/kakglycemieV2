@@ -40,6 +40,9 @@ class AllUsersController extends Controller
     public function registerVue(){
         return view('auth.registerUser');
     }
+    public function errorPage(){
+        return view('errorPage');
+    }
     public function userRegister(Request $request)
     {
         $request->validate([
