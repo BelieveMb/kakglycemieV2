@@ -48,6 +48,7 @@
             
         </div>
     </div>
+
     {{-- <div id="main-chart"></div> --}}
 
     {{-- <div>
@@ -55,52 +56,58 @@
         {!! $chart->renderHtml() !!}
         {!! $chart->renderJs() !!}
     </div> --}}
-    <pre>{{ print_r($taux) }}</pre>
 
     <div>
       <canvas id="myChart" width="400" height="200"></canvas>
     </div>
+    <div class="mt-10 lg:mt-[6rem] px-5 flex flex-col items-baseline justify-end text-gray-600">
+        <p>Voici la présentation de votre  glycémie** :</p>
+        <ul class="list-disc px-6 text-sm lg:text-base">
+            <li>La colonne c'est votre taux de glycémie.</li>
+            <li>La ligne c'est le jour de votre traitement.</li>
+        </ul>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <script>
+    const ctx = document.getElementById('myChart');
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script>
-  const ctx = document.getElementById('myChart');
-
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: {!! json_encode($jours) !!}, // Jours récupérés
-        datasets: [{
-            label: 'Taux de Glycémie',
-            data: {!! json_encode($taux) !!}, // Taux récupérés
-            borderColor: 'rgba(75, 192, 192, 1)',
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderWidth: 2,
-            fill: true,
-        }]
-    },
-   
-    options: {
-        responsive: true,
-        scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: 'Taux'
-                }
-            },
-            x: {
-                title: {
-                    display: true,
-                    text: 'Jour'
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: {!! json_encode($jours) !!}, 
+            // labels: [1, 2, 3, 4, 5, 6],
+            datasets: [{
+                label: 'Taux de Glycémie',
+                // data: [350, 150, 83, 230],
+                data: {!! json_encode($tauxGlycemie) !!}, // Taux récupérés
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderWidth: 2,
+                fill: true,
+            }]
+        },
+    
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Taux'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Jour'
+                    }
                 }
             }
         }
-    }
-  });
-</script>
+    });
+    </script>
 
 </div>

@@ -53,9 +53,8 @@ class PatientControllers extends Controller
         // return view("Patient.patientDash", compact('chart'),[ 'lastTaux'=>$lastTaux]);
 
         $jours = $lastRecords->pluck('jour')->reverse()->values()->toArray(); // Récupérer les jours sous forme de tableau
-        $taux = $lastRecords->pluck('taux')->reverse()->values()->toArray(); // Récupérer les taux sous forme de tableau
-
-        return view("Patient.patientDash", compact('jours', 'taux'), ['lastTaux' => $lastTaux]);    
+        $tauxGlycemie = $lastRecords->pluck('taux')->reverse()->values()->toArray(); // Récupérer les taux sous forme de tablea4
+        return view("Patient.patientDash", compact('jours', 'tauxGlycemie'), ['lastTaux' => $lastTaux, 'tauxGlycemie' =>$tauxGlycemie]);    
     }
 
   

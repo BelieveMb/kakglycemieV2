@@ -41,7 +41,7 @@ AllUsers | about-us | a developper
 -->
 
 Patients | check graph for 30  days | to check
--->
+--> okay we show just 10 days
 addd 404 page
 --> okay
 
