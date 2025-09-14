@@ -31,15 +31,14 @@ class PatientControllers extends Controller
         ]);
     }
     function dashboardForm(){
-        // $lastTaux = patientModel::
-        //     where('idpatient', $idpatient)
-        //     ->orderBy('jour', 'desc')
-        //     ->first();
-        // $lastTaux = DB::table('traitement2')->where('idpatient', $idpatient)->orderByDesc('idtraitement')->get();
         $idpatient = auth()->id();
         $lastTaux = patientModel::where('idpatient', $idpatient)->orderByDesc('jour')
                     ->first();
 
+        $lastRecords = patientModel::where('idpatient', $idpatient)
+            ->orderByDesc('jour', 'desc')
+            ->take(10)
+            ->get();
         // $chart_options = [
         //     'chart_title' => 'Taux de glycémie',
         //     'report_type' => 'group_by_string',
@@ -50,28 +49,13 @@ class PatientControllers extends Controller
         //     'aggregate_field' => 'taux',
         //     'chart_type' => 'line',
         // ];
+        //  $chart = new LaravelChart($chart_options);
+        // return view("Patient.patientDash", compact('chart'),[ 'lastTaux'=>$lastTaux]);
 
-                // Récupérer les 7 derniers enregistrements
-        $lastRecords = patientModel::whereRaw('idpatient = '. $idpatient)
-            ->orderBy('jour', 'desc') // Assurez-vous que 'jour' est le bon champ pour le tri
-            ->take(5) // Limiter à 7 enregistrements
-            ->get()
-            ->sortBy('jour'); // pour remettre les dates dans l'ordre croissant
+        $jours = $lastRecords->pluck('jour')->reverse()->values()->toArray(); // Récupérer les jours sous forme de tableau
+        $taux = $lastRecords->pluck('taux')->reverse()->values()->toArray(); // Récupérer les taux sous forme de tableau
 
-     
-        // Créer le graphique avec es données préparées
-        $chart = new LaravelChart([
-             'chart_title' => 'Taux de glycémie (100 dernières mesures)',
-        'report_type' => 'group_by_string',
-        'model' => 'App\Models\patientModel',
-        'group_by_field' => 'jour',
-        'chart_type' => 'line',
-        'data' => $lastRecords,
-        'fields' => ['taux'],
-        ]);
-
-        // $chart = new LaravelChart($chart_options);
-        return view("Patient.patientDash", compact('chart'),[ 'lastTaux'=>$lastTaux]);
+        return view("Patient.patientDash", compact('jours', 'taux'), ['lastTaux' => $lastTaux]);    
     }
 
   

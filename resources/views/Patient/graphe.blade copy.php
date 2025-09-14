@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
     <div class="flex flex-col items-center justify-between mb-4">
         <div class="flex-shrink-0">
@@ -50,57 +50,9 @@
     </div>
     {{-- <div id="main-chart"></div> --}}
 
-    {{-- <div>
+    <div>
         {!! $chart->renderChartJsLibrary() !!}
         {!! $chart->renderHtml() !!}
         {!! $chart->renderJs() !!}
-    </div> --}}
-    <pre>{{ print_r($taux) }}</pre>
-
-    <div>
-      <canvas id="myChart" width="400" height="200"></canvas>
     </div>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script>
-  const ctx = document.getElementById('myChart');
-
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: {!! json_encode($jours) !!}, // Jours récupérés
-        datasets: [{
-            label: 'Taux de Glycémie',
-            data: {!! json_encode($taux) !!}, // Taux récupérés
-            borderColor: 'rgba(75, 192, 192, 1)',
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderWidth: 2,
-            fill: true,
-        }]
-    },
-   
-    options: {
-        responsive: true,
-        scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: 'Taux'
-                }
-            },
-            x: {
-                title: {
-                    display: true,
-                    text: 'Jour'
-                }
-            }
-        }
-    }
-  });
-</script>
-
 </div>
