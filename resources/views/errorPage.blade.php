@@ -42,7 +42,7 @@
     </style>
 
 <body>
-    @include('AllUsers/components/header')
+    {{-- @include('AllUsers/components/header') --}}
 
     <main>
        
@@ -54,20 +54,19 @@
 <h1 class="text-6xl font-medium py-8 px-4">oops! Une erreur s'est produite</h1>
 <p class="text-2xl pb-8 px-12 font-medium">Oops! La page que vous cherchez n'existe pas.</p>
 <button class="bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md mr-6">
-Accueil
+        <a href="{{ url('/') }}" >Accueil</a>
+
 </button>
 <button class="bg-gradient-to-r from-red-400 to-red-500 hover:from-red-500 hover:to-red-500 text-white font-semibold px-6 py-3 rounded-md">
-Retour
+    <a href="javascript:history.back()" >Retour</a>
 </button>
 </div>
 </div>
 </div>
 </div>
-     
+    
 
-        @include('AllUsers/components/footer')
-
-
+        {{-- @include('AllUsers/components/footer') --}}
 
     </main>
 </body>

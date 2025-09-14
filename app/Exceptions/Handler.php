@@ -3,7 +3,9 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Throwable;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -12,6 +14,17 @@ class Handler extends ExceptionHandler
      *
      * @var array<class-string<\Throwable>, \Psr\Log\LogLevel::*>
      */
+    // app/Exceptions/Handler.php
+
+
+    protected function renderHttpException(HttpExceptionInterface $exception){
+        if ($exception instanceof NotFoundHttpException) {
+            return response()->view('errorPage', [], 404);
+        }
+
+        return parent::renderHttpException($exception);
+    }
+
     protected $levels = [
         //
     ];
@@ -47,4 +60,6 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
 }
+
