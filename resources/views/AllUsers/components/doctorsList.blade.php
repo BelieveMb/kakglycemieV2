@@ -18,7 +18,7 @@
                       <span class="block font-medium text-red-300">Choisir</span>
                     </div>
                   </div>
-
+sks
                   <div class="flex flex-col mr-5 text-center mb-11   ">
                     <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
                       <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
@@ -40,56 +40,40 @@
     </section> -->
 
 
-
-
 <section class="bg-gray-700 px-8 py-10  lg:px-40 lg:py-20 ">
   <div class="relative flex-[1_auto] flex flex-col break-words min-w-0 bg-clip-border rounded-[.95rem] border border-dashed border-stone-200 bg-white ">
     <div class="flex-auto block py-2 px-8">
       <h3 class="mb-2 text-[2rem] font-semibold text-gray-700" >Nos Médecins </h3>
+
       <div id="default-carousel" class="relative w-full" data-carousel="slide"  >
         <div class="relative overflow-hidden rounded-lg h-40 lg:h-64">
-          <!-- Item 1 -->
           <div class="hidden duration-1000 ease-in-out lg:flex-row" data-carousel-item  >
             <div class="flex flex-col lg:flex-row" >
-              <div class="flex flex-col mr-5 text-center    ">
-                <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]" id="choiceDoctor">
-                  <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
-                      src="../images/img_med.png" alt="avarat image">
-                </div>
-                <div class="text-center" >
-                  <a  class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out" id="choiceDoctor">1 Reynolds</a> <br>
-                    <button id="choiceDoctor" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline  focus:bg-red-200 focus:outline-none" >Chosir</button>
-          
-                </div>
-              </div>
+              
+                @if (!$doctorList->isEmpty() )
+                    @foreach ($doctorList as $doctor)
+                      <div class="flex flex-col mr-5 text-center    ">
+                        <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]" id="choiceDoctor">
+                          <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
+                              src="../images/img_med.png" alt="avarat image">
+                        </div>
+                        <div class="text-center" >
+                          <a  class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out" id="choiceDoctor"> {{$doctor->name}} </a> <br>
+                            <button id="choiceDoctor" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline  focus:bg-red-200 focus:outline-none" >Chosir</button>
+                  
+                        </div>
+                      </div>
+                    @endforeach
+                @else
+                      <p>Lonny </p>
+                @endif
 
-              <div class="flex flex-col mr-5 text-center mb-11   ">
-                <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]" id="choiceDoctor">
-                  <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
-                    src="../images/img_med.png" alt="avarat image">
-                </div>
-                <div class="text-center">
-                  <a href="javascript:void(0)" id="choiceDoctor" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha Reynolds</a>
-                  <span class="block font-medium text-red-300">Choisir</span>
-                </div>
-              </div>
-
-              <div class="flex flex-col mr-5 text-center mb-11   ">
-                <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]" id="choiceDoctor">
-                  <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
-                    src="../images/img_med.png" alt="avarat image">
-                </div>
-                <div class="text-center">
-                  <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha
-                    Reynolds</a>
-                  <span class="block font-medium text-red-300">Choisir</span>
-                </div>
-              </div>
+             
 
             </div>
           </div>
-         
-          <div class="hidden duration-1000 ease-in-out lg:flex-row" data-carousel-item>
+         check this list of doctor
+          {{-- <div class="hidden duration-1000 ease-in-out lg:flex-row" data-carousel-item>
             <div class="flex flex-col lg:flex-row">
               <div class="flex flex-col mr-5 text-center mb-11   ">
                 <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
@@ -98,8 +82,7 @@
                 </div>
                 <div class="text-center">
                   <a href="javascript:void(0)"
-                    class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">2
-                    Reynolds</a>
+                    class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">2 Moise</a>
                   <span class="block font-medium text-red-300">Choisir</span>
                 </div>
               </div>
@@ -131,7 +114,7 @@
               </div>
 
             </div>
-          </div>
+          </div> --}}
 
         
         </div>
@@ -196,7 +179,7 @@
               <p class="text-lg text-gray-600">Pour bénéficier de tous les avantages et commencer à prendre le contrôle de votre santé, veuillez vous connecter ou vous inscrire dès maintenant !</p>
               <div class="flex flex-row space-x-4 justify-center text-sm lg:text-xl">
                   <a  href="{{ route('register') }}"  class="flex items-center justify-center gap-2 bg-gray-700 text-gray-100 px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300"> Inscrivez-vous <i class="bi bi-person-plus-fill"></i> </a>
-                  <a  href="{{ route('login') }}"  class="flex items-center justify-center gap-2 bg-red-500 text-gray-100 px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300"> Connectez-vous <i class="bi bi-box-arrow-in-left"></i> </a>
+                  {{-- <a  href="{{ route('login') }}"  class="flex items-center justify-center gap-2 bg-red-500 text-gray-100 px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300"> Connectez-vous <i class="bi bi-box-arrow-in-left"></i> </a> --}}
               </div>
           </div>
 

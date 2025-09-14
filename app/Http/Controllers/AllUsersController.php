@@ -16,8 +16,15 @@ class AllUsersController extends Controller
     
     public function index()
     {
-        //la route pour la page d'accueil
-        return view('AllUsers.index', ["title"=>"Accueil"]);
+         $doctorList = DB::table('medecin')
+            ->where('valider', 'oui')
+            ->join('users','users.id', '=' ,'medecin.idmedecin')
+            ->get();
+            
+        return view('AllUsers.index', [
+            'doctorList' => $doctorList,
+             "title"=>"Accueil"
+        ]);
     }
 
     
@@ -152,8 +159,21 @@ class AllUsersController extends Controller
     
         return redirect()->route('accueilName');
     }
+    
+    public function medecinList(){
+        //select * les medecins qui validé par le patient
+        $doctorList = DB::table('medecin')
+            ->where('valider', 'oui')
+            ->get();
+dd($doctorList);
+        $secu= 'Love is All';
+            
+        return view('AllUsers.index', [
+            'doctorList' => $doctorList, 'secu' => $secu
+        ]);
+    }
 
-   
+
     public function update(Request $request, AllUsers $allUsers)
     {
         //

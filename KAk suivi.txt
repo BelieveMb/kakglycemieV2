@@ -6,12 +6,13 @@ Responsive mode |  À tester | Patients et Médecins
 --> 
 Ajout d'un médecin | À tester | Patients
 --> *si médecin n'existe pas, il faut afficher le message
-Check suivi médecin ok
+Check suivi médecin -->ok
 
 Affichage de la liste des médecins | À Développer | Patients
 --->is okay
 
-Recherche de traitement selon les statistiques | À Développer | Patients --> is okay
+Recherche de traitement selon les statistiques | À Développer | Patients.
+--> is okay
 
 Validation du médecin par Kak glycémie| À Développer | Admin
 --> checker laconnx admin et reception ordre med->...okay
@@ -46,7 +47,10 @@ addd 404 page
 --> okay
 
 check send message on footer / footer
+--<
 
+add black  background on main slide - home
+--->
 Crédenciales
 pat = 0899954912
 med = 0899954911
