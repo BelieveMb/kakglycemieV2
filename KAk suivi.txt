@@ -39,119 +39,268 @@ AllUsers | add tesmonials on patient-medecin screen; and accordion | a developpe
 --> imporve doctor tesmonials
 
 AllUsers | about-us | a developper
--->
+--> in progress ok
 
 Patients | check graph for 30  days | to check
 --> okay we show just 10 days
 addd 404 page
 --> okay
 
+Medecin | add contact medecin with Whatsapp |  a developper
+--->
+
 check send message on footer / footer
 -->
 
 add black  background on main slide - home
 --->
+
+
+contact informations
++33 615175061
+1 avenue Pierre de courbetin, sens 89100
+djokiam@gmail.com
+Djodjo Kiamodja
+
+
+
 Crédenciales
 pat = 0899954912
 med = 0899954911
 pass= 123456789
 
 
-  {{-- <div class="flex-auto block py-2 px-8">
-      <h3 class="mb-2 text-[2rem] font-semibold text-gray-700" >Nos Médecins </h3>
+ patient info
+Logo Kak glycémie
+Patients
+Médecins
+A propos de nous
+Connexion
+KaK Glycémie pour le diabètique
+Patients par KaK
+Suivez votre glycémie en tout simplicité.
 
-      <div id="default-carousel" class="relative w-full" data-carousel="slide"  >
-        <div class="relative overflow-hidden rounded-lg h-40 lg:h-64">
-          <div class="hidden duration-1000 ease-in-out lg:flex-row" data-carousel-item  >
-            <div class="flex flex-col lg:flex-row" >
-              
-                {{-- @if (!$doctorList->isEmpty() )
-                    @foreach ($doctorList as $doctor)
-                      <div class="flex flex-col mr-5 text-center">
-                        <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]" id="choiceDoctor">
-                          <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
-                              src="../images/img_med.png" alt="avarat image">
-                        </div>
-                        <div class="text-center" >
-                          <a  class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out" id="choiceDoctor"> {{$doctor->name}} </a> <br>
-                            <button id="choiceDoctor" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline  focus:bg-red-200 focus:outline-none" >Chosir</button>
-                  
-                        </div>
-                      </div>
-                    @endforeach
-                @else
-                      <p>Lonny </p>
-                @endif --}}
+Inscription
+Connexion
+Nous sommes là pour vous aider à suivre votre glycémie et vos traitements de manière simple et efficace.
+Connexion 
+Inscription 
+Pour vous
+Suivre sa glycémie
+Pourquoi suivre sa glycémie ?, Le suivi de la glycémie est essentiel pour les patients diabétiques. En effet, cela permet de contrôler son taux de sucre dans le sang et d'adapter son traitement en conséquence.
 
-             
-                <div class="flex flex-col mr-5 text-center mb-11   ">
-                  <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                    <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
-                      src="../images/img_med.png" alt="avarat image">
-                  </div>
-                  <div class="text-center">
-                    <a href="javascript:void(0)"
-                      class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">2 Moise</a>
-                    <span class="block font-medium text-red-300">Choisir</span>
-                  </div>
-                </div>
-      
-                <div class="flex flex-col mr-5 text-center mb-11   ">
-                  <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                    <img class="inline-block shrink-0 rounded-[.95rem] w-[150px] h-[150px] shadow-red-200 shadow-lg"
-                      src="../images/img_med.png" alt="avarat image">
-                  </div>
-                  <div class="text-center">
-                    <a href="javascript:void(0)"
-                      class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha
-                      Reynolds</a>
-                    <span class="block font-medium text-red-300">Choisir</span>
-                  </div>
-                </div>
+Un suivi permet de détecter rapidement les fluctuations du taux de sucre dans le sang, ce qui peut être un signe d'un problème de santé sous-jacent.
 
-            </div>
-          </div>
-          
+détecter rapidement les variations anormales de leurs niveaux de sucre dans le sang et réagir rapidement et prendre les mesures nécessaires pour éviter des complications potentielles.
 
-        
-        </div>
-        <!-- Slider indicators -->
-        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-          <button type="button" class="w-3 h-3 rounded-full text-gray-700" aria-current="true" aria-label="Slide 1"
-            data-carousel-slide-to="0"></button>
-          <button type="button" class="w-3 h-3 rounded-full bg-red-500" aria-current="false" aria-label="Slide 2"
-            data-carousel-slide-to="1"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
-            data-carousel-slide-to="2"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
-            data-carousel-slide-to="3"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
-            data-carousel-slide-to="4"></button>
-        </div>
-        <!-- Slider controls -->
-        <button type="button"
-          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-prev>
-          <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full  bg-red-500 hover:bg-gray-200 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-gray-800 rtl:rotate-180" aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
-            </svg>
-            <span class="sr-only">Previous</span>
-          </span>
-        </button>
-        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-          <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-red-500 hover:bg-gray-200 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-gray-800 rtl:rotate-180" aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="m1 9 4-4-4-4" />
-            </svg>
-            <span class="sr-only">Next</span>
-          </span>
-        </button>
+L'utilisation de Kak Glycémie pour suivre sa glycémie permet aux patients de prendre le contrôle de leur santé et d'améliorer leur qualité de vie
 
-      </div>
-    </div> --}}
+Commencez
+image votre avantage sur kak
+Prendre en charge son diabète avec Kak Glycémie
+Suivi précis et en temps réel
+Vous pouvez suivre votre glycémie en temps réel et recevoir des notifications en temps réel lorsque vos mesures sont hors de la plage cible. Les données sont stockées dans le cloud et accessibles à tout moment, ce qui vous permet de suivre votre progression à distance.
+
+Échangez des messages sécurisés avec votre médecin
+Kak Glycémie facilite la communication entre les patients diabétiques et leur médecin. Vous pouvez échanger des messages sécurisés avec votre médecin, ce qui permet une prise en charge personnalisée et rapide.
+
+Optimisez votre gestion du diabète avec Kak Glycémie.
+Kak Glycémie offre une gestion personnalisée du diabète en fournissant des outils avancés d'analyse et de suivi. Grâce à des graphiques détaillés, vous pouvez visualiser les tendances de votre glycémie sur une période donnée...
+
+Comment ça marche
+KaK glycémie est conçu pour aider les patients atteints de diabète à suivre leur taux de glycémie, d'échanger avec son médecin et à améliorer leur santé.
+
+Création de profil
+L'utilisateur s'inscrit sur Kak Glycémie en fournissant les informations nécessaires. Une fois inscrit, l'utilisateur peut directement se connecter en utilisant ses identifiants
+
+Connexion sécurisée
+L'utilisateur se connecte à Kak Glycémie chaque jour pour enregistrer sa glycémie. Il peut saisir les mesures de glycémie prises à différents moments de la journée, telles que le matin à jeun, avant les repas ou après les repas.
+
+Graphe de suivi
+À partir des données quotidiennes de glycémie saisies par l'utilisateur, Kak Glycémie génère automatiquement un graphe clair et informatif. Ces graphiques montrent la variation de la glycémie au fil du temps.
+
+ Communication avec le médecin
+L'utilisateur peut facilement communiquer avec son médecin via la plateforme Kak Glycémie. Il peut échanger des messages sécurisés, poser des questions, partager des préoccupations et recevoir des conseils personnalisés pour améliorer sa gestion du diabète. Cette communication directe avec le médecin permet une prise en charge personnalisée et une réponse rapide aux besoins de l'utilisateur.
+
+Depuis que j'utilise Kak Glycémie, la gestion de mon diabète est devenue beaucoup plus simple. L'application me permet de suivre ma glycémie en temps réel, Cela m'aide à réagir rapidement et à éviter les complications. De plus, le stockage des données me permet d'accéder à mes informations à tout moment, ce qui est très pratique pour mes rendez-vous chez le médecin.
+
+Image de marie
+Marie
+33 ans
+Je suis vraiment impressionné par Kak Glycémie ! L'échange avec mon médecin a transformé ma manière de gérer mon diabète. Je peux poser des questions et obtenir des conseils en temps réel sans avoir à attendre mon prochain rendez-vous. Les graphiques détaillés me permettent aussi de visualiser mes progrès et d'ajuster mon traitement en conséquence. Je me sens beaucoup plus en contrôle de ma santé.
+
+Image de Paul
+Paul
+45 ans
+Kak Glycémie a changé ma vie ! J'adore la fonctionnalité de suivi en temps réel. Je peux voir comment mes habitudes alimentaires et mon activité physique influencent ma glycémie. Les notifications m'aident à rester vigilant et à prendre des décisions éclairées. Grâce à cette application, je me sens soutenue dans ma gestion du diabète, et je peux enfin vivre ma vie sans stress constant.
+
+Image de marie
+Sophie
+48 ans
+logo kak glycémie
+KaK glycémie
+Avec Kak Glycémie, vous pouvez prendre le contrôle de votre santé en suivant votre glycémie avec précision, en analysant les tendances et en communiquant efficacement avec votre médecin.
+
+Accès rapide
+
+Accueil
+
+Patient
+
+Médecin
+
+Apropos de nous
+
+Laissez nous un message.
+Email Address
+Envoyer
+© 2023 KaKglycémie. Tous les droits réservés. Développer par Believe MB.
+
+Expliquer
+
+Medecin info
+Logo Kak glycémie
+Patients
+Médecins
+A propos de nous
+Connexion
+Un outil avancé pour le suivi de la glycémie des patients diabétiques.
+Kak Glycémie est une application innovante conçue pour faciliter le suivi de la glycémie des patients diabétiques. Grâce à son interface conviviale et à ses fonctionnalités avancées, Kak Glycémie permet aux médecins de mieux comprendre les variations de la glycémie de leurs patients, d'optimiser leur traitement et de fournir une prise en charge personnalisée.
+
+Connexion 
+Inscription 
+Accès en temps réel aux données de glycémie
+Vous avez un accès instantané aux données de glycémie de vos patients. Vous pouvez consulter les mesures de glycémie en temps réel..
+
+Suivez vos patients facilement
+Suivez facilement les données de glycémie de tous vos patients diabétiques en un seul endroit. Vous pouvez voir les mesures de glycémie actuelles
+
+Communication sécurisée avec les patients
+Kak Glycémie facilite la communication entre vous et vos patients diabétiques. Vous pouvez échanger des messages sécurisés directement via la plateforme.
+
+Comment ça marche
+KaK glycémie est conçu pour aider les patients atteints de diabète à suivre leur taux de glycémie, d'échanger avec son médecin et à améliorer leur santé.
+
+Créer son compte
+Inscrivez-vous en tant que médecin, créez votre compte en tant que médecin sur Kak Glycémie.
+
+La glycémie de vos patients
+Consultez les données de glycémie en temps réel de vos patients via votre tableau de bord personnalisé.
+
+Communiquez avec vos patients
+Échangez des messages sécurisés avec vos patients pour fournir des conseils personnalisés, répondre à leurs questions et ajuster leur traitement en conséquence.
+
+Commencez dès maintenant
+Savez-vous que Kak Glycémie peut être un outil précieux pour le suivi de la glycémie de vos patients.
+Connexion 
+Inscription 
+Depuis que j'utilise Kak Glycémie, la gestion de mon diabète est devenue beaucoup plus simple. L'application me permet de suivre ma glycémie en temps réel, Cela m'aide à réagir rapidement et à éviter les complications. De plus, le stockage des données me permet d'accéder à mes informations à tout moment, ce qui est très pratique pour mes rendez-vous chez le médecin.
+
+Image de marie
+Marie
+33 ans
+Je suis vraiment impressionné par Kak Glycémie ! L'échange avec mon médecin a transformé ma manière de gérer mon diabète. Je peux poser des questions et obtenir des conseils en temps réel sans avoir à attendre mon prochain rendez-vous. Les graphiques détaillés me permettent aussi de visualiser mes progrès et d'ajuster mon traitement en conséquence. Je me sens beaucoup plus en contrôle de ma santé.
+
+Image de Paul
+Paul
+45 ans
+Kak Glycémie a changé ma vie ! J'adore la fonctionnalité de suivi en temps réel. Je peux voir comment mes habitudes alimentaires et mon activité physique influencent ma glycémie. Les notifications m'aident à rester vigilant et à prendre des décisions éclairées. Grâce à cette application, je me sens soutenue dans ma gestion du diabète, et je peux enfin vivre ma vie sans stress constant.
+
+Image de marie
+Sophie
+48 ans
+logo kak glycémie
+KaK glycémie
+Avec Kak Glycémie, vous pouvez prendre le contrôle de votre santé en suivant votre glycémie avec précision, en analysant les tendances et en communiquant efficacement avec votre médecin.
+
+Accès rapide
+
+Accueil
+
+Patient
+
+Médecin
+
+Apropos de nous
+
+Laissez nous un message.
+Email Address
+Envoyer
+© 2023 KaKglycémie. Tous les droits réservés. Développer par Believe MB.
+
+Expliquer
+
+Info pour tous
+Logo Kak glycémie
+Patients
+
+
+Médecins
+A propos de nous
+Connexion
+Un outil avancé pour le suivi de la glycémie des patients diabétiques.
+Kak Glycémie est une application innovante conçue pour faciliter le suivi de la glycémie des patients diabétiques. Grâce à son interface conviviale et à ses fonctionnalités avancées, Kak Glycémie permet aux médecins de mieux comprendre les variations de la glycémie de leurs patients, d'optimiser leur traitement et de fournir une prise en charge personnalisée.
+
+Connexion 
+Inscription 
+Accès en temps réel aux données de glycémie
+Vous avez un accès instantané aux données de glycémie de vos patients. Vous pouvez consulter les mesures de glycémie en temps réel..
+
+Suivez vos patients facilement
+Suivez facilement les données de glycémie de tous vos patients diabétiques en un seul endroit. Vous pouvez voir les mesures de glycémie actuelles
+
+Communication sécurisée avec les patients
+Kak Glycémie facilite la communication entre vous et vos patients diabétiques. Vous pouvez échanger des messages sécurisés directement via la plateforme.
+
+Comment ça marche
+KaK glycémie est conçu pour aider les patients atteints de diabète à suivre leur taux de glycémie, d'échanger avec son médecin et à améliorer leur santé.
+
+Créer son compte
+Inscrivez-vous en tant que médecin, créez votre compte en tant que médecin sur Kak Glycémie.
+
+La glycémie de vos patients
+Consultez les données de glycémie en temps réel de vos patients via votre tableau de bord personnalisé.
+
+Communiquez avec vos patients
+Échangez des messages sécurisés avec vos patients pour fournir des conseils personnalisés, répondre à leurs questions et ajuster leur traitement en conséquence.
+
+Commencez dès maintenant
+Savez-vous que Kak Glycémie peut être un outil précieux pour le suivi de la glycémie de vos patients.
+Connexion 
+Inscription 
+Depuis que j'utilise Kak Glycémie, la gestion de mon diabète est devenue beaucoup plus simple. L'application me permet de suivre ma glycémie en temps réel, Cela m'aide à réagir rapidement et à éviter les complications. De plus, le stockage des données me permet d'accéder à mes informations à tout moment, ce qui est très pratique pour mes rendez-vous chez le médecin.
+
+Image de marie
+Marie
+33 ans
+Je suis vraiment impressionné par Kak Glycémie ! L'échange avec mon médecin a transformé ma manière de gérer mon diabète. Je peux poser des questions et obtenir des conseils en temps réel sans avoir à attendre mon prochain rendez-vous. Les graphiques détaillés me permettent aussi de visualiser mes progrès et d'ajuster mon traitement en conséquence. Je me sens beaucoup plus en contrôle de ma santé.
+
+Image de Paul
+Paul
+45 ans
+Kak Glycémie a changé ma vie ! J'adore la fonctionnalité de suivi en temps réel. Je peux voir comment mes habitudes alimentaires et mon activité physique influencent ma glycémie. Les notifications m'aident à rester vigilant et à prendre des décisions éclairées. Grâce à cette application, je me sens soutenue dans ma gestion du diabète, et je peux enfin vivre ma vie sans stress constant.
+
+Image de marie
+Sophie
+48 ans
+logo kak glycémie
+KaK glycémie
+Avec Kak Glycémie, vous pouvez prendre le contrôle de votre santé en suivant votre glycémie avec précision, en analysant les tendances et en communiquant efficacement avec votre médecin.
+
+Accès rapide
+
+Accueil
+
+Patient
+
+Médecin
+
+Apropos de nous
+
+Laissez nous un message.
+Email Address
+Envoyer
+© 2023 KaKglycémie. Tous les droits réservés. Développer par Believe MB.
+
+Expliquer
+Alors rapport a toutes ses infos; je veux  que tu rediges ceci; un contenu pour 3 cards et chaque card est compose d'un titre, un paragraphe et un call to action; 1 card parle de kak glycemie pour tous; 2e kak pour les patients et 3 pour le medecin

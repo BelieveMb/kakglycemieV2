@@ -262,9 +262,9 @@
                 </p>
                 <p class="mb-2 text-gray-500">Tout savoir sur le comment utiliser KaK glycémie étant :</p>
                 <ul class="list-disc pl-5 text-gray-500">
-                  <li><a href="route('patientName')"  target="_blank"
+                  <li><a href="/patient"  target="_blank"
                       class="text-blue-600 hover:underline">Un patient</a></li>
-                  <li><a href="route('doctorName')"  target="_blank"
+                  <li><a href="{{url('/doctor')}}"  target="_blank"
                       class="text-blue-600 hover:underline">Un médecin </a></li>
                 </ul>
               </div>
