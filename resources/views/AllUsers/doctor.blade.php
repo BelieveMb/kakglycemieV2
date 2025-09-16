@@ -176,46 +176,46 @@
         </div>
       </section>
 
-            <section class="bg-gray-100 flex gap-20 px-8 py-10 lg:px-40 lg:py-20 ">
-                <div class="flex items-center justify-center flex-col gap-2 lg:flex-row">
-                    <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white">
-                        <p class="text-gray-700">I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.</p>
+    <section class="bg-gray-100 flex gap-20 px-8 py-10 lg:px-40 lg:py-20 ">
+      <div class="flex items-center justify-center flex-col gap-2 lg:flex-row">
+          <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white">
+            <p class="text-gray-700">Depuis que j'utilise Kak Glycémie, la gestion de mon diabète est devenue beaucoup plus simple. L'application me permet de suivre ma glycémie en temps réel, Cela m'aide à réagir rapidement et à éviter les complications. De plus, le stockage des données me permet d'accéder à mes informations à tout moment, ce qui est très pratique pour mes rendez-vous chez le médecin.</p>
+          <div class="mt-8 flex gap-4 items-center">
+              <img class="h-12 w-12 rounded-full" src="images/inscrip_young.jpg" alt="Image de marie" />
+              <div>
+                <h3 class="text-lg font-medium text-gray-700">Marie</h3>
+                <span class="text-sm tracking-wide text-gray-600">33 ans</span>
+              </div>
+            </div>
+          </div>
 
-                        <div class="mt-8 flex gap-4 items-center">
-                            <img class="h-12 w-12 rounded-full" src="https://pbs.twimg.com/profile_images/1599029039297077249/p0znhFdE_400x400.jpg" alt="" />
-                            <div>
-                                <h3 class="text-lg font-medium text-gray-700">Oketa Fred</h3>
-                                <span class="text-sm tracking-wide text-gray-600">Fullstack Developer</span>
-                            </div>
-                        </div>
-                    </div>
+          <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white">
+            <p class="text-gray-700">Je suis vraiment impressionné par Kak Glycémie ! L'échange avec mon médecin a transformé ma manière de gérer mon diabète. Je peux poser des questions et obtenir des conseils en temps réel sans avoir à attendre mon prochain rendez-vous. Les graphiques détaillés me permettent aussi de visualiser mes progrès et d'ajuster mon traitement en conséquence. Je me sens beaucoup plus en contrôle de ma santé.</p>
 
-                    <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white">
-                        <p class="text-gray-700">I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.</p>
+            <div class="mt-8 flex gap-4 items-center">
+              <img class="h-12 w-12 rounded-full"  src="images/inscript_man.jpg" alt="Image de Paul" />
+              <div>
+                <h3 class="text-lg font-medium text-gray-700">Paul</h3>
+                <span class="text-sm tracking-wide text-gray-600">45 ans</span>
+              </div>
+            </div>
+          </div>
 
-                        <div class="mt-8 flex gap-4 items-center">
-                            <img class="h-12 w-12 rounded-full" src="https://pbs.twimg.com/profile_images/1599029039297077249/p0znhFdE_400x400.jpg" alt="" />
-                            <div>
-                                <h3 class="text-lg font-medium text-gray-700">Oketa Fred</h3>
-                                <span class="text-sm tracking-wide text-gray-600">Fullstack Developer</span>
-                            </div>
-                        </div>
-                    </div>
+          <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white">
+            <p class="text-gray-700">Kak Glycémie a changé ma vie ! J'adore la fonctionnalité de suivi en temps réel. Je peux voir comment mes habitudes alimentaires et mon activité physique influencent ma glycémie. Les notifications m'aident à rester vigilant et à prendre des décisions éclairées. Grâce à cette application, je me sens soutenue dans ma gestion du diabète, et je peux enfin vivre ma vie sans stress constant.</p>
 
-                    <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white">
-                        <p class="text-gray-700">I absolutely love Tailus! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze.</p>
+            <div class="mt-8 flex gap-4 items-center">
+              <img class="h-12 w-12 rounded-full"  src="images/inscrip_woman.jpg" alt="Image de marie"/>
+              <div>
+                <h3 class="text-lg font-medium text-gray-700">Sophie</h3>
+                <span class="text-sm tracking-wide text-gray-600">48 ans</span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+   
 
-                        <div class="mt-8 flex gap-4 items-center">
-                            <img class="h-12 w-12 rounded-full" src="https://pbs.twimg.com/profile_images/1599029039297077249/p0znhFdE_400x400.jpg" alt="" />
-                            <div>
-                                <h3 class="text-lg font-medium text-gray-700">Oketa Fred</h3>
-                                <span class="text-sm tracking-wide text-gray-600">Fullstack Developer</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-     
   
       
     </main >

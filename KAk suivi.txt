@@ -36,7 +36,7 @@ AllUsers | homepage show medecin validate | a developper
 --> okay<
 
 AllUsers | add tesmonials on patient-medecin screen; and accordion | a developper
--->
+--> imporve doctor tesmonials
 
 AllUsers | about-us | a developper
 -->
