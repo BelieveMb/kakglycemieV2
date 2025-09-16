@@ -13,11 +13,12 @@ use Illuminate\Support\Facades\Hash;
 
 class AllUsersController extends Controller
 {
-    
+   
     public function index()
     {
          $doctorList = DB::table('medecin')
             ->where('valider', 'oui')
+            ->limit(7)
             ->join('users','users.id', '=' ,'medecin.idmedecin')
             ->get();
             

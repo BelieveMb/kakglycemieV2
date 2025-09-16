@@ -1,21 +1,17 @@
-
-
-
  <section class="bg-gray-700 px-8 py-10  lg:px-40 lg:py-20 ">
   <div class="relative flex-[1_auto] flex flex-col break-words min-w-0 bg-clip-border rounded-[.95rem] border border-dashed border-stone-200 bg-white ">  
     <h3 class="px-2 mb-2 text-[2rem] font-semibold text-gray-700" >Nos médecins </h3>
     <ul class="grid grid-cols-4 gap-2 px-2 py-3">
        @if (!$doctorList->isEmpty() )
                     @foreach ($doctorList as $doctor)
-      <li class="flex items-center flex-col">
-        <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="" class="rounded-full w-16 h-16 object-cover">
-        <h5 class="font-semibold">{{$doctor->name}}</h5>
+      <li class="flex items-center flex-col cursor-pointer hover:bg-red-200 rounded-lg"  onclick="alert('Inscrivez vous ou connectez pour en savoir plus sur le médecin {{$doctor->name}}');">
+        <img src="../images/profil-med.png" alt="profil du medecin" class="rounded-full w-24 h-24 object-cover">
+        <h5 class="font-semibold truncate" >{{$doctor->name}}</h5>
       </li>
         @endforeach
-                @else
-                      <p>Lonny </p>
-                @endif
-      
+            @else
+                  <p>ajouter une alert lorsqu'on clique </p>
+            @endif
     </ul>
   </div>
 </section> 

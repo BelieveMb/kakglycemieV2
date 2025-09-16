@@ -33,7 +33,7 @@ Medecin | check pagition on stat patient | a checker
 --> after on the 2rd version
 
 AllUsers | homepage show medecin validate | a developper
--->
+--> okay<
 
 AllUsers | add tesmonials on patient-medecin screen; and accordion | a developper
 -->
