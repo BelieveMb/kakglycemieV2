@@ -41,7 +41,7 @@
 
           <div class="flex flex-col space-y-4 mx-20 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 lg:mx-0">
             <a href="{{ route('registerVue') }}"  class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
-              Commencez maintenant !
+              Commencez  !
               <span class="ml-2 -mr-1 text-lg" >
                 <i class="bi bi-arrow-right"></i>
               </span>              
