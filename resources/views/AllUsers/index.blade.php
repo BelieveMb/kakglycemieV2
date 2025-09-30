@@ -16,7 +16,7 @@
       <div class="  w-full text-center  ">
 
         <div class=" flex-col justify-center hidden mySlides fade  h-auto w-full bg-no-repeat bg-cover bg-center py-40 " style="background-image: url('{{ asset('images/patient_kak.jpg') }}');">
-          <h1 class="mb-4 mx-4 text-4xl font-extrabold tracking-tight leading-none text-red-400 md:text-5xl lg:text-6xl lg:mx-20"> Prenez le contrôle de votre glycémie avec KaK glycémie </h1>
+          <h1 class="mb-4 mx-4 text-4xl font-extrabold tracking-tight leading-none text-red-400 md:text-5xl lg:text-6xl lg:mx-20"> Bienvenue, Prenez le contrôle de votre glycémie avec KaK glycémie </h1>
           <p class="mb-8 px-4 text-lg font-bold text-red-100  lg:text-xl sm:px-16 lg:px-48">Suivez votre glycémie, découvrez des tendances et échangez avec votre médecin avec le meilleur outil de gestion du diabète.
           </p>
 
