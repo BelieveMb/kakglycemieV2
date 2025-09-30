@@ -143,7 +143,7 @@
     <!-- section your avantages  -->
     <section class="bg-gray-50 px-8  lg:px-40 py-20">
       <div class=" flex flex-wrap">
-        <div class="w-full md:w-4/12 ">
+        <div class="w-24 lg:w-4/12 ">
           <img alt="image votre avantage sur kak" class="max-w-full h-full rounded-lg shadow-lg" src="{{ asset('images/img_avantage.jpg') }}">
         </div>
         <div class="w-full md:w-1/2 ml-auto mr-auto px-4">

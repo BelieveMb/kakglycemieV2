@@ -34,7 +34,7 @@
                     <p>KaK Glycémie est facile à utiliser et accessible à partir de n'importe quel appareil connecté à Internet.</p>
                 </div>
                 <div class="w-[100%] ">
-                    <img alt="image votre avantage sur kak" class="max-w-full h-full rounded-lg shadow-lg" src="{{ asset('images/patient.jpg') }}">
+                    <img alt="image votre avantage sur kak" class="max-w-full h-full rounded-lg shadow-lg" src="{{ asset('images/inscrip_woman.jpg') }}">
                 </div>
 
                 <div class="flex flex-col items-center content-center text-center w-full">
@@ -44,7 +44,7 @@
                     <h3 class="text-2xl font-semibold mb-4">Médecins de qualités</h3>
                     <p>Rejoignez nous et prenez le contrôle de votre santé dès maintenant !.</p>
                 </div>
-                <div class="w-[100%]">
+                <div class="w-24 lg:w-[100%]">
                     <img alt="image votre avantage sur kak" class="max-w-full h-full rounded-lg shadow-lg" src="{{ asset('images/doctor.jpg') }}">
                 </div>
             </div>

@@ -24,7 +24,6 @@
         buttonA.classList.add("text-red-500");
         buttonB.classList.add("bg-gray-700");
         buttonB.classList.add("text-gray-100");
-
     });
 });
 </script>
