@@ -1,5 +1,10 @@
 KAk suite
 
+msql -> kakuser
+    -> passkak2025
+finir avec github actions
+->
+
 .Inscription et connexion | À tester | Patients et Médecins
 --> ok, apres inscription add a text or alerte  pour lui demander de se connecter 
 Responsive mode |  À tester | Patients et Médecins
