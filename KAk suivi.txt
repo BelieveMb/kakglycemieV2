@@ -1,6 +1,8 @@
 KAk suite
 
-msql -> kakuser
+msql 
+    -> kakglycemie
+    -> kakuser
     -> passkak2025
 finir avec github actions
 ->ok
