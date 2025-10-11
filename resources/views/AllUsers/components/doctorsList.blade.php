@@ -10,7 +10,7 @@
       </li>
         @endforeach
             @else
-                  <p>ajouter une alert lorsqu'on clique </p>
+                  <p>improve the image of homepage lorsqu'on clique </p>
             @endif
     </ul>
   </div>
