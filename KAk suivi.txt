@@ -1,4 +1,5 @@
 KAk suite
+ ssh ubuntu@137.74.42.29
 
 msql 
     -> kakglycemie

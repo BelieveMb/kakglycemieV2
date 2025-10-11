@@ -12,4 +12,4 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     //
 }
-<?php // Mis à jour le Sam 11 oct 2025 15:55:53 WAT
+?>
