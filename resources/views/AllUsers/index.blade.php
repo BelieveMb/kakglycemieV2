@@ -84,7 +84,7 @@
     <!--  section banner  -->
     <section class="bg-gray-700  px-8 py-10 lg:px-40 lg:py-4 flex flex-col    justify-between gap-6 lg:flex-row">
       <div class="font-bold flex  text-lg leading-5 text-white      opacity-100 lg:text-xl " >
-        <h3>Inscrivez ou connectez vous pour profiter pleinement de KaK</h3>
+        <h3>Inscrivez vous ou connectez vous pour profiter pleinement de KaK</h3>
 
       </div>
       <div>
