@@ -52,10 +52,20 @@
         {!! $chart->renderJs() !!}
     </div>
 
-    <div class="mt-10 lg:mt-[10rem] px-5 flex flex-col items-baseline justify-end text-gray-600">
+    <div class="mt-10 lg:mt-[6rem] px-5 flex flex-col items-baseline justify-end text-gray-600">
         <p>Voici la présentation de la glycémie du patient** :</p>
         <ul class="list-disc px-6">
             <li>La colonne c'est le taux de glycémie du patient</li>
             <li>La ligne c'est le jour de traitement pris par le patient</li>
+            <li>phone {{ $infoUser->phone }} </li>
         </ul>
+        @php
+            $whatsappNumber = '2250102030405';
+            $whatsappMessage = "Bonjour, je viens de votre app KakGlycemie.";
+        @endphp
+         <div >
+          {{-- <a href="" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
+          focus:bg-red-200 focus:outline-none"> Contactez </a> --}}
+          <a href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode($whatsappMessage) }}" ... >💬 Contacter via WhatsApp</a>
+        </div>
     </div>

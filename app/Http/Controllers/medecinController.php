@@ -66,6 +66,8 @@ class medecinController extends Controller
         $idpatient = $request->input('idpatient');
         $lastTaux = patientModel::where('idpatient', $idpatient)->orderByDesc('jour')->first();
 
+        $infoUser = userModel::where('id', $idpatient)->first();
+
         $chart_options = [
             'chart_title' => 'Taux de glycémie',
             'report_type' => 'group_by_string',
@@ -103,7 +105,8 @@ class medecinController extends Controller
         return view('Medecin.infoPatient', compact('chart'),[ 
             'idpatient'=>$idpatient,
             'traitementList' => $traitementList,            
-            'lastTaux' => $lastTaux,            
+            'lastTaux' => $lastTaux, 
+            'infoUser' => $infoUser           
         ]);
     }
 
