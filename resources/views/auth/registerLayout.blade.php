@@ -91,7 +91,7 @@
         </section>
     </main>
 
-    @include('Auth.formRegisterLogin')
+    @include('auth.formRegisterLogin')
 
     
 

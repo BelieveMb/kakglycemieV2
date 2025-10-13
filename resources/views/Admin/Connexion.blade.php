@@ -15,7 +15,6 @@
     <main>
         <div>
             <div class="flex overflow-hidden bg-white pt-16">
-                {{-- @include('Admin.components.sidebar') --}}
                 <div class="bg-gray-900 opacity-50 hidden fixed inset-0 z-10" id="sidebarBackdrop"></div>
                 <div id="main-content" class="h-full w-full flex flex-col justify-center items-center">
                     <div class="py-3 px-4 my-[2rem] w-[80%] lg:w-[30%]   flex flex-col justify-center items-center gap-4  bg-gray-700 text-gray-50 rounded-xl">
