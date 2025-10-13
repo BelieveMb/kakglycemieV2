@@ -196,7 +196,7 @@
             </p>
             <div class="mt-8">
               <a href="{{ route('registerVue') }}" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
-              focus:bg-red-200 focus:outline-none"> Commencez </a>
+              focus:bg-red-200 focus:outline-none"> Commencez !</a>
             </div>
          
           </div>
