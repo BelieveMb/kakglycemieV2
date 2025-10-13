@@ -89,7 +89,7 @@
       </div>
       <div>
         <a href="{{ route('registerVue') }}" class="px-4 py-2  text-sm font-semibold bg-gray-100 text-red-500 rounded-lg     
-        hover:text-red-700 focus:text-gray-900 hover:bg-gray-200  hover:shadow-outline         focus:bg-gray-200 focus:outline-none"> Commencez  </a>
+        hover:text-red-700 focus:text-gray-900 hover:bg-gray-200  hover:shadow-outline         focus:bg-gray-200 focus:outline-none"> Commencez !! </a>
       </div>
       
     </section>
