@@ -84,12 +84,12 @@
     <!--  section banner  -->
     <section class="bg-gray-700  px-8 py-10 lg:px-40 lg:py-4 flex flex-col    justify-between gap-6 lg:flex-row">
       <div class="font-bold flex  text-lg leading-5 text-white      opacity-100 lg:text-xl " >
-        <h3>Inscrivez vous ou connectez vous pour profiter pleinement de KaK</h3>
+        <h3>Inscrivez vous ou connectez vous pour profiter pleinement de KaK Glycémie</h3>
 
       </div>
       <div>
         <a href="{{ route('registerVue') }}" class="px-4 py-2  text-sm font-semibold bg-gray-100 text-red-500 rounded-lg     
-        hover:text-red-700 focus:text-gray-900 hover:bg-gray-200  hover:shadow-outline         focus:bg-gray-200 focus:outline-none"> Commencez !! </a>
+        hover:text-red-700 focus:text-gray-900 hover:bg-gray-200  hover:shadow-outline         focus:bg-gray-200 focus:outline-none"> Commencez </a>
       </div>
       
     </section>

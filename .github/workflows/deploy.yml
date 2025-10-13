@@ -20,19 +20,24 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd /home/ubuntu/kakglycemieV2
+
+            # Reset complet vers la dernière version
             git fetch origin
             git reset --hard origin/main
             git clean -fd
 
+            # Installe les dépendances
             composer install --optimize-autoloader --no-dev
             npm ci
             npm run build
 
+            # Clear cache Laravel
             php artisan config:clear
             php artisan cache:clear
             php artisan view:clear
 
+            # Permissions
             chown -R www-data:www-data storage bootstrap/cache
             chmod -R 775 storage bootstrap/cache
 
-            echo "✅ Déploiement terminé 2"
+            echo "✅ Déploiement terminé"
