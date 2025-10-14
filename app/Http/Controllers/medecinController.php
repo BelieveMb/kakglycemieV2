@@ -67,7 +67,7 @@ class medecinController extends Controller
         $idpatient = $request->input('idpatient');
         $lastTaux = patientModel::where('idpatient', $idpatient)->orderByDesc('jour')->first();
 
-        $infoUser = AllUsers::where('id', $idpatient)->first();
+        $infoUser = DB::table('users')->where('id', $idpatient)->first();
 
         $chart_options = [
             'chart_title' => 'Taux de glycémie',
