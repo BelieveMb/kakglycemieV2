@@ -88,8 +88,8 @@
         
         </section>
     </main>
-
-    @include('auth.formRegisterLogin')
+    {{-- check here please --}}
+    {{-- @include('auth.formRegisterLogin') --}}
 
     
 
