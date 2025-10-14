@@ -88,8 +88,8 @@
         
         </section>
     </main>
-    {{-- check here please --}}
-    {{-- @include('auth.formRegisterLogin') --}}
+    {{-- check here please on VPS --}}
+    @include('auth.formRegisterLogin')
 
     
 

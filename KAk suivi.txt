@@ -91,3 +91,6 @@ Remarques
 4. Medicin -> Home page cher docteur, pour la validation de votre inscription
 5. Admin -> improve all !!, validation and menu
 6. Medecin -> Ajouter contact whatsapp dans le visionnage de sa glycémie
+
+Perso
+7. Check connexion medecin and patient by url
