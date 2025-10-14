@@ -22,8 +22,6 @@
                 <div class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style="max-width:1000px">
                     <div class="md:flex w-full">
                         <div class="hidden md:block w-1/2  bg-red-500 py-10 px-10">
-
-
                             <div id="default-carousel" class="relative w-full" data-carousel="slide">
                                 <!-- Carousel wrapper -->
                                 <div class="relative h-full overflow-hidden rounded-lg md:h-[90vh]">
