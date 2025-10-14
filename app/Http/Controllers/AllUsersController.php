@@ -62,7 +62,8 @@ class AllUsersController extends Controller
             'password' => ['required', 'confirmed', 'min:8'],
         ]);
 
-        
+        $fullPhone = $request->input('country_code') . $request->input('phone');
+
         
         $iduser = random_int(3, 2998);
         $user = User::create([
@@ -70,7 +71,7 @@ class AllUsersController extends Controller
             'name' => $request->name,
             'sexe' => $request->sexe,
             'email' => $request->email,
-            'phone' => $request->phone,
+            'phone' => $fullPhone,
             'type' => $request->type,
             'password' => Hash::make($request->password),
         ]);

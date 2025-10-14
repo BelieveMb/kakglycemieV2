@@ -60,12 +60,12 @@
             <li>phone {{ $infoUser->phone }} </li>
         </ul>
         @php
-            $whatsappNumber = '2250102030405';
-            $whatsappMessage = "Bonjour, je viens de votre app KakGlycemie.";
+            $whatsappNumber = $infoUser->phone;
+            $whatsappMessage = "Bonjour, je vous écris à partir de l'app KakGlycemie.";
         @endphp
          <div >
-          {{-- <a href="" class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
-          focus:bg-red-200 focus:outline-none"> Contactez </a> --}}
-          <a href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode($whatsappMessage) }}" ... >💬 Contacter via WhatsApp</a>
+          {{-- <a href=""> Contactez </a> --}}
+          <a href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode($whatsappMessage) }}"  class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
+          focus:bg-red-200 focus:outline-none" >💬 Contacter via WhatsApp</a>
         </div>
     </div>
