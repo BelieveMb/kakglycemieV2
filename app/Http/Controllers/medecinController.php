@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\AllUsers;
 use App\Models\DoctorModel;
 use App\Models\patientModel;
 use App\Models\User;
@@ -66,7 +67,7 @@ class medecinController extends Controller
         $idpatient = $request->input('idpatient');
         $lastTaux = patientModel::where('idpatient', $idpatient)->orderByDesc('jour')->first();
 
-        $infoUser = userModel::where('id', $idpatient)->first();
+        $infoUser = AllUsers::where('id', $idpatient)->first();
 
         $chart_options = [
             'chart_title' => 'Taux de glycémie',
