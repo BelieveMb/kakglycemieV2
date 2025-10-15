@@ -74,19 +74,19 @@ Djodjo Kiamodja
 
 Crédenciales
 med = 0899954912 
-pat = 0828963058
+pat = 0817723066
 pass= 123456789
 
 
  0615175061
-Kaycee02
+Kaycee02aa
 
 0615175060
 
 Remarques
 
-1. Improve add your taux, le champs traitement, ameliore le texte
-2. Enregistre l'heure de l'utilisateur lors de l'ajoute du glycemie
+1. Improve add your taux, le champs traitement, ameliore le texte -> okay
+2. Enregistre l'heure de l'utilisateur lors de l'ajoute du glycemie -> okay
 3. Medecin _> contact kak, improve the infos et faire le test
 4. Medicin -> Home page cher docteur, pour la validation de votre inscription
 5. Admin -> improve all !!, validation and menu

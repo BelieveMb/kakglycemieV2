@@ -62,8 +62,11 @@ class AllUsersController extends Controller
             'password' => ['required', 'confirmed', 'min:8'],
         ]);
 
-        $fullPhone = $request->input('country_code') . ltrim($request->input('phone'), '0');
-        
+        // $fullPhone = $request->input('country_code') . ltrim(string: $request->input('phone'), '0');
+        $countryCode = ltrim($request->input('country_code'), '+'); // Enlève le "+"
+        $phone = ltrim($request->input('phone'), '0'); // Enlève le 0 initial
+        $fullPhone = $countryCode . $phone;
+
         $iduser = random_int(3, 2998);
         $user = User::create([
             'id' => $iduser,

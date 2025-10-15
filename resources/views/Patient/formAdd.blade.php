@@ -24,7 +24,7 @@
                     <form action="{{ route('Patient.addTauxTraitement') }}" method="POST" class="px-1 lg:px-20">
                         @csrf
                        
-
+                        <input type="hidden" name="dateTrait" id="dateTrait">
                         <input type="hidden" name="idpatient" value="{{auth()->user()->id}}" placeholder="Votre taux de glycémie" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500">
                         <div class="mb-4">
                             <label for="taux" class="font-semibold mb-2 block">Votre Taux de glycémie  mg/dl</label>
@@ -35,7 +35,7 @@
                         <div class="mb-6">
                             <label for="traitement" class="font-semibold mb-2 block">Le traitement pris aujourd'hui </label>
                             <!-- <textarea name="traitement" placeholder="Dites nous, les traitements que vous avez pris." class="border-1 border-b-4 border-red-500 rounded-2xl  px-4 py-1 w-full h-16 focus:border-2 outline-none focus:border-red-500"></textarea> -->
-                            <input type="text" name="traitement" placeholder="Votre taux de glycémie" class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500">
+                            <input type="text" name="traitement" placeholder="Le traitement reçu..." class="border-1 border-b-4 border-red-500 rounded-2xl px-4 py-2 w-full focus:border-2 outline-none focus:border-red-500">
                             <x-input-error :messages="$errors->get('traitement')" class="mt-2" />
                         </div>
                         <div class="flex justify-center items-center">
@@ -52,3 +52,18 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const now = new Date();
+
+        // Format à la Laravel-friendly (Y-m-d H:i:s)
+        const formattedDate = now.getFullYear() + '-' +
+            String(now.getMonth() + 1).padStart(2, '0') + '-' +
+            String(now.getDate()).padStart(2, '0') + ' ' +
+            String(now.getHours()).padStart(2, '0') + ':' +
+            String(now.getMinutes()).padStart(2, '0') + ':' +
+            String(now.getSeconds()).padStart(2, '0');
+
+        document.getElementById('dateTrait').value = formattedDate;
+    });
+</script>

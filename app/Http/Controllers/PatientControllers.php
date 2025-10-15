@@ -72,7 +72,9 @@ class PatientControllers extends Controller
                     ->orderByDesc('idtraitement')
                     ->value('jour');
 
-        $maDate = date('d-m-Y, H:i'); 
+        // $maDate = date('d-m-Y, H:i'); 
+        $maDate = $request->input('dateTrait');
+
         $jour = $dataJour + 1;
 
         $query =  DB::table('traitement2')->insert([
