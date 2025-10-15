@@ -78,11 +78,6 @@ pat = 0817723066
 pass= 123456789
 
 
- 0615175061
-Kaycee02aa
-
-0615175060
-
 Remarques
 
 1. Improve add your taux, le champs traitement, ameliore le texte -> okay

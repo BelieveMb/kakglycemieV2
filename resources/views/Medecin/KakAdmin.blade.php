@@ -21,7 +21,7 @@
                         </span>
                         <div class="flex flex-col">
                             <b>Adresse</b>
-                            <p> Av. du port 135, Kinshasa-Gombe</p>
+                            <p> 1 avenue Pierre de courbetin, sens 89100</p>
                         </div>
                     </div>
                     <div class="flex gap-2">
@@ -30,7 +30,7 @@
                         </span>
                         <div class="flex flex-col">
                             <b>Téléphone</b>
-                            <p> +243 817 723 066</p>
+                            <p> <a href="tel:+33615175061" class="text-gray-50">  +33 615175061 </a></p>
                         </div>
                     </div>
 
