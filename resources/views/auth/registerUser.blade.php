@@ -60,7 +60,7 @@
                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
                     <div class="w-full px-3 mb-2">
-                        <label for="phone" class="text-xs font-semibold px-1">Téléphone</label>
+                        <label for="phone" class="text-xs font-semibold px-1">Téléphone <i class="bi bi-whatsapp text-green-500 text-lg mr-2"></i></label>
                         <div class="flex">
                             <!-- Sélecteur d'indicatif -->
                             <div class="relative">

@@ -57,13 +57,12 @@ class AllUsersController extends Controller
             'name' => ['required', 'max:255' ],
             'sexe' => 'required|in:Masculin,Feminin' ,
             'email' => ['required', 'email', 'max:255', 'unique:'.User::class],
-            'phone' => ['required', 'unique:'.User::class, 'min:10','max:15'],
+            'phone' => ['required', 'unique:'.User::class, 'min:9','max:10'],
             'type' => 'required|in:patient,medecin' ,
             'password' => ['required', 'confirmed', 'min:8'],
         ]);
 
-        $fullPhone = $request->input('country_code') . $request->input('phone');
-
+        $fullPhone = $request->input('country_code') . ltrim($request->input('phone'), '0');
         
         $iduser = random_int(3, 2998);
         $user = User::create([

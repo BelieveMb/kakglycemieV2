@@ -73,8 +73,8 @@ Djodjo Kiamodja
 
 
 Crédenciales
-pat = 0899954912 
-med = 0899954911
+med = 0899954912 
+pat = 0828963058
 pass= 123456789
 
 
