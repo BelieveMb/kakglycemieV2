@@ -68,7 +68,16 @@
                     </div>
                 </a>
                 @php
-                    $whatsappNumber = $detailMedecin->phone;
+                    $phone = $detailMedecin->phone;
+                    $indicatif = $detailMedecin->indicatif;
+                    // Enlève le '+' de l'indicatif
+                    $indicatifClean = ltrim($indicatif, '+');
+
+                    // Enlève le premier '0' du numéro de téléphone
+                    $phoneClean = ltrim($phone, '0');
+
+                    // Combine les deux
+                    $whatsappNumber = $indicatifClean . $phoneClean;
                     $whatsappMessage = "Bonjour docteur, je vous écris à partir de l'app KakGlycemie.";
                 @endphp
                 <div >

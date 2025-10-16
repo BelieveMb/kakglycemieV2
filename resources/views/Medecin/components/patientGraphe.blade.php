@@ -59,7 +59,16 @@
             <li>La ligne c'est le jour de traitement pris par le patient</li>
         </ul>
         @php
-            $whatsappNumber = $infoUser->phone;
+            $phone = $infoUser->phone;
+            $indicatif = $detailMedecin->indicatif;
+            // Enlève le '+' de l'indicatif
+            $indicatifClean = ltrim($indicatif, '+');
+            
+            // Enlève le premier '0' du numéro de téléphone
+            $phoneClean = ltrim($phone, '0');
+            
+            // Combine les deux
+            $whatsappNumber = $indicatifClean . $phoneClean;
             $whatsappMessage = "Bonjour, je vous écris à partir de l'app KakGlycemie.";
         @endphp
          <div >
