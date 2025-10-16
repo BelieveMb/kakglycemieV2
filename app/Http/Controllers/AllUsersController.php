@@ -61,7 +61,7 @@ class AllUsersController extends Controller
             'type' => 'required|in:patient,medecin' ,
             'password' => ['required', 'confirmed', 'min:8'],
         ]);
-
+        $phone = $request->input('phone');
         // $fullPhone = $request->input('country_code') . ltrim(string: $request->input('phone'), '0');
         $countryCode = ltrim($request->input('country_code'), '+'); // Enlève le "+"
         // $phone = ltrim($request->input('phone'), '0'); // Enlève le 0 initial

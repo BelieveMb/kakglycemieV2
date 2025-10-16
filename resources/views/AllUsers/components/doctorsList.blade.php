@@ -6,7 +6,7 @@
                     @foreach ($doctorList as $doctor)
       <li class="flex items-center flex-col cursor-pointer hover:bg-red-200 rounded-lg"  onclick="alert('Inscrivez vous ou connectez pour en savoir plus sur le médecin {{$doctor->name}}');">
         <img src="../images/profil-med.png" alt="profil du medecin" class="rounded-full w-24 h-24 object-cover">
-        <h5 class="font-semibold truncate w-40" >{{$doctor->name}}</h5>
+        <h5 class="font-semibold truncate w-48 text-center" >{{$doctor->name}}</h5>
       </li>
         @endforeach
             @else
