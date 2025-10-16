@@ -60,7 +60,7 @@
         </ul>
         @php
             $phone = $infoUser->phone;
-            $indicatif = $detailMedecin->indicatif;
+            $indicatif = $infoUser->indicatif;
             // Enlève le '+' de l'indicatif
             $indicatifClean = ltrim($indicatif, '+');
             
