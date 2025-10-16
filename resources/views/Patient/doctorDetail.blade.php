@@ -67,6 +67,14 @@
                         <p class="text-xs text-gray-500"> {{ $detailMedecin->phone }}</p>
                     </div>
                 </a>
+                @php
+                    $whatsappNumber = $detailMedecin->phone;
+                    $whatsappMessage = "Bonjour docteur, je vous écris à partir de l'app KakGlycemie.";
+                @endphp
+                <div >
+                <a href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode($whatsappMessage) }}"  class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
+                focus:bg-red-200 focus:outline-none" >💬 Contacter via WhatsApp</a>
+                </div>
                 <a href="#" class="px-4 py-2 hover:bg-red-200 hover:rounded-lg flex">
                     <div class="text-gray-800 text-2xl">
                         <i class="bi bi-person-vcard-fill"></i>

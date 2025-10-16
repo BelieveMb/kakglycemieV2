@@ -57,14 +57,12 @@
         <ul class="list-disc px-6">
             <li>La colonne c'est le taux de glycémie du patient</li>
             <li>La ligne c'est le jour de traitement pris par le patient</li>
-            <li>phone {{ $infoUser->phone }} </li>
         </ul>
         @php
             $whatsappNumber = $infoUser->phone;
             $whatsappMessage = "Bonjour, je vous écris à partir de l'app KakGlycemie.";
         @endphp
          <div >
-          {{-- <a href=""> Contactez </a> --}}
           <a href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode($whatsappMessage) }}"  class="px-4 py-2  text-sm font-semibold bg-red-500 text-gray-50 rounded-lg hover:text-gray-600 focus:text-gray-900 hover:bg-red-200  hover:shadow-outline
           focus:bg-red-200 focus:outline-none" >💬 Contacter via WhatsApp</a>
         </div>

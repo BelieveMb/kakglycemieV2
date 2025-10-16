@@ -82,10 +82,11 @@ Remarques
 
 1. Improve add your taux, le champs traitement, ameliore le texte -> okay
 2. Enregistre l'heure de l'utilisateur lors de l'ajoute du glycemie -> okay
-3. Medecin _> contact kak, improve the infos et faire le test -> okay
-4. Medicin -> Home page cher docteur, pour la validation de votre inscription
+3. Medecin _> contact kak, improve the infos et faire le test -> ok
+4. Medecin -> Home page cher docteur, pour la validation de votre inscription -> okay
 5. Admin -> improve all !!, validation and menu
-6. Medecin -> Ajouter contact whatsapp dans le visionnage de sa glycémie
+6. Medecin, Patient -> Ajouter contact whatsapp dans le visionnage de sa
+glycémie -> okay
 
 Perso
 7. Check connexion medecin and patient by url

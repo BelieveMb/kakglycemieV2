@@ -24,8 +24,7 @@
                     </div>
                     @include('Medecin.components.footer')
                     <p class="text-center text-sm text-gray-500 my-10">
-                        &copy; 2023-2024 <a href="#" class="hover:underline" target="_blank">KaK glycémie</a>. Tous 
-                        les droits réservés.
+                        &copy; Développé par <a href="https://become-the-best-647252.webflow.io/" class="hover:underline" target="_blank">Become The Best</a> Chaque problème = une solution tech. 
                     </p>
                 </div>
 

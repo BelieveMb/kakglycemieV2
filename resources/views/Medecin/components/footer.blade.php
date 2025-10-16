@@ -7,7 +7,8 @@
                <li><a href="#" class="text-sm font-normal text-gray-500 hover:underline">Contact</a></li>
             </ul> --}}
              <p class=" text-sm text-gray-500 my-10">
-                        &copy; Développé par <a href="https://become-the-best-647252.webflow.io/" class="hover:underline" target="_blank">Become The Best</a> Chaque problème = une solution tech. 
+               &copy; 2023-2024 <a href="#" class="hover:underline" target="_blank">KaK glycémie</a>. Tous 
+                        les droits réservés.
             </p>
             <div class="flex sm:justify-center space-x-6">
                <a href="#" class="text-gray-500 hover:text-gray-900">

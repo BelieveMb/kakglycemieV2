@@ -14,6 +14,17 @@
             <div class="flow-root">
                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
                     @if ($patientList->count() == 0)
+                    <h3 class="font-semibold text-xl animate-pulse delay-600 hover:text-red-400 ">Votre profil est incomplet. Merci de compléter votre inscription ici pour valider votre candidature. Cliquez sur Mon profil
+                        <a href="{{ route('Medecin.monProfil') }}" class="@if(request()->route()->getName()=== 'Medecin.monProfil') bg-gray-200 @endif text-gray-50 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
+                            <span class="@if(request()->route()->getName()=== 'Medecin.monProfil') bg-gray-200 font-semibold text-red-500 @endif">
+                                <span class="   w-6 h-6 flex-shrink-0 hover:text-red-500 transition duration-75">
+                                    <i class="ml-1 text-xl bi bi-person-circle"></i>
+                                </span>
+                                <span class="ml-3 flex-1 whitespace-nowrap">Mon profil</span>
+                            </span>
+                        </a>
+                    </h3>
+
                         <h3 class="font-semibold text-xl">Vous avez aucun patient qui vous a choisi, demander à vos patients de  <span
                             class="text-red-500">vous ajouter</span> </h3>
                     @else

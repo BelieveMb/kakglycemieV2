@@ -64,8 +64,9 @@ class AllUsersController extends Controller
 
         // $fullPhone = $request->input('country_code') . ltrim(string: $request->input('phone'), '0');
         $countryCode = ltrim($request->input('country_code'), '+'); // Enlève le "+"
-        $phone = ltrim($request->input('phone'), '0'); // Enlève le 0 initial
+        // $phone = ltrim($request->input('phone'), '0'); // Enlève le 0 initial
         $fullPhone = $countryCode . $phone;
+
 
         $iduser = random_int(3, 2998);
         $user = User::create([
@@ -73,7 +74,8 @@ class AllUsersController extends Controller
             'name' => $request->name,
             'sexe' => $request->sexe,
             'email' => $request->email,
-            'phone' => $fullPhone,
+            'indicatif' => $countryCode,
+            'phone' => $phone,
             'type' => $request->type,
             'password' => Hash::make($request->password),
         ]);
