@@ -56,13 +56,21 @@
     document.addEventListener('DOMContentLoaded', function () {
         const now = new Date();
 
-        // Format à la Laravel-friendly (Y-m-d H:i:s)
+        /* Format à la Laravel-friendly (Y-m-d H:i:s)
         const formattedDate = now.getFullYear() + '-' +
             String(now.getMonth() + 1).padStart(2, '0') + '-' +
             String(now.getDate()).padStart(2, '0') + ' ' +
             String(now.getHours()).padStart(2, '0') + ':' +
             String(now.getMinutes()).padStart(2, '0') + ':' +
+            String(now.getSeconds()).padStart(2, '0');*/
+        // Format à (d/m/Y H:i:s)
+        const formattedDate = String(now.getDate()).padStart(2, '0') + '/' +
+            String(now.getMonth() + 1).padStart(2, '0') + '/' +
+            now.getFullYear() + ' ' +
+            String(now.getHours()).padStart(2, '0') + ':' +
+            String(now.getMinutes()).padStart(2, '0') + ':' +
             String(now.getSeconds()).padStart(2, '0');
+
 
         document.getElementById('dateTrait').value = formattedDate;
     });
