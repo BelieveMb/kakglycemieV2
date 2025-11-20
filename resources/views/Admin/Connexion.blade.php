@@ -37,7 +37,6 @@
                         @endif
                         <form method="POST">
                             @csrf
-                
                             <div class="flex flex-col gap-2">
                                 <div class="w-full px-3 mb-5">
                                     <label for="phone" class="text-xs font-semibold px-1">Votre numéro de téléphone </label>

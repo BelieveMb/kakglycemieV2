@@ -17,35 +17,49 @@ class adminController extends Controller
     public function connexionAdminVue(){
         return view("Admin.Connexion");
     }  
-    public function connexionAdmin(Request $request){
+    // public function connexionAdmin(Request $request){
  
-        $credentials = $request->validate([
-            'phone' => ['required', 'string'],
-            'password' => ['required'],
-        ]);
-        // check login admina§//
+    //     $credentials = $request->validate([
+    //         'phone' => ['required', 'string'],
+    //         'password' => ['required'],
+    //     ]);
+    //     // check login admina§//
         
-        // Récupérer les informations de l'agent à partir de la table "agents" en fonction du numéro de téléphone
-        /*$agent = AgentModel::where('phone', $credentials['phone'])->first();
-        if ($agent) {
-            // Vérifier le mot de passe
-            if (Hash::check($credentials['password'], $agent->password)) {
-                // Authentifier l'agent
-                //Auth::login($agent);
-                // L'agent est maintenant authentifié
-                return to_route('admin.dashboardAdmin');
-
-
-            } else {
-                // Mot de passe incorrect
-                return back()->with('fail', 'Le numero ou le mot de passe est incorrect !');
-            }
-        } else {
-            // Agent non trouvé
-            return back()->with('fail', 'Agent non trouvé.');
-        }*/
+    //     // Récupérer les informations de l'agent à partir de la table "agents" en fonction du numéro de téléphone
+    //     $agent = AgentModel::where('phone', $credentials['phone'])->first();
+    //     if ($agent) {
+    //         // Vérifier le mot de passe
+    //         if (Hash::check($credentials['password'], $agent->password)) {
+    //             // Authentifier l'agent
+    //             Auth::login($agent); // L'agent est maintenant authentifié
+    //             return to_route('admin.dashboardAdmin');
+    //         } else {
+    //             // Mot de passe incorrect
+    //             return back()->with('fail', 'Le numero ou le mot de passe est incorrect !');
+    //         }
+    //     } else {
+    //         // Agent non trouvé
+    //         return back()->with('fail', 'Agent non trouvé.');
+    //     }
     
-    }  
+    // }  
+    public function connexionAdmin(Request $request): RedirectResponse{
+        $credentials = $request->validate([
+            'telPat' => 'required|max:15',
+            'password' => 'required',
+        ]);
+
+        if(Auth::attempt($credentials)) {
+            //$request->session()->regenerate();
+            return redirect()->intended(route('admin.dashboardAdmin')); 
+           // return to_route('admin.dashboardAdmin');
+        }
+        return back()->withErrors([
+            'mainError' => 'Erreur, votre numéro de téléphone ou votre mot de passe est incorrect.',
+        ])->onlyInput('mainError');
+        
+    }
+
     public function logoutAdmin(Request $request): RedirectResponse
     {
         //la deconnexion de l'user

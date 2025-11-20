@@ -55,7 +55,7 @@ addd 404 page
 --> okay
 
 Medecin | add contact medecin with Whatsapp |  a developper
---->
+---> totest
 
 check send message on footer / footer
 -->
@@ -63,6 +63,7 @@ check send message on footer / footer
 add black  background on main slide - home
 --->
 
+revoir la connexion  admins
 
 contact informations
 +33 615175061
