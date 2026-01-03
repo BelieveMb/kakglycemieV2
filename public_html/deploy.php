@@ -1,6 +1,6 @@
 <?php
 // Vérifie que la requête vient de GitHub (optionnel)
-$secret = 'ton_secret_super_complexe'; // Choisis-le toi-même
+$secret = 'kak-keys'; // Choisis-le toi-même
 $headers = getallheaders();
 $signature = $headers['X-Hub-Signature-256'] ?? '';
 
