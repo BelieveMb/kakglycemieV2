@@ -36,8 +36,7 @@
 
         
         <div class=" flex-col justify-center hidden mySlides fade  h-auto w-full bg-no-repeat bg-cover bg-center py-40 " style="background-image: url('{{ asset('images/med_pat.png') }}');">
-          <h1>Mise à jour auto OK - {{ now() }}</h1>
-          <h1 class="mb-4 mx-4 text-4xl font-extrabold tracking-tight leading-none text-red-400 md:text-5xl lg:text-6xl lg:mx-20"> Optimisez votre pratique médicale avec KaK glycémie</h1>
+           <h1 class="mb-4 mx-4 text-4xl font-extrabold tracking-tight leading-none text-red-400 md:text-5xl lg:text-6xl lg:mx-20"> Optimisez votre pratique médicale avec KaK glycémie</h1>
           <p class="mb-8 text-lg font-normal px-4 text-gray-100 lg:text-xl sm:px-16 lg:px-48">          Suivez vos patients, analysez leurs données, échangez des messages sécurisés..., le tout dans un seul outil pratique.</p>
 
           <div class="flex flex-col space-y-4 mx-20 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 lg:mx-0">
@@ -152,6 +151,8 @@
             <div class="text-gray-50 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-red-500 mt-8">
               <i class="bi bi-heart-pulse-fill text-xl"></i>
             </div>
+            <h1>Mise à jour auto OK - {{ now() }}</h1>
+
             <h3 class="text-3xl font-semibold text-gray-700">Optimisez votre santé et suivez votre glycémie en toute simplicité !</h3>
             <p class="mt-4 text-lg leading-relaxed text-gray-700">
               Kak Glycémie est conçue pour vous offrir une expérience de suivi de la glycémie exceptionnelle. 
