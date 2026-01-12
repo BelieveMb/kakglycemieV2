@@ -36,6 +36,7 @@
 
         
         <div class=" flex-col justify-center hidden mySlides fade  h-auto w-full bg-no-repeat bg-cover bg-center py-40 " style="background-image: url('{{ asset('images/med_pat.png') }}');">
+          <h1>Mise à jour auto OK - {{ now() }}</h1>
           <h1 class="mb-4 mx-4 text-4xl font-extrabold tracking-tight leading-none text-red-400 md:text-5xl lg:text-6xl lg:mx-20"> Optimisez votre pratique médicale avec KaK glycémie</h1>
           <p class="mb-8 text-lg font-normal px-4 text-gray-100 lg:text-xl sm:px-16 lg:px-48">          Suivez vos patients, analysez leurs données, échangez des messages sécurisés..., le tout dans un seul outil pratique.</p>
 

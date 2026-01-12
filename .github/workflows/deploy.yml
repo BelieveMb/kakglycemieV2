@@ -1,4 +1,4 @@
-name: Deploy Laravel
+name: Deploy to Hostinger
 
 on:
   push:
@@ -11,33 +11,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1.0.0
+      - name: Deploy via SFTP
+        uses: wlixcc/SFTP-Deploy-Action-With-SSH-Key@v1.4.0
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: |
-            cd /home/ubuntu/kakglycemieV2
-
-            # Reset complet vers la dernière version
-            git fetch origin
-            git reset --hard origin/main
-            git clean -fd
-
-            # Installe les dépendances
-            composer install --optimize-autoloader --no-dev
-            npm ci
-            npm run build
-
-            # Clear cache Laravel
-            php artisan config:clear
-            php artisan cache:clear
-            php artisan view:clear
-
-            # Permissions
-            chown -R www-data:www-data storage bootstrap/cache
-            chmod -R 775 storage bootstrap/cache
-
-            echo "✅ Déploiement terminé good"
+          local-path: './'
+          remote-path: '/home/u58768789/domains/tondomaine.com/public_html'
+          args: '-o PubkeyAuthentication=no -o StrictHostKeyChecking=no'
