@@ -151,7 +151,7 @@
             <div class="text-gray-50 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-red-500 mt-8">
               <i class="bi bi-heart-pulse-fill text-xl"></i>
             </div>
-            <h1>Mise à jour auto OK - {{ now() }}</h1>
+            <h1>Mise à jour auto date to check OK - {{ now() }}</h1>
 
             <h3 class="text-3xl font-semibold text-gray-700">Optimisez votre santé et suivez votre glycémie en toute simplicité !</h3>
             <p class="mt-4 text-lg leading-relaxed text-gray-700">
