@@ -152,7 +152,7 @@
               <i class="bi bi-heart-pulse-fill text-xl"></i>
             </div>
             <h1>Mise à jour auto date to ooooOK - {{ now() }}</h1>
-
+            <p>Dernier test : {{ now() }}</p>
             <h3 class="text-3xl font-semibold text-gray-700">Optimisez votre santé et suivez votre glycémie en toute simplicité !</h3>
             <p class="mt-4 text-lg leading-relaxed text-gray-700">
               Kak Glycémie est conçue pour vous offrir une expérience de suivi de la glycémie exceptionnelle. 
