@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenu.e sur KaK /{{$title}}</title>
-    <link rel="shortcut icon" href="images/logo_white.png" type="image/x-icon">
+
+
+    {{-- {{ asset('images/img_avantage.jpg') }} --}}
+    <link rel="shortcut icon" href="/images/logo_white.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ asset('../css/AllUsers.css') }}">
 
@@ -151,7 +154,6 @@
             <div class="text-gray-50 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-red-500 mt-8">
               <i class="bi bi-heart-pulse-fill text-xl"></i>
             </div>
-            <h1>Mise à jour auto date to ooooOK - {{ now() }}</h1>
             <p>Dernier test : {{ now() }}</p>
             <h3 class="text-3xl font-semibold text-gray-700">Optimisez votre santé et suivez votre glycémie en toute simplicité !</h3>
             <p class="mt-4 text-lg leading-relaxed text-gray-700">
