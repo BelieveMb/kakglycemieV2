@@ -73,9 +73,9 @@ Djodjo Kiamodja
 
 
 
-Crédenciales
-med = 0899954912 
-pat = 0817723066
+Crédenciales new
+med = 817723066 
+pat = 899954192
 pass= 123456789
 
 
@@ -91,3 +91,6 @@ glycémie -> okay
 
 Perso
 7. Check connexion medecin and patient by url
+
+On line  remarks
+1. add pages of error on hostinger

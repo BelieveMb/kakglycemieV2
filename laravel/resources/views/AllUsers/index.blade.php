@@ -288,7 +288,7 @@
 
       <div class="text-gray-50 ">
         <h3 class="text-7xl font-bold mb-4">+100 <span class="bi bi-users"></span></h3>
-        <span class="font-medium">Personnes pour vous compagner</span>
+        <span class="font-medium">Personnes pour vous accompagner</span>
       </div>
 
       <div class="text-gray-50 ">

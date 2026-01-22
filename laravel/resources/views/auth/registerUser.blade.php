@@ -73,7 +73,6 @@
                                     <!-- Ajoute d'autres pays ici -->
                                 </select>
                             </div>
-
                             <!-- Champ téléphone -->
                             <div class="flex-grow">
                                 <input type="tel"

@@ -11,7 +11,7 @@
     @vite('resources/css/AllUsers.css')
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{ asset('vendor/basement/basement.bundle.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('vendor/basement/basement.bundle.min.css') }}"> --}}
 </head>
 
 <body>
@@ -37,12 +37,15 @@
                 </div>
 
             </div>
-            <script async defer src="https://buttons.github.io/buttons.js"></script>
-            <script src="https://demo.themesberg.com/windster/app.bundle.js"></script>
+            {{-- <script async defer src="https://buttons.github.io/buttons.js"></script>
+            <script src="https://demo.themesberg.com/windster/app.bundle.js"></script> 
+            last comment --}}
         </div>
 
     </main>
-   <!--- <x-basement::chat-box />   <script src="{{ asset('vendor/basement/basement.bundle.min.js') }}"></script>  -->
+   <!--- <x-basement::chat-box />   
+    {{-- <script src="{{ asset('vendor/basement/basement.bundle.min.js') }}"> --}}
+    </script>  -->
 </body>
 
 </html>
