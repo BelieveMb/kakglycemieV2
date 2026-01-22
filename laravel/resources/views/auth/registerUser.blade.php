@@ -6,7 +6,7 @@
 @section('formSide')
     <div class="w-full md:w-1/2 py-10 px-5 md:px-10">
         <div class="text-center mb-10">
-            <h1 class="font-bold text-3xl text-gray-600">S'inscrire sur KaK Glycémie</h1>
+            <h1 class="font-bold text-3xl text-gray-600">S'inscrire sur KaK Glycémie.</h1>
         </div>
         <div>
             <form method="POST"  >
@@ -60,12 +60,54 @@
                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
                     <div class="w-full px-3 mb-2">
+                        <label for="phone" class="text-xs font-semibold px-1">
+                            Téléphone <i class="bi bi-whatsapp text-green-500 text-lg mr-2"></i>
+                        </label>
+                    
+                        <div class="flex">
+                            <!-- Sélecteur d'indicatif -->
+                            <div class="relative">
+                                <select name="country_code"
+                                    required
+                                    class="h-full rounded-l-lg border-2 border-gray-200 bg-white pl-2 pr-6 text-sm focus:border-indigo-500">
+                    
+                                    <!-- Option obligatoire -->
+                                    <option value="" disabled {{ old('country_code') ? '' : 'selected' }}>
+                                        🔽 indicatif
+                                    </option>
+                    
+                                    <option value="+243" {{ old('country_code') == '+243' ? 'selected' : '' }}>🇨🇩 +243</option>
+                                    <option value="+33"  {{ old('country_code') == '+33'  ? 'selected' : '' }}>🇫🇷 +33</option>
+                                    <option value="+242" {{ old('country_code') == '+242' ? 'selected' : '' }}>🇨🇬 +242</option>
+                                    <option value="+1"   {{ old('country_code') == '+1'   ? 'selected' : '' }}>🇺🇸 +1</option>
+                                    <option value="+44"  {{ old('country_code') == '+44'  ? 'selected' : '' }}>🇬🇧 +44</option>
+                                </select>
+                            </div>
+                    
+                            <!-- Champ téléphone -->
+                            <div class="flex-grow">
+                                <input type="tel"
+                                    class="w-full pl-3 pr-3 py-2 rounded-r-lg border-2 border-l-0 border-gray-200 outline-none focus:border-indigo-500"
+                                    placeholder="ex. 817723066"
+                                    name="phone"
+                                    value="{{ old('phone') }}"
+                                    required
+                                    autocomplete="phone">
+                            </div>
+                        </div>
+                    
+                        <x-input-error :messages="$errors->get('country_code')" class="mt-2" />
+                        <x-input-error :messages="$errors->get('phone')" class="mt-2" />
+                    </div>
+                    
+                    {{-- <div class="w-full px-3 mb-2">
                         <label for="phone" class="text-xs font-semibold px-1">Téléphone <i class="bi bi-whatsapp text-green-500 text-lg mr-2"></i></label>
                         <div class="flex">
                             <!-- Sélecteur d'indicatif -->
                             <div class="relative">
-                                <select name="country_code" class="h-full rounded-l-lg border-2 border-gray-200 bg-white pl-2 pr-6 text-sm focus:border-indigo-500">
-                                    <option value="+243" {{ old('country_code') == '243' ? 'selected' : '' }}>🇨🇩  +243</option>
+                                <select required name="country_code" class="h-full rounded-l-lg border-2 border-gray-200 bg-white pl-2 pr-6 text-sm focus:border-indigo-500">
+                                    <option >🔽 indicatif</option>
+                                    <option value="+243" {{ old(key: 'country_code') == '243' ? 'selected' : '' }}>🇨🇩  +243</option>
                                     <option value="+33" {{ old('country_code') == '33' ? 'selected' : '' }}>🇫🇷 +33</option>
                                     <option value="+242" {{ old('country_code') == '242' ? 'selected' : '' }}>🇨🇬 +242</option>
                                     <option value="+1" {{ old('country_code') == '1' ? 'selected' : '' }}>🇺🇸 +1</option>
@@ -82,7 +124,7 @@
                         </div>
 
                         <x-input-error :messages="$errors->get('phone')" class="mt-2" />
-                    </div>
+                    </div> --}}
 
 
                     {{-- <div class="w-full px-3 mb-2">
@@ -166,7 +208,7 @@
                     </div>
                 </div>
                 <div class="px-5 flex items-center">
-                    <p>Déjà un patient de KaK glycémie, <a href="{{ route('loginUserVue') }}" class="text-red-400 underline">Se
+                    <p>Déjà inscrit sur  KaK glycémie ?, <a href="{{ route('loginUserVue') }}" class="text-red-400 underline">Se
                             connecter <i class="bi bi-box-arrow-in-left"></i></a></p>
                 </div>
             </form>
