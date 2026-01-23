@@ -43,6 +43,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'sexe' => $request->sexe,
             'email' => $request->email,
+            'indicatif' => $request->input('country_code'),
             'phone' => $request->phone,
             'type' => $request->type,
             'password' => Hash::make($request->password),
