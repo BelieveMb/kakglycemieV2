@@ -35,6 +35,7 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'max:255' ],
             'sexe' => 'required|in:Masculin,Feminin' ,
             'email' => ['required', 'email', 'max:255', 'unique:'.User::class],
+            'indicatif' => ['required', 'min:2', 'max:4'],
             'phone' => ['required', 'unique:'.User::class, 'min:10','max:15'],
             'password' => ['required', 'confirmed', 'min:8'],
         ]);
@@ -43,7 +44,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'sexe' => $request->sexe,
             'email' => $request->email,
-            'indicatif' => $request->input('country_code'),
+            'indicatif' => $request->indicatif,
             'phone' => $request->phone,
             'type' => $request->type,
             'password' => Hash::make($request->password),

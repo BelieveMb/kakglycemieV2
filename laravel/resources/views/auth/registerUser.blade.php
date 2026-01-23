@@ -67,20 +67,20 @@
                         <div class="flex">
                             <!-- Sélecteur d'indicatif -->
                             <div class="relative">
-                                <select name="country_code"
+                                <select name="indicatif"
                                     required
                                     class="h-full rounded-l-lg border-2 border-gray-200 bg-white pl-2 pr-6 text-sm focus:border-indigo-500">
                     
                                     <!-- Option obligatoire -->
-                                    <option value="" disabled {{ old('country_code') ? '' : 'selected' }}>
+                                    <option value="" disabled {{ old('indicatif') ? '' : 'selected' }}>
                                         🔽 indicatif
                                     </option>
                     
-                                    <option value="+243" {{ old('country_code') == '+243' ? 'selected' : '' }}>🇨🇩 +243</option>
-                                    <option value="+33"  {{ old('country_code') == '+33'  ? 'selected' : '' }}>🇫🇷 +33</option>
-                                    <option value="+242" {{ old('country_code') == '+242' ? 'selected' : '' }}>🇨🇬 +242</option>
-                                    <option value="+1"   {{ old('country_code') == '+1'   ? 'selected' : '' }}>🇺🇸 +1</option>
-                                    <option value="+44"  {{ old('country_code') == '+44'  ? 'selected' : '' }}>🇬🇧 +44</option>
+                                    <option value="+243" {{ old('indicatif') == '+243' ? 'selected' : '' }}>🇨🇩 +243</option>
+                                    <option value="+33"  {{ old('indicatif') == '+33'  ? 'selected' : '' }}>🇫🇷 +33</option>
+                                    <option value="+242" {{ old('indicatif') == '+242' ? 'selected' : '' }}>🇨🇬 +242</option>
+                                    <option value="+1"   {{ old('indicatif') == '+1'   ? 'selected' : '' }}>🇺🇸 +1</option>
+                                    <option value="+44"  {{ old('indicatif') == '+44'  ? 'selected' : '' }}>🇬🇧 +44</option>
                                 </select>
                             </div>
                     
@@ -96,49 +96,10 @@
                             </div>
                         </div>
                     
-                        <x-input-error :messages="$errors->get('country_code')" class="mt-2" />
+                        <x-input-error :messages="$errors->get('indicatif')" class="mt-2" />
                         <x-input-error :messages="$errors->get('phone')" class="mt-2" />
                     </div>
-                    
-                    {{-- <div class="w-full px-3 mb-2">
-                        <label for="phone" class="text-xs font-semibold px-1">Téléphone <i class="bi bi-whatsapp text-green-500 text-lg mr-2"></i></label>
-                        <div class="flex">
-                            <!-- Sélecteur d'indicatif -->
-                            <div class="relative">
-                                <select required name="country_code" class="h-full rounded-l-lg border-2 border-gray-200 bg-white pl-2 pr-6 text-sm focus:border-indigo-500">
-                                    <option >🔽 indicatif</option>
-                                    <option value="+243" {{ old(key: 'country_code') == '243' ? 'selected' : '' }}>🇨🇩  +243</option>
-                                    <option value="+33" {{ old('country_code') == '33' ? 'selected' : '' }}>🇫🇷 +33</option>
-                                    <option value="+242" {{ old('country_code') == '242' ? 'selected' : '' }}>🇨🇬 +242</option>
-                                    <option value="+1" {{ old('country_code') == '1' ? 'selected' : '' }}>🇺🇸 +1</option>
-                                    <option value="+44" {{ old('country_code') == '44' ? 'selected' : '' }}>🇬🇧 +44</option>
-                                    <!-- Ajoute d'autres pays ici -->
-                                </select>
-                            </div>
-                            <!-- Champ téléphone -->
-                            <div class="flex-grow">
-                                <input type="tel"
-                                    class="w-full pl-3 pr-3 py-2 rounded-r-lg border-2 border-l-0 border-gray-200 outline-none focus:border-indigo-500"
-                                    placeholder="ex. 817723066" name="phone" value="{{ old('phone') }}" required autofocus autocomplete="phone">
-                            </div>
-                        </div>
-
-                        <x-input-error :messages="$errors->get('phone')" class="mt-2" />
-                    </div> --}}
-
-
-                    {{-- <div class="w-full px-3 mb-2">
-                        <label for="phone" class="text-xs font-semibold px-1">Téléphone </label>
-                        <div class="flex">
-                            <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i
-                                    class="bi bi-phone text-gray-400 text-lg"></i></div>
-                            <input type="tel"
-                                class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
-                                placeholder="ex. 817723066" name="phone" value="{{ old('phone') }}" required autofocus
-                                autocomplete="phone">
-                        </div>
-                        <x-input-error :messages="$errors->get('phone')" class="mt-2" />
-                    </div> --}}
+                   
                 </div>
 
                 <div class="w-full px-3 mb-2 ">

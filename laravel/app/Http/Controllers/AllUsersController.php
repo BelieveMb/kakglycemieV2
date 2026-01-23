@@ -64,7 +64,7 @@ class AllUsersController extends Controller
         ]);
         $phone = $request->input('phone');
         // $fullPhone = $request->input('country_code') . ltrim(string: $request->input('phone'), '0');
-        $countryCode = ltrim($request->input('country_code'), '+'); // Enlève le "+"
+        $countryCode = ltrim($request->input('indicatif'), '+'); // Enlève le "+"
         // $phone = ltrim($request->input('phone'), '0'); // Enlève le 0 initial
         $fullPhone = $countryCode . $phone;
 
@@ -74,11 +74,12 @@ class AllUsersController extends Controller
             'name' => $request->name,
             'sexe' => $request->sexe,
             'email' => $request->email,
-            'indicatif' => $request->input('country_code'),
+            'indicatif' => $request->indicatif,
             'phone' => $phone,
             'type' => $request->type,
             'password' => Hash::make($request->password),
         ]);
+        $iduser = $user->id;
 
         if($user){
             $type = $request->input('type');
