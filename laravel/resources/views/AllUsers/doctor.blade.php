@@ -65,7 +65,7 @@
                                 <h6 class="text-xl font-semibold">Accès en temps réel aux données de glycémie</h6>
                                 <p class="mt-2 mb-4 text-blueGray-500">
                                     Vous avez un accès instantané aux données de glycémie de vos patients. Vous pouvez
-                                    consulter les mesures de glycémie en temps réel..
+                                    consulter les mesures de glycémie en temps réel.
                                 </p>
                             </div>
                         </div>
@@ -97,7 +97,7 @@
                                 <h6 class="text-xl font-semibold">Communication sécurisée avec les patients</h6>
                                 <p class="mt-2 mb-4 text-blueGray-500">
                                     Kak Glycémie facilite la communication entre vous et vos patients diabétiques.
-                                     Vous pouvez échanger des messages sécurisés directement via la plateforme.
+                                     Vous pouvez échanger des messages sécurisés directement via une plateforme de messagerie.
                                 </p>
                             </div>
                         </div>
@@ -123,8 +123,7 @@
                     </div>
                     <div class="text-left">
                         <h3 class="text-2xl leading-normal my-2 font-semibold text-gray-800 "> Créer son compte </h3>
-                        <p class="text-black">  Inscrivez-vous en tant que médecin,  créez votre compte en tant que médecin
-                        sur Kak Glycémie. </p>
+                        <p class="text-black"> Inscrivez-vous en tant que médecin en cochant l'option "profil médecin" pour créer votre compte sur Kak Glycémie.   </p>
                     </div>
 
                 </div>

@@ -44,7 +44,7 @@
                     <h3 class="text-2xl font-semibold mb-4">Médecins de qualités</h3>
                     <p>Rejoignez nous et prenez le contrôle de votre santé dès maintenant !.</p>
                 </div>
-                <div class="w-24 lg:w-[100%]">
+                <div class="w-44 lg:w-[100%]">
                     <img alt="image votre avantage sur kak" class="max-w-full h-full rounded-lg shadow-lg" src="{{ asset('images/doctor.jpg') }}">
                 </div>
             </div>
@@ -90,7 +90,7 @@
         </section>
 
         <section class="  py-10 px-10 bg-red-500">
-            <div class=" flex flex-col items-center content-center justify-between gap-8 lg:flex-row bg-gray-200  -mt-14 lg:-mt-26 py-16 mx-24 ">
+            <div class=" flex flex-col items-center content-center justify-between gap-8 lg:flex-row bg-gray-200  -mt-14 lg:-mt-26 py-16 mx-12 lg:mx-24 ">
                 <div class="flex flex-col justify-center items-center text-center -mt-20 lg:-mt-40 px-10 py-8    hover:animate-pulse cursor-pointer">
                     <div class="mb-4">
                         <span class="text-[4rem] font-semibold inline-block px-6 py-2  uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-info"></i></span>

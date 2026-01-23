@@ -16,8 +16,8 @@
       
      
     <div class="w-[90%] h-auto lg:w-[60%]  py-4 px-8  border-2 border-red-500 rounded-2xl shadow-4xl shadow-gray-800 bg-gray-50 opacity-80 mb-4 lg:text-xl">
-          <span>KaK Glycémie pour le diabètique</span>
-          <h1 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-red-500 md:text-35xl lg:text-5xl "> Patients par KaK</h1>
+          <span>KaK Glycémie pour les diabètiques</span>
+          <h1 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-red-500 md:text-35xl lg:text-5xl "> Patients de KaK</h1>
           <p class="mb-8 text-lg font-normal text-gray-800 lg:text-xl ">Suivez votre glycémie en tout simplicité.</p>
         <div class="flex  justify-center gap-4 text-xs flex-row lg:justify-start lg:space-x-8 lg:text-xl">
             <a href="{{ route('registerVue') }}" class="inline-flex justify-center items-center py-1 px-3 lg:py-3 lg:px-5 text-base font-medium text-center text-white rounded-lg bg-red-500 hover:bg-gray-700 hover:text-gray-200 focus:ring-4 focus:ring-red-300 ">
@@ -76,7 +76,7 @@
                     <span class="text-2xl font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-50 bg-red-500 mr-3"><i class="bi bi-exclamation-triangle"></i></span>
                   </div>
                   <div>
-                    <p class="text-gray-700 font-semibold">détecter rapidement les variations anormales de leurs niveaux de sucre dans le sang et réagir rapidement et prendre les mesures nécessaires pour éviter des complications potentielles. </p>
+                    <p class="text-gray-700 font-semibold">Détecter rapidement les variations anormales de leurs niveaux de sucre dans le sang et réagir rapidement et prendre les mesures nécessaires pour éviter des complications potentielles. </p>
                   </div>
                 </div>
               </li>
@@ -199,8 +199,8 @@
         </div>
 
         <div class="px-8 my-8 text-gray-100 font-medium">
-          <h3 class="text-sm lg:text-xl my-2"><i class="bi bi-chat"></i>  Communication avec le médecin  </h3>
-          <p> L'utilisateur peut facilement communiquer avec son médecin via la plateforme Kak Glycémie. Il peut échanger des messages sécurisés, poser des questions, partager des préoccupations et recevoir des conseils personnalisés pour améliorer sa gestion du diabète. Cette communication directe avec le médecin permet une prise en charge personnalisée et une réponse rapide aux besoins de l'utilisateur.</p>
+          <h3 class="text-lg lg:text-xl my-2"><i class="bi bi-chat"></i>  Communication avec le médecin  </h3>
+          <p> L'utilisateur peut facilement communiquer avec son médecin via une plateforme de messagerie. Il peut échanger des messages sécurisés, poser des questions, partager des préoccupations et recevoir des conseils personnalisés pour améliorer sa gestion du diabète. Cette communication directe avec le médecin permet une prise en charge personnalisée et une réponse rapide aux besoins de l'utilisateur.</p>
         </div>
     </section>
 

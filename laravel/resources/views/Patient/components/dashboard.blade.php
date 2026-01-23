@@ -24,9 +24,7 @@
                 <div id="main-content" class="h-screen w-full bg-gray-50 relative overflow-y-auto lg:ml-64">
                     <div class="pt-6 px-4">
                         @yield('dashboardPatient')
-
                     </div>
-
 
 
                     @include('Patient.components.footer')
@@ -43,9 +41,7 @@
         </div>
 
     </main>
-   <!--- <x-basement::chat-box />   
-    {{-- <script src="{{ asset('vendor/basement/basement.bundle.min.js') }}"> --}}
-    </script>  -->
+   
 </body>
 
 </html>
