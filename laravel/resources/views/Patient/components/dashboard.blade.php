@@ -29,15 +29,16 @@
 
                     @include('Patient.components.footer')
                     <p class="text-center text-sm text-gray-500 my-10">
-                        &copy; 2023-2024 <a href="#" class="hover:underline" target="_blank">KaK glycémie</a>. Tous 
+                        &copy; 2023-2026 <a href="#" class="hover:underline" target="_blank">KaK glycémie</a>. Tous 
                         les droits réservés.
                     </p>
                 </div>
 
             </div>
-            {{-- <script async defer src="https://buttons.github.io/buttons.js"></script>
+            
+            <script async defer src="https://buttons.github.io/buttons.js"></script>
             <script src="https://demo.themesberg.com/windster/app.bundle.js"></script> 
-            last comment --}}
+            
         </div>
 
     </main>

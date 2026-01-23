@@ -94,3 +94,8 @@ Perso
 
 On line  remarks
 1. add pages of error on hostinger
+2. improve medcin list when he  wait a validation, change the message on
+ListMedecin.blade.php
+3.faire le code pour Connexion d'Administrateur
+4. add a search patients on medecin dash checj ListMedecin.blade
+

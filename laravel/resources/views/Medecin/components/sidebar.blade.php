@@ -4,20 +4,20 @@
       <div class="flex-1 px-3 bg-gray-700 divide-y space-y-1">
          <ul class="space-y-2 pb-2">
             <li>
-               <form action="#" method="GET" class="lg:hidden">
-                  <label for="mobile-search" class="sr-only">Trouvez un médecin</label>
-                  <div class="relative">
-                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <!-- <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
-                        </svg> -->
-                        <span class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-red-500 transition duration-75">
-                           <i class="ml-1 text-xl bi bi-person"></i>
-                        </span>
+                  {{-- <form action="#" method="GET" class="lg:hidden">
+                     <label for="mobile-search" class="sr-only">Trouvez un médecin</label>
+                     <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                           <!-- <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                           </svg> -->
+                           <span class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-red-500 transition duration-75">
+                              <i class="ml-1 text-xl bi bi-person"></i>
+                           </span>
+                        </div>
+                        <input type="text" name="email" id="mobile-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-gray-300  block w-full pl-10 p-2.5" placeholder="Trouvez un patient...">
                      </div>
-                     <input type="text" name="email" id="mobile-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-gray-300  block w-full pl-10 p-2.5" placeholder="Trouvez un patient...">
-                  </div>
-               </form>
+                  </form> --}}
             </li>
             <li>
                <a href="{{ route('Medecin.dashboard') }}" class="@if(request()->route()->getName()=== 'Medecin.dashboard') bg-gray-200 @endif text-gray-50 font-normal text-base  rounded-lg flex items-center p-2 hover:bg-gray-100 hover:font-semibold hover:text-red-500 group">
